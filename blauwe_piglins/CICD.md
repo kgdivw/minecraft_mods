@@ -6,7 +6,7 @@ Dit project gebruikt GitHub Actions voor automatische builds en releases.
 
 Bij elke push naar `master` of `main`:
 
-1. **Build**: De workflow combineert de BP en RP directories in één .mcpack bestand
+1. **Build**: De workflow combineert de BP en RP directories in één .mcaddon bestand
 2. **Release**: Het bestand wordt geüpload naar de "latest" release tag
 3. **Update**: De release wordt bijgewerkt met commit informatie
 
@@ -24,10 +24,10 @@ mkdir -p build/addon
 cp -r BP build/addon/
 cp -r RP build/addon/
 cd build/addon
-zip -r ../BlauwePiglins.mcpack BP/ RP/
+zip -r ../BlauwePiglins.mcaddon BP/ RP/
 ```
 
-Het resulterende `BlauwePiglins.mcpack` bestand staat in de `build/` directory.
+Het resulterende `BlauwePiglins.mcaddon` bestand staat in de `build/` directory.
 
 ## Rolling Release Strategie
 

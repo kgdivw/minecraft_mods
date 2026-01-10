@@ -6,7 +6,7 @@
 Een Minecraft Bedrock Edition addon die blauwe piglins toevoegt. Word vrienden met ze door 5 diamonds te geven!
 
 > [!NOTE]
-> Deze addon wordt automatisch gebouwd en uitgebracht via GitHub Actions. Bij elke commit naar `master` wordt een nieuwe `BlauwePiglins.mcpack` gegenereerd en beschikbaar gemaakt in de [latest release](../../releases/tag/latest).
+> Deze addon wordt automatisch gebouwd en uitgebracht via GitHub Actions. Bij elke commit naar `master` wordt een nieuwe `BlauwePiglins.mcaddon` gegenereerd en beschikbaar gemaakt in de [latest release](../../releases/tag/latest).
 
 ## 🎮 Features
 
@@ -19,10 +19,10 @@ Een Minecraft Bedrock Edition addon die blauwe piglins toevoegt. Word vrienden m
 ### Voor Tablet/Bedrock Edition:
 
 1. Download de nieuwste release van de [Releases pagina](../../releases):
-   - `BlauwePiglins.mcpack` (bevat beide packs)
+   - `BlauwePiglins.mcaddon` (bevat beide packs)
 
 2. Open het bestand met Minecraft Bedrock Edition
-   - Minecraft importeert automatisch zowel behavior pack als resource pack
+   - Minecraft importeert automatisch zowel behavior pack als resource pack (je ziet twee keer 'Import Started')
 
 3. Activeer beide packs in je wereld instellingen:
    - Ga naar **Behavior Packs** → Activeer "Blauwe Piglins Behavior Pack"
@@ -72,7 +72,7 @@ blauwe_piglins/
 │
 └── README.md
 
-Note: BlauwePiglins.mcpack wordt automatisch gegenereerd via GitHub Actions
+Note: BlauwePiglins.mcaddon wordt automatisch gegenereerd via GitHub Actions
 ```
 
 ## 🔧 Technische Details
