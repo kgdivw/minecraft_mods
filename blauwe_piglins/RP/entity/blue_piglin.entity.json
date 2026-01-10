@@ -16,8 +16,8 @@
                 "controller.render.piglin"
             ],
             "spawn_egg": {
-                "base_color": "#3498db",
-                "overlay_color": "#1f618d"
+                "base_color": "#00BFFF",
+                "overlay_color": "#1E90FF"
             }
         }
     }
