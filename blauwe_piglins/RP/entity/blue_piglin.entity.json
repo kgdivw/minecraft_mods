@@ -18,6 +18,18 @@
             "spawn_egg": {
                 "base_color": "#00BFFF",
                 "overlay_color": "#1E90FF"
+            },
+            "animations": {
+                "walk": "animation.humanoid.move",
+                "look_at_target": "animation.humanoid.look_at_target"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    {
+                        "walk": "query.modified_move_speed"
+                    }
+                ]
             }
         }
     }
