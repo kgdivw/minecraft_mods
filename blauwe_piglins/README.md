@@ -86,6 +86,19 @@ Note: BlauwePiglins.mcaddon wordt automatisch gegenereerd via GitHub Actions
 
 Zie `walkthrough.md` in de artifacts folder voor gedetailleerde documentatie.
 
-## 🎨 Credits
-
-Gemaakt met AI-assistentie voor Minecraft Bedrock Edition.
+## 🚀 Ontwikkeling & Credits
+ 
+Dit project is een experiment in geavanceerde **AI Pair Programming**. Het is volledig ontwikkeld door een samenwerking tussen een menselijke gebruiker en **Antigravity**, een agentic AI assistent van Google DeepMind.
+ 
+### Hoe het tot stand kwam:
+1. **Concept**: Het idee voor vriendelijke blauwe piglins kwam van de gebruiker.
+2. **Realisatie**: Antigravity heeft de code geschreven voor de behavior packs, resource packs, en de texture definities.
+3. **Automatisering**: Er is een volledig geautomatiseerde CI/CD pipeline opgezet. Elke wijziging die we pushen via git wordt automatisch:
+   - Verwerkt door GitHub Actions
+   - Ingepakt als `.mcaddon`
+   - Gepubliceerd als "Latest Build" release
+ 
+Deze workflow laat zien hoe AI en mens kunnen samenwerken om snel werkende software (en Minecraft mods!) te bouwen.
+ 
+---
+ *Gemaakt met 💙 en 🤖 Antigravity*
