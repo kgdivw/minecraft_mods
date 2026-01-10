@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "custom:blue_piglin",
+            "materials": {
+                "default": "piglin"
+            },
+            "textures": {
+                "default": "textures/entity/blue_piglin"
+            },
+            "geometry": {
+                "default": "geometry.piglin"
+            },
+            "render_controllers": [
+                "controller.render.piglin"
+            ],
+            "spawn_egg": {
+                "base_color": "#3498db",
+                "overlay_color": "#1f618d"
+            }
+        }
+    }
+}

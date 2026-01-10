@@ -1,0 +1,55 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Create combined addon structure
+        run: |
+          mkdir -p build/addon
+          cp -r blauwe_piglins/BP build/addon/
+          cp -r blauwe_piglins/RP build/addon/
+      
+      - name: Create .mcpack file
+        run: |
+          cd build/addon
+          zip -r ../BlauwePiglins.mcpack BP/ RP/
+      
+      - name: Get short SHA
+        id: sha
+        run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      
+      - name: Update Latest Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          name: Latest Build
+          body: |
+            🎮 **Blauwe Piglins - Latest Build**
+            
+            Automatisch gegenereerd van commit: ${{ steps.sha.outputs.short_sha }}
+            
+            ## Installatie
+            1. Download `BlauwePiglins.mcpack`
+            2. Open met Minecraft Bedrock Edition op je tablet
+            3. Activeer beide packs in je wereld instellingen
+            
+            ## Features
+            - Blauwe piglins die vrienden worden met diamonds (5 stuks)
+            - Volgen de speler en vallen vijandige piglins aan
+          files: |
+            build/BlauwePiglins.mcpack
+          prerelease: false
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
