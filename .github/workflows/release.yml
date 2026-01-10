@@ -19,13 +19,15 @@ jobs:
       - name: Create combined addon structure
         run: |
           mkdir -p build/addon
+          # Copy folders directly to build root for correct zipping structure
           cp -r blauwe_piglins/BP build/addon/
           cp -r blauwe_piglins/RP build/addon/
       
-      - name: Create .mcpack file
+      - name: Create .mcaddon file
         run: |
           cd build/addon
-          zip -r ../BlauwePiglins.mcpack BP/ RP/
+          # Zip BP and RP folders into a .mcaddon file
+          zip -r ../BlauwePiglins.mcaddon BP/ RP/
       
       - name: Get short SHA
         id: sha
@@ -42,15 +44,16 @@ jobs:
             Automatisch gegenereerd van commit: ${{ steps.sha.outputs.short_sha }}
             
             ## Installatie
-            1. Download `BlauwePiglins.mcpack`
+            1. Download `BlauwePiglins.mcaddon`
             2. Open met Minecraft Bedrock Edition op je tablet
-            3. Activeer beide packs in je wereld instellingen
+            3. De addon wordt automatisch geïmporteerd (Behavior + Resource Pack)
+            4. Activeer het Behavior Pack in je wereld instellingen (Resource Pack wordt vaak automatisch mee geactiveerd)
             
             ## Features
             - Blauwe piglins die vrienden worden met diamonds (5 stuks)
             - Volgen de speler en vallen vijandige piglins aan
           files: |
-            build/BlauwePiglins.mcpack
+            build/BlauwePiglins.mcaddon
           prerelease: false
           draft: false
         env:
