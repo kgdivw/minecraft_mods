@@ -102,3 +102,12 @@ Deze workflow laat zien hoe AI en mens kunnen samenwerken om snel werkende softw
  
 ---
  *Gemaakt met 💙 en 🤖 Antigravity*
+ 
+### 🛠️ Gebruikte Tools & Extensies
+ 
+- **[Antigravity](https://deepmind.google/technologies/antigravity/)**: Advanced Agentic AI Coding Assistant
+- **[Antigravity Browser Extension](https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd)**: Voor browser interacties en research
+- **[Visual Studio Code](https://code.visualstudio.com/)**: Onze code editor
+- **[GitHub Actions](https://github.com/features/actions)**: Voor de CI/CD pipeline
+- **[Handy](https://github.com/cjpais/Handy)**: Offline speech-to-text tool die we gebruiken
+- **Parakeet v3**: Het krachtige ASR (Automatic Speech Recognition) model gebruikt door Handy
