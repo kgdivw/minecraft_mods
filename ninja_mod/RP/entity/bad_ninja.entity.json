@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:bad_ninja",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/bad_ninja"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#1C1C1C",
+        "overlay_color": "#8B0000"
+      },
+      "animations": {
+        "walk": "animation.humanoid.move",
+        "look_at_target": "animation.humanoid.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "walk": "query.modified_move_speed"
+          }
+        ]
+      }
+    }
+  }
+}

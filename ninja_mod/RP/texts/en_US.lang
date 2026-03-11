@@ -1,0 +1,6 @@
+entity.custom:good_ninja.name=Good Ninja
+entity.custom:bad_ninja.name=Bad Ninja
+entity.custom:ninja_king.name=Ninja King
+item.spawn_egg.entity.custom:good_ninja.name=Spawn Good Ninja
+item.spawn_egg.entity.custom:bad_ninja.name=Spawn Bad Ninja
+item.spawn_egg.entity.custom:ninja_king.name=Spawn Ninja King
