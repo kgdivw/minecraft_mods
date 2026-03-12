@@ -24,6 +24,9 @@
         "look_at_target": "animation.humanoid.look_at_target"
       },
       "scripts": {
+        "initialize": [
+          "variable.tcos0 = 0;"
+        ],
         "animate": [
           "look_at_target",
           {

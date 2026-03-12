@@ -4,7 +4,7 @@
     "description": {
       "identifier": "custom:ninja_castle_feature"
     },
-    "structure_name": "ninja_castle",
+    "structure_name": "mystructure:ninja_castle",
     "adjustment_radius": 4,
     "facing_direction": "random",
     "constraints": {
