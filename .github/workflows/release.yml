@@ -11,49 +11,62 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Create combined addon structure
+
+      - name: Create Blauwe Piglins addon
         run: |
-          mkdir -p build/addon
-          # Copy folders directly to build root for correct zipping structure
-          cp -r blauwe_piglins/BP build/addon/
-          cp -r blauwe_piglins/RP build/addon/
-      
-      - name: Create .mcaddon file
-        run: |
-          cd build/addon
-          # Zip BP and RP folders into a .mcaddon file
+          mkdir -p build/blauwe_piglins
+          cp -r blauwe_piglins/BP build/blauwe_piglins/
+          cp -r blauwe_piglins/RP build/blauwe_piglins/
+          cd build/blauwe_piglins
           zip -r ../BlauwePiglins.mcaddon BP/ RP/
-      
+
+      - name: Create Ninja Mod addon
+        run: |
+          mkdir -p build/ninja_mod
+          cp -r ninja_mod/BP build/ninja_mod/
+          cp -r ninja_mod/RP build/ninja_mod/
+          cd build/ninja_mod
+          zip -r ../NinjaMod.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-      
+
       - name: Update Latest Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
           name: Latest Build
           body: |
-            🎮 **Blauwe Piglins - Latest Build**
-            
+            🎮 **Minecraft Mods - Latest Build**
+
             Automatisch gegenereerd van commit: ${{ steps.sha.outputs.short_sha }}
-            
+
             ## Installatie
-            1. Download `BlauwePiglins.mcaddon`
-            2. Open met Minecraft Bedrock Edition op je tablet
-            3. De addon wordt automatisch geïmporteerd (Behavior + Resource Pack)
-            4. Activeer het Behavior Pack in je wereld instellingen (Resource Pack wordt vaak automatisch mee geactiveerd)
-            
-            ## Features
+            1. Download het `.mcaddon` bestand van je keuze
+            2. Open met Minecraft Bedrock Edition
+            3. De addon wordt automatisch geïmporteerd
+            4. Activeer het Behavior Pack in je wereld instellingen
+
+            ## Mods
+
+            ### Blauwe Piglins
             - Blauwe piglins die vrienden worden met diamonds (5 stuks)
             - Volgen de speler en vallen vijandige piglins aan
+
+            ### Ninja Mod
+            - Goede ninja's (handelaars die ninja spullen verkopen)
+            - Slechte ninja's (vijandige mobs die 's nachts spawnen)
+            - Ninja Koningen (boss mobs met 80 HP)
+            - Ninja tempels, kastelen en winkels
+            - Goede en slechte ninja's vechten tegen elkaar
           files: |
             build/BlauwePiglins.mcaddon
+            build/NinjaMod.mcaddon
           prerelease: false
           draft: false
         env:
