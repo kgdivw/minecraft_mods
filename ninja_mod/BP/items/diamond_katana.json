@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:diamond_katana",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.sword"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:damage": 12,
+      "minecraft:durability": {
+        "max_durability": 1000
+      },
+      "minecraft:icon": {
+        "texture": "diamond_katana"
+      },
+      "minecraft:display_name": {
+        "value": "item.custom:diamond_katana.name"
+      }
+    }
+  }
+}

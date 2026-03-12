@@ -1,0 +1,24 @@
+{
+  "resource_pack_name": "Ninja Mod",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "katana": {
+      "textures": "textures/items/katana"
+    },
+    "diamond_katana": {
+      "textures": "textures/items/diamond_katana"
+    },
+    "bo_stok": {
+      "textures": "textures/items/bo_stok"
+    },
+    "shuriken": {
+      "textures": "textures/items/shuriken"
+    },
+    "ninja_masker": {
+      "textures": "textures/items/ninja_masker"
+    },
+    "ninja_harnas": {
+      "textures": "textures/items/ninja_harnas"
+    }
+  }
+}
