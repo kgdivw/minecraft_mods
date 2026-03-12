@@ -20,8 +20,9 @@
           "minecraft:snow_layer",
           "minecraft:tallgrass",
           "minecraft:short_grass",
-          "minecraft:leaves",
-          "minecraft:leaves2",
+          "minecraft:oak_leaves",
+          "minecraft:birch_leaves",
+          "minecraft:spruce_leaves",
           "minecraft:water"
         ]
       }
