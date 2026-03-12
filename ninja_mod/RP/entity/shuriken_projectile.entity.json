@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:shuriken_projectile",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/shuriken"
+      },
+      "geometry": {
+        "default": "geometry.shuriken_projectile"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "animations": {
+        "spin": "animation.shuriken.spin"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.tcos0 = 0;"
+        ],
+        "animate": [
+          "spin"
+        ]
+      }
+    }
+  }
+}

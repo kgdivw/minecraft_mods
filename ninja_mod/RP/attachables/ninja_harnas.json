@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "custom:ninja_harnas",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ninja_harnas_model"
+      },
+      "geometry": {
+        "default": "geometry.ninja_harnas"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "initialize": [
+          "variable.tcos0 = 0;"
+        ]
+      }
+    }
+  }
+}

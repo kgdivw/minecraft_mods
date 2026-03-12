@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "custom:ninja_masker",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ninja_masker_model"
+      },
+      "geometry": {
+        "default": "geometry.ninja_masker"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "initialize": [
+          "variable.tcos0 = 0;"
+        ],
+        "parent_setup": "(variable.helmet_layer_visible = 0.0);"
+      }
+    }
+  }
+}
