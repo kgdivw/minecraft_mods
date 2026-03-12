@@ -21,7 +21,7 @@
             },
             "animations": {
                 "walk": "animation.humanoid.move",
-                "look_at_target": "animation.humanoid.look_at_target"
+                "look_at_target": "animation.humanoid.look_at_target.default"
             },
             "scripts": {
                 "animate": [
