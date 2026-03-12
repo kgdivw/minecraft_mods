@@ -106,20 +106,13 @@ class NBTWriter:
         return self.buf.getvalue()
 
 
-def build_block_palette(block_names):
-    """Build the block palette NBT section.
-
-    block_names: list of block name strings like "minecraft:stone_bricks"
-    Returns palette entries as list of dicts with name and states.
-    """
-    return block_names
-
-
-def create_mcstructure(size_x, size_y, size_z, blocks, block_palette, origin=(0, 0, 0)):
+def create_mcstructure(size_x, size_y, size_z, blocks, block_palette,
+                       chest_positions=None, origin=(0, 0, 0)):
     """Create a complete .mcstructure file.
 
     blocks: 3D array indexed as blocks[x][y][z] = palette_index
     block_palette: list of block name strings
+    chest_positions: list of (x, y, z, loot_table_path) tuples for chests
     """
     w = NBTWriter()
 
@@ -147,8 +140,6 @@ def create_mcstructure(size_x, size_y, size_z, blocks, block_palette, origin=(0,
     # Block indices - two layers (primary and secondary/waterlogged)
     w.begin_list("block_indices", TAG_LIST, 2)
 
-    # Primary block layer
-    total_blocks = size_x * size_y * size_z
     # Flatten blocks array: iterate x, y, z
     flat_blocks = []
     for x in range(size_x):
@@ -178,17 +169,32 @@ def create_mcstructure(size_x, size_y, size_z, blocks, block_palette, origin=(0,
     # Block palette
     w.begin_list("block_palette", TAG_COMPOUND, len(block_palette))
     for block_name in block_palette:
-        # Each palette entry is a compound with "name", "states", and "version"
         w.write_tag_string("name", block_name)
         w.begin_compound("states")
         w.end_compound()  # states
-        # Version 18090528 corresponds to Minecraft Bedrock 1.20.x
         w.write_tag_int("version", 18090528)
         w.write_inline_compound_end()  # palette entry
 
-    # Block position data (empty)
+    # Block position data (chest loot tables)
     w.begin_compound("block_position_data")
-    w.end_compound()
+
+    if chest_positions:
+        for cx, cy, cz, loot_table in chest_positions:
+            # Flattened index: x * (size_y * size_z) + y * size_z + z
+            flat_index = cx * (size_y * size_z) + cy * size_z + cz
+            w.begin_compound(str(flat_index))
+            w.begin_compound("block_entity_data")
+            w.write_tag_string("LootTable", loot_table)
+            w.write_tag_long("LootTableSeed", 0)
+            w.write_tag_string("id", "Chest")
+            w.write_tag_byte("isMovable", 1)
+            w.write_tag_int("x", cx)
+            w.write_tag_int("y", cy)
+            w.write_tag_int("z", cz)
+            w.end_compound()  # block_entity_data
+            w.end_compound()  # flat_index
+
+    w.end_compound()  # block_position_data
 
     w.end_compound()  # default
     w.end_compound()  # palette
@@ -208,10 +214,9 @@ AIR = -1  # -1 means air/no block
 
 
 def generate_ninja_temple(output_path):
-    """Generate a 11x8x11 ninja temple with pillars and open design."""
+    """Generate a 11x8x11 ninja temple with pillars, chests, and open design."""
     sx, sy, sz = 11, 8, 11
 
-    # Palette
     palette = [
         "minecraft:stone_bricks",       # 0
         "minecraft:mossy_stone_bricks",  # 1
@@ -219,6 +224,7 @@ def generate_ninja_temple(output_path):
         "minecraft:lantern",             # 3
         "minecraft:dark_oak_planks",     # 4
         "minecraft:dark_oak_slab",       # 5
+        "minecraft:chest",              # 6
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -261,14 +267,26 @@ def generate_ninja_temple(output_path):
     for x in range(3, 8):
         blocks[x][0][0] = 2
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette)
+    # Chests with ninja loot (y=1)
+    chest_loot = "loot_tables/chests/ninja_temple_chest.json"
+    blocks[2][1][9] = 6  # back left
+    blocks[8][1][9] = 6  # back right
+    blocks[5][1][5] = 6  # center
+
+    chest_positions = [
+        (2, 1, 9, chest_loot),
+        (8, 1, 9, chest_loot),
+        (5, 1, 5, chest_loot),
+    ]
+
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created temple: {output_path} ({len(data)} bytes)")
 
 
 def generate_ninja_castle(output_path):
-    """Generate a 15x12x15 ninja castle with walls, towers, and throne."""
+    """Generate a 15x12x15 ninja castle with walls, towers, throne, and chests."""
     sx, sy, sz = 15, 12, 15
 
     palette = [
@@ -279,8 +297,9 @@ def generate_ninja_castle(output_path):
         "minecraft:lantern",             # 4
         "minecraft:dark_oak_fence",      # 5
         "minecraft:gold_block",          # 6
-        "minecraft:red_carpet",          # 7 - actually "minecraft:carpet" with data
+        "minecraft:red_carpet",          # 7
         "minecraft:obsidian",            # 8
+        "minecraft:chest",              # 9
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -313,7 +332,6 @@ def generate_ninja_castle(output_path):
     for tx, tz in tower_corners:
         for y in range(1, 10):
             blocks[tx][y][tz] = 8  # obsidian towers
-            # Make towers 3x3
             for dx in [-1, 0, 1]:
                 for dz in [-1, 0, 1]:
                     nx, nz = tx + dx, tz + dz
@@ -357,14 +375,30 @@ def generate_ninja_castle(output_path):
     for lx, lz in lantern_positions:
         blocks[lx][6][lz] = 4
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette)
+    # Chests with castle loot (y=1) - near throne and in corners
+    chest_loot = "loot_tables/chests/ninja_castle_chest.json"
+    blocks[5][1][12] = 9   # left of throne
+    blocks[9][1][12] = 9   # right of throne
+    blocks[2][1][2] = 9    # front left corner
+    blocks[12][1][2] = 9   # front right corner
+    blocks[7][1][7] = 9    # center
+
+    chest_positions = [
+        (5, 1, 12, chest_loot),
+        (9, 1, 12, chest_loot),
+        (2, 1, 2, chest_loot),
+        (12, 1, 2, chest_loot),
+        (7, 1, 7, chest_loot),
+    ]
+
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created castle: {output_path} ({len(data)} bytes)")
 
 
 def generate_ninja_shop(output_path):
-    """Generate a 7x6x7 ninja shop - small wooden building."""
+    """Generate a 7x6x7 ninja shop - small wooden building with chests."""
     sx, sy, sz = 7, 6, 7
 
     palette = [
@@ -374,7 +408,7 @@ def generate_ninja_shop(output_path):
         "minecraft:glass_pane",          # 3
         "minecraft:lantern",             # 4
         "minecraft:oak_fence",           # 5
-        "minecraft:barrel",              # 6
+        "minecraft:chest",              # 6
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -412,10 +446,17 @@ def generate_ninja_shop(output_path):
     for z in range(sz):
         blocks[3][5][z] = 2
 
-    # Interior: barrel (shop counter, y=1)
+    # Chests with shop loot (y=1) - along back wall
+    chest_loot = "loot_tables/chests/ninja_shop_chest.json"
     blocks[2][1][5] = 6
     blocks[3][1][5] = 6
     blocks[4][1][5] = 6
+
+    chest_positions = [
+        (2, 1, 5, chest_loot),
+        (3, 1, 5, chest_loot),
+        (4, 1, 5, chest_loot),
+    ]
 
     # Lantern inside
     blocks[3][3][3] = 4
@@ -424,7 +465,7 @@ def generate_ninja_shop(output_path):
     blocks[2][1][0] = 5
     blocks[4][1][0] = 5
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette)
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created shop: {output_path} ({len(data)} bytes)")
