@@ -9,8 +9,11 @@
       "placement_pass": "first_pass",
       "minecraft:biome_filter": {
         "any_of": [
+          { "test": "has_biome_tag", "value": "plains" },
+          { "test": "has_biome_tag", "value": "desert" },
           { "test": "has_biome_tag", "value": "forest" },
-          { "test": "has_biome_tag", "value": "taiga" }
+          { "test": "has_biome_tag", "value": "taiga" },
+          { "test": "has_biome_tag", "value": "savanna" }
         ]
       }
     },
@@ -18,7 +21,7 @@
       "iterations": 1,
       "scatter_chance": {
         "numerator": 1,
-        "denominator": 500
+        "denominator": 100
       },
       "x": {
         "distribution": "uniform",

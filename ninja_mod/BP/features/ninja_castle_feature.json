@@ -10,7 +10,21 @@
     "constraints": {
       "unburied": {},
       "block_intersection": {
-        "block_allowlist": ["minecraft:air"]
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:grass_block",
+          "minecraft:dirt",
+          "minecraft:stone",
+          "minecraft:sand",
+          "minecraft:gravel",
+          "minecraft:snow_layer",
+          "minecraft:tallgrass",
+          "minecraft:short_grass",
+          "minecraft:flowers",
+          "minecraft:leaves",
+          "minecraft:leaves2",
+          "minecraft:water"
+        ]
       }
     }
   }
