@@ -10,3 +10,4 @@ item.custom:bo_stok.name=Bo Stok
 item.custom:shuriken.name=Shuriken
 item.custom:ninja_masker.name=Ninja Masker
 item.custom:ninja_harnas.name=Ninja Harnas
+entity.custom:shuriken_projectile.name=Shuriken
