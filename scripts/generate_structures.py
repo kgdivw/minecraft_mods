@@ -107,12 +107,14 @@ class NBTWriter:
 
 
 def create_mcstructure(size_x, size_y, size_z, blocks, block_palette,
-                       chest_positions=None, origin=(0, 0, 0)):
+                       chest_positions=None, spawner_positions=None,
+                       origin=(0, 0, 0)):
     """Create a complete .mcstructure file.
 
     blocks: 3D array indexed as blocks[x][y][z] = palette_index
     block_palette: list of block name strings
     chest_positions: list of (x, y, z, loot_table_path) tuples for chests
+    spawner_positions: list of (x, y, z, entity_id) tuples for mob spawners
     """
     w = NBTWriter()
 
@@ -180,7 +182,6 @@ def create_mcstructure(size_x, size_y, size_z, blocks, block_palette,
 
     if chest_positions:
         for cx, cy, cz, loot_table in chest_positions:
-            # Flattened index: x * (size_y * size_z) + y * size_z + z
             flat_index = cx * (size_y * size_z) + cy * size_z + cz
             w.begin_compound(str(flat_index))
             w.begin_compound("block_entity_data")
@@ -191,6 +192,27 @@ def create_mcstructure(size_x, size_y, size_z, blocks, block_palette,
             w.write_tag_int("x", cx)
             w.write_tag_int("y", cy)
             w.write_tag_int("z", cz)
+            w.end_compound()  # block_entity_data
+            w.end_compound()  # flat_index
+
+    if spawner_positions:
+        for sx_pos, sy_pos, sz_pos, entity_id in spawner_positions:
+            flat_index = sx_pos * (size_y * size_z) + sy_pos * size_z + sz_pos
+            w.begin_compound(str(flat_index))
+            w.begin_compound("block_entity_data")
+            w.write_tag_string("EntityIdentifier", entity_id)
+            w.write_tag_string("id", "MobSpawner")
+            w.write_tag_byte("isMovable", 1)
+            w.write_tag_short("Delay", 20)
+            w.write_tag_short("MinSpawnDelay", 200)
+            w.write_tag_short("MaxSpawnDelay", 800)
+            w.write_tag_short("SpawnCount", 1)
+            w.write_tag_short("MaxNearbyEntities", 4)
+            w.write_tag_short("RequiredPlayerRange", 16)
+            w.write_tag_short("SpawnRange", 4)
+            w.write_tag_int("x", sx_pos)
+            w.write_tag_int("y", sy_pos)
+            w.write_tag_int("z", sz_pos)
             w.end_compound()  # block_entity_data
             w.end_compound()  # flat_index
 
@@ -225,6 +247,7 @@ def generate_ninja_temple(output_path):
         "minecraft:dark_oak_planks",     # 4
         "minecraft:dark_oak_slab",       # 5
         "minecraft:chest",              # 6
+        "minecraft:mob_spawner",        # 7
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -279,7 +302,14 @@ def generate_ninja_temple(output_path):
         (5, 1, 5, chest_loot),
     ]
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
+    # Good ninja spawner in the temple center
+    blocks[5][1][3] = 7
+    spawner_positions = [
+        (5, 1, 3, "custom:good_ninja"),
+    ]
+
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions,
+                              spawner_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created temple: {output_path} ({len(data)} bytes)")
@@ -300,6 +330,7 @@ def generate_ninja_castle(output_path):
         "minecraft:red_carpet",          # 7
         "minecraft:obsidian",            # 8
         "minecraft:chest",              # 9
+        "minecraft:mob_spawner",        # 10
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -391,7 +422,19 @@ def generate_ninja_castle(output_path):
         (7, 1, 7, chest_loot),
     ]
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
+    # Mob spawners: ninja king near throne, bad ninjas at patrol points
+    blocks[7][1][11] = 10   # king spawner near throne
+    blocks[3][1][3] = 10    # bad ninja spawner front left
+    blocks[11][1][3] = 10   # bad ninja spawner front right
+
+    spawner_positions = [
+        (7, 1, 11, "custom:ninja_king"),
+        (3, 1, 3, "custom:bad_ninja"),
+        (11, 1, 3, "custom:bad_ninja"),
+    ]
+
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions,
+                              spawner_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created castle: {output_path} ({len(data)} bytes)")
@@ -409,6 +452,7 @@ def generate_ninja_shop(output_path):
         "minecraft:lantern",             # 4
         "minecraft:oak_fence",           # 5
         "minecraft:chest",              # 6
+        "minecraft:mob_spawner",        # 7
     ]
 
     blocks = create_3d_array(sx, sy, sz)
@@ -461,11 +505,18 @@ def generate_ninja_shop(output_path):
     # Lantern inside
     blocks[3][3][3] = 4
 
+    # Good ninja spawner (shopkeeper)
+    blocks[3][1][3] = 7
+    spawner_positions = [
+        (3, 1, 3, "custom:good_ninja"),
+    ]
+
     # Fence posts outside (shop sign posts)
     blocks[2][1][0] = 5
     blocks[4][1][0] = 5
 
-    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions)
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions,
+                              spawner_positions)
     with open(output_path, "wb") as f:
         f.write(data)
     print(f"Created shop: {output_path} ({len(data)} bytes)")
