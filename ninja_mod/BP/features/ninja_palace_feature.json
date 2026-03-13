@@ -1,0 +1,31 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "custom:ninja_palace_feature"
+    },
+    "structure_name": "mystructure:ninja_palace",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "unburied": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:grass_block",
+          "minecraft:dirt",
+          "minecraft:stone",
+          "minecraft:sand",
+          "minecraft:gravel",
+          "minecraft:snow_layer",
+          "minecraft:tallgrass",
+          "minecraft:short_grass",
+          "minecraft:oak_leaves",
+          "minecraft:birch_leaves",
+          "minecraft:spruce_leaves",
+          "minecraft:water"
+        ]
+      }
+    }
+  }
+}
