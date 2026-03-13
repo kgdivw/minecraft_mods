@@ -522,6 +522,240 @@ def generate_ninja_shop(output_path):
     print(f"Created shop: {output_path} ({len(data)} bytes)")
 
 
+def generate_ninja_palace(output_path):
+    """Generate a 45x24x45 ninja palace - 3x castle size with KOBE on the roof."""
+    sx, sy, sz = 45, 24, 45
+
+    palette = [
+        "minecraft:stone_bricks",       # 0
+        "minecraft:mossy_stone_bricks",  # 1
+        "minecraft:quartz_block",       # 2
+        "minecraft:dark_oak_planks",    # 3
+        "minecraft:dark_oak_slab",      # 4
+        "minecraft:lantern",            # 5
+        "minecraft:dark_oak_fence",     # 6
+        "minecraft:gold_block",         # 7
+        "minecraft:red_carpet",         # 8
+        "minecraft:obsidian",           # 9
+        "minecraft:chest",              # 10
+        "minecraft:mob_spawner",        # 11
+        "minecraft:diamond_block",      # 12
+        "minecraft:emerald_block",      # 13
+        "minecraft:glass_pane",         # 14
+    ]
+
+    blocks = create_3d_array(sx, sy, sz)
+
+    # === FLOOR (y=0): quartz with stone brick border ===
+    for x in range(sx):
+        for z in range(sz):
+            if x == 0 or x == sx-1 or z == 0 or z == sz-1:
+                blocks[x][0][z] = 0
+            else:
+                blocks[x][0][z] = 2  # quartz
+
+    # Red carpet grand hallway (center x=22, full length)
+    for z in range(2, 43):
+        blocks[22][0][z] = 8
+        blocks[21][0][z] = 8
+        blocks[23][0][z] = 8
+
+    # === OUTER WALLS (y=1 to y=14) ===
+    for y in range(1, 15):
+        for x in range(sx):
+            blocks[x][y][0] = 0
+            blocks[x][y][44] = 0
+        for z in range(sz):
+            blocks[0][y][z] = 0
+            blocks[44][y][z] = 0
+
+    # Windows on walls (y=4-6, every 5 blocks)
+    for i in range(5, 40, 5):
+        for y in range(4, 7):
+            blocks[i][y][0] = 14   # front
+            blocks[i][y][44] = 14  # back
+        for y in range(4, 7):
+            blocks[0][y][i] = 14   # left
+            blocks[44][y][i] = 14  # right
+
+    # Grand gate (front z=0, x=19-25, y=1-8)
+    for x in range(19, 26):
+        for y in range(1, 9):
+            blocks[x][y][0] = -1
+
+    # Gate arch top
+    for x in range(19, 26):
+        blocks[x][9][0] = 7  # gold arch
+
+    # === CORNER TOWERS (y=1 to y=20) ===
+    tower_corners = [(0, 0), (0, 44), (44, 0), (44, 44)]
+    for tx, tz in tower_corners:
+        for y in range(1, 21):
+            for dx in range(-2, 3):
+                for dz in range(-2, 3):
+                    nx, nz = tx + dx, tz + dz
+                    if 0 <= nx < sx and 0 <= nz < sz:
+                        if dx*dx + dz*dz <= 5:  # circular-ish tower
+                            blocks[nx][y][nz] = 9  # obsidian
+        # Tower top: gold cap
+        for dx in range(-1, 2):
+            for dz in range(-1, 2):
+                nx, nz = tx + dx, tz + dz
+                if 0 <= nx < sx and 0 <= nz < sz:
+                    blocks[nx][21][nz] = 7
+
+    # === INNER WALLS (create rooms) ===
+    # Divide palace into sections with inner walls at z=15 and z=30
+    for y in range(1, 15):
+        for x in range(1, 44):
+            blocks[x][y][15] = 0
+            blocks[x][y][30] = 0
+    # Doorways in inner walls
+    for y in range(1, 6):
+        blocks[22][y][15] = -1
+        blocks[21][y][15] = -1
+        blocks[23][y][15] = -1
+        blocks[22][y][30] = -1
+        blocks[21][y][30] = -1
+        blocks[23][y][30] = -1
+
+    # === THRONE ROOM (back section z=31-43) ===
+    # Grand throne
+    for x in range(20, 25):
+        blocks[x][1][42] = 7   # gold base
+        blocks[x][2][42] = 7   # gold back
+        blocks[x][3][42] = 12  # diamond top
+    blocks[22][4][42] = 7  # gold crown piece
+
+    # Throne room pillars
+    for px in [16, 28]:
+        for pz in [34, 40]:
+            for y in range(1, 14):
+                blocks[px][y][pz] = 2  # quartz pillars
+
+    # === ROOF (y=15): dark oak planks ===
+    for x in range(1, 44):
+        for z in range(1, 44):
+            blocks[x][15][z] = 3
+
+    # === BATTLEMENTS (y=15 on walls) ===
+    for x in range(sx):
+        if x % 2 == 0:
+            blocks[x][15][0] = 0
+            blocks[x][15][44] = 0
+    for z in range(sz):
+        if z % 2 == 0:
+            blocks[0][15][z] = 0
+            blocks[44][15][z] = 0
+
+    # Fences between battlements
+    for x in range(sx):
+        if x % 2 == 1:
+            blocks[x][15][0] = 6
+            blocks[x][15][44] = 6
+    for z in range(sz):
+        if z % 2 == 1:
+            blocks[0][15][z] = 6
+            blocks[44][15][z] = 6
+
+    # === "KOBE" ON THE ROOF (y=16, using gold blocks) ===
+    # Each letter is 5 wide x 7 tall, 2 blocks gap between letters
+    # Total width: 4*5 + 3*2 = 26 blocks
+    # Start at x=10, z=10
+
+    # Letter pixel patterns (7 rows x 5 cols each)
+    K = [
+        [1,0,0,0,1],
+        [1,0,0,1,0],
+        [1,0,1,0,0],
+        [1,1,0,0,0],
+        [1,0,1,0,0],
+        [1,0,0,1,0],
+        [1,0,0,0,1],
+    ]
+    O = [
+        [0,1,1,1,0],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [0,1,1,1,0],
+    ]
+    B = [
+        [1,1,1,1,0],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [1,1,1,1,0],
+        [1,0,0,0,1],
+        [1,0,0,0,1],
+        [1,1,1,1,0],
+    ]
+    E = [
+        [1,1,1,1,1],
+        [1,0,0,0,0],
+        [1,0,0,0,0],
+        [1,1,1,1,0],
+        [1,0,0,0,0],
+        [1,0,0,0,0],
+        [1,1,1,1,1],
+    ]
+
+    letters = [K, O, B, E]
+    start_x = 10
+    start_z = 19  # centered-ish on the roof
+
+    for li, letter in enumerate(letters):
+        lx = start_x + li * 7  # 5 wide + 2 gap
+        for row in range(7):
+            for col in range(5):
+                if letter[row][col] == 1:
+                    blocks[lx + col][16][start_z + row] = 7  # gold block
+
+    # === LANTERNS ===
+    for lx in range(6, 40, 8):
+        for lz in range(6, 40, 8):
+            if blocks[lx][14][lz] == -1:  # only in air
+                blocks[lx][14][lz] = 5
+    # Force some lanterns
+    for lx in [10, 22, 34]:
+        for lz in [8, 22, 36]:
+            blocks[lx][14][lz] = 5
+
+    # === CHESTS (best loot) ===
+    chest_loot = "loot_tables/chests/ninja_castle_chest.json"
+    chest_coords = [
+        (10, 1, 5), (34, 1, 5),     # front room
+        (10, 1, 20), (34, 1, 20),   # middle room
+        (10, 1, 38), (34, 1, 38),   # throne room
+        (22, 1, 40),                 # near throne
+    ]
+    for cx, cy, cz in chest_coords:
+        blocks[cx][cy][cz] = 10
+    chest_positions = [(cx, cy, cz, chest_loot) for cx, cy, cz in chest_coords]
+
+    # === MOB SPAWNERS (good ninjas) ===
+    spawner_coords = [
+        (15, 1, 8),   # front room left
+        (29, 1, 8),   # front room right
+        (15, 1, 22),  # middle room left
+        (29, 1, 22),  # middle room right
+        (15, 1, 36),  # throne room left
+        (29, 1, 36),  # throne room right
+    ]
+    for mx, my, mz in spawner_coords:
+        blocks[mx][my][mz] = 11
+    spawner_positions = [
+        (mx, my, mz, "custom:good_ninja") for mx, my, mz in spawner_coords
+    ]
+
+    data = create_mcstructure(sx, sy, sz, blocks, palette, chest_positions,
+                              spawner_positions)
+    with open(output_path, "wb") as f:
+        f.write(data)
+    print(f"Created palace: {output_path} ({len(data)} bytes)")
+
+
 if __name__ == "__main__":
     base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     struct_dir = os.path.join(base, "ninja_mod", "BP", "structures")
@@ -530,4 +764,5 @@ if __name__ == "__main__":
     generate_ninja_temple(os.path.join(struct_dir, "ninja_temple.mcstructure"))
     generate_ninja_castle(os.path.join(struct_dir, "ninja_castle.mcstructure"))
     generate_ninja_shop(os.path.join(struct_dir, "ninja_shop.mcstructure"))
+    generate_ninja_palace(os.path.join(struct_dir, "ninja_palace.mcstructure"))
     print("All structures generated!")
