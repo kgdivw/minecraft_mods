@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "zoo:parrot",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/zoo_parrot"
+            },
+            "geometry": {
+                "default": "geometry.parrot"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#FF6060",
+                "overlay_color": "#33DD33"
+            },
+            "animations": {
+                "walk": "animation.parrot.moving",
+                "look_at_target": "animation.common.look_at_target"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    {
+                        "walk": "query.modified_move_speed"
+                    }
+                ]
+            }
+        }
+    }
+}

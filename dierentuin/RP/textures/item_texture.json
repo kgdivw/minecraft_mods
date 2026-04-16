@@ -1,0 +1,21 @@
+{
+    "resource_pack_name": "Dierentuin",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "cage_empty": {
+            "textures": "textures/items/cage_empty"
+        },
+        "cage_lion": {
+            "textures": "textures/items/cage_lion"
+        },
+        "cage_panda": {
+            "textures": "textures/items/cage_panda"
+        },
+        "cage_parrot": {
+            "textures": "textures/items/cage_parrot"
+        },
+        "cage_elephant": {
+            "textures": "textures/items/cage_elephant"
+        }
+    }
+}

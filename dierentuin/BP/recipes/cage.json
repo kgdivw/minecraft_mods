@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "zoo:cage"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "I I",
+            "I I",
+            "III"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_bars"
+            }
+        },
+        "result": {
+            "item": "zoo:cage_empty",
+            "count": 2
+        }
+    }
+}

@@ -32,6 +32,14 @@ jobs:
           cd build/ninja_mod
           zip -r ../NinjaMod.mcaddon BP/ RP/
 
+      - name: Create Dierentuin addon
+        run: |
+          mkdir -p build/dierentuin
+          cp -r dierentuin/BP build/dierentuin/
+          cp -r dierentuin/RP build/dierentuin/
+          cd build/dierentuin
+          zip -r ../Dierentuin.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -64,9 +72,15 @@ jobs:
             - Ninja Koningen (boss mobs met 80 HP)
             - Ninja tempels, kastelen en winkels
             - Goede en slechte ninja's vechten tegen elkaar
+
+            ### Dierentuin
+            - Vang wilde dieren (leeuw, panda, papegaai, olifant) met kooien
+            - Rijd met een bestuurbaar karretje door je dierentuin
+            - Bouw je dierentuin met `/function build_zoo`
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
+            build/Dierentuin.mcaddon
           prerelease: false
           draft: false
         env:

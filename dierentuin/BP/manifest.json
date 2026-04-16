@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Dierentuin Behavior Pack",
+        "description": "Vang wilde dieren en breng ze naar je dierentuin!",
+        "uuid": "f1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "a2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b3c4d5e6-f7a8-4b9c-0d1e-2f3a4b5c6d7e",
+            "version": [1, 0, 0]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "zoo:cage_parrot",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.miscellaneous"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "cage_parrot"
+            },
+            "minecraft:display_name": {
+                "value": "item.zoo:cage_parrot.name"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:entity_placer": {
+                "entity": "zoo:parrot",
+                "use_on": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt",
+                    "minecraft:sand",
+                    "minecraft:gravel",
+                    "minecraft:stone",
+                    "minecraft:cobblestone",
+                    "minecraft:podzol",
+                    "minecraft:mycelium",
+                    "minecraft:moss_block"
+                ]
+            }
+        }
+    }
+}

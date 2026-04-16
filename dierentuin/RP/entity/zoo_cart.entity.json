@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "zoo:cart",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/zoo_cart"
+            },
+            "geometry": {
+                "default": "geometry.minecart"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#4CAF50",
+                "overlay_color": "#2E7D32"
+            }
+        }
+    }
+}

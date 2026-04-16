@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "zoo:panda",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/zoo_panda"
+            },
+            "geometry": {
+                "default": "geometry.panda"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#F0F0F0",
+                "overlay_color": "#333333"
+            },
+            "animations": {
+                "walk": "animation.quadruped.walk",
+                "look_at_target": "animation.common.look_at_target"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    {
+                        "walk": "query.modified_move_speed"
+                    }
+                ]
+            }
+        }
+    }
+}
