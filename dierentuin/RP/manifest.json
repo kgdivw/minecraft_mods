@@ -3,14 +3,14 @@
     "header": {
         "name": "Dierentuin Resource Pack",
         "description": "Textures en models voor de dierentuin addon",
-        "uuid": "b3c4d5e6-f7a8-4b9c-0d1e-2f3a4b5c6d7e",
+        "uuid": "34fb1354-d939-45b8-9324-595feb057ce5",
         "version": [1, 0, 0],
         "min_engine_version": [1, 20, 0]
     },
     "modules": [
         {
             "type": "resources",
-            "uuid": "c4d5e6f7-a8b9-4c0d-1e2f-3a4b5c6d7e8f",
+            "uuid": "acf6aa08-1e08-4136-99a6-efe0113f89dd",
             "version": [1, 0, 0]
         }
     ]
