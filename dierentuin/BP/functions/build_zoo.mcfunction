@@ -45,7 +45,7 @@ setblock ~2 ~2 ~-15 stone_bricks
 # Poort boog
 fill ~-2 ~3 ~-15 ~2 ~3 ~-15 stone_bricks
 # Bord boven poort
-setblock ~0 ~3 ~-16 oak_wall_sign
+setblock ~0 ~3 ~-16 wall_sign
 
 # --- Hok 1: Leeuw (noordwest) ---
 fill ~-14 ~ ~2 ~-3 ~1 ~2 oak_fence
@@ -58,7 +58,7 @@ setblock ~-3 ~1 ~8 air
 # Zand vloer
 fill ~-13 ~-1 ~3 ~-4 ~-1 ~13 sand
 # Naambordje
-setblock ~-3 ~ ~7 oak_wall_sign
+setblock ~-3 ~ ~7 wall_sign
 
 # --- Hok 2: Panda (noordoost) ---
 fill ~3 ~ ~2 ~14 ~1 ~2 oak_fence
@@ -71,7 +71,7 @@ setblock ~3 ~1 ~8 air
 # Gras + bamboo vloer
 fill ~4 ~-1 ~3 ~13 ~-1 ~13 podzol
 # Naambordje
-setblock ~3 ~ ~7 oak_wall_sign
+setblock ~3 ~ ~7 wall_sign
 
 # --- Hok 3: Papegaai (zuidwest) ---
 fill ~-14 ~ ~-14 ~-3 ~1 ~-14 oak_fence
@@ -90,7 +90,7 @@ setblock ~-10 ~2 ~-10 jungle_leaves
 setblock ~-7 ~ ~-7 jungle_log
 setblock ~-7 ~1 ~-7 jungle_leaves
 # Naambordje
-setblock ~-3 ~ ~-7 oak_wall_sign
+setblock ~-3 ~ ~-7 wall_sign
 
 # --- Hok 4: Olifant (zuidoost) ---
 fill ~3 ~ ~-14 ~14 ~1 ~-14 oak_fence
@@ -105,7 +105,7 @@ fill ~4 ~-1 ~-13 ~13 ~-1 ~-4 coarse_dirt
 # Waterplaats
 fill ~8 ~-1 ~-10 ~11 ~-1 ~-8 water
 # Naambordje
-setblock ~3 ~ ~-7 oak_wall_sign
+setblock ~3 ~ ~-7 wall_sign
 
 # --- Karretje parkeerplaats bij ingang ---
 fill ~-4 ~-1 ~-18 ~4 ~-1 ~-16 stone_bricks
