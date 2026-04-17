@@ -20,15 +20,11 @@
                 "overlay_color": "#00CC00"
             },
             "animations": {
-                "walk": "animation.parrot.moving",
                 "look_at_target": "animation.common.look_at_target"
             },
             "scripts": {
                 "animate": [
-                    "look_at_target",
-                    {
-                        "walk": "query.modified_move_speed"
-                    }
+                    "look_at_target"
                 ]
             }
         }
