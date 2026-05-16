@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Superteams Behavior Pack",
+        "description": "Vorm een team van 10 villagers met een superkracht en val andere teams aan!",
+        "uuid": "dc02412f-33e6-4ffb-b522-54e5ce96d338",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "c59af861-1c07-42a1-a9ee-8940f53c54cc",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "cc33c4ca-6a94-49d6-9026-180ad0beff95",
+            "version": [1, 0, 0]
+        }
+    ]
+}

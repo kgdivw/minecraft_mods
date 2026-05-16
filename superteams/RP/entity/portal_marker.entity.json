@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "superteams:portal_marker",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/portal_marker"
+            },
+            "geometry": {
+                "default": "geometry.portal_marker"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}
