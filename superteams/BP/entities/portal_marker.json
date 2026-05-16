@@ -1,0 +1,66 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "superteams:portal_marker",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "fire": {
+                "minecraft:type_family": {
+                    "family": ["portal_marker", "fire_portal"]
+                }
+            },
+            "ice": {
+                "minecraft:type_family": {
+                    "family": ["portal_marker", "ice_portal"]
+                }
+            },
+            "lightning": {
+                "minecraft:type_family": {
+                    "family": ["portal_marker", "lightning_portal"]
+                }
+            },
+            "earth": {
+                "minecraft:type_family": {
+                    "family": ["portal_marker", "earth_portal"]
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 0.1
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    { "deals_damage": false }
+                ]
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            }
+        },
+        "events": {
+            "superteams:become_fire":      { "add": { "component_groups": ["fire"] } },
+            "superteams:become_ice":       { "add": { "component_groups": ["ice"] } },
+            "superteams:become_lightning": { "add": { "component_groups": ["lightning"] } },
+            "superteams:become_earth":     { "add": { "component_groups": ["earth"] } }
+        }
+    }
+}

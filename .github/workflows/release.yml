@@ -40,6 +40,14 @@ jobs:
           cd build/dierentuin
           zip -r ../Dierentuin.mcaddon BP/ RP/
 
+      - name: Create Superteams addon
+        run: |
+          mkdir -p build/superteams
+          cp -r superteams/BP build/superteams/
+          cp -r superteams/RP build/superteams/
+          cd build/superteams
+          zip -r ../Superteams.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -77,10 +85,18 @@ jobs:
             - Vang wilde dieren (leeuw, panda, papegaai, olifant) met kooien
             - Rijd met een bestuurbaar karretje door je dierentuin
             - Bouw je dierentuin met `/function build_zoo`
+
+            ### Superteams
+            - 4 teams met superkrachten: Vuur, IJs, Bliksem, Aarde
+            - Hub platform met 4 portals + 4 team eilanden
+            - Spawn 10 villagers van jouw team die andere teams aanvallen
+            - Bouw huizen, gigantisch herenhuis en armory
+            - Zee Paard dat over zee kan zwemmen om vijandige eilanden aan te vallen
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
             build/Dierentuin.mcaddon
+            build/Superteams.mcaddon
           prerelease: false
           draft: false
         env:

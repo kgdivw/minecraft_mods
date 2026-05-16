@@ -1,0 +1,24 @@
+{
+    "resource_pack_name": "superteams",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "soul_shard": {
+            "textures": "textures/items/soul_shard"
+        },
+        "respawn_token": {
+            "textures": "textures/items/respawn_token"
+        },
+        "fireball_item": {
+            "textures": "textures/items/fireball_item"
+        },
+        "iceball_item": {
+            "textures": "textures/items/iceball_item"
+        },
+        "thunderbolt_item": {
+            "textures": "textures/items/thunderbolt_item"
+        },
+        "earthball_item": {
+            "textures": "textures/items/earthball_item"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "superteams:sea_horse",
+            "materials": {
+                "default": "horse"
+            },
+            "textures": {
+                "default": "textures/entity/sea_horse"
+            },
+            "geometry": {
+                "default": "geometry.horse_v2"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#1D3557",
+                "overlay_color": "#A8DADC"
+            },
+            "animations": {
+                "walk": "animation.quadruped.walk",
+                "look_at_target": "animation.common.look_at_target"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    {
+                        "walk": "query.modified_move_speed"
+                    }
+                ]
+            }
+        }
+    }
+}
