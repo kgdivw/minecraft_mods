@@ -47,10 +47,10 @@ fill ~-4 ~4 ~-3 ~-4 ~4 ~3 oak_stairs
 fill ~4 ~4 ~-3 ~4 ~4 ~3 oak_stairs
 
 # --- 4 Bedden (een per villager) ---
-setblock ~-2 ~ ~-2 red_bed
-setblock ~2 ~ ~-2 red_bed
-setblock ~-2 ~ ~2 red_bed
-setblock ~2 ~ ~2 red_bed
+setblock ~-2 ~ ~-2 red_wool
+setblock ~2 ~ ~-2 red_wool
+setblock ~-2 ~ ~2 red_wool
+setblock ~2 ~ ~2 red_wool
 
 # --- Verlichting ---
 setblock ~0 ~3 ~0 lantern

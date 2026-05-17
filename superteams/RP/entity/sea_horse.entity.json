@@ -10,7 +10,7 @@
                 "default": "textures/entity/sea_horse"
             },
             "geometry": {
-                "default": "geometry.horse_v2"
+                "default": "geometry.horse.v2"
             },
             "render_controllers": [
                 "controller.render.default"

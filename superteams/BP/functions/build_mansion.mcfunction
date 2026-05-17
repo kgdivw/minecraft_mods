@@ -78,18 +78,18 @@ fill ~-1 ~9 ~-1 ~1 ~9 ~1 dark_oak_planks
 setblock ~0 ~10 ~0 lantern
 
 # --- 5 bedden begane grond (in het midden) ---
-setblock ~-5 ~ ~-5 red_bed
-setblock ~-2 ~ ~-5 red_bed
-setblock ~2 ~ ~-5 red_bed
-setblock ~5 ~ ~-5 red_bed
-setblock ~5 ~ ~-2 red_bed
+setblock ~-5 ~ ~-5 red_wool
+setblock ~-2 ~ ~-5 red_wool
+setblock ~2 ~ ~-5 red_wool
+setblock ~5 ~ ~-5 red_wool
+setblock ~5 ~ ~-2 red_wool
 
 # --- 5 bedden 1e etage ---
-setblock ~-5 ~5 ~-5 red_bed
-setblock ~-2 ~5 ~-5 red_bed
-setblock ~2 ~5 ~-5 red_bed
-setblock ~5 ~5 ~-5 red_bed
-setblock ~5 ~5 ~-2 red_bed
+setblock ~-5 ~5 ~-5 red_wool
+setblock ~-2 ~5 ~-5 red_wool
+setblock ~2 ~5 ~-5 red_wool
+setblock ~5 ~5 ~-5 red_wool
+setblock ~5 ~5 ~-2 red_wool
 
 # --- Verlichting begane grond ---
 setblock ~0 ~3 ~0 lantern

@@ -12,7 +12,7 @@ fill -517 63 -17 -483 64 17 water
 # --- IJs strand ---
 fill -515 63 -15 -485 65 15 packed_ice
 # --- Eiland binnenkant (sneeuw blokken) ---
-fill -513 66 -13 -487 66 13 snow_block
+fill -513 66 -13 -487 66 13 packed_ice
 # --- Vloer met patronen ---
 setblock -500 66 0 blue_ice
 fill -502 66 -2 -498 66 2 blue_ice
