@@ -112,18 +112,19 @@ section ul li::marker { color: #ffd966; }
   counter-reset: step;
 }
 .steps li {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 14px;
-  align-items: center;
+  position: relative;
   background: rgba(255,255,255,0.06);
-  padding: 12px 14px;
+  padding: 14px 14px 14px 72px;
   border-radius: 14px;
   border-left: 4px solid #ffd966;
+  min-height: 56px;
 }
 .steps li::before {
   counter-increment: step;
   content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 14px;
   display: grid;
   place-items: center;
   width: 42px;
@@ -135,6 +136,7 @@ section ul li::marker { color: #ffd966; }
   color: #2c1338;
   box-shadow: 0 3px 0 rgba(0,0,0,0.3);
 }
+.steps li .cmd { margin: 8px 0; }
 
 /* === TEAM CARDS === */
 .teams {
