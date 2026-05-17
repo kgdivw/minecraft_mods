@@ -3,54 +3,54 @@
 # ==========================================
 
 # --- Ruimte maken (35x35 area, y=65 tot 95 -> 30 hoog) ---
-fill 483 65 -17 517 80 17 air
-fill 483 81 -17 517 95 17 air
+fill ~-17 ~-10 ~-17 ~17 ~5 ~17 air
+fill ~-17 ~6 ~-17 ~17 ~20 ~17 air
 
 # --- Water rondom op zeespiegel (35x35 area, y=63-64) ---
-fill 483 63 -17 517 64 17 water
+fill ~-17 ~-12 ~-17 ~17 ~-11 ~17 water
 
 # --- Strand (sand 30x30) ---
-fill 485 63 -15 515 65 15 sand
+fill ~-15 ~-12 ~-15 ~15 ~-10 ~15 sand
 # --- Eiland binnenkant (red sand / red concrete powder voor vuur sfeer) ---
-fill 487 66 -13 513 66 13 red_sand
+fill ~-13 ~-9 ~-13 ~13 ~-9 ~13 red_sand
 # --- Vloer met patronen van blackstone ---
-fill 489 66 -11 511 66 11 red_sand
-setblock 500 66 0 blackstone
-fill 498 66 -2 502 66 2 blackstone
-fill 499 66 -1 501 66 1 magma
+fill ~-11 ~-9 ~-11 ~11 ~-9 ~11 red_sand
+setblock ~ ~-9 ~ blackstone
+fill ~-2 ~-9 ~-2 ~2 ~-9 ~2 blackstone
+fill ~-1 ~-9 ~-1 ~1 ~-9 ~1 magma
 
 # --- Decoratieve basalt zuilen (4 hoog) ---
-fill 487 67 -13 487 70 -13 basalt
-fill 513 67 -13 513 70 -13 basalt
-fill 487 67 13 487 70 13 basalt
-fill 513 67 13 513 70 13 basalt
-setblock 487 71 -13 fire
-setblock 513 71 -13 fire
-setblock 487 71 13 fire
-setblock 513 71 13 fire
+fill ~-13 ~-8 ~-13 ~-13 ~-5 ~-13 basalt
+fill ~13 ~-8 ~-13 ~13 ~-5 ~-13 basalt
+fill ~-13 ~-8 ~13 ~-13 ~-5 ~13 basalt
+fill ~13 ~-8 ~13 ~13 ~-5 ~13 basalt
+setblock ~-13 ~-4 ~-13 fire
+setblock ~13 ~-4 ~-13 fire
+setblock ~-13 ~-4 ~13 fire
+setblock ~13 ~-4 ~13 fire
 
 # --- Welkomstpoort (zuid, kant van waar speler arriveert) ---
-fill 498 66 -15 498 69 -15 nether_brick_fence
-fill 502 66 -15 502 69 -15 nether_brick_fence
-fill 499 70 -15 501 70 -15 nether_brick
-setblock 500 69 -15 standing_sign
+fill ~-2 ~-9 ~-15 ~-2 ~-6 ~-15 nether_brick_fence
+fill ~2 ~-9 ~-15 ~2 ~-6 ~-15 nether_brick_fence
+fill ~-1 ~-5 ~-15 ~1 ~-5 ~-15 nether_brick
+setblock ~ ~-6 ~-15 standing_sign
 
 # --- Spawn pad (waar speler verschijnt) ---
-fill 499 66 -1 501 66 1 polished_blackstone
-setblock 500 67 0 lantern
+fill ~-1 ~-9 ~-1 ~1 ~-9 ~1 polished_blackstone
+setblock ~ ~-8 ~ lantern
 
 # --- Wat vuur-sfeer (vervangen met fire/lava blokken voor stabiliteit) ---
-setblock 492 67 -8 fire
-setblock 495 67 7 fire
-setblock 506 67 -7 fire
-setblock 508 67 5 fire
+setblock ~-8 ~-8 ~-8 fire
+setblock ~-5 ~-8 ~7 fire
+setblock ~6 ~-8 ~-7 fire
+setblock ~8 ~-8 ~5 fire
 
 # --- Tickingarea om eiland geladen te houden ---
-tickingarea add 480 60 -20 520 90 20 island_fire true
+tickingarea add ~-20 ~-15 ~-20 ~20 ~15 ~20 island_fire true
 
 # --- Spawn 5 neutrale villagers (geven respawn_token bij dood) ---
-summon superteams:neutral_villager 495 67 -8
-summon superteams:neutral_villager 505 67 5
-summon superteams:neutral_villager 497 67 10
-summon superteams:neutral_villager 508 67 -7
-summon superteams:neutral_villager 492 67 3
+summon superteams:neutral_villager ~-5 ~-8 ~-8
+summon superteams:neutral_villager ~5 ~-8 ~5
+summon superteams:neutral_villager ~-3 ~-8 ~10
+summon superteams:neutral_villager ~8 ~-8 ~-7
+summon superteams:neutral_villager ~-8 ~-8 ~3

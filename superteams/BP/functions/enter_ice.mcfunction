@@ -2,15 +2,15 @@
 tag @s add st_chose
 tag @s add team_ice
 
-# Teleport eerst hoog boven het eiland (laadt de chunks)
-tp @s -500 95 0
+# Teleport naar eiland (laadt de chunks)
+tp @s -500 75 0
 
-# Bouw eiland alleen 1x per wereld
-execute unless score world_ice world_state matches 1 run function island_ice
+# Bouw eiland alleen 1x per wereld (relatief tov speler)
+execute unless score world_ice world_state matches 1 at @s run function island_ice
 scoreboard players set world_ice world_state 1
 
-# Land op het eiland
-tp @s -500 70 0
+# Land op de top van het eiland
+tp @s -500 67 0
 
 effect @s water_breathing 99999 0 true
 effect @s conduit_power 99999 0 true
