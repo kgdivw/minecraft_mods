@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Superteams Handleiding 🦸</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --vuur:    #E63946;
+  --vuur2:   #FFB703;
+  --ijs:     #A8DADC;
+  --ijs2:    #1D3557;
+  --bliksem: #FFD60A;
+  --bliksem2:#003566;
+  --aarde:   #2D6A4F;
+  --aarde2:  #774936;
+  --bg1: #2c1338;
+  --bg2: #4f1c5c;
+  --bg3: #1d3557;
+}
+html, body {
+  font-family: -apple-system, "Segoe UI", "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2) 50%, var(--bg3));
+  color: #fff;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+  overflow-x: hidden;
+}
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 18px 80px;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  padding: 36px 8px 28px;
+}
+.title {
+  font-size: clamp(48px, 12vw, 110px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, var(--vuur), var(--bliksem), var(--aarde), var(--ijs));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 0 rgba(0,0,0,0.4));
+  animation: shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%,100% { background-position:   0% 50%; }
+  50%     { background-position: 100% 50%; }
+}
+.subtitle {
+  font-size: clamp(16px, 4vw, 24px);
+  margin-top: 8px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+.emoji-row {
+  font-size: clamp(28px, 7vw, 50px);
+  letter-spacing: 12px;
+  margin: 18px 0 6px;
+  animation: bounce 3s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-8px); }
+}
+
+/* === SECTIES === */
+section {
+  margin: 30px 0;
+  background: rgba(255,255,255,0.07);
+  border: 2px solid rgba(255,255,255,0.13);
+  border-radius: 22px;
+  padding: 22px 22px 26px;
+  backdrop-filter: blur(6px);
+}
+section h2 {
+  font-size: clamp(22px, 5vw, 32px);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.5px;
+}
+section h2 .em { font-size: 1.2em; }
+section h3 {
+  font-size: clamp(18px, 4vw, 22px);
+  margin: 14px 0 8px;
+  color: #ffd966;
+}
+section p, section li {
+  font-size: clamp(15px, 3.6vw, 17px);
+  margin: 6px 0;
+}
+section ul, section ol { padding-left: 24px; }
+section ul li::marker { color: #ffd966; }
+
+/* === STAP-BLOKKEN === */
+.steps {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  padding-left: 0;
+  counter-reset: step;
+}
+.steps li {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  padding: 12px 14px;
+  border-radius: 14px;
+  border-left: 4px solid #ffd966;
+}
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 900;
+  background: radial-gradient(circle at 30% 30%, #ffd966, #c08a00);
+  color: #2c1338;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.3);
+}
+
+/* === TEAM CARDS === */
+.teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+.team-card {
+  border-radius: 20px;
+  padding: 22px 18px;
+  border: 3px solid rgba(255,255,255,0.18);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+.team-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+.team-card.vuur    { background: linear-gradient(160deg, var(--vuur),    #8a1e2a); }
+.team-card.ijs     { background: linear-gradient(160deg, var(--ijs),     var(--ijs2)); }
+.team-card.bliksem { background: linear-gradient(160deg, var(--bliksem), #6e4d00); color:#000; }
+.team-card.aarde   { background: linear-gradient(160deg, var(--aarde),   #1a4030); }
+.team-card .icon {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 4px;
+  text-shadow: 0 4px 0 rgba(0,0,0,0.3);
+}
+.team-card h3 {
+  font-size: 26px;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+  color: inherit;
+}
+.team-card .dir {
+  display: inline-block;
+  background: rgba(0,0,0,0.25);
+  padding: 2px 9px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.team-card .row {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.team-card .label {
+  display: inline-block;
+  background: rgba(0,0,0,0.35);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-right: 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* === CODE BLOCKS === */
+.cmd {
+  display: block;
+  background: rgba(0,0,0,0.45);
+  border-left: 4px solid #ffd966;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  color: #fff7c2;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+/* === SHARD PROGRESS === */
+.progress {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+.progress-row {
+  background: rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 2px solid rgba(255,217,102,0.45);
+}
+.progress-row .head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.shards-bar {
+  height: 12px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+.shards-bar .fill { height: 100%; background: linear-gradient(90deg, #b18cff, #ffb46b); width: 33%; }
+.shards-bar.full .fill { width: 100%; }
+
+/* === DOWNLOAD KNOP === */
+.cta {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+.cta a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2c1338;
+  background: linear-gradient(135deg, #ffe066, #ffaa00);
+  font-weight: 900;
+  font-size: clamp(18px, 5vw, 22px);
+  padding: 18px 32px;
+  border-radius: 999px;
+  box-shadow: 0 6px 0 #8a5b00, 0 16px 40px rgba(0,0,0,0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta a:active { transform: translateY(4px); box-shadow: 0 2px 0 #8a5b00, 0 6px 20px rgba(0,0,0,0.3); }
+
+/* === TIPS === */
+.tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+.tip {
+  background: rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border-left: 4px solid #b18cff;
+}
+.tip .em { font-size: 28px; display: block; margin-bottom: 4px; }
+
+/* === FOOTER === */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.65;
+  font-size: 14px;
+}
+footer a { color: #ffd966; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="emoji-row">🔥 ❄️ ⚡ 🪨</div>
+  <h1 class="title">SUPERTEAMS</h1>
+  <p class="subtitle">Vorm je team, kies je superkracht, verover de zee!</p>
+</header>
+
+<section>
+  <h2><span class="em">🚀</span> Hoe te beginnen</h2>
+  <ol class="steps">
+    <li>Download <strong>Superteams.mcaddon</strong> en open het — Minecraft installeert het pakket automatisch.</li>
+    <li>Maak een nieuwe wereld in <strong>Creative</strong> met <strong>Cheats AAN</strong>.</li>
+    <li>Activeer in de wereld-instellingen het <strong>Superteams Behavior Pack</strong> én <strong>Resource Pack</strong>.</li>
+    <li>Spawn in. Tik op chat en typ:
+      <code class="cmd">/function start</code>
+      Dit bouwt het hub-platform met 4 portals én alle 4 team-eilanden ver weg in de zee.
+    </li>
+    <li>Loop op een gekleurde portal en BOEM — je krijgt je superkracht en wordt naar je eiland geteleporteerd.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="em">🦸</span> De 4 Superteams</h2>
+  <p>Elke team heeft zijn eigen passieve kracht én 2 unlockbare extra krachten. Stap op een portal in de hub om te kiezen!</p>
+  <div class="teams">
+
+    <div class="team-card vuur">
+      <span class="icon">🔥</span>
+      <span class="dir">NOORD ↑</span>
+      <h3>TEAM VUUR</h3>
+      <div class="row"><span class="label">PASSIEF</span> Vuurresistentie + Sterkte II</div>
+      <div class="row"><span class="label">POWER 1</span> Vuurballen werpen 💥</div>
+      <div class="row"><span class="label">POWER 2</span> Vuurstekels aura (brandt vijanden binnen 4 blokken)</div>
+    </div>
+
+    <div class="team-card ijs">
+      <span class="icon">❄️</span>
+      <span class="dir">WEST ←</span>
+      <h3>TEAM IJS</h3>
+      <div class="row"><span class="label">PASSIEF</span> Water Ademen + Conduit Power</div>
+      <div class="row"><span class="label">POWER 1</span> IJsballen werpen 🎯</div>
+      <div class="row"><span class="label">POWER 2</span> Ijspegels aura (slowness + schade binnen 4 blokken)</div>
+    </div>
+
+    <div class="team-card bliksem">
+      <span class="icon">⚡</span>
+      <span class="dir">ZUID ↓</span>
+      <h3>TEAM BLIKSEM</h3>
+      <div class="row"><span class="label">PASSIEF</span> Snelheid II + Sprongkracht II</div>
+      <div class="row"><span class="label">POWER 1</span> Bliksembollen (homing!) 🎯</div>
+      <div class="row"><span class="label">POWER 2</span> Donderslag aura (binnen 5 blokken)</div>
+    </div>
+
+    <div class="team-card aarde">
+      <span class="icon">🪨</span>
+      <span class="dir">OOST →</span>
+      <h3>TEAM AARDE</h3>
+      <div class="row"><span class="label">PASSIEF</span> Resistance + Extra Leven</div>
+      <div class="row"><span class="label">POWER 1</span> Aardeballen werpen 🥚</div>
+      <div class="row"><span class="label">POWER 2</span> Rotsstekels aura (poison binnen 4 blokken)</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="em">🔮</span> Sjards & krachten unlocken</h2>
+  <p>Bovenin je scherm zie je een <strong>HUD</strong> met je sjards-count. Sjards krijg je door <strong>vijand-villagers van een ander team</strong> te doden. Sjards worden automatisch opgepikt!</p>
+  <div class="progress">
+    <div class="progress-row">
+      <div class="head">🔮 5 sjards → <span style="color:#ffe066">Power 1 ontgrendeld</span></div>
+      <div class="shards-bar"><div class="fill"></div></div>
+      <p>Je krijgt 16 werpbare projectielen (vuurbal/ijsbal/bliksem/aarde) — gebruik ze met rechtermuis of lange tik. Op? Geen zorgen, je voorraad vult zich automatisch aan!</p>
+    </div>
+    <div class="progress-row">
+      <div class="head">🔮🔮 15 sjards → <span style="color:#ffe066">Power 2 ontgrendeld</span></div>
+      <div class="shards-bar full"><div class="fill"></div></div>
+      <p>Een <strong>aura</strong> verschijnt om je heen. Elke seconde schade aan alle vijanden binnen 4-5 blokken — met team-specifieke effecten!</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="em">👥</span> Neutrale villagers — laat je team groeien</h2>
+  <p>Op je eiland staan <strong>5 grijze, neutrale villagers</strong>. Als je ze doodmaakt, droppen ze een ✨ <strong>Wedergeboorte Token</strong> ✨. Loop eroverheen en…</p>
+  <p style="text-align:center; font-size:32px; margin:14px 0">💥 ➜ 👤 van JOUW team!</p>
+  <p>Zo bouw je een leger groter dan 10. Combineer dit met <code>/function spawn_team</code> voor instant 10 villagers extra.</p>
+</section>
+
+<section>
+  <h2><span class="em">🏠</span> Bouwen op je eiland</h2>
+  <p>Loop een stukje opzij voor je het commando gebruikt — anders bouw je het bovenop iets anders.</p>
+  <code class="cmd">/function build_house</code>
+  <p>Klein huis met 4 rode wollen bedden. Voor je startgroep.</p>
+  <code class="cmd">/function build_mansion</code>
+  <p>Gigantisch herenhuis: 2 verdiepingen, 10 bedden, ramen, trap, lantaarns. Voor de hele club!</p>
+  <code class="cmd">/function build_armory</code>
+  <p>Wapenkamer met diamond/iron/gold/chainmail armor stands + 32 pijlen + bow + diamond sword. <strong>En een Zee Paard</strong> met saddle en iron horse armor staat al klaar in zijn stal.</p>
+</section>
+
+<section>
+  <h2><span class="em">🐴</span> Het Zee Paard — over de zee aanvallen</h2>
+  <p>Het Zee Paard is amphibisch én drijvend. Het kan over én door water lopen <em>zoals over land</em>.</p>
+  <ol class="steps">
+    <li>Run <code class="cmd">/function build_armory</code>.</li>
+    <li>Tik op het paard met de saddle (uit je inventory) om hem te zadelen.</li>
+    <li>Tik dan met de iron horse armor om het harnas op te doen.</li>
+    <li>Stap erop en rijd richting een ander eiland. Het paard zwemt zonder vertraging!</li>
+    <li>Eenmaal aan land bij een vijand-eiland: val hun villagers aan voor sjards.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="em">🗺️</span> Eiland coördinaten</h2>
+  <div class="tips">
+    <div class="tip"><span class="em">🔥</span><strong>Vuur</strong><br>500, 70, 0</div>
+    <div class="tip"><span class="em">❄️</span><strong>IJs</strong><br>-500, 70, 0</div>
+    <div class="tip"><span class="em">⚡</span><strong>Bliksem</strong><br>0, 70, 500</div>
+    <div class="tip"><span class="em">🪨</span><strong>Aarde</strong><br>0, 70, -500</div>
+  </div>
+  <p style="margin-top:10px">Opposing teams (Vuur ↔ IJs, Bliksem ↔ Aarde) zijn <strong>1000 blokken uit elkaar</strong>. Reken op een paar minuten zwemmen met het Zee Paard.</p>
+</section>
+
+<section>
+  <h2><span class="em">⌨️</span> Alle commando's</h2>
+  <code class="cmd">/function start          # Hub + alle 4 eilanden bouwen</code>
+  <code class="cmd">/function spawn_team     # Spawn 10 villagers van jouw team</code>
+  <code class="cmd">/function build_house    # Klein huis</code>
+  <code class="cmd">/function build_mansion  # Gigantisch herenhuis</code>
+  <code class="cmd">/function build_armory   # Wapenkamer + Zee Paard</code>
+  <code class="cmd">/function reset          # Wis team + powers + sjards, kies opnieuw</code>
+  <code class="cmd">/function help           # Lijst alle commando's in chat</code>
+</section>
+
+<section>
+  <h2><span class="em">💡</span> Tips & trucs</h2>
+  <div class="tips">
+    <div class="tip"><span class="em">🎯</span>Bliksembollen <strong>volgen vijanden</strong>! Mik in de buurt en ze doen de rest.</div>
+    <div class="tip"><span class="em">🔁</span>Power 1 ammo <strong>vult vanzelf aan</strong> als je leeg bent — je raakt nooit zonder.</div>
+    <div class="tip"><span class="em">⚔️</span>Je villagers vechten <strong>automatisch</strong> tegen andere teams. Laat ze de strijd doen.</div>
+    <div class="tip"><span class="em">🛡️</span>Power 2 aura doet schade <strong>elke seconde</strong>. Loop een groep vijanden in, ze branden/bevriezen/poisoned.</div>
+    <div class="tip"><span class="em">🐎</span>Het Zee Paard heeft <strong>auto-saddle</strong> wanneer mogelijk; anders krijg je losse items om handmatig op te doen.</div>
+    <div class="tip"><span class="em">🌍</span>Per eiland leeft een <strong>tickingarea</strong> dus villagers blijven leven ook als je weg bent.</div>
+  </div>
+</section>
+
+<div class="cta">
+  <a href="https://github.com/kgdivw/minecraft_mods/releases/download/latest/Superteams.mcaddon">
+    📥 Download Superteams.mcaddon
+  </a>
+</div>
+
+<footer>
+  <p>Gemaakt met ❤️ door Joris &amp; Claude · <a href="https://github.com/kgdivw/minecraft_mods">GitHub repo</a></p>
+</footer>
+
+</div>
+</body>
+</html>
