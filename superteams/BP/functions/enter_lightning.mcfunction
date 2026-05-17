@@ -2,15 +2,15 @@
 tag @s add st_chose
 tag @s add team_lightning
 
-# Teleport eerst hoog boven het eiland (laadt de chunks)
-tp @s 0 95 500
+# Teleport naar eiland (laadt de chunks)
+tp @s 0 75 500
 
-# Bouw eiland alleen 1x per wereld
-execute unless score world_lightning world_state matches 1 run function island_lightning
+# Bouw eiland alleen 1x per wereld (relatief tov speler)
+execute unless score world_lightning world_state matches 1 at @s run function island_lightning
 scoreboard players set world_lightning world_state 1
 
-# Land op het eiland
-tp @s 0 70 500
+# Land op de top van het eiland
+tp @s 0 67 500
 
 effect @s speed 99999 1 true
 effect @s jump_boost 99999 1 true

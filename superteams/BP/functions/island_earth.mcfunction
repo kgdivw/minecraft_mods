@@ -3,53 +3,53 @@
 # ==========================================
 
 # --- Ruimte maken ---
-fill -17 65 -517 17 80 -483 air
-fill -17 81 -517 17 95 -483 air
+fill ~-17 ~-10 ~-17 ~17 ~5 ~17 air
+fill ~-17 ~6 ~-17 ~17 ~20 ~17 air
 
 # --- Water rondom ---
-fill -17 63 -517 17 64 -483 water
+fill ~-17 ~-12 ~-17 ~17 ~-11 ~17 water
 
 # --- Strand ---
-fill -15 63 -515 15 65 -485 sand
+fill ~-15 ~-12 ~-15 ~15 ~-10 ~15 sand
 # --- Eiland binnenkant (gras + dirt) ---
-fill -13 65 -513 13 65 -487 dirt
-fill -13 66 -513 13 66 -487 grass_block
+fill ~-13 ~-10 ~-13 ~13 ~-10 ~13 dirt
+fill ~-13 ~-9 ~-13 ~13 ~-9 ~13 grass_block
 # --- Vloer met patronen ---
-setblock 0 66 -500 mossy_cobblestone
-fill -2 66 -502 2 66 -498 mossy_cobblestone
-fill -1 66 -501 1 66 -499 moss_block
+setblock ~ ~-9 ~ mossy_cobblestone
+fill ~-2 ~-9 ~-2 ~2 ~-9 ~2 mossy_cobblestone
+fill ~-1 ~-9 ~-1 ~1 ~-9 ~1 moss_block
 
 # --- Decoratieve stenen zuilen ---
-fill -13 67 -487 -13 70 -487 mossy_cobblestone
-fill 13 67 -487 13 70 -487 mossy_cobblestone
-fill -13 67 -513 -13 70 -513 mossy_cobblestone
-fill 13 67 -513 13 70 -513 mossy_cobblestone
-setblock -13 71 -487 lantern
-setblock 13 71 -487 lantern
-setblock -13 71 -513 lantern
-setblock 13 71 -513 lantern
+fill ~-13 ~-8 ~13 ~-13 ~-5 ~13 mossy_cobblestone
+fill ~13 ~-8 ~13 ~13 ~-5 ~13 mossy_cobblestone
+fill ~-13 ~-8 ~-13 ~-13 ~-5 ~-13 mossy_cobblestone
+fill ~13 ~-8 ~-13 ~13 ~-5 ~-13 mossy_cobblestone
+setblock ~-13 ~-4 ~13 lantern
+setblock ~13 ~-4 ~13 lantern
+setblock ~-13 ~-4 ~-13 lantern
+setblock ~13 ~-4 ~-13 lantern
 
 # --- Welkomstpoort ---
-fill -2 66 -485 -2 69 -485 mossy_cobblestone
-fill 2 66 -485 2 69 -485 mossy_cobblestone
-fill -1 70 -485 1 70 -485 mossy_cobblestone
-setblock 0 69 -485 standing_sign
+fill ~-2 ~-9 ~15 ~-2 ~-6 ~15 mossy_cobblestone
+fill ~2 ~-9 ~15 ~2 ~-6 ~15 mossy_cobblestone
+fill ~-1 ~-5 ~15 ~1 ~-5 ~15 mossy_cobblestone
+setblock ~ ~-6 ~15 standing_sign
 
 # --- Spawn pad ---
-fill -1 66 -501 1 66 -499 moss_block
-setblock 0 67 -500 lantern
+fill ~-1 ~-9 ~-1 ~1 ~-9 ~1 moss_block
+setblock ~ ~-8 ~ lantern
 
 # --- Eik bomen sfeer ---
-setblock -8 67 -492 oak_sapling
-setblock 7 67 -495 oak_sapling
-setblock -7 67 -506 oak_sapling
-setblock 5 67 -508 oak_sapling
+setblock ~-8 ~-8 ~8 oak_sapling
+setblock ~7 ~-8 ~5 oak_sapling
+setblock ~-7 ~-8 ~-6 oak_sapling
+setblock ~5 ~-8 ~-8 oak_sapling
 
-tickingarea add -20 60 -520 20 90 -480 island_earth true
+tickingarea add ~-20 ~-15 ~-20 ~20 ~15 ~20 island_earth true
 
 # --- Spawn 5 neutrale villagers (geven respawn_token bij dood) ---
-summon superteams:neutral_villager -8 67 -495
-summon superteams:neutral_villager 5 67 -505
-summon superteams:neutral_villager 10 67 -497
-summon superteams:neutral_villager -7 67 -508
-summon superteams:neutral_villager 3 67 -492
+summon superteams:neutral_villager ~-8 ~-8 ~5
+summon superteams:neutral_villager ~5 ~-8 ~-5
+summon superteams:neutral_villager ~10 ~-8 ~3
+summon superteams:neutral_villager ~-7 ~-8 ~-8
+summon superteams:neutral_villager ~3 ~-8 ~8
