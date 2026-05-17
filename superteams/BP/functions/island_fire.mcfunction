@@ -17,7 +17,7 @@ fill 487 66 -13 513 66 13 red_sand
 fill 489 66 -11 511 66 11 red_sand
 setblock 500 66 0 blackstone
 fill 498 66 -2 502 66 2 blackstone
-fill 499 66 -1 501 66 1 magma_block
+fill 499 66 -1 501 66 1 magma
 
 # --- Decoratieve basalt zuilen (4 hoog) ---
 fill 487 67 -13 487 70 -13 basalt
