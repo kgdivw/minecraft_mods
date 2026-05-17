@@ -1,129 +1,118 @@
 # ==========================================
 # SUPERTEAMS - START PLATFORM
-# Bouwt het hub platform op vaste positie (0, 80, 0)
-# zodat het niet botst met de teameilanden op y=70
+# Bouwt het hub platform op vaste positie (0, 80, 0) met absolute coords
+# (anders worden ~ relatief gerekend tov speler-positie BIJ FUNCTIE-START,
+# niet tov de tp-bestemming)
 # Gebruik: /function start
 # ==========================================
 
-# --- Scoreboards aanmaken (mislukt zonder warning als ze al bestaan) ---
+# --- Scoreboards aanmaken (idempotent) ---
 scoreboard objectives add shards dummy "Sjards"
 scoreboard objectives add aura_t dummy "Aura Timer"
 
-# --- Speler eerst naar vaste hub-positie ---
-tp @s 0 80 0
+# --- Maak ruimte (31x31x11) ---
+fill -15 80 -15 15 90 15 air
 
-# --- Maak ruimte (31x31x10) ---
-fill ~-15 ~ ~-15 ~15 ~10 ~15 air
+# --- Platform vloer ---
+fill -15 79 -15 15 79 15 stone_bricks
 
-# --- Platform vloer (stenen tegels) ---
-fill ~-15 ~-1 ~-15 ~15 ~-1 ~15 stone_bricks
-
-# --- Buitenrand van mossy stone bricks voor sfeer ---
-fill ~-15 ~ ~-15 ~15 ~ ~-15 mossy_stone_bricks
-fill ~-15 ~ ~15 ~15 ~ ~15 mossy_stone_bricks
-fill ~-15 ~ ~-15 ~-15 ~ ~15 mossy_stone_bricks
-fill ~15 ~ ~-15 ~15 ~ ~15 mossy_stone_bricks
+# --- Buitenrand (mossy stone bricks) ---
+fill -15 80 -15 15 80 -15 mossy_stone_bricks
+fill -15 80 15 15 80 15 mossy_stone_bricks
+fill -15 80 -15 -15 80 15 mossy_stone_bricks
+fill 15 80 -15 15 80 15 mossy_stone_bricks
 
 # --- Middenfontein als spawnpunt ---
-fill ~-2 ~ ~-2 ~2 ~ ~2 polished_andesite
-setblock ~0 ~ ~0 beacon
-setblock ~0 ~-1 ~0 diamond_block
-setblock ~-1 ~ ~0 sea_lantern
-setblock ~1 ~ ~0 sea_lantern
-setblock ~0 ~ ~-1 sea_lantern
-setblock ~0 ~ ~1 sea_lantern
+fill -2 79 -2 2 79 2 polished_andesite
+setblock 0 80 0 beacon
+setblock 0 78 0 diamond_block
+setblock -1 80 0 sea_lantern
+setblock 1 80 0 sea_lantern
+setblock 0 80 -1 sea_lantern
+setblock 0 80 1 sea_lantern
 
-# === PORTAL NOORD (FIRE / VUUR) at ~0 ~ ~-12 ===
-# Vloer plaat (5x5 rood beton)
-fill ~-2 ~-1 ~-14 ~2 ~-1 ~-10 red_concrete
-# Verlichting
-setblock ~-2 ~ ~-14 fire
-setblock ~2 ~ ~-14 fire
-setblock ~-2 ~ ~-10 fire
-setblock ~2 ~ ~-10 fire
-# 4 obsidian pilaren (4 hoog)
-fill ~-2 ~ ~-13 ~-2 ~4 ~-13 obsidian
-fill ~2 ~ ~-13 ~2 ~4 ~-13 obsidian
-fill ~-2 ~ ~-11 ~-2 ~4 ~-11 obsidian
-fill ~2 ~ ~-11 ~2 ~4 ~-11 obsidian
-# Bovenste boog
-fill ~-2 ~4 ~-13 ~2 ~4 ~-11 obsidian
-# Achterwand met rood glas
-fill ~-1 ~1 ~-13 ~1 ~3 ~-13 red_stained_glass
-# Magma onder de glas plaat
-fill ~-1 ~ ~-13 ~1 ~ ~-13 magma
-# Hoek lantaarns
-setblock ~-2 ~4 ~-13 soul_lantern
-setblock ~2 ~4 ~-13 soul_lantern
-# Hangend bord uitleg (achterkant op de magma — speler kijkt vanaf zuid)
-setblock ~0 ~3 ~-14 standing_sign
-# Portal marker entity in het midden van de plaat
-summon superteams:portal_marker ~0 ~ ~-12 0 0 superteams:become_fire fire_portal
+# === PORTAL NOORD (FIRE / VUUR) at (0, 80, -12) ===
+fill -2 79 -14 2 79 -10 red_concrete
+setblock -2 80 -14 fire
+setblock 2 80 -14 fire
+setblock -2 80 -10 fire
+setblock 2 80 -10 fire
+fill -2 80 -13 -2 84 -13 obsidian
+fill 2 80 -13 2 84 -13 obsidian
+fill -2 80 -11 -2 84 -11 obsidian
+fill 2 80 -11 2 84 -11 obsidian
+fill -2 84 -13 2 84 -11 obsidian
+fill -1 81 -13 1 83 -13 red_stained_glass
+fill -1 80 -13 1 80 -13 magma
+setblock -2 84 -13 soul_lantern
+setblock 2 84 -13 soul_lantern
+setblock 0 83 -14 standing_sign
+summon superteams:portal_marker 0 80 -12 0 0 superteams:become_fire fire_portal
 
-# === PORTAL ZUID (LIGHTNING / BLIKSEM) at ~0 ~ ~12 ===
-fill ~-2 ~-1 ~10 ~2 ~-1 ~14 yellow_concrete
-setblock ~-2 ~ ~10 fire
-setblock ~2 ~ ~10 fire
-setblock ~-2 ~ ~14 fire
-setblock ~2 ~ ~14 fire
-fill ~-2 ~ ~11 ~-2 ~4 ~11 obsidian
-fill ~2 ~ ~11 ~2 ~4 ~11 obsidian
-fill ~-2 ~ ~13 ~-2 ~4 ~13 obsidian
-fill ~2 ~ ~13 ~2 ~4 ~13 obsidian
-fill ~-2 ~4 ~11 ~2 ~4 ~13 obsidian
-fill ~-1 ~1 ~13 ~1 ~3 ~13 yellow_stained_glass
-fill ~-1 ~ ~13 ~1 ~ ~13 sea_lantern
-setblock ~-2 ~4 ~13 sea_lantern
-setblock ~2 ~4 ~13 sea_lantern
-setblock ~0 ~3 ~14 standing_sign
-summon superteams:portal_marker ~0 ~ ~12 0 0 superteams:become_lightning lightning_portal
+# === PORTAL ZUID (LIGHTNING / BLIKSEM) at (0, 80, 12) ===
+fill -2 79 10 2 79 14 yellow_concrete
+setblock -2 80 10 fire
+setblock 2 80 10 fire
+setblock -2 80 14 fire
+setblock 2 80 14 fire
+fill -2 80 11 -2 84 11 obsidian
+fill 2 80 11 2 84 11 obsidian
+fill -2 80 13 -2 84 13 obsidian
+fill 2 80 13 2 84 13 obsidian
+fill -2 84 11 2 84 13 obsidian
+fill -1 81 13 1 83 13 yellow_stained_glass
+fill -1 80 13 1 80 13 sea_lantern
+setblock -2 84 13 sea_lantern
+setblock 2 84 13 sea_lantern
+setblock 0 83 14 standing_sign
+summon superteams:portal_marker 0 80 12 0 0 superteams:become_lightning lightning_portal
 
-# === PORTAL OOST (EARTH / AARDE) at ~12 ~ ~0 ===
-fill ~10 ~-1 ~-2 ~14 ~-1 ~2 green_concrete
-setblock ~10 ~ ~-2 fire
-setblock ~14 ~ ~-2 fire
-setblock ~10 ~ ~2 fire
-setblock ~14 ~ ~2 fire
-fill ~11 ~ ~-2 ~11 ~4 ~-2 obsidian
-fill ~13 ~ ~-2 ~13 ~4 ~-2 obsidian
-fill ~11 ~ ~2 ~11 ~4 ~2 obsidian
-fill ~13 ~ ~2 ~13 ~4 ~2 obsidian
-fill ~11 ~4 ~-2 ~13 ~4 ~2 obsidian
-fill ~13 ~1 ~-1 ~13 ~3 ~1 lime_stained_glass
-fill ~13 ~ ~-1 ~13 ~ ~1 moss_block
-setblock ~13 ~4 ~-2 lantern
-setblock ~13 ~4 ~2 lantern
-setblock ~14 ~3 ~0 standing_sign
-summon superteams:portal_marker ~12 ~ ~0 0 0 superteams:become_earth earth_portal
+# === PORTAL OOST (EARTH / AARDE) at (12, 80, 0) ===
+fill 10 79 -2 14 79 2 green_concrete
+setblock 10 80 -2 fire
+setblock 14 80 -2 fire
+setblock 10 80 2 fire
+setblock 14 80 2 fire
+fill 11 80 -2 11 84 -2 obsidian
+fill 13 80 -2 13 84 -2 obsidian
+fill 11 80 2 11 84 2 obsidian
+fill 13 80 2 13 84 2 obsidian
+fill 11 84 -2 13 84 2 obsidian
+fill 13 81 -1 13 83 1 lime_stained_glass
+fill 13 80 -1 13 80 1 moss_block
+setblock 13 84 -2 lantern
+setblock 13 84 2 lantern
+setblock 14 83 0 standing_sign
+summon superteams:portal_marker 12 80 0 0 0 superteams:become_earth earth_portal
 
-# === PORTAL WEST (ICE / IJS) at ~-12 ~ ~0 ===
-fill ~-14 ~-1 ~-2 ~-10 ~-1 ~2 light_blue_concrete
-setblock ~-14 ~ ~-2 fire
-setblock ~-10 ~ ~-2 fire
-setblock ~-14 ~ ~2 fire
-setblock ~-10 ~ ~2 fire
-fill ~-13 ~ ~-2 ~-13 ~4 ~-2 obsidian
-fill ~-11 ~ ~-2 ~-11 ~4 ~-2 obsidian
-fill ~-13 ~ ~2 ~-13 ~4 ~2 obsidian
-fill ~-11 ~ ~2 ~-11 ~4 ~2 obsidian
-fill ~-13 ~4 ~-2 ~-11 ~4 ~2 obsidian
-fill ~-13 ~1 ~-1 ~-13 ~3 ~1 light_blue_stained_glass
-fill ~-13 ~ ~-1 ~-13 ~ ~1 packed_ice
-setblock ~-13 ~4 ~-2 soul_lantern
-setblock ~-13 ~4 ~2 soul_lantern
-setblock ~-14 ~3 ~0 standing_sign
-summon superteams:portal_marker ~-12 ~ ~0 0 0 superteams:become_ice ice_portal
+# === PORTAL WEST (ICE / IJS) at (-12, 80, 0) ===
+fill -14 79 -2 -10 79 2 light_blue_concrete
+setblock -14 80 -2 fire
+setblock -10 80 -2 fire
+setblock -14 80 2 fire
+setblock -10 80 2 fire
+fill -13 80 -2 -13 84 -2 obsidian
+fill -11 80 -2 -11 84 -2 obsidian
+fill -13 80 2 -13 84 2 obsidian
+fill -11 80 2 -11 84 2 obsidian
+fill -13 84 -2 -11 84 2 obsidian
+fill -13 81 -1 -13 83 1 light_blue_stained_glass
+fill -13 80 -1 -13 80 1 packed_ice
+setblock -13 84 -2 soul_lantern
+setblock -13 84 2 soul_lantern
+setblock -14 83 0 standing_sign
+summon superteams:portal_marker -12 80 0 0 0 superteams:become_ice ice_portal
 
 # --- Houd hub geladen ---
-tickingarea add ~-20 ~-2 ~-20 ~20 ~10 ~20 superteams_hub true
+tickingarea add -20 78 -20 20 90 20 superteams_hub true
 
-# --- Bouw ook alle 4 eilanden alvast op vaste coordinaten ---
+# --- Bouw alle 4 eilanden ---
 function island_fire
 function island_ice
 function island_lightning
 function island_earth
 
-# --- Speler op spawnpunt zetten (boven de beacon op het center) ---
+# --- Speler op spawnpunt zetten (boven de beacon) ---
 tp @s 0 82 0
 
 # --- Welkomstbericht ---
