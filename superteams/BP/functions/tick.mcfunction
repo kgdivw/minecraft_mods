@@ -44,13 +44,13 @@ execute as @a[tag=team_earth,tag=power_1,hasitem={item=superteams:earthball_item
 scoreboard players add @a[tag=power_2] aura_t 1
 
 # --- Aura schade elke ~1 seconde voor power_2 spelers ---
-execute as @a[tag=team_fire,tag=power_2,scores={aura_t=20..}] at @s run damage @e[type=team_villager,family=!fire_team,r=4] 4 fire
-execute as @a[tag=team_fire,tag=power_2,scores={aura_t=20..}] at @s run damage @e[type=neutral_villager,r=4] 4 fire
-execute as @a[tag=team_ice,tag=power_2,scores={aura_t=20..}] at @s run effect @e[type=team_villager,family=!ice_team,r=4] slowness 4 2 true
-execute as @a[tag=team_ice,tag=power_2,scores={aura_t=20..}] at @s run damage @e[type=team_villager,family=!ice_team,r=4] 2 magic
-execute as @a[tag=team_lightning,tag=power_2,scores={aura_t=20..}] at @s run damage @e[type=team_villager,family=!lightning_team,r=5] 5 lightning
-execute as @a[tag=team_earth,tag=power_2,scores={aura_t=20..}] at @s run effect @e[type=team_villager,family=!earth_team,r=4] poison 6 0 true
-execute as @a[tag=team_earth,tag=power_2,scores={aura_t=20..}] at @s run damage @e[type=team_villager,family=!earth_team,r=4] 2 magic
+execute as @a[tag=team_fire,tag=power_2,scores={aura_t=20..}] at @s run damage @e[family=team_villager,family=!fire_team,r=4] 4 fire
+execute as @a[tag=team_fire,tag=power_2,scores={aura_t=20..}] at @s run damage @e[family=neutral_villager,r=4] 4 fire
+execute as @a[tag=team_ice,tag=power_2,scores={aura_t=20..}] at @s run effect @e[family=team_villager,family=!ice_team,r=4] slowness 4 2 true
+execute as @a[tag=team_ice,tag=power_2,scores={aura_t=20..}] at @s run damage @e[family=team_villager,family=!ice_team,r=4] 2 magic
+execute as @a[tag=team_lightning,tag=power_2,scores={aura_t=20..}] at @s run damage @e[family=team_villager,family=!lightning_team,r=5] 5 lightning
+execute as @a[tag=team_earth,tag=power_2,scores={aura_t=20..}] at @s run effect @e[family=team_villager,family=!earth_team,r=4] poison 6 0 true
+execute as @a[tag=team_earth,tag=power_2,scores={aura_t=20..}] at @s run damage @e[family=team_villager,family=!earth_team,r=4] 2 magic
 
 # --- Aura visualisatie (particles) ---
 execute as @a[tag=team_fire,tag=power_2,scores={aura_t=20..}] at @s run particle minecraft:basic_flame_particle ~ ~1 ~

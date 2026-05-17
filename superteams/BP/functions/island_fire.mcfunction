@@ -17,7 +17,7 @@ fill 487 66 -13 513 66 13 red_sand
 fill 489 66 -11 511 66 11 red_sand
 setblock 500 66 0 blackstone
 fill 498 66 -2 502 66 2 blackstone
-fill 499 66 -1 501 66 1 magma
+fill 499 66 -1 501 66 1 magma_block
 
 # --- Decoratieve basalt zuilen (4 hoog) ---
 fill 487 67 -13 487 70 -13 basalt
@@ -32,18 +32,18 @@ setblock 513 71 13 fire
 # --- Welkomstpoort (zuid, kant van waar speler arriveert) ---
 fill 498 66 -15 498 69 -15 nether_brick_fence
 fill 502 66 -15 502 69 -15 nether_brick_fence
-fill 499 70 -15 501 70 -15 nether_bricks
+fill 499 70 -15 501 70 -15 nether_brick
 setblock 500 69 -15 standing_sign
 
 # --- Spawn pad (waar speler verschijnt) ---
 fill 499 66 -1 501 66 1 polished_blackstone
 setblock 500 67 0 lantern
 
-# --- Wat vuur-sfeer planten ---
-setblock 492 67 -8 dead_bush
-setblock 495 67 7 dead_bush
-setblock 506 67 -7 dead_bush
-setblock 508 67 5 dead_bush
+# --- Wat vuur-sfeer (vervangen met fire/lava blokken voor stabiliteit) ---
+setblock 492 67 -8 fire
+setblock 495 67 7 fire
+setblock 506 67 -7 fire
+setblock 508 67 5 fire
 
 # --- Tickingarea om eiland geladen te houden ---
 tickingarea add 480 60 -20 520 90 20 island_fire true
