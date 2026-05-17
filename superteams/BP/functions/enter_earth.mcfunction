@@ -6,8 +6,8 @@ tag @s add team_earth
 tp @s 0 95 -500
 
 # Bouw eiland alleen 1x per wereld
-execute unless score $island_earth world_state matches 1 run function island_earth
-scoreboard players set $island_earth world_state 1
+execute unless score world_earth world_state matches 1 run function island_earth
+scoreboard players set world_earth world_state 1
 
 # Land op het eiland
 tp @s 0 70 -500
