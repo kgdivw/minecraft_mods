@@ -1,7 +1,17 @@
 # Speler kiest TEAM BLIKSEM
 tag @s add st_chose
 tag @s add team_lightning
+
+# Teleport eerst hoog boven het eiland (laadt de chunks)
+tp @s 0 95 500
+
+# Bouw eiland alleen 1x per wereld
+execute unless score $island_lightning world_state matches 1 run function island_lightning
+scoreboard players set $island_lightning world_state 1
+
+# Land op het eiland
 tp @s 0 70 500
+
 effect @s speed 99999 1 true
 effect @s jump_boost 99999 1 true
 give @s iron_sword 1

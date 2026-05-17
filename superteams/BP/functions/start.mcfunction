@@ -10,6 +10,14 @@
 scoreboard objectives add shards dummy "Sjards"
 scoreboard objectives add aura_t dummy "Aura Timer"
 
+# --- KRITIEK: speler EERST naar de hub teleporteren ---
+# Hierdoor laden de chunks rond (0,80,0). Anders mislukken alle fills
+# stilletjes omdat ze op niet-geladen chunks proberen te bouwen.
+tp @s 0 95 0
+
+# --- Tickingarea voor hub VOOR het bouwen ---
+tickingarea add -20 78 -20 20 90 20 superteams_hub true
+
 # --- Maak ruimte (31x31x11) ---
 fill -15 80 -15 15 90 15 air
 
@@ -103,14 +111,9 @@ setblock -13 84 2 soul_lantern
 setblock -14 83 0 standing_sign
 summon superteams:portal_marker -12 80 0 0 0 superteams:become_ice ice_portal
 
-# --- Houd hub geladen ---
-tickingarea add -20 78 -20 20 90 20 superteams_hub true
-
-# --- Bouw alle 4 eilanden ---
-function island_fire
-function island_ice
-function island_lightning
-function island_earth
+# --- Wereld-state scoreboard voor lazy island building ---
+scoreboard objectives add world_state dummy
+# (eilanden worden gebouwd bij eerste portal-doorgang, zie enter_*.mcfunction)
 
 # --- Speler op spawnpunt zetten (boven de beacon) ---
 tp @s 0 82 0
