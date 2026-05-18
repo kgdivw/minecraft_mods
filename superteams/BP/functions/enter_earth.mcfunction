@@ -6,7 +6,7 @@ tag @s add team_earth
 tp @s 0 75 -500
 
 # Bouw eiland alleen 1x per wereld (relatief tov speler)
-execute unless score world_earth world_state matches 1 at @s run function island_earth
+execute at @s run function island_earth
 scoreboard players set world_earth world_state 1
 
 # Land op de top van het eiland

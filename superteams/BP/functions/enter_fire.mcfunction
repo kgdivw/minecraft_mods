@@ -6,7 +6,7 @@ tag @s add team_fire
 tp @s 500 75 0
 
 # Bouw eiland alleen 1x per wereld (relatief tov speler positie)
-execute unless score world_fire world_state matches 1 at @s run function island_fire
+execute at @s run function island_fire
 scoreboard players set world_fire world_state 1
 
 # Land op de top van het eiland

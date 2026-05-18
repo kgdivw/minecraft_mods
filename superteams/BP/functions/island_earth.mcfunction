@@ -3,6 +3,9 @@
 # ==========================================
 
 # --- Ruimte maken ---
+# --- Kill oude neutrals zodat we niet opstapelen bij rebuild ---
+kill @e[type=superteams:neutral_villager,r=30]
+
 fill ~-17 ~-10 ~-17 ~17 ~5 ~17 air
 fill ~-17 ~6 ~-17 ~17 ~20 ~17 air
 

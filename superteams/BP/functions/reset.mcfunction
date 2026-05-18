@@ -9,6 +9,10 @@ tag @s remove power_2
 effect @s clear
 scoreboard players set @s shards 0
 scoreboard players set @s aura_t 0
+scoreboard players reset world_fire world_state
+scoreboard players reset world_ice world_state
+scoreboard players reset world_lightning world_state
+scoreboard players reset world_earth world_state
 clear @s superteams:fireball_item
 clear @s superteams:iceball_item
 clear @s superteams:thunderbolt_item

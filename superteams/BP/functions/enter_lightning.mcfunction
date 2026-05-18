@@ -6,7 +6,7 @@ tag @s add team_lightning
 tp @s 0 75 500
 
 # Bouw eiland alleen 1x per wereld (relatief tov speler)
-execute unless score world_lightning world_state matches 1 at @s run function island_lightning
+execute at @s run function island_lightning
 scoreboard players set world_lightning world_state 1
 
 # Land op de top van het eiland
