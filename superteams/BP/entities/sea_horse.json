@@ -37,11 +37,16 @@
                 "can_swim": true,
                 "is_amphibious": true
             },
-            "minecraft:movement.basic": {},
+            "minecraft:movement.amphibious": {},
             "minecraft:jump.dynamic": {},
             "minecraft:can_power_jump": {},
             "minecraft:horse.jump_strength": {
                 "value": { "range_min": 0.7, "range_max": 1.0 }
+            },
+            "minecraft:variable_max_auto_step": {
+                "base_value": 1.5,
+                "controlled_value": 1.5,
+                "jump_prevented_value": 0.6
             },
             "minecraft:physics": {},
             "minecraft:pushable": {
@@ -50,12 +55,12 @@
             },
             "minecraft:buoyant": {
                 "apply_gravity": true,
-                "base_buoyancy": 1.0,
+                "base_buoyancy": 0.85,
                 "big_wave_probability": 0,
                 "big_wave_speed": 0,
                 "drag_down_on_buoyancy_removed": 0,
                 "liquid_blocks": ["minecraft:water", "minecraft:flowing_water"],
-                "simulate_waves": true
+                "simulate_waves": false
             },
             "minecraft:is_tamed": {},
             "minecraft:behavior.float": {
