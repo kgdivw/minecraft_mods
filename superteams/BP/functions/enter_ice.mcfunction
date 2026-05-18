@@ -6,7 +6,7 @@ tag @s add team_ice
 tp @s -500 75 0
 
 # Bouw eiland alleen 1x per wereld (relatief tov speler)
-execute unless score world_ice world_state matches 1 at @s run function island_ice
+execute at @s run function island_ice
 scoreboard players set world_ice world_state 1
 
 # Land op de top van het eiland

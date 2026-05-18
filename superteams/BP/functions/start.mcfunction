@@ -46,6 +46,7 @@ fill ~-1 ~ ~-13 ~1 ~ ~-13 magma
 setblock ~-2 ~4 ~-13 soul_lantern
 setblock ~2 ~4 ~-13 soul_lantern
 summon superteams:portal_marker ~0 ~ ~-12 0 0 superteams:become_fire fire_portal
+summon armor_stand "§c§l🔥 TEAM VUUR\n§r§7Stap erop voor:\n§6Vuurresistentie + Sterkte" ~0 ~3 ~-12
 
 # === PORTAL ZUID (LIGHTNING / BLIKSEM) at relatief 0, 0, 12 ===
 fill ~-2 ~-1 ~10 ~2 ~-1 ~14 yellow_concrete
@@ -63,6 +64,7 @@ fill ~-1 ~ ~13 ~1 ~ ~13 sea_lantern
 setblock ~-2 ~4 ~13 sea_lantern
 setblock ~2 ~4 ~13 sea_lantern
 summon superteams:portal_marker ~0 ~ ~12 0 0 superteams:become_lightning lightning_portal
+summon armor_stand "§e§l⚡ TEAM BLIKSEM\n§r§7Stap erop voor:\n§6Snelheid + Sprongkracht" ~0 ~3 ~12
 
 # === PORTAL OOST (EARTH / AARDE) at relatief 12, 0, 0 ===
 fill ~10 ~-1 ~-2 ~14 ~-1 ~2 green_concrete
@@ -80,6 +82,7 @@ fill ~13 ~ ~-1 ~13 ~ ~1 moss_block
 setblock ~13 ~4 ~-2 lantern
 setblock ~13 ~4 ~2 lantern
 summon superteams:portal_marker ~12 ~ ~0 0 0 superteams:become_earth earth_portal
+summon armor_stand "§a§l🪨 TEAM AARDE\n§r§7Stap erop voor:\n§2Resistance + Extra Leven" ~12 ~3 ~0
 
 # === PORTAL WEST (ICE / IJS) at relatief -12, 0, 0 ===
 fill ~-14 ~-1 ~-2 ~-10 ~-1 ~2 light_blue_concrete
@@ -97,6 +100,10 @@ fill ~-13 ~ ~-1 ~-13 ~ ~1 packed_ice
 setblock ~-13 ~4 ~-2 soul_lantern
 setblock ~-13 ~4 ~2 soul_lantern
 summon superteams:portal_marker ~-12 ~ ~0 0 0 superteams:become_ice ice_portal
+summon armor_stand "§b§l❄️ TEAM IJS\n§r§7Stap erop voor:\n§3Water Ademen + Conduit Power" ~-12 ~3 ~0
+
+# --- Centrale instructie-armor-stand bij de beacon ---
+summon armor_stand "§6§lSUPERTEAMS HUB\n§r§eTyp §6/function help §evoor alle commandos\n§7Loop naar een gekleurde portal!" ~0 ~3 ~0
 
 # --- Houd hub geladen (relatief om speler-positie) ---
 tickingarea add ~-20 ~-2 ~-20 ~20 ~10 ~20 superteams_hub true
