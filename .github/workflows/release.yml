@@ -48,6 +48,13 @@ jobs:
           cd build/superteams
           zip -r ../Superteams.mcaddon BP/ RP/
 
+      - name: Create Lava Mod addon
+        run: |
+          mkdir -p build/lava_mod
+          cp -r lava_mod/BP build/lava_mod/
+          cd build/lava_mod
+          zip -r ../LavaMod.mcaddon BP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -92,11 +99,18 @@ jobs:
             - Spawn 10 villagers van jouw team die andere teams aanvallen
             - Bouw huizen, gigantisch herenhuis en armory
             - Zee Paard dat over zee kan zwemmen om vijandige eilanden aan te vallen
+
+            ### Lava Mod
+            - Lavablokken verspreid in het landschap
+            - Alle mobs, dieren en items die in/op lava komen zakken weg in de lava
+            - Spelers blijven gewoon staan (immuun)
+            - Vereist Minecraft 1.21+ met experimentele scripting aan
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
             build/Dierentuin.mcaddon
             build/Superteams.mcaddon
+            build/LavaMod.mcaddon
           prerelease: false
           draft: false
         env:
