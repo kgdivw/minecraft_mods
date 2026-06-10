@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "custom:single_lava_feature"
+        },
+        "places_block": "minecraft:lava",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air",
+            "minecraft:grass_block",
+            "minecraft:dirt",
+            "minecraft:stone",
+            "minecraft:sand",
+            "minecraft:gravel",
+            "minecraft:water",
+            "minecraft:short_grass",
+            "minecraft:tallgrass",
+            "minecraft:snow_layer"
+        ]
+    }
+}
