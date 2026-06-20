@@ -35,7 +35,7 @@ summon ridder_mod:ridder_npc 1996 80 1979
 summon ridder_mod:ridder_npc 2004 80 1979
 
 # --- Markeren dat het leger al gespawnd is ---
-scoreboard players set $leger rm_state 1
+scoreboard players set rmLeger rm_state 1
 
 # --- Feedback ---
 title @s actionbar §6§lKasteel klaar! Kok, uitvinder, hofnar, butler & leger zijn er!

@@ -332,9 +332,9 @@ def write(name, lines):
 
 
 our = build_castle(2000, 2000, OUR, "ours")
-our.append("scoreboard players set $kasteel rm_state 1")
+our.append("scoreboard players set rmKasteel rm_state 1")
 write("build_kasteel.mcfunction", our)
 
 rood = build_castle(2000, 1700, ROOD, "rood")
-rood.append("scoreboard players set $rood rm_state 1")
+rood.append("scoreboard players set rmRood rm_state 1")
 write("build_rood_kasteel.mcfunction", rood)

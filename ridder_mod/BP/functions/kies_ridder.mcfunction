@@ -8,10 +8,10 @@ tag @s add rol_ridder
 tp @s 2000 82 2000
 
 # --- Kasteel + bewoners 1x bouwen ---
-execute unless score $kasteel rm_state matches 1 run function build_kasteel
-execute unless score $leger rm_state matches 1 run function leger
-execute unless score $rood rm_state matches 1 run function build_rood_kasteel
-execute unless score $vijand rm_state matches 1 run function vijand_kasteel
+execute unless score rmKasteel rm_state matches 1 run function build_kasteel
+execute unless score rmLeger rm_state matches 1 run function leger
+execute unless score rmRood rm_state matches 1 run function build_rood_kasteel
+execute unless score rmVijand rm_state matches 1 run function vijand_kasteel
 
 # --- Avatar: het sterkste harnas (netherite) wordt aangetrokken ---
 replaceitem entity @s slot.armor.head 0 netherite_helmet

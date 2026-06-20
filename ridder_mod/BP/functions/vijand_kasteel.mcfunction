@@ -27,4 +27,4 @@ summon ridder_mod:vijand_kanon 2000 80 1732 0 0
 summon ridder_mod:vijand_kanon 2008 80 1732 0 0
 
 # --- Markeren dat de bezetting al gespawnd is ---
-scoreboard players set $vijand rm_state 1
+scoreboard players set rmVijand rm_state 1

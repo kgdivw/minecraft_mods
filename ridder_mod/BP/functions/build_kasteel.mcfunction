@@ -1052,4 +1052,4 @@ setblock 2000 76 2009 torch
 setblock 2009 76 1991 torch
 setblock 2009 76 2000 torch
 setblock 2009 76 2009 torch
-scoreboard players set $kasteel rm_state 1
+scoreboard players set rmKasteel rm_state 1

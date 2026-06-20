@@ -1046,4 +1046,4 @@ setblock 2000 76 1709 torch
 setblock 2009 76 1691 torch
 setblock 2009 76 1700 torch
 setblock 2009 76 1709 torch
-scoreboard players set $rood rm_state 1
+scoreboard players set rmRood rm_state 1
