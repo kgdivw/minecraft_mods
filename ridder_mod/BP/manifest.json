@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Ridder Mod Behavior Pack",
+        "description": "Kies ridder, prins/prinses of koning/koningin en spawn in een gigantisch kasteel met een leger ridders!",
+        "uuid": "3261bfc5-72a5-401e-8f90-183ef1a02233",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 10]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "98c56b86-5e99-4d38-ab3d-d5c577647d42",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b108e3ed-e754-4097-a3d3-3eb480fce4da",
+            "version": [1, 0, 0]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ridder_mod:keuze_portal",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ridder": {
+                "minecraft:type_family": {
+                    "family": ["keuze_portal", "portal_ridder"]
+                }
+            },
+            "prins": {
+                "minecraft:type_family": {
+                    "family": ["keuze_portal", "portal_prins"]
+                }
+            },
+            "koning": {
+                "minecraft:type_family": {
+                    "family": ["keuze_portal", "portal_koning"]
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 0.1
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    { "deals_damage": false }
+                ]
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            }
+        },
+        "events": {
+            "ridder_mod:word_ridder": { "add": { "component_groups": ["ridder"] } },
+            "ridder_mod:word_prins":  { "add": { "component_groups": ["prins"] } },
+            "ridder_mod:word_koning": { "add": { "component_groups": ["koning"] } }
+        }
+    }
+}

@@ -55,6 +55,14 @@ jobs:
           cd build/lava_mod
           zip -r ../LavaMod.mcaddon BP/
 
+      - name: Create Ridder Mod addon
+        run: |
+          mkdir -p build/ridder_mod
+          cp -r ridder_mod/BP build/ridder_mod/
+          cp -r ridder_mod/RP build/ridder_mod/
+          cd build/ridder_mod
+          zip -r ../RidderMod.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -105,12 +113,21 @@ jobs:
             - Alle mobs, dieren en items die in/op lava komen zakken weg in de lava
             - Spelers blijven gewoon staan (immuun)
             - Vereist Minecraft 1.21+ met experimentele scripting aan
+
+            ### Ridder Mod
+            - Kies Ridder, Prins/Prinses of Koning/Koningin via 3 portals
+            - Spawn in een gigantisch stenen kasteel (3 verdiepingen, torens, kelder)
+            - Gouden troon (koning) of diamanten troon (prins) met lang rood tapijt
+            - Ridder krijgt het sterkste harnas + zwaard, schild, boog, kruisboog, speer & pijlen
+            - Kasteelbewoners: kok, uitvinder, hofnar en butler
+            - Een leger ridders op de binnenplaats + `/function vijand_leger` voor een veldslag
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
             build/Dierentuin.mcaddon
             build/Superteams.mcaddon
             build/LavaMod.mcaddon
+            build/RidderMod.mcaddon
           prerelease: false
           draft: false
         env:

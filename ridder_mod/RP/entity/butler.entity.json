@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "ridder_mod:butler",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/butler"
+            },
+            "geometry": {
+                "default": "geometry.humanoid"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#1A1A1A",
+                "overlay_color": "#FFFFFF"
+            },
+            "animations": {
+                "humanoid_base_pose": "animation.humanoid.base_pose",
+                "look_at_target": "animation.humanoid.look_at_target.default",
+                "move": "animation.humanoid.move",
+                "attack": "animation.humanoid.attack"
+            },
+            "scripts": {
+                "animate": [
+                    "humanoid_base_pose",
+                    "look_at_target",
+                    "move",
+                    "attack"
+                ]
+            }
+        }
+    }
+}

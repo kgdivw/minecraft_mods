@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "ridder_mod:keuze_portal",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/keuze_portal"
+            },
+            "geometry": {
+                "default": "geometry.keuze_portal"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

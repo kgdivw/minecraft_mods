@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Ridder Mod Resource Pack",
+        "description": "Textures en modellen voor de Ridder Mod: ridders, kok, uitvinder, hofnar en butler",
+        "uuid": "b108e3ed-e754-4097-a3d3-3eb480fce4da",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 10]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "28c0dd4e-72c5-4ac6-a175-550cae1624fd",
+            "version": [1, 0, 0]
+        }
+    ]
+}
