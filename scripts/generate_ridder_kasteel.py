@@ -304,19 +304,23 @@ def build_castle(cx, cz, p, mode):
     return lines
 
 
+# NB: alle block-id's hieronder zijn Bedrock-namen die de bestaande, werkende
+# mods in deze repo ook gebruiken (stone_bricks, stone_brick_wall, nether_brick
+# (enkelvoud!), red_concrete, sea_lantern, soul_lantern, ...). Gebruik GEEN
+# Java-namen zoals "red_nether_bricks" of "cobblestone_wall".
 OUR = {
     "wall": "stone_bricks", "floor": "polished_andesite", "foundation": "stone_bricks",
-    "cellar": "cobblestone", "merlon": "cobblestone_wall", "plaza": "stone_bricks",
+    "cellar": "cobblestone", "merlon": "stone_brick_wall", "plaza": "stone_bricks",
     "stairs": "stone_brick_stairs", "glass": "glass_pane", "torch": "torch",
     "lantern": "lantern", "spire_light": "sea_lantern", "flag": "red_wool",
-    "gate_light": "lit_pumpkin", "area": "ridder_kasteel",
+    "gate_light": "sea_lantern", "area": "ridder_kasteel",
 }
 ROOD = {
-    "wall": "red_concrete", "floor": "red_nether_bricks", "foundation": "red_nether_bricks",
-    "cellar": "netherrack", "merlon": "red_concrete", "plaza": "red_nether_bricks",
-    "stairs": "stone_brick_stairs", "glass": "red_stained_glass", "torch": "soul_torch",
-    "lantern": "soul_lantern", "spire_light": "glowstone", "flag": "black_wool",
-    "gate_light": "glowstone", "area": "rood_kasteel",
+    "wall": "red_concrete", "floor": "red_nether_brick", "foundation": "red_nether_brick",
+    "cellar": "netherrack", "merlon": "stone_brick_wall", "plaza": "red_nether_brick",
+    "stairs": "stone_brick_stairs", "glass": "red_stained_glass", "torch": "torch",
+    "lantern": "soul_lantern", "spire_light": "sea_lantern", "flag": "black_wool",
+    "gate_light": "soul_lantern", "area": "rood_kasteel",
 }
 
 
