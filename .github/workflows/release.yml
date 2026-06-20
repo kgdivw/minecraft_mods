@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - main
+      - claude/ridder-mod
 
 jobs:
   build-and-release:
