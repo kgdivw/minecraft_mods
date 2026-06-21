@@ -8,6 +8,7 @@ entity.ridder_mod:uitvinder.name=Uitvinder
 entity.ridder_mod:hofnar.name=Hofnar
 entity.ridder_mod:butler.name=Butler
 entity.ridder_mod:keuze_portal.name=Keuze Portal
+entity.ridder_mod:kasteel_anker.name=Kasteel Anker
 item.spawn_egg.entity.ridder_mod:ridder_npc.name=Spawn Ridder
 item.spawn_egg.entity.ridder_mod:vijand_ridder.name=Spawn Vijandige Ridder
 item.spawn_egg.entity.ridder_mod:vijand_boog.name=Spawn Vijandige Boogschutter

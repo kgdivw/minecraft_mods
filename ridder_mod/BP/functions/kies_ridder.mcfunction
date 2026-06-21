@@ -4,14 +4,9 @@
 tag @s add rm_chose
 tag @s add rol_ridder
 
-# --- Eerst naar het kasteel teleporteren zodat de chunks laden ---
-tp @s 2000 82 2000
-
-# --- Kasteel + bewoners 1x bouwen ---
-execute unless score rmKasteel rm_state matches 1 run function build_kasteel
-execute unless score rmLeger rm_state matches 1 run function leger
-execute unless score rmRood rm_state matches 1 run function build_rood_kasteel
-execute unless score rmVijand rm_state matches 1 run function vijand_kasteel
+# --- Kasteel + leger RONDOM de speler bouwen (1x) ---
+execute unless score rmKasteel rm_state matches 1 at @s run function build_kasteel
+execute unless score rmLeger rm_state matches 1 at @s run function leger
 
 # --- Avatar: het sterkste harnas (netherite) wordt aangetrokken ---
 replaceitem entity @s slot.armor.head 0 netherite_helmet
@@ -35,8 +30,8 @@ replaceitem entity @s slot.hotbar 3 trident 1
 replaceitem entity @s slot.hotbar 4 arrow 64
 replaceitem entity @s slot.hotbar 5 arrow 64
 
-# --- Naar de binnenplaats, midden in je leger ---
-tp @s 2000 80 1958 0 0
+# --- Naar de binnenplaats, midden in je leger (korte hop) ---
+tp @s ~ ~ ~-40 0 0
 
 # --- Start de aftelklok: over 1 minuut valt de vijand aan ---
 tag @s add rm_count

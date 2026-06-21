@@ -5,1535 +5,1537 @@ gamerule commandblockoutput false
 gamerule dofiretick false
 gamerule mobgriefing false
 scoreboard objectives add rm_state dummy
+tickingarea remove rood_kasteel
+tickingarea add ~-104 ~-12 ~-104 ~104 ~118 ~104 rood_kasteel true
 # Binnenplaats leegmaken (tot muurhoogte) en de grond vlak leggen
-fill 1900 80 1600 1929 87 1629 air
-fill 1900 80 1630 1929 87 1659 air
-fill 1900 80 1660 1929 87 1689 air
-fill 1900 80 1690 1929 87 1719 air
-fill 1900 80 1720 1929 87 1749 air
-fill 1900 80 1750 1929 87 1779 air
-fill 1900 80 1780 1929 87 1800 air
-fill 1930 80 1600 1959 87 1629 air
-fill 1930 80 1630 1959 87 1659 air
-fill 1930 80 1660 1959 87 1689 air
-fill 1930 80 1690 1959 87 1719 air
-fill 1930 80 1720 1959 87 1749 air
-fill 1930 80 1750 1959 87 1779 air
-fill 1930 80 1780 1959 87 1800 air
-fill 1960 80 1600 1989 87 1629 air
-fill 1960 80 1630 1989 87 1659 air
-fill 1960 80 1660 1989 87 1689 air
-fill 1960 80 1690 1989 87 1719 air
-fill 1960 80 1720 1989 87 1749 air
-fill 1960 80 1750 1989 87 1779 air
-fill 1960 80 1780 1989 87 1800 air
-fill 1990 80 1600 2019 87 1629 air
-fill 1990 80 1630 2019 87 1659 air
-fill 1990 80 1660 2019 87 1689 air
-fill 1990 80 1690 2019 87 1719 air
-fill 1990 80 1720 2019 87 1749 air
-fill 1990 80 1750 2019 87 1779 air
-fill 1990 80 1780 2019 87 1800 air
-fill 2020 80 1600 2049 87 1629 air
-fill 2020 80 1630 2049 87 1659 air
-fill 2020 80 1660 2049 87 1689 air
-fill 2020 80 1690 2049 87 1719 air
-fill 2020 80 1720 2049 87 1749 air
-fill 2020 80 1750 2049 87 1779 air
-fill 2020 80 1780 2049 87 1800 air
-fill 2050 80 1600 2079 87 1629 air
-fill 2050 80 1630 2079 87 1659 air
-fill 2050 80 1660 2079 87 1689 air
-fill 2050 80 1690 2079 87 1719 air
-fill 2050 80 1720 2079 87 1749 air
-fill 2050 80 1750 2079 87 1779 air
-fill 2050 80 1780 2079 87 1800 air
-fill 2080 80 1600 2100 87 1629 air
-fill 2080 80 1630 2100 87 1659 air
-fill 2080 80 1660 2100 87 1689 air
-fill 2080 80 1690 2100 87 1719 air
-fill 2080 80 1720 2100 87 1749 air
-fill 2080 80 1750 2100 87 1779 air
-fill 2080 80 1780 2100 87 1800 air
-fill 1900 79 1600 1929 79 1629 grass_block
-fill 1900 79 1630 1929 79 1659 grass_block
-fill 1900 79 1660 1929 79 1689 grass_block
-fill 1900 79 1690 1929 79 1719 grass_block
-fill 1900 79 1720 1929 79 1749 grass_block
-fill 1900 79 1750 1929 79 1779 grass_block
-fill 1900 79 1780 1929 79 1800 grass_block
-fill 1930 79 1600 1959 79 1629 grass_block
-fill 1930 79 1630 1959 79 1659 grass_block
-fill 1930 79 1660 1959 79 1689 grass_block
-fill 1930 79 1690 1959 79 1719 grass_block
-fill 1930 79 1720 1959 79 1749 grass_block
-fill 1930 79 1750 1959 79 1779 grass_block
-fill 1930 79 1780 1959 79 1800 grass_block
-fill 1960 79 1600 1989 79 1629 grass_block
-fill 1960 79 1630 1989 79 1659 grass_block
-fill 1960 79 1660 1989 79 1689 grass_block
-fill 1960 79 1690 1989 79 1719 grass_block
-fill 1960 79 1720 1989 79 1749 grass_block
-fill 1960 79 1750 1989 79 1779 grass_block
-fill 1960 79 1780 1989 79 1800 grass_block
-fill 1990 79 1600 2019 79 1629 grass_block
-fill 1990 79 1630 2019 79 1659 grass_block
-fill 1990 79 1660 2019 79 1689 grass_block
-fill 1990 79 1690 2019 79 1719 grass_block
-fill 1990 79 1720 2019 79 1749 grass_block
-fill 1990 79 1750 2019 79 1779 grass_block
-fill 1990 79 1780 2019 79 1800 grass_block
-fill 2020 79 1600 2049 79 1629 grass_block
-fill 2020 79 1630 2049 79 1659 grass_block
-fill 2020 79 1660 2049 79 1689 grass_block
-fill 2020 79 1690 2049 79 1719 grass_block
-fill 2020 79 1720 2049 79 1749 grass_block
-fill 2020 79 1750 2049 79 1779 grass_block
-fill 2020 79 1780 2049 79 1800 grass_block
-fill 2050 79 1600 2079 79 1629 grass_block
-fill 2050 79 1630 2079 79 1659 grass_block
-fill 2050 79 1660 2079 79 1689 grass_block
-fill 2050 79 1690 2079 79 1719 grass_block
-fill 2050 79 1720 2079 79 1749 grass_block
-fill 2050 79 1750 2079 79 1779 grass_block
-fill 2050 79 1780 2079 79 1800 grass_block
-fill 2080 79 1600 2100 79 1629 grass_block
-fill 2080 79 1630 2100 79 1659 grass_block
-fill 2080 79 1660 2100 79 1689 grass_block
-fill 2080 79 1690 2100 79 1719 grass_block
-fill 2080 79 1720 2100 79 1749 grass_block
-fill 2080 79 1750 2100 79 1779 grass_block
-fill 2080 79 1780 2100 79 1800 grass_block
-fill 1966 79 1666 1995 79 1695 red_nether_brick
-fill 1966 79 1696 1995 79 1725 red_nether_brick
-fill 1966 79 1726 1995 79 1734 red_nether_brick
-fill 1996 79 1666 2025 79 1695 red_nether_brick
-fill 1996 79 1696 2025 79 1725 red_nether_brick
-fill 1996 79 1726 2025 79 1734 red_nether_brick
-fill 2026 79 1666 2034 79 1695 red_nether_brick
-fill 2026 79 1696 2034 79 1725 red_nether_brick
-fill 2026 79 1726 2034 79 1734 red_nether_brick
+fill ~-100 ~0 ~-100 ~-71 ~7 ~-71 air
+fill ~-100 ~0 ~-70 ~-71 ~7 ~-41 air
+fill ~-100 ~0 ~-40 ~-71 ~7 ~-11 air
+fill ~-100 ~0 ~-10 ~-71 ~7 ~19 air
+fill ~-100 ~0 ~20 ~-71 ~7 ~49 air
+fill ~-100 ~0 ~50 ~-71 ~7 ~79 air
+fill ~-100 ~0 ~80 ~-71 ~7 ~100 air
+fill ~-70 ~0 ~-100 ~-41 ~7 ~-71 air
+fill ~-70 ~0 ~-70 ~-41 ~7 ~-41 air
+fill ~-70 ~0 ~-40 ~-41 ~7 ~-11 air
+fill ~-70 ~0 ~-10 ~-41 ~7 ~19 air
+fill ~-70 ~0 ~20 ~-41 ~7 ~49 air
+fill ~-70 ~0 ~50 ~-41 ~7 ~79 air
+fill ~-70 ~0 ~80 ~-41 ~7 ~100 air
+fill ~-40 ~0 ~-100 ~-11 ~7 ~-71 air
+fill ~-40 ~0 ~-70 ~-11 ~7 ~-41 air
+fill ~-40 ~0 ~-40 ~-11 ~7 ~-11 air
+fill ~-40 ~0 ~-10 ~-11 ~7 ~19 air
+fill ~-40 ~0 ~20 ~-11 ~7 ~49 air
+fill ~-40 ~0 ~50 ~-11 ~7 ~79 air
+fill ~-40 ~0 ~80 ~-11 ~7 ~100 air
+fill ~-10 ~0 ~-100 ~19 ~7 ~-71 air
+fill ~-10 ~0 ~-70 ~19 ~7 ~-41 air
+fill ~-10 ~0 ~-40 ~19 ~7 ~-11 air
+fill ~-10 ~0 ~-10 ~19 ~7 ~19 air
+fill ~-10 ~0 ~20 ~19 ~7 ~49 air
+fill ~-10 ~0 ~50 ~19 ~7 ~79 air
+fill ~-10 ~0 ~80 ~19 ~7 ~100 air
+fill ~20 ~0 ~-100 ~49 ~7 ~-71 air
+fill ~20 ~0 ~-70 ~49 ~7 ~-41 air
+fill ~20 ~0 ~-40 ~49 ~7 ~-11 air
+fill ~20 ~0 ~-10 ~49 ~7 ~19 air
+fill ~20 ~0 ~20 ~49 ~7 ~49 air
+fill ~20 ~0 ~50 ~49 ~7 ~79 air
+fill ~20 ~0 ~80 ~49 ~7 ~100 air
+fill ~50 ~0 ~-100 ~79 ~7 ~-71 air
+fill ~50 ~0 ~-70 ~79 ~7 ~-41 air
+fill ~50 ~0 ~-40 ~79 ~7 ~-11 air
+fill ~50 ~0 ~-10 ~79 ~7 ~19 air
+fill ~50 ~0 ~20 ~79 ~7 ~49 air
+fill ~50 ~0 ~50 ~79 ~7 ~79 air
+fill ~50 ~0 ~80 ~79 ~7 ~100 air
+fill ~80 ~0 ~-100 ~100 ~7 ~-71 air
+fill ~80 ~0 ~-70 ~100 ~7 ~-41 air
+fill ~80 ~0 ~-40 ~100 ~7 ~-11 air
+fill ~80 ~0 ~-10 ~100 ~7 ~19 air
+fill ~80 ~0 ~20 ~100 ~7 ~49 air
+fill ~80 ~0 ~50 ~100 ~7 ~79 air
+fill ~80 ~0 ~80 ~100 ~7 ~100 air
+fill ~-100 ~-1 ~-100 ~-71 ~-1 ~-71 grass_block
+fill ~-100 ~-1 ~-70 ~-71 ~-1 ~-41 grass_block
+fill ~-100 ~-1 ~-40 ~-71 ~-1 ~-11 grass_block
+fill ~-100 ~-1 ~-10 ~-71 ~-1 ~19 grass_block
+fill ~-100 ~-1 ~20 ~-71 ~-1 ~49 grass_block
+fill ~-100 ~-1 ~50 ~-71 ~-1 ~79 grass_block
+fill ~-100 ~-1 ~80 ~-71 ~-1 ~100 grass_block
+fill ~-70 ~-1 ~-100 ~-41 ~-1 ~-71 grass_block
+fill ~-70 ~-1 ~-70 ~-41 ~-1 ~-41 grass_block
+fill ~-70 ~-1 ~-40 ~-41 ~-1 ~-11 grass_block
+fill ~-70 ~-1 ~-10 ~-41 ~-1 ~19 grass_block
+fill ~-70 ~-1 ~20 ~-41 ~-1 ~49 grass_block
+fill ~-70 ~-1 ~50 ~-41 ~-1 ~79 grass_block
+fill ~-70 ~-1 ~80 ~-41 ~-1 ~100 grass_block
+fill ~-40 ~-1 ~-100 ~-11 ~-1 ~-71 grass_block
+fill ~-40 ~-1 ~-70 ~-11 ~-1 ~-41 grass_block
+fill ~-40 ~-1 ~-40 ~-11 ~-1 ~-11 grass_block
+fill ~-40 ~-1 ~-10 ~-11 ~-1 ~19 grass_block
+fill ~-40 ~-1 ~20 ~-11 ~-1 ~49 grass_block
+fill ~-40 ~-1 ~50 ~-11 ~-1 ~79 grass_block
+fill ~-40 ~-1 ~80 ~-11 ~-1 ~100 grass_block
+fill ~-10 ~-1 ~-100 ~19 ~-1 ~-71 grass_block
+fill ~-10 ~-1 ~-70 ~19 ~-1 ~-41 grass_block
+fill ~-10 ~-1 ~-40 ~19 ~-1 ~-11 grass_block
+fill ~-10 ~-1 ~-10 ~19 ~-1 ~19 grass_block
+fill ~-10 ~-1 ~20 ~19 ~-1 ~49 grass_block
+fill ~-10 ~-1 ~50 ~19 ~-1 ~79 grass_block
+fill ~-10 ~-1 ~80 ~19 ~-1 ~100 grass_block
+fill ~20 ~-1 ~-100 ~49 ~-1 ~-71 grass_block
+fill ~20 ~-1 ~-70 ~49 ~-1 ~-41 grass_block
+fill ~20 ~-1 ~-40 ~49 ~-1 ~-11 grass_block
+fill ~20 ~-1 ~-10 ~49 ~-1 ~19 grass_block
+fill ~20 ~-1 ~20 ~49 ~-1 ~49 grass_block
+fill ~20 ~-1 ~50 ~49 ~-1 ~79 grass_block
+fill ~20 ~-1 ~80 ~49 ~-1 ~100 grass_block
+fill ~50 ~-1 ~-100 ~79 ~-1 ~-71 grass_block
+fill ~50 ~-1 ~-70 ~79 ~-1 ~-41 grass_block
+fill ~50 ~-1 ~-40 ~79 ~-1 ~-11 grass_block
+fill ~50 ~-1 ~-10 ~79 ~-1 ~19 grass_block
+fill ~50 ~-1 ~20 ~79 ~-1 ~49 grass_block
+fill ~50 ~-1 ~50 ~79 ~-1 ~79 grass_block
+fill ~50 ~-1 ~80 ~79 ~-1 ~100 grass_block
+fill ~80 ~-1 ~-100 ~100 ~-1 ~-71 grass_block
+fill ~80 ~-1 ~-70 ~100 ~-1 ~-41 grass_block
+fill ~80 ~-1 ~-40 ~100 ~-1 ~-11 grass_block
+fill ~80 ~-1 ~-10 ~100 ~-1 ~19 grass_block
+fill ~80 ~-1 ~20 ~100 ~-1 ~49 grass_block
+fill ~80 ~-1 ~50 ~100 ~-1 ~79 grass_block
+fill ~80 ~-1 ~80 ~100 ~-1 ~100 grass_block
+fill ~-34 ~-1 ~-34 ~-5 ~-1 ~-5 red_nether_brick
+fill ~-34 ~-1 ~-4 ~-5 ~-1 ~25 red_nether_brick
+fill ~-34 ~-1 ~26 ~-5 ~-1 ~34 red_nether_brick
+fill ~-4 ~-1 ~-34 ~25 ~-1 ~-5 red_nether_brick
+fill ~-4 ~-1 ~-4 ~25 ~-1 ~25 red_nether_brick
+fill ~-4 ~-1 ~26 ~25 ~-1 ~34 red_nether_brick
+fill ~26 ~-1 ~-34 ~34 ~-1 ~-5 red_nether_brick
+fill ~26 ~-1 ~-4 ~34 ~-1 ~25 red_nether_brick
+fill ~26 ~-1 ~26 ~34 ~-1 ~34 red_nether_brick
 # === BUITENMUUR ROND DE BINNENPLAATS (ong. 200 breed) ===
-fill 1900 80 1600 2100 86 1600 red_concrete
-fill 1900 80 1800 2100 86 1800 red_concrete
-fill 1900 80 1600 1900 86 1800 red_concrete
-fill 2100 80 1600 2100 86 1800 red_concrete
-setblock 1900 87 1600 stone_brick_wall
-setblock 1900 87 1800 stone_brick_wall
-setblock 1904 87 1600 stone_brick_wall
-setblock 1904 87 1800 stone_brick_wall
-setblock 1908 87 1600 stone_brick_wall
-setblock 1908 87 1800 stone_brick_wall
-setblock 1912 87 1600 stone_brick_wall
-setblock 1912 87 1800 stone_brick_wall
-setblock 1916 87 1600 stone_brick_wall
-setblock 1916 87 1800 stone_brick_wall
-setblock 1920 87 1600 stone_brick_wall
-setblock 1920 87 1800 stone_brick_wall
-setblock 1924 87 1600 stone_brick_wall
-setblock 1924 87 1800 stone_brick_wall
-setblock 1928 87 1600 stone_brick_wall
-setblock 1928 87 1800 stone_brick_wall
-setblock 1932 87 1600 stone_brick_wall
-setblock 1932 87 1800 stone_brick_wall
-setblock 1936 87 1600 stone_brick_wall
-setblock 1936 87 1800 stone_brick_wall
-setblock 1940 87 1600 stone_brick_wall
-setblock 1940 87 1800 stone_brick_wall
-setblock 1944 87 1600 stone_brick_wall
-setblock 1944 87 1800 stone_brick_wall
-setblock 1948 87 1600 stone_brick_wall
-setblock 1948 87 1800 stone_brick_wall
-setblock 1952 87 1600 stone_brick_wall
-setblock 1952 87 1800 stone_brick_wall
-setblock 1956 87 1600 stone_brick_wall
-setblock 1956 87 1800 stone_brick_wall
-setblock 1960 87 1600 stone_brick_wall
-setblock 1960 87 1800 stone_brick_wall
-setblock 1964 87 1600 stone_brick_wall
-setblock 1964 87 1800 stone_brick_wall
-setblock 1968 87 1600 stone_brick_wall
-setblock 1968 87 1800 stone_brick_wall
-setblock 1972 87 1600 stone_brick_wall
-setblock 1972 87 1800 stone_brick_wall
-setblock 1976 87 1600 stone_brick_wall
-setblock 1976 87 1800 stone_brick_wall
-setblock 1980 87 1600 stone_brick_wall
-setblock 1980 87 1800 stone_brick_wall
-setblock 1984 87 1600 stone_brick_wall
-setblock 1984 87 1800 stone_brick_wall
-setblock 1988 87 1600 stone_brick_wall
-setblock 1988 87 1800 stone_brick_wall
-setblock 1992 87 1600 stone_brick_wall
-setblock 1992 87 1800 stone_brick_wall
-setblock 1996 87 1600 stone_brick_wall
-setblock 1996 87 1800 stone_brick_wall
-setblock 2000 87 1600 stone_brick_wall
-setblock 2000 87 1800 stone_brick_wall
-setblock 2004 87 1600 stone_brick_wall
-setblock 2004 87 1800 stone_brick_wall
-setblock 2008 87 1600 stone_brick_wall
-setblock 2008 87 1800 stone_brick_wall
-setblock 2012 87 1600 stone_brick_wall
-setblock 2012 87 1800 stone_brick_wall
-setblock 2016 87 1600 stone_brick_wall
-setblock 2016 87 1800 stone_brick_wall
-setblock 2020 87 1600 stone_brick_wall
-setblock 2020 87 1800 stone_brick_wall
-setblock 2024 87 1600 stone_brick_wall
-setblock 2024 87 1800 stone_brick_wall
-setblock 2028 87 1600 stone_brick_wall
-setblock 2028 87 1800 stone_brick_wall
-setblock 2032 87 1600 stone_brick_wall
-setblock 2032 87 1800 stone_brick_wall
-setblock 2036 87 1600 stone_brick_wall
-setblock 2036 87 1800 stone_brick_wall
-setblock 2040 87 1600 stone_brick_wall
-setblock 2040 87 1800 stone_brick_wall
-setblock 2044 87 1600 stone_brick_wall
-setblock 2044 87 1800 stone_brick_wall
-setblock 2048 87 1600 stone_brick_wall
-setblock 2048 87 1800 stone_brick_wall
-setblock 2052 87 1600 stone_brick_wall
-setblock 2052 87 1800 stone_brick_wall
-setblock 2056 87 1600 stone_brick_wall
-setblock 2056 87 1800 stone_brick_wall
-setblock 2060 87 1600 stone_brick_wall
-setblock 2060 87 1800 stone_brick_wall
-setblock 2064 87 1600 stone_brick_wall
-setblock 2064 87 1800 stone_brick_wall
-setblock 2068 87 1600 stone_brick_wall
-setblock 2068 87 1800 stone_brick_wall
-setblock 2072 87 1600 stone_brick_wall
-setblock 2072 87 1800 stone_brick_wall
-setblock 2076 87 1600 stone_brick_wall
-setblock 2076 87 1800 stone_brick_wall
-setblock 2080 87 1600 stone_brick_wall
-setblock 2080 87 1800 stone_brick_wall
-setblock 2084 87 1600 stone_brick_wall
-setblock 2084 87 1800 stone_brick_wall
-setblock 2088 87 1600 stone_brick_wall
-setblock 2088 87 1800 stone_brick_wall
-setblock 2092 87 1600 stone_brick_wall
-setblock 2092 87 1800 stone_brick_wall
-setblock 2096 87 1600 stone_brick_wall
-setblock 2096 87 1800 stone_brick_wall
-setblock 2100 87 1600 stone_brick_wall
-setblock 2100 87 1800 stone_brick_wall
-setblock 1900 87 1600 stone_brick_wall
-setblock 2100 87 1600 stone_brick_wall
-setblock 1900 87 1604 stone_brick_wall
-setblock 2100 87 1604 stone_brick_wall
-setblock 1900 87 1608 stone_brick_wall
-setblock 2100 87 1608 stone_brick_wall
-setblock 1900 87 1612 stone_brick_wall
-setblock 2100 87 1612 stone_brick_wall
-setblock 1900 87 1616 stone_brick_wall
-setblock 2100 87 1616 stone_brick_wall
-setblock 1900 87 1620 stone_brick_wall
-setblock 2100 87 1620 stone_brick_wall
-setblock 1900 87 1624 stone_brick_wall
-setblock 2100 87 1624 stone_brick_wall
-setblock 1900 87 1628 stone_brick_wall
-setblock 2100 87 1628 stone_brick_wall
-setblock 1900 87 1632 stone_brick_wall
-setblock 2100 87 1632 stone_brick_wall
-setblock 1900 87 1636 stone_brick_wall
-setblock 2100 87 1636 stone_brick_wall
-setblock 1900 87 1640 stone_brick_wall
-setblock 2100 87 1640 stone_brick_wall
-setblock 1900 87 1644 stone_brick_wall
-setblock 2100 87 1644 stone_brick_wall
-setblock 1900 87 1648 stone_brick_wall
-setblock 2100 87 1648 stone_brick_wall
-setblock 1900 87 1652 stone_brick_wall
-setblock 2100 87 1652 stone_brick_wall
-setblock 1900 87 1656 stone_brick_wall
-setblock 2100 87 1656 stone_brick_wall
-setblock 1900 87 1660 stone_brick_wall
-setblock 2100 87 1660 stone_brick_wall
-setblock 1900 87 1664 stone_brick_wall
-setblock 2100 87 1664 stone_brick_wall
-setblock 1900 87 1668 stone_brick_wall
-setblock 2100 87 1668 stone_brick_wall
-setblock 1900 87 1672 stone_brick_wall
-setblock 2100 87 1672 stone_brick_wall
-setblock 1900 87 1676 stone_brick_wall
-setblock 2100 87 1676 stone_brick_wall
-setblock 1900 87 1680 stone_brick_wall
-setblock 2100 87 1680 stone_brick_wall
-setblock 1900 87 1684 stone_brick_wall
-setblock 2100 87 1684 stone_brick_wall
-setblock 1900 87 1688 stone_brick_wall
-setblock 2100 87 1688 stone_brick_wall
-setblock 1900 87 1692 stone_brick_wall
-setblock 2100 87 1692 stone_brick_wall
-setblock 1900 87 1696 stone_brick_wall
-setblock 2100 87 1696 stone_brick_wall
-setblock 1900 87 1700 stone_brick_wall
-setblock 2100 87 1700 stone_brick_wall
-setblock 1900 87 1704 stone_brick_wall
-setblock 2100 87 1704 stone_brick_wall
-setblock 1900 87 1708 stone_brick_wall
-setblock 2100 87 1708 stone_brick_wall
-setblock 1900 87 1712 stone_brick_wall
-setblock 2100 87 1712 stone_brick_wall
-setblock 1900 87 1716 stone_brick_wall
-setblock 2100 87 1716 stone_brick_wall
-setblock 1900 87 1720 stone_brick_wall
-setblock 2100 87 1720 stone_brick_wall
-setblock 1900 87 1724 stone_brick_wall
-setblock 2100 87 1724 stone_brick_wall
-setblock 1900 87 1728 stone_brick_wall
-setblock 2100 87 1728 stone_brick_wall
-setblock 1900 87 1732 stone_brick_wall
-setblock 2100 87 1732 stone_brick_wall
-setblock 1900 87 1736 stone_brick_wall
-setblock 2100 87 1736 stone_brick_wall
-setblock 1900 87 1740 stone_brick_wall
-setblock 2100 87 1740 stone_brick_wall
-setblock 1900 87 1744 stone_brick_wall
-setblock 2100 87 1744 stone_brick_wall
-setblock 1900 87 1748 stone_brick_wall
-setblock 2100 87 1748 stone_brick_wall
-setblock 1900 87 1752 stone_brick_wall
-setblock 2100 87 1752 stone_brick_wall
-setblock 1900 87 1756 stone_brick_wall
-setblock 2100 87 1756 stone_brick_wall
-setblock 1900 87 1760 stone_brick_wall
-setblock 2100 87 1760 stone_brick_wall
-setblock 1900 87 1764 stone_brick_wall
-setblock 2100 87 1764 stone_brick_wall
-setblock 1900 87 1768 stone_brick_wall
-setblock 2100 87 1768 stone_brick_wall
-setblock 1900 87 1772 stone_brick_wall
-setblock 2100 87 1772 stone_brick_wall
-setblock 1900 87 1776 stone_brick_wall
-setblock 2100 87 1776 stone_brick_wall
-setblock 1900 87 1780 stone_brick_wall
-setblock 2100 87 1780 stone_brick_wall
-setblock 1900 87 1784 stone_brick_wall
-setblock 2100 87 1784 stone_brick_wall
-setblock 1900 87 1788 stone_brick_wall
-setblock 2100 87 1788 stone_brick_wall
-setblock 1900 87 1792 stone_brick_wall
-setblock 2100 87 1792 stone_brick_wall
-setblock 1900 87 1796 stone_brick_wall
-setblock 2100 87 1796 stone_brick_wall
-setblock 1900 87 1800 stone_brick_wall
-setblock 2100 87 1800 stone_brick_wall
-fill 1997 80 1800 2003 84 1800 air
-setblock 1996 84 1800 soul_lantern
-setblock 2004 84 1800 soul_lantern
-setblock 1904 84 1601 torch
-setblock 1904 84 1799 torch
-setblock 1916 84 1601 torch
-setblock 1916 84 1799 torch
-setblock 1928 84 1601 torch
-setblock 1928 84 1799 torch
-setblock 1940 84 1601 torch
-setblock 1940 84 1799 torch
-setblock 1952 84 1601 torch
-setblock 1952 84 1799 torch
-setblock 1964 84 1601 torch
-setblock 1964 84 1799 torch
-setblock 1976 84 1601 torch
-setblock 1976 84 1799 torch
-setblock 1988 84 1601 torch
-setblock 1988 84 1799 torch
-setblock 2000 84 1601 torch
-setblock 2000 84 1799 torch
-setblock 2012 84 1601 torch
-setblock 2012 84 1799 torch
-setblock 2024 84 1601 torch
-setblock 2024 84 1799 torch
-setblock 2036 84 1601 torch
-setblock 2036 84 1799 torch
-setblock 2048 84 1601 torch
-setblock 2048 84 1799 torch
-setblock 2060 84 1601 torch
-setblock 2060 84 1799 torch
-setblock 2072 84 1601 torch
-setblock 2072 84 1799 torch
-setblock 2084 84 1601 torch
-setblock 2084 84 1799 torch
-setblock 2096 84 1601 torch
-setblock 2096 84 1799 torch
+fill ~-100 ~0 ~-100 ~100 ~6 ~-100 red_concrete
+fill ~-100 ~0 ~100 ~100 ~6 ~100 red_concrete
+fill ~-100 ~0 ~-100 ~-100 ~6 ~100 red_concrete
+fill ~100 ~0 ~-100 ~100 ~6 ~100 red_concrete
+setblock ~-100 ~7 ~-100 stone_brick_wall
+setblock ~-100 ~7 ~100 stone_brick_wall
+setblock ~-96 ~7 ~-100 stone_brick_wall
+setblock ~-96 ~7 ~100 stone_brick_wall
+setblock ~-92 ~7 ~-100 stone_brick_wall
+setblock ~-92 ~7 ~100 stone_brick_wall
+setblock ~-88 ~7 ~-100 stone_brick_wall
+setblock ~-88 ~7 ~100 stone_brick_wall
+setblock ~-84 ~7 ~-100 stone_brick_wall
+setblock ~-84 ~7 ~100 stone_brick_wall
+setblock ~-80 ~7 ~-100 stone_brick_wall
+setblock ~-80 ~7 ~100 stone_brick_wall
+setblock ~-76 ~7 ~-100 stone_brick_wall
+setblock ~-76 ~7 ~100 stone_brick_wall
+setblock ~-72 ~7 ~-100 stone_brick_wall
+setblock ~-72 ~7 ~100 stone_brick_wall
+setblock ~-68 ~7 ~-100 stone_brick_wall
+setblock ~-68 ~7 ~100 stone_brick_wall
+setblock ~-64 ~7 ~-100 stone_brick_wall
+setblock ~-64 ~7 ~100 stone_brick_wall
+setblock ~-60 ~7 ~-100 stone_brick_wall
+setblock ~-60 ~7 ~100 stone_brick_wall
+setblock ~-56 ~7 ~-100 stone_brick_wall
+setblock ~-56 ~7 ~100 stone_brick_wall
+setblock ~-52 ~7 ~-100 stone_brick_wall
+setblock ~-52 ~7 ~100 stone_brick_wall
+setblock ~-48 ~7 ~-100 stone_brick_wall
+setblock ~-48 ~7 ~100 stone_brick_wall
+setblock ~-44 ~7 ~-100 stone_brick_wall
+setblock ~-44 ~7 ~100 stone_brick_wall
+setblock ~-40 ~7 ~-100 stone_brick_wall
+setblock ~-40 ~7 ~100 stone_brick_wall
+setblock ~-36 ~7 ~-100 stone_brick_wall
+setblock ~-36 ~7 ~100 stone_brick_wall
+setblock ~-32 ~7 ~-100 stone_brick_wall
+setblock ~-32 ~7 ~100 stone_brick_wall
+setblock ~-28 ~7 ~-100 stone_brick_wall
+setblock ~-28 ~7 ~100 stone_brick_wall
+setblock ~-24 ~7 ~-100 stone_brick_wall
+setblock ~-24 ~7 ~100 stone_brick_wall
+setblock ~-20 ~7 ~-100 stone_brick_wall
+setblock ~-20 ~7 ~100 stone_brick_wall
+setblock ~-16 ~7 ~-100 stone_brick_wall
+setblock ~-16 ~7 ~100 stone_brick_wall
+setblock ~-12 ~7 ~-100 stone_brick_wall
+setblock ~-12 ~7 ~100 stone_brick_wall
+setblock ~-8 ~7 ~-100 stone_brick_wall
+setblock ~-8 ~7 ~100 stone_brick_wall
+setblock ~-4 ~7 ~-100 stone_brick_wall
+setblock ~-4 ~7 ~100 stone_brick_wall
+setblock ~0 ~7 ~-100 stone_brick_wall
+setblock ~0 ~7 ~100 stone_brick_wall
+setblock ~4 ~7 ~-100 stone_brick_wall
+setblock ~4 ~7 ~100 stone_brick_wall
+setblock ~8 ~7 ~-100 stone_brick_wall
+setblock ~8 ~7 ~100 stone_brick_wall
+setblock ~12 ~7 ~-100 stone_brick_wall
+setblock ~12 ~7 ~100 stone_brick_wall
+setblock ~16 ~7 ~-100 stone_brick_wall
+setblock ~16 ~7 ~100 stone_brick_wall
+setblock ~20 ~7 ~-100 stone_brick_wall
+setblock ~20 ~7 ~100 stone_brick_wall
+setblock ~24 ~7 ~-100 stone_brick_wall
+setblock ~24 ~7 ~100 stone_brick_wall
+setblock ~28 ~7 ~-100 stone_brick_wall
+setblock ~28 ~7 ~100 stone_brick_wall
+setblock ~32 ~7 ~-100 stone_brick_wall
+setblock ~32 ~7 ~100 stone_brick_wall
+setblock ~36 ~7 ~-100 stone_brick_wall
+setblock ~36 ~7 ~100 stone_brick_wall
+setblock ~40 ~7 ~-100 stone_brick_wall
+setblock ~40 ~7 ~100 stone_brick_wall
+setblock ~44 ~7 ~-100 stone_brick_wall
+setblock ~44 ~7 ~100 stone_brick_wall
+setblock ~48 ~7 ~-100 stone_brick_wall
+setblock ~48 ~7 ~100 stone_brick_wall
+setblock ~52 ~7 ~-100 stone_brick_wall
+setblock ~52 ~7 ~100 stone_brick_wall
+setblock ~56 ~7 ~-100 stone_brick_wall
+setblock ~56 ~7 ~100 stone_brick_wall
+setblock ~60 ~7 ~-100 stone_brick_wall
+setblock ~60 ~7 ~100 stone_brick_wall
+setblock ~64 ~7 ~-100 stone_brick_wall
+setblock ~64 ~7 ~100 stone_brick_wall
+setblock ~68 ~7 ~-100 stone_brick_wall
+setblock ~68 ~7 ~100 stone_brick_wall
+setblock ~72 ~7 ~-100 stone_brick_wall
+setblock ~72 ~7 ~100 stone_brick_wall
+setblock ~76 ~7 ~-100 stone_brick_wall
+setblock ~76 ~7 ~100 stone_brick_wall
+setblock ~80 ~7 ~-100 stone_brick_wall
+setblock ~80 ~7 ~100 stone_brick_wall
+setblock ~84 ~7 ~-100 stone_brick_wall
+setblock ~84 ~7 ~100 stone_brick_wall
+setblock ~88 ~7 ~-100 stone_brick_wall
+setblock ~88 ~7 ~100 stone_brick_wall
+setblock ~92 ~7 ~-100 stone_brick_wall
+setblock ~92 ~7 ~100 stone_brick_wall
+setblock ~96 ~7 ~-100 stone_brick_wall
+setblock ~96 ~7 ~100 stone_brick_wall
+setblock ~100 ~7 ~-100 stone_brick_wall
+setblock ~100 ~7 ~100 stone_brick_wall
+setblock ~-100 ~7 ~-100 stone_brick_wall
+setblock ~100 ~7 ~-100 stone_brick_wall
+setblock ~-100 ~7 ~-96 stone_brick_wall
+setblock ~100 ~7 ~-96 stone_brick_wall
+setblock ~-100 ~7 ~-92 stone_brick_wall
+setblock ~100 ~7 ~-92 stone_brick_wall
+setblock ~-100 ~7 ~-88 stone_brick_wall
+setblock ~100 ~7 ~-88 stone_brick_wall
+setblock ~-100 ~7 ~-84 stone_brick_wall
+setblock ~100 ~7 ~-84 stone_brick_wall
+setblock ~-100 ~7 ~-80 stone_brick_wall
+setblock ~100 ~7 ~-80 stone_brick_wall
+setblock ~-100 ~7 ~-76 stone_brick_wall
+setblock ~100 ~7 ~-76 stone_brick_wall
+setblock ~-100 ~7 ~-72 stone_brick_wall
+setblock ~100 ~7 ~-72 stone_brick_wall
+setblock ~-100 ~7 ~-68 stone_brick_wall
+setblock ~100 ~7 ~-68 stone_brick_wall
+setblock ~-100 ~7 ~-64 stone_brick_wall
+setblock ~100 ~7 ~-64 stone_brick_wall
+setblock ~-100 ~7 ~-60 stone_brick_wall
+setblock ~100 ~7 ~-60 stone_brick_wall
+setblock ~-100 ~7 ~-56 stone_brick_wall
+setblock ~100 ~7 ~-56 stone_brick_wall
+setblock ~-100 ~7 ~-52 stone_brick_wall
+setblock ~100 ~7 ~-52 stone_brick_wall
+setblock ~-100 ~7 ~-48 stone_brick_wall
+setblock ~100 ~7 ~-48 stone_brick_wall
+setblock ~-100 ~7 ~-44 stone_brick_wall
+setblock ~100 ~7 ~-44 stone_brick_wall
+setblock ~-100 ~7 ~-40 stone_brick_wall
+setblock ~100 ~7 ~-40 stone_brick_wall
+setblock ~-100 ~7 ~-36 stone_brick_wall
+setblock ~100 ~7 ~-36 stone_brick_wall
+setblock ~-100 ~7 ~-32 stone_brick_wall
+setblock ~100 ~7 ~-32 stone_brick_wall
+setblock ~-100 ~7 ~-28 stone_brick_wall
+setblock ~100 ~7 ~-28 stone_brick_wall
+setblock ~-100 ~7 ~-24 stone_brick_wall
+setblock ~100 ~7 ~-24 stone_brick_wall
+setblock ~-100 ~7 ~-20 stone_brick_wall
+setblock ~100 ~7 ~-20 stone_brick_wall
+setblock ~-100 ~7 ~-16 stone_brick_wall
+setblock ~100 ~7 ~-16 stone_brick_wall
+setblock ~-100 ~7 ~-12 stone_brick_wall
+setblock ~100 ~7 ~-12 stone_brick_wall
+setblock ~-100 ~7 ~-8 stone_brick_wall
+setblock ~100 ~7 ~-8 stone_brick_wall
+setblock ~-100 ~7 ~-4 stone_brick_wall
+setblock ~100 ~7 ~-4 stone_brick_wall
+setblock ~-100 ~7 ~0 stone_brick_wall
+setblock ~100 ~7 ~0 stone_brick_wall
+setblock ~-100 ~7 ~4 stone_brick_wall
+setblock ~100 ~7 ~4 stone_brick_wall
+setblock ~-100 ~7 ~8 stone_brick_wall
+setblock ~100 ~7 ~8 stone_brick_wall
+setblock ~-100 ~7 ~12 stone_brick_wall
+setblock ~100 ~7 ~12 stone_brick_wall
+setblock ~-100 ~7 ~16 stone_brick_wall
+setblock ~100 ~7 ~16 stone_brick_wall
+setblock ~-100 ~7 ~20 stone_brick_wall
+setblock ~100 ~7 ~20 stone_brick_wall
+setblock ~-100 ~7 ~24 stone_brick_wall
+setblock ~100 ~7 ~24 stone_brick_wall
+setblock ~-100 ~7 ~28 stone_brick_wall
+setblock ~100 ~7 ~28 stone_brick_wall
+setblock ~-100 ~7 ~32 stone_brick_wall
+setblock ~100 ~7 ~32 stone_brick_wall
+setblock ~-100 ~7 ~36 stone_brick_wall
+setblock ~100 ~7 ~36 stone_brick_wall
+setblock ~-100 ~7 ~40 stone_brick_wall
+setblock ~100 ~7 ~40 stone_brick_wall
+setblock ~-100 ~7 ~44 stone_brick_wall
+setblock ~100 ~7 ~44 stone_brick_wall
+setblock ~-100 ~7 ~48 stone_brick_wall
+setblock ~100 ~7 ~48 stone_brick_wall
+setblock ~-100 ~7 ~52 stone_brick_wall
+setblock ~100 ~7 ~52 stone_brick_wall
+setblock ~-100 ~7 ~56 stone_brick_wall
+setblock ~100 ~7 ~56 stone_brick_wall
+setblock ~-100 ~7 ~60 stone_brick_wall
+setblock ~100 ~7 ~60 stone_brick_wall
+setblock ~-100 ~7 ~64 stone_brick_wall
+setblock ~100 ~7 ~64 stone_brick_wall
+setblock ~-100 ~7 ~68 stone_brick_wall
+setblock ~100 ~7 ~68 stone_brick_wall
+setblock ~-100 ~7 ~72 stone_brick_wall
+setblock ~100 ~7 ~72 stone_brick_wall
+setblock ~-100 ~7 ~76 stone_brick_wall
+setblock ~100 ~7 ~76 stone_brick_wall
+setblock ~-100 ~7 ~80 stone_brick_wall
+setblock ~100 ~7 ~80 stone_brick_wall
+setblock ~-100 ~7 ~84 stone_brick_wall
+setblock ~100 ~7 ~84 stone_brick_wall
+setblock ~-100 ~7 ~88 stone_brick_wall
+setblock ~100 ~7 ~88 stone_brick_wall
+setblock ~-100 ~7 ~92 stone_brick_wall
+setblock ~100 ~7 ~92 stone_brick_wall
+setblock ~-100 ~7 ~96 stone_brick_wall
+setblock ~100 ~7 ~96 stone_brick_wall
+setblock ~-100 ~7 ~100 stone_brick_wall
+setblock ~100 ~7 ~100 stone_brick_wall
+fill ~-3 ~0 ~100 ~3 ~4 ~100 air
+setblock ~-4 ~4 ~100 soul_lantern
+setblock ~4 ~4 ~100 soul_lantern
+setblock ~-96 ~4 ~-99 torch
+setblock ~-96 ~4 ~99 torch
+setblock ~-84 ~4 ~-99 torch
+setblock ~-84 ~4 ~99 torch
+setblock ~-72 ~4 ~-99 torch
+setblock ~-72 ~4 ~99 torch
+setblock ~-60 ~4 ~-99 torch
+setblock ~-60 ~4 ~99 torch
+setblock ~-48 ~4 ~-99 torch
+setblock ~-48 ~4 ~99 torch
+setblock ~-36 ~4 ~-99 torch
+setblock ~-36 ~4 ~99 torch
+setblock ~-24 ~4 ~-99 torch
+setblock ~-24 ~4 ~99 torch
+setblock ~-12 ~4 ~-99 torch
+setblock ~-12 ~4 ~99 torch
+setblock ~0 ~4 ~-99 torch
+setblock ~0 ~4 ~99 torch
+setblock ~12 ~4 ~-99 torch
+setblock ~12 ~4 ~99 torch
+setblock ~24 ~4 ~-99 torch
+setblock ~24 ~4 ~99 torch
+setblock ~36 ~4 ~-99 torch
+setblock ~36 ~4 ~99 torch
+setblock ~48 ~4 ~-99 torch
+setblock ~48 ~4 ~99 torch
+setblock ~60 ~4 ~-99 torch
+setblock ~60 ~4 ~99 torch
+setblock ~72 ~4 ~-99 torch
+setblock ~72 ~4 ~99 torch
+setblock ~84 ~4 ~-99 torch
+setblock ~84 ~4 ~99 torch
+setblock ~96 ~4 ~-99 torch
+setblock ~96 ~4 ~99 torch
 # === DE KEEP - FUNDERING & 3 VERDIEPINGEN ===
-fill 1972 80 1672 2001 98 1701 air
-fill 1972 80 1702 2001 98 1728 air
-fill 2002 80 1672 2028 98 1701 air
-fill 2002 80 1702 2028 98 1728 air
-fill 1972 78 1672 2028 79 1728 red_nether_brick
-fill 1972 80 1672 2028 98 1672 red_concrete
-fill 1972 80 1728 2028 98 1728 red_concrete
-fill 1972 80 1672 1972 98 1728 red_concrete
-fill 2028 80 1672 2028 98 1728 red_concrete
-fill 1973 79 1673 2027 79 1727 red_concrete
-fill 1973 85 1673 2027 85 1727 red_concrete
-fill 1973 91 1673 2027 91 1727 red_concrete
-fill 1972 98 1672 2028 98 1728 red_concrete
-fill 1973 80 1673 2027 80 1727 red_nether_brick
-setblock 1976 82 1672 red_stained_glass
-setblock 1976 83 1672 red_stained_glass
-setblock 1976 82 1728 red_stained_glass
-setblock 1976 83 1728 red_stained_glass
-setblock 1982 82 1672 red_stained_glass
-setblock 1982 83 1672 red_stained_glass
-setblock 1982 82 1728 red_stained_glass
-setblock 1982 83 1728 red_stained_glass
-setblock 1988 82 1672 red_stained_glass
-setblock 1988 83 1672 red_stained_glass
-setblock 1988 82 1728 red_stained_glass
-setblock 1988 83 1728 red_stained_glass
-setblock 1994 82 1672 red_stained_glass
-setblock 1994 83 1672 red_stained_glass
-setblock 1994 82 1728 red_stained_glass
-setblock 1994 83 1728 red_stained_glass
-setblock 2000 82 1672 red_stained_glass
-setblock 2000 83 1672 red_stained_glass
-setblock 2000 82 1728 red_stained_glass
-setblock 2000 83 1728 red_stained_glass
-setblock 2006 82 1672 red_stained_glass
-setblock 2006 83 1672 red_stained_glass
-setblock 2006 82 1728 red_stained_glass
-setblock 2006 83 1728 red_stained_glass
-setblock 2012 82 1672 red_stained_glass
-setblock 2012 83 1672 red_stained_glass
-setblock 2012 82 1728 red_stained_glass
-setblock 2012 83 1728 red_stained_glass
-setblock 2018 82 1672 red_stained_glass
-setblock 2018 83 1672 red_stained_glass
-setblock 2018 82 1728 red_stained_glass
-setblock 2018 83 1728 red_stained_glass
-setblock 2024 82 1672 red_stained_glass
-setblock 2024 83 1672 red_stained_glass
-setblock 2024 82 1728 red_stained_glass
-setblock 2024 83 1728 red_stained_glass
-setblock 1972 82 1676 red_stained_glass
-setblock 1972 83 1676 red_stained_glass
-setblock 2028 82 1676 red_stained_glass
-setblock 2028 83 1676 red_stained_glass
-setblock 1972 82 1682 red_stained_glass
-setblock 1972 83 1682 red_stained_glass
-setblock 2028 82 1682 red_stained_glass
-setblock 2028 83 1682 red_stained_glass
-setblock 1972 82 1688 red_stained_glass
-setblock 1972 83 1688 red_stained_glass
-setblock 2028 82 1688 red_stained_glass
-setblock 2028 83 1688 red_stained_glass
-setblock 1972 82 1694 red_stained_glass
-setblock 1972 83 1694 red_stained_glass
-setblock 2028 82 1694 red_stained_glass
-setblock 2028 83 1694 red_stained_glass
-setblock 1972 82 1700 red_stained_glass
-setblock 1972 83 1700 red_stained_glass
-setblock 2028 82 1700 red_stained_glass
-setblock 2028 83 1700 red_stained_glass
-setblock 1972 82 1706 red_stained_glass
-setblock 1972 83 1706 red_stained_glass
-setblock 2028 82 1706 red_stained_glass
-setblock 2028 83 1706 red_stained_glass
-setblock 1972 82 1712 red_stained_glass
-setblock 1972 83 1712 red_stained_glass
-setblock 2028 82 1712 red_stained_glass
-setblock 2028 83 1712 red_stained_glass
-setblock 1972 82 1718 red_stained_glass
-setblock 1972 83 1718 red_stained_glass
-setblock 2028 82 1718 red_stained_glass
-setblock 2028 83 1718 red_stained_glass
-setblock 1972 82 1724 red_stained_glass
-setblock 1972 83 1724 red_stained_glass
-setblock 2028 82 1724 red_stained_glass
-setblock 2028 83 1724 red_stained_glass
-setblock 1976 88 1672 red_stained_glass
-setblock 1976 89 1672 red_stained_glass
-setblock 1976 88 1728 red_stained_glass
-setblock 1976 89 1728 red_stained_glass
-setblock 1982 88 1672 red_stained_glass
-setblock 1982 89 1672 red_stained_glass
-setblock 1982 88 1728 red_stained_glass
-setblock 1982 89 1728 red_stained_glass
-setblock 1988 88 1672 red_stained_glass
-setblock 1988 89 1672 red_stained_glass
-setblock 1988 88 1728 red_stained_glass
-setblock 1988 89 1728 red_stained_glass
-setblock 1994 88 1672 red_stained_glass
-setblock 1994 89 1672 red_stained_glass
-setblock 1994 88 1728 red_stained_glass
-setblock 1994 89 1728 red_stained_glass
-setblock 2000 88 1672 red_stained_glass
-setblock 2000 89 1672 red_stained_glass
-setblock 2000 88 1728 red_stained_glass
-setblock 2000 89 1728 red_stained_glass
-setblock 2006 88 1672 red_stained_glass
-setblock 2006 89 1672 red_stained_glass
-setblock 2006 88 1728 red_stained_glass
-setblock 2006 89 1728 red_stained_glass
-setblock 2012 88 1672 red_stained_glass
-setblock 2012 89 1672 red_stained_glass
-setblock 2012 88 1728 red_stained_glass
-setblock 2012 89 1728 red_stained_glass
-setblock 2018 88 1672 red_stained_glass
-setblock 2018 89 1672 red_stained_glass
-setblock 2018 88 1728 red_stained_glass
-setblock 2018 89 1728 red_stained_glass
-setblock 2024 88 1672 red_stained_glass
-setblock 2024 89 1672 red_stained_glass
-setblock 2024 88 1728 red_stained_glass
-setblock 2024 89 1728 red_stained_glass
-setblock 1972 88 1676 red_stained_glass
-setblock 1972 89 1676 red_stained_glass
-setblock 2028 88 1676 red_stained_glass
-setblock 2028 89 1676 red_stained_glass
-setblock 1972 88 1682 red_stained_glass
-setblock 1972 89 1682 red_stained_glass
-setblock 2028 88 1682 red_stained_glass
-setblock 2028 89 1682 red_stained_glass
-setblock 1972 88 1688 red_stained_glass
-setblock 1972 89 1688 red_stained_glass
-setblock 2028 88 1688 red_stained_glass
-setblock 2028 89 1688 red_stained_glass
-setblock 1972 88 1694 red_stained_glass
-setblock 1972 89 1694 red_stained_glass
-setblock 2028 88 1694 red_stained_glass
-setblock 2028 89 1694 red_stained_glass
-setblock 1972 88 1700 red_stained_glass
-setblock 1972 89 1700 red_stained_glass
-setblock 2028 88 1700 red_stained_glass
-setblock 2028 89 1700 red_stained_glass
-setblock 1972 88 1706 red_stained_glass
-setblock 1972 89 1706 red_stained_glass
-setblock 2028 88 1706 red_stained_glass
-setblock 2028 89 1706 red_stained_glass
-setblock 1972 88 1712 red_stained_glass
-setblock 1972 89 1712 red_stained_glass
-setblock 2028 88 1712 red_stained_glass
-setblock 2028 89 1712 red_stained_glass
-setblock 1972 88 1718 red_stained_glass
-setblock 1972 89 1718 red_stained_glass
-setblock 2028 88 1718 red_stained_glass
-setblock 2028 89 1718 red_stained_glass
-setblock 1972 88 1724 red_stained_glass
-setblock 1972 89 1724 red_stained_glass
-setblock 2028 88 1724 red_stained_glass
-setblock 2028 89 1724 red_stained_glass
-setblock 1976 94 1672 red_stained_glass
-setblock 1976 95 1672 red_stained_glass
-setblock 1976 94 1728 red_stained_glass
-setblock 1976 95 1728 red_stained_glass
-setblock 1982 94 1672 red_stained_glass
-setblock 1982 95 1672 red_stained_glass
-setblock 1982 94 1728 red_stained_glass
-setblock 1982 95 1728 red_stained_glass
-setblock 1988 94 1672 red_stained_glass
-setblock 1988 95 1672 red_stained_glass
-setblock 1988 94 1728 red_stained_glass
-setblock 1988 95 1728 red_stained_glass
-setblock 1994 94 1672 red_stained_glass
-setblock 1994 95 1672 red_stained_glass
-setblock 1994 94 1728 red_stained_glass
-setblock 1994 95 1728 red_stained_glass
-setblock 2000 94 1672 red_stained_glass
-setblock 2000 95 1672 red_stained_glass
-setblock 2000 94 1728 red_stained_glass
-setblock 2000 95 1728 red_stained_glass
-setblock 2006 94 1672 red_stained_glass
-setblock 2006 95 1672 red_stained_glass
-setblock 2006 94 1728 red_stained_glass
-setblock 2006 95 1728 red_stained_glass
-setblock 2012 94 1672 red_stained_glass
-setblock 2012 95 1672 red_stained_glass
-setblock 2012 94 1728 red_stained_glass
-setblock 2012 95 1728 red_stained_glass
-setblock 2018 94 1672 red_stained_glass
-setblock 2018 95 1672 red_stained_glass
-setblock 2018 94 1728 red_stained_glass
-setblock 2018 95 1728 red_stained_glass
-setblock 2024 94 1672 red_stained_glass
-setblock 2024 95 1672 red_stained_glass
-setblock 2024 94 1728 red_stained_glass
-setblock 2024 95 1728 red_stained_glass
-setblock 1972 94 1676 red_stained_glass
-setblock 1972 95 1676 red_stained_glass
-setblock 2028 94 1676 red_stained_glass
-setblock 2028 95 1676 red_stained_glass
-setblock 1972 94 1682 red_stained_glass
-setblock 1972 95 1682 red_stained_glass
-setblock 2028 94 1682 red_stained_glass
-setblock 2028 95 1682 red_stained_glass
-setblock 1972 94 1688 red_stained_glass
-setblock 1972 95 1688 red_stained_glass
-setblock 2028 94 1688 red_stained_glass
-setblock 2028 95 1688 red_stained_glass
-setblock 1972 94 1694 red_stained_glass
-setblock 1972 95 1694 red_stained_glass
-setblock 2028 94 1694 red_stained_glass
-setblock 2028 95 1694 red_stained_glass
-setblock 1972 94 1700 red_stained_glass
-setblock 1972 95 1700 red_stained_glass
-setblock 2028 94 1700 red_stained_glass
-setblock 2028 95 1700 red_stained_glass
-setblock 1972 94 1706 red_stained_glass
-setblock 1972 95 1706 red_stained_glass
-setblock 2028 94 1706 red_stained_glass
-setblock 2028 95 1706 red_stained_glass
-setblock 1972 94 1712 red_stained_glass
-setblock 1972 95 1712 red_stained_glass
-setblock 2028 94 1712 red_stained_glass
-setblock 2028 95 1712 red_stained_glass
-setblock 1972 94 1718 red_stained_glass
-setblock 1972 95 1718 red_stained_glass
-setblock 2028 94 1718 red_stained_glass
-setblock 2028 95 1718 red_stained_glass
-setblock 1972 94 1724 red_stained_glass
-setblock 1972 95 1724 red_stained_glass
-setblock 2028 94 1724 red_stained_glass
-setblock 2028 95 1724 red_stained_glass
-setblock 1972 99 1672 stone_brick_wall
-setblock 1972 99 1728 stone_brick_wall
-setblock 1975 99 1672 stone_brick_wall
-setblock 1975 99 1728 stone_brick_wall
-setblock 1978 99 1672 stone_brick_wall
-setblock 1978 99 1728 stone_brick_wall
-setblock 1981 99 1672 stone_brick_wall
-setblock 1981 99 1728 stone_brick_wall
-setblock 1984 99 1672 stone_brick_wall
-setblock 1984 99 1728 stone_brick_wall
-setblock 1987 99 1672 stone_brick_wall
-setblock 1987 99 1728 stone_brick_wall
-setblock 1990 99 1672 stone_brick_wall
-setblock 1990 99 1728 stone_brick_wall
-setblock 1993 99 1672 stone_brick_wall
-setblock 1993 99 1728 stone_brick_wall
-setblock 1996 99 1672 stone_brick_wall
-setblock 1996 99 1728 stone_brick_wall
-setblock 1999 99 1672 stone_brick_wall
-setblock 1999 99 1728 stone_brick_wall
-setblock 2002 99 1672 stone_brick_wall
-setblock 2002 99 1728 stone_brick_wall
-setblock 2005 99 1672 stone_brick_wall
-setblock 2005 99 1728 stone_brick_wall
-setblock 2008 99 1672 stone_brick_wall
-setblock 2008 99 1728 stone_brick_wall
-setblock 2011 99 1672 stone_brick_wall
-setblock 2011 99 1728 stone_brick_wall
-setblock 2014 99 1672 stone_brick_wall
-setblock 2014 99 1728 stone_brick_wall
-setblock 2017 99 1672 stone_brick_wall
-setblock 2017 99 1728 stone_brick_wall
-setblock 2020 99 1672 stone_brick_wall
-setblock 2020 99 1728 stone_brick_wall
-setblock 2023 99 1672 stone_brick_wall
-setblock 2023 99 1728 stone_brick_wall
-setblock 2026 99 1672 stone_brick_wall
-setblock 2026 99 1728 stone_brick_wall
-setblock 1972 99 1672 stone_brick_wall
-setblock 2028 99 1672 stone_brick_wall
-setblock 1972 99 1675 stone_brick_wall
-setblock 2028 99 1675 stone_brick_wall
-setblock 1972 99 1678 stone_brick_wall
-setblock 2028 99 1678 stone_brick_wall
-setblock 1972 99 1681 stone_brick_wall
-setblock 2028 99 1681 stone_brick_wall
-setblock 1972 99 1684 stone_brick_wall
-setblock 2028 99 1684 stone_brick_wall
-setblock 1972 99 1687 stone_brick_wall
-setblock 2028 99 1687 stone_brick_wall
-setblock 1972 99 1690 stone_brick_wall
-setblock 2028 99 1690 stone_brick_wall
-setblock 1972 99 1693 stone_brick_wall
-setblock 2028 99 1693 stone_brick_wall
-setblock 1972 99 1696 stone_brick_wall
-setblock 2028 99 1696 stone_brick_wall
-setblock 1972 99 1699 stone_brick_wall
-setblock 2028 99 1699 stone_brick_wall
-setblock 1972 99 1702 stone_brick_wall
-setblock 2028 99 1702 stone_brick_wall
-setblock 1972 99 1705 stone_brick_wall
-setblock 2028 99 1705 stone_brick_wall
-setblock 1972 99 1708 stone_brick_wall
-setblock 2028 99 1708 stone_brick_wall
-setblock 1972 99 1711 stone_brick_wall
-setblock 2028 99 1711 stone_brick_wall
-setblock 1972 99 1714 stone_brick_wall
-setblock 2028 99 1714 stone_brick_wall
-setblock 1972 99 1717 stone_brick_wall
-setblock 2028 99 1717 stone_brick_wall
-setblock 1972 99 1720 stone_brick_wall
-setblock 2028 99 1720 stone_brick_wall
-setblock 1972 99 1723 stone_brick_wall
-setblock 2028 99 1723 stone_brick_wall
-setblock 1972 99 1726 stone_brick_wall
-setblock 2028 99 1726 stone_brick_wall
-fill 1998 80 1728 2002 83 1728 air
-setblock 1997 84 1728 soul_lantern
-setblock 2003 84 1728 soul_lantern
-setblock 1973 82 1673 torch
-setblock 1973 82 1727 torch
-setblock 1977 82 1673 torch
-setblock 1977 82 1727 torch
-setblock 1981 82 1673 torch
-setblock 1981 82 1727 torch
-setblock 1985 82 1673 torch
-setblock 1985 82 1727 torch
-setblock 1989 82 1673 torch
-setblock 1989 82 1727 torch
-setblock 1993 82 1673 torch
-setblock 1993 82 1727 torch
-setblock 1997 82 1673 torch
-setblock 1997 82 1727 torch
-setblock 2001 82 1673 torch
-setblock 2001 82 1727 torch
-setblock 2005 82 1673 torch
-setblock 2005 82 1727 torch
-setblock 2009 82 1673 torch
-setblock 2009 82 1727 torch
-setblock 2013 82 1673 torch
-setblock 2013 82 1727 torch
-setblock 2017 82 1673 torch
-setblock 2017 82 1727 torch
-setblock 2021 82 1673 torch
-setblock 2021 82 1727 torch
-setblock 2025 82 1673 torch
-setblock 2025 82 1727 torch
-setblock 1973 82 1673 torch
-setblock 2027 82 1673 torch
-setblock 1973 82 1677 torch
-setblock 2027 82 1677 torch
-setblock 1973 82 1681 torch
-setblock 2027 82 1681 torch
-setblock 1973 82 1685 torch
-setblock 2027 82 1685 torch
-setblock 1973 82 1689 torch
-setblock 2027 82 1689 torch
-setblock 1973 82 1693 torch
-setblock 2027 82 1693 torch
-setblock 1973 82 1697 torch
-setblock 2027 82 1697 torch
-setblock 1973 82 1701 torch
-setblock 2027 82 1701 torch
-setblock 1973 82 1705 torch
-setblock 2027 82 1705 torch
-setblock 1973 82 1709 torch
-setblock 2027 82 1709 torch
-setblock 1973 82 1713 torch
-setblock 2027 82 1713 torch
-setblock 1973 82 1717 torch
-setblock 2027 82 1717 torch
-setblock 1973 82 1721 torch
-setblock 2027 82 1721 torch
-setblock 1973 82 1725 torch
-setblock 2027 82 1725 torch
-setblock 1973 84 1673 torch
-setblock 1973 84 1727 torch
-setblock 1977 84 1673 torch
-setblock 1977 84 1727 torch
-setblock 1981 84 1673 torch
-setblock 1981 84 1727 torch
-setblock 1985 84 1673 torch
-setblock 1985 84 1727 torch
-setblock 1989 84 1673 torch
-setblock 1989 84 1727 torch
-setblock 1993 84 1673 torch
-setblock 1993 84 1727 torch
-setblock 1997 84 1673 torch
-setblock 1997 84 1727 torch
-setblock 2001 84 1673 torch
-setblock 2001 84 1727 torch
-setblock 2005 84 1673 torch
-setblock 2005 84 1727 torch
-setblock 2009 84 1673 torch
-setblock 2009 84 1727 torch
-setblock 2013 84 1673 torch
-setblock 2013 84 1727 torch
-setblock 2017 84 1673 torch
-setblock 2017 84 1727 torch
-setblock 2021 84 1673 torch
-setblock 2021 84 1727 torch
-setblock 2025 84 1673 torch
-setblock 2025 84 1727 torch
-setblock 1973 84 1673 torch
-setblock 2027 84 1673 torch
-setblock 1973 84 1677 torch
-setblock 2027 84 1677 torch
-setblock 1973 84 1681 torch
-setblock 2027 84 1681 torch
-setblock 1973 84 1685 torch
-setblock 2027 84 1685 torch
-setblock 1973 84 1689 torch
-setblock 2027 84 1689 torch
-setblock 1973 84 1693 torch
-setblock 2027 84 1693 torch
-setblock 1973 84 1697 torch
-setblock 2027 84 1697 torch
-setblock 1973 84 1701 torch
-setblock 2027 84 1701 torch
-setblock 1973 84 1705 torch
-setblock 2027 84 1705 torch
-setblock 1973 84 1709 torch
-setblock 2027 84 1709 torch
-setblock 1973 84 1713 torch
-setblock 2027 84 1713 torch
-setblock 1973 84 1717 torch
-setblock 2027 84 1717 torch
-setblock 1973 84 1721 torch
-setblock 2027 84 1721 torch
-setblock 1973 84 1725 torch
-setblock 2027 84 1725 torch
-setblock 1973 88 1673 torch
-setblock 1973 88 1727 torch
-setblock 1977 88 1673 torch
-setblock 1977 88 1727 torch
-setblock 1981 88 1673 torch
-setblock 1981 88 1727 torch
-setblock 1985 88 1673 torch
-setblock 1985 88 1727 torch
-setblock 1989 88 1673 torch
-setblock 1989 88 1727 torch
-setblock 1993 88 1673 torch
-setblock 1993 88 1727 torch
-setblock 1997 88 1673 torch
-setblock 1997 88 1727 torch
-setblock 2001 88 1673 torch
-setblock 2001 88 1727 torch
-setblock 2005 88 1673 torch
-setblock 2005 88 1727 torch
-setblock 2009 88 1673 torch
-setblock 2009 88 1727 torch
-setblock 2013 88 1673 torch
-setblock 2013 88 1727 torch
-setblock 2017 88 1673 torch
-setblock 2017 88 1727 torch
-setblock 2021 88 1673 torch
-setblock 2021 88 1727 torch
-setblock 2025 88 1673 torch
-setblock 2025 88 1727 torch
-setblock 1973 88 1673 torch
-setblock 2027 88 1673 torch
-setblock 1973 88 1677 torch
-setblock 2027 88 1677 torch
-setblock 1973 88 1681 torch
-setblock 2027 88 1681 torch
-setblock 1973 88 1685 torch
-setblock 2027 88 1685 torch
-setblock 1973 88 1689 torch
-setblock 2027 88 1689 torch
-setblock 1973 88 1693 torch
-setblock 2027 88 1693 torch
-setblock 1973 88 1697 torch
-setblock 2027 88 1697 torch
-setblock 1973 88 1701 torch
-setblock 2027 88 1701 torch
-setblock 1973 88 1705 torch
-setblock 2027 88 1705 torch
-setblock 1973 88 1709 torch
-setblock 2027 88 1709 torch
-setblock 1973 88 1713 torch
-setblock 2027 88 1713 torch
-setblock 1973 88 1717 torch
-setblock 2027 88 1717 torch
-setblock 1973 88 1721 torch
-setblock 2027 88 1721 torch
-setblock 1973 88 1725 torch
-setblock 2027 88 1725 torch
-setblock 1973 90 1673 torch
-setblock 1973 90 1727 torch
-setblock 1977 90 1673 torch
-setblock 1977 90 1727 torch
-setblock 1981 90 1673 torch
-setblock 1981 90 1727 torch
-setblock 1985 90 1673 torch
-setblock 1985 90 1727 torch
-setblock 1989 90 1673 torch
-setblock 1989 90 1727 torch
-setblock 1993 90 1673 torch
-setblock 1993 90 1727 torch
-setblock 1997 90 1673 torch
-setblock 1997 90 1727 torch
-setblock 2001 90 1673 torch
-setblock 2001 90 1727 torch
-setblock 2005 90 1673 torch
-setblock 2005 90 1727 torch
-setblock 2009 90 1673 torch
-setblock 2009 90 1727 torch
-setblock 2013 90 1673 torch
-setblock 2013 90 1727 torch
-setblock 2017 90 1673 torch
-setblock 2017 90 1727 torch
-setblock 2021 90 1673 torch
-setblock 2021 90 1727 torch
-setblock 2025 90 1673 torch
-setblock 2025 90 1727 torch
-setblock 1973 90 1673 torch
-setblock 2027 90 1673 torch
-setblock 1973 90 1677 torch
-setblock 2027 90 1677 torch
-setblock 1973 90 1681 torch
-setblock 2027 90 1681 torch
-setblock 1973 90 1685 torch
-setblock 2027 90 1685 torch
-setblock 1973 90 1689 torch
-setblock 2027 90 1689 torch
-setblock 1973 90 1693 torch
-setblock 2027 90 1693 torch
-setblock 1973 90 1697 torch
-setblock 2027 90 1697 torch
-setblock 1973 90 1701 torch
-setblock 2027 90 1701 torch
-setblock 1973 90 1705 torch
-setblock 2027 90 1705 torch
-setblock 1973 90 1709 torch
-setblock 2027 90 1709 torch
-setblock 1973 90 1713 torch
-setblock 2027 90 1713 torch
-setblock 1973 90 1717 torch
-setblock 2027 90 1717 torch
-setblock 1973 90 1721 torch
-setblock 2027 90 1721 torch
-setblock 1973 90 1725 torch
-setblock 2027 90 1725 torch
-setblock 1973 94 1673 torch
-setblock 1973 94 1727 torch
-setblock 1977 94 1673 torch
-setblock 1977 94 1727 torch
-setblock 1981 94 1673 torch
-setblock 1981 94 1727 torch
-setblock 1985 94 1673 torch
-setblock 1985 94 1727 torch
-setblock 1989 94 1673 torch
-setblock 1989 94 1727 torch
-setblock 1993 94 1673 torch
-setblock 1993 94 1727 torch
-setblock 1997 94 1673 torch
-setblock 1997 94 1727 torch
-setblock 2001 94 1673 torch
-setblock 2001 94 1727 torch
-setblock 2005 94 1673 torch
-setblock 2005 94 1727 torch
-setblock 2009 94 1673 torch
-setblock 2009 94 1727 torch
-setblock 2013 94 1673 torch
-setblock 2013 94 1727 torch
-setblock 2017 94 1673 torch
-setblock 2017 94 1727 torch
-setblock 2021 94 1673 torch
-setblock 2021 94 1727 torch
-setblock 2025 94 1673 torch
-setblock 2025 94 1727 torch
-setblock 1973 94 1673 torch
-setblock 2027 94 1673 torch
-setblock 1973 94 1677 torch
-setblock 2027 94 1677 torch
-setblock 1973 94 1681 torch
-setblock 2027 94 1681 torch
-setblock 1973 94 1685 torch
-setblock 2027 94 1685 torch
-setblock 1973 94 1689 torch
-setblock 2027 94 1689 torch
-setblock 1973 94 1693 torch
-setblock 2027 94 1693 torch
-setblock 1973 94 1697 torch
-setblock 2027 94 1697 torch
-setblock 1973 94 1701 torch
-setblock 2027 94 1701 torch
-setblock 1973 94 1705 torch
-setblock 2027 94 1705 torch
-setblock 1973 94 1709 torch
-setblock 2027 94 1709 torch
-setblock 1973 94 1713 torch
-setblock 2027 94 1713 torch
-setblock 1973 94 1717 torch
-setblock 2027 94 1717 torch
-setblock 1973 94 1721 torch
-setblock 2027 94 1721 torch
-setblock 1973 94 1725 torch
-setblock 2027 94 1725 torch
-setblock 1973 96 1673 torch
-setblock 1973 96 1727 torch
-setblock 1977 96 1673 torch
-setblock 1977 96 1727 torch
-setblock 1981 96 1673 torch
-setblock 1981 96 1727 torch
-setblock 1985 96 1673 torch
-setblock 1985 96 1727 torch
-setblock 1989 96 1673 torch
-setblock 1989 96 1727 torch
-setblock 1993 96 1673 torch
-setblock 1993 96 1727 torch
-setblock 1997 96 1673 torch
-setblock 1997 96 1727 torch
-setblock 2001 96 1673 torch
-setblock 2001 96 1727 torch
-setblock 2005 96 1673 torch
-setblock 2005 96 1727 torch
-setblock 2009 96 1673 torch
-setblock 2009 96 1727 torch
-setblock 2013 96 1673 torch
-setblock 2013 96 1727 torch
-setblock 2017 96 1673 torch
-setblock 2017 96 1727 torch
-setblock 2021 96 1673 torch
-setblock 2021 96 1727 torch
-setblock 2025 96 1673 torch
-setblock 2025 96 1727 torch
-setblock 1973 96 1673 torch
-setblock 2027 96 1673 torch
-setblock 1973 96 1677 torch
-setblock 2027 96 1677 torch
-setblock 1973 96 1681 torch
-setblock 2027 96 1681 torch
-setblock 1973 96 1685 torch
-setblock 2027 96 1685 torch
-setblock 1973 96 1689 torch
-setblock 2027 96 1689 torch
-setblock 1973 96 1693 torch
-setblock 2027 96 1693 torch
-setblock 1973 96 1697 torch
-setblock 2027 96 1697 torch
-setblock 1973 96 1701 torch
-setblock 2027 96 1701 torch
-setblock 1973 96 1705 torch
-setblock 2027 96 1705 torch
-setblock 1973 96 1709 torch
-setblock 2027 96 1709 torch
-setblock 1973 96 1713 torch
-setblock 2027 96 1713 torch
-setblock 1973 96 1717 torch
-setblock 2027 96 1717 torch
-setblock 1973 96 1721 torch
-setblock 2027 96 1721 torch
-setblock 1973 96 1725 torch
-setblock 2027 96 1725 torch
-setblock 1988 85 1688 soul_lantern
-setblock 1988 85 1694 soul_lantern
-setblock 1988 85 1700 soul_lantern
-setblock 1988 85 1706 soul_lantern
-setblock 1988 85 1712 soul_lantern
-setblock 1994 85 1688 soul_lantern
-setblock 1994 85 1694 soul_lantern
-setblock 1994 85 1700 soul_lantern
-setblock 1994 85 1706 soul_lantern
-setblock 1994 85 1712 soul_lantern
-setblock 2000 85 1688 soul_lantern
-setblock 2000 85 1694 soul_lantern
-setblock 2000 85 1700 soul_lantern
-setblock 2000 85 1706 soul_lantern
-setblock 2000 85 1712 soul_lantern
-setblock 2006 85 1688 soul_lantern
-setblock 2006 85 1694 soul_lantern
-setblock 2006 85 1700 soul_lantern
-setblock 2006 85 1706 soul_lantern
-setblock 2006 85 1712 soul_lantern
-setblock 2012 85 1688 soul_lantern
-setblock 2012 85 1694 soul_lantern
-setblock 2012 85 1700 soul_lantern
-setblock 2012 85 1706 soul_lantern
-setblock 2012 85 1712 soul_lantern
-setblock 1976 81 1676 oak_fence
-setblock 1976 82 1676 torch
-setblock 1976 81 1700 oak_fence
-setblock 1976 82 1700 torch
-setblock 1976 81 1724 oak_fence
-setblock 1976 82 1724 torch
-setblock 2000 81 1676 oak_fence
-setblock 2000 82 1676 torch
-setblock 2000 81 1700 oak_fence
-setblock 2000 82 1700 torch
-setblock 2000 81 1724 oak_fence
-setblock 2000 82 1724 torch
-setblock 2024 81 1676 oak_fence
-setblock 2024 82 1676 torch
-setblock 2024 81 1700 oak_fence
-setblock 2024 82 1700 torch
-setblock 2024 81 1724 oak_fence
-setblock 2024 82 1724 torch
-fill 1974 85 1674 1976 85 1676 air
-fill 1974 91 1674 1976 91 1676 air
-setblock 1975 80 1675 stone_brick_stairs
-setblock 1976 81 1675 stone_brick_stairs
-setblock 1976 82 1676 stone_brick_stairs
-setblock 1977 83 1676 stone_brick_stairs
-setblock 1977 84 1677 stone_brick_stairs
-setblock 1978 85 1677 stone_brick_stairs
-setblock 1978 86 1678 stone_brick_stairs
-setblock 1975 87 1678 stone_brick_stairs
-setblock 1975 88 1675 stone_brick_stairs
-setblock 1976 89 1675 stone_brick_stairs
-setblock 1976 90 1676 stone_brick_stairs
-setblock 1977 91 1676 stone_brick_stairs
-setblock 1977 92 1677 stone_brick_stairs
-setblock 1978 93 1677 stone_brick_stairs
-setblock 1978 94 1678 stone_brick_stairs
-setblock 1975 95 1678 stone_brick_stairs
-setblock 1975 96 1675 stone_brick_stairs
-setblock 1976 97 1675 stone_brick_stairs
+fill ~-28 ~0 ~-28 ~1 ~18 ~1 air
+fill ~-28 ~0 ~2 ~1 ~18 ~28 air
+fill ~2 ~0 ~-28 ~28 ~18 ~1 air
+fill ~2 ~0 ~2 ~28 ~18 ~28 air
+fill ~-28 ~-2 ~-28 ~28 ~-1 ~28 red_nether_brick
+fill ~-28 ~0 ~-28 ~28 ~18 ~-28 red_concrete
+fill ~-28 ~0 ~28 ~28 ~18 ~28 red_concrete
+fill ~-28 ~0 ~-28 ~-28 ~18 ~28 red_concrete
+fill ~28 ~0 ~-28 ~28 ~18 ~28 red_concrete
+fill ~-27 ~-1 ~-27 ~27 ~-1 ~27 red_concrete
+fill ~-27 ~5 ~-27 ~27 ~5 ~27 red_concrete
+fill ~-27 ~11 ~-27 ~27 ~11 ~27 red_concrete
+fill ~-28 ~18 ~-28 ~28 ~18 ~28 red_concrete
+fill ~-27 ~0 ~-27 ~27 ~0 ~27 red_nether_brick
+setblock ~-24 ~2 ~-28 red_stained_glass
+setblock ~-24 ~3 ~-28 red_stained_glass
+setblock ~-24 ~2 ~28 red_stained_glass
+setblock ~-24 ~3 ~28 red_stained_glass
+setblock ~-18 ~2 ~-28 red_stained_glass
+setblock ~-18 ~3 ~-28 red_stained_glass
+setblock ~-18 ~2 ~28 red_stained_glass
+setblock ~-18 ~3 ~28 red_stained_glass
+setblock ~-12 ~2 ~-28 red_stained_glass
+setblock ~-12 ~3 ~-28 red_stained_glass
+setblock ~-12 ~2 ~28 red_stained_glass
+setblock ~-12 ~3 ~28 red_stained_glass
+setblock ~-6 ~2 ~-28 red_stained_glass
+setblock ~-6 ~3 ~-28 red_stained_glass
+setblock ~-6 ~2 ~28 red_stained_glass
+setblock ~-6 ~3 ~28 red_stained_glass
+setblock ~0 ~2 ~-28 red_stained_glass
+setblock ~0 ~3 ~-28 red_stained_glass
+setblock ~0 ~2 ~28 red_stained_glass
+setblock ~0 ~3 ~28 red_stained_glass
+setblock ~6 ~2 ~-28 red_stained_glass
+setblock ~6 ~3 ~-28 red_stained_glass
+setblock ~6 ~2 ~28 red_stained_glass
+setblock ~6 ~3 ~28 red_stained_glass
+setblock ~12 ~2 ~-28 red_stained_glass
+setblock ~12 ~3 ~-28 red_stained_glass
+setblock ~12 ~2 ~28 red_stained_glass
+setblock ~12 ~3 ~28 red_stained_glass
+setblock ~18 ~2 ~-28 red_stained_glass
+setblock ~18 ~3 ~-28 red_stained_glass
+setblock ~18 ~2 ~28 red_stained_glass
+setblock ~18 ~3 ~28 red_stained_glass
+setblock ~24 ~2 ~-28 red_stained_glass
+setblock ~24 ~3 ~-28 red_stained_glass
+setblock ~24 ~2 ~28 red_stained_glass
+setblock ~24 ~3 ~28 red_stained_glass
+setblock ~-28 ~2 ~-24 red_stained_glass
+setblock ~-28 ~3 ~-24 red_stained_glass
+setblock ~28 ~2 ~-24 red_stained_glass
+setblock ~28 ~3 ~-24 red_stained_glass
+setblock ~-28 ~2 ~-18 red_stained_glass
+setblock ~-28 ~3 ~-18 red_stained_glass
+setblock ~28 ~2 ~-18 red_stained_glass
+setblock ~28 ~3 ~-18 red_stained_glass
+setblock ~-28 ~2 ~-12 red_stained_glass
+setblock ~-28 ~3 ~-12 red_stained_glass
+setblock ~28 ~2 ~-12 red_stained_glass
+setblock ~28 ~3 ~-12 red_stained_glass
+setblock ~-28 ~2 ~-6 red_stained_glass
+setblock ~-28 ~3 ~-6 red_stained_glass
+setblock ~28 ~2 ~-6 red_stained_glass
+setblock ~28 ~3 ~-6 red_stained_glass
+setblock ~-28 ~2 ~0 red_stained_glass
+setblock ~-28 ~3 ~0 red_stained_glass
+setblock ~28 ~2 ~0 red_stained_glass
+setblock ~28 ~3 ~0 red_stained_glass
+setblock ~-28 ~2 ~6 red_stained_glass
+setblock ~-28 ~3 ~6 red_stained_glass
+setblock ~28 ~2 ~6 red_stained_glass
+setblock ~28 ~3 ~6 red_stained_glass
+setblock ~-28 ~2 ~12 red_stained_glass
+setblock ~-28 ~3 ~12 red_stained_glass
+setblock ~28 ~2 ~12 red_stained_glass
+setblock ~28 ~3 ~12 red_stained_glass
+setblock ~-28 ~2 ~18 red_stained_glass
+setblock ~-28 ~3 ~18 red_stained_glass
+setblock ~28 ~2 ~18 red_stained_glass
+setblock ~28 ~3 ~18 red_stained_glass
+setblock ~-28 ~2 ~24 red_stained_glass
+setblock ~-28 ~3 ~24 red_stained_glass
+setblock ~28 ~2 ~24 red_stained_glass
+setblock ~28 ~3 ~24 red_stained_glass
+setblock ~-24 ~8 ~-28 red_stained_glass
+setblock ~-24 ~9 ~-28 red_stained_glass
+setblock ~-24 ~8 ~28 red_stained_glass
+setblock ~-24 ~9 ~28 red_stained_glass
+setblock ~-18 ~8 ~-28 red_stained_glass
+setblock ~-18 ~9 ~-28 red_stained_glass
+setblock ~-18 ~8 ~28 red_stained_glass
+setblock ~-18 ~9 ~28 red_stained_glass
+setblock ~-12 ~8 ~-28 red_stained_glass
+setblock ~-12 ~9 ~-28 red_stained_glass
+setblock ~-12 ~8 ~28 red_stained_glass
+setblock ~-12 ~9 ~28 red_stained_glass
+setblock ~-6 ~8 ~-28 red_stained_glass
+setblock ~-6 ~9 ~-28 red_stained_glass
+setblock ~-6 ~8 ~28 red_stained_glass
+setblock ~-6 ~9 ~28 red_stained_glass
+setblock ~0 ~8 ~-28 red_stained_glass
+setblock ~0 ~9 ~-28 red_stained_glass
+setblock ~0 ~8 ~28 red_stained_glass
+setblock ~0 ~9 ~28 red_stained_glass
+setblock ~6 ~8 ~-28 red_stained_glass
+setblock ~6 ~9 ~-28 red_stained_glass
+setblock ~6 ~8 ~28 red_stained_glass
+setblock ~6 ~9 ~28 red_stained_glass
+setblock ~12 ~8 ~-28 red_stained_glass
+setblock ~12 ~9 ~-28 red_stained_glass
+setblock ~12 ~8 ~28 red_stained_glass
+setblock ~12 ~9 ~28 red_stained_glass
+setblock ~18 ~8 ~-28 red_stained_glass
+setblock ~18 ~9 ~-28 red_stained_glass
+setblock ~18 ~8 ~28 red_stained_glass
+setblock ~18 ~9 ~28 red_stained_glass
+setblock ~24 ~8 ~-28 red_stained_glass
+setblock ~24 ~9 ~-28 red_stained_glass
+setblock ~24 ~8 ~28 red_stained_glass
+setblock ~24 ~9 ~28 red_stained_glass
+setblock ~-28 ~8 ~-24 red_stained_glass
+setblock ~-28 ~9 ~-24 red_stained_glass
+setblock ~28 ~8 ~-24 red_stained_glass
+setblock ~28 ~9 ~-24 red_stained_glass
+setblock ~-28 ~8 ~-18 red_stained_glass
+setblock ~-28 ~9 ~-18 red_stained_glass
+setblock ~28 ~8 ~-18 red_stained_glass
+setblock ~28 ~9 ~-18 red_stained_glass
+setblock ~-28 ~8 ~-12 red_stained_glass
+setblock ~-28 ~9 ~-12 red_stained_glass
+setblock ~28 ~8 ~-12 red_stained_glass
+setblock ~28 ~9 ~-12 red_stained_glass
+setblock ~-28 ~8 ~-6 red_stained_glass
+setblock ~-28 ~9 ~-6 red_stained_glass
+setblock ~28 ~8 ~-6 red_stained_glass
+setblock ~28 ~9 ~-6 red_stained_glass
+setblock ~-28 ~8 ~0 red_stained_glass
+setblock ~-28 ~9 ~0 red_stained_glass
+setblock ~28 ~8 ~0 red_stained_glass
+setblock ~28 ~9 ~0 red_stained_glass
+setblock ~-28 ~8 ~6 red_stained_glass
+setblock ~-28 ~9 ~6 red_stained_glass
+setblock ~28 ~8 ~6 red_stained_glass
+setblock ~28 ~9 ~6 red_stained_glass
+setblock ~-28 ~8 ~12 red_stained_glass
+setblock ~-28 ~9 ~12 red_stained_glass
+setblock ~28 ~8 ~12 red_stained_glass
+setblock ~28 ~9 ~12 red_stained_glass
+setblock ~-28 ~8 ~18 red_stained_glass
+setblock ~-28 ~9 ~18 red_stained_glass
+setblock ~28 ~8 ~18 red_stained_glass
+setblock ~28 ~9 ~18 red_stained_glass
+setblock ~-28 ~8 ~24 red_stained_glass
+setblock ~-28 ~9 ~24 red_stained_glass
+setblock ~28 ~8 ~24 red_stained_glass
+setblock ~28 ~9 ~24 red_stained_glass
+setblock ~-24 ~14 ~-28 red_stained_glass
+setblock ~-24 ~15 ~-28 red_stained_glass
+setblock ~-24 ~14 ~28 red_stained_glass
+setblock ~-24 ~15 ~28 red_stained_glass
+setblock ~-18 ~14 ~-28 red_stained_glass
+setblock ~-18 ~15 ~-28 red_stained_glass
+setblock ~-18 ~14 ~28 red_stained_glass
+setblock ~-18 ~15 ~28 red_stained_glass
+setblock ~-12 ~14 ~-28 red_stained_glass
+setblock ~-12 ~15 ~-28 red_stained_glass
+setblock ~-12 ~14 ~28 red_stained_glass
+setblock ~-12 ~15 ~28 red_stained_glass
+setblock ~-6 ~14 ~-28 red_stained_glass
+setblock ~-6 ~15 ~-28 red_stained_glass
+setblock ~-6 ~14 ~28 red_stained_glass
+setblock ~-6 ~15 ~28 red_stained_glass
+setblock ~0 ~14 ~-28 red_stained_glass
+setblock ~0 ~15 ~-28 red_stained_glass
+setblock ~0 ~14 ~28 red_stained_glass
+setblock ~0 ~15 ~28 red_stained_glass
+setblock ~6 ~14 ~-28 red_stained_glass
+setblock ~6 ~15 ~-28 red_stained_glass
+setblock ~6 ~14 ~28 red_stained_glass
+setblock ~6 ~15 ~28 red_stained_glass
+setblock ~12 ~14 ~-28 red_stained_glass
+setblock ~12 ~15 ~-28 red_stained_glass
+setblock ~12 ~14 ~28 red_stained_glass
+setblock ~12 ~15 ~28 red_stained_glass
+setblock ~18 ~14 ~-28 red_stained_glass
+setblock ~18 ~15 ~-28 red_stained_glass
+setblock ~18 ~14 ~28 red_stained_glass
+setblock ~18 ~15 ~28 red_stained_glass
+setblock ~24 ~14 ~-28 red_stained_glass
+setblock ~24 ~15 ~-28 red_stained_glass
+setblock ~24 ~14 ~28 red_stained_glass
+setblock ~24 ~15 ~28 red_stained_glass
+setblock ~-28 ~14 ~-24 red_stained_glass
+setblock ~-28 ~15 ~-24 red_stained_glass
+setblock ~28 ~14 ~-24 red_stained_glass
+setblock ~28 ~15 ~-24 red_stained_glass
+setblock ~-28 ~14 ~-18 red_stained_glass
+setblock ~-28 ~15 ~-18 red_stained_glass
+setblock ~28 ~14 ~-18 red_stained_glass
+setblock ~28 ~15 ~-18 red_stained_glass
+setblock ~-28 ~14 ~-12 red_stained_glass
+setblock ~-28 ~15 ~-12 red_stained_glass
+setblock ~28 ~14 ~-12 red_stained_glass
+setblock ~28 ~15 ~-12 red_stained_glass
+setblock ~-28 ~14 ~-6 red_stained_glass
+setblock ~-28 ~15 ~-6 red_stained_glass
+setblock ~28 ~14 ~-6 red_stained_glass
+setblock ~28 ~15 ~-6 red_stained_glass
+setblock ~-28 ~14 ~0 red_stained_glass
+setblock ~-28 ~15 ~0 red_stained_glass
+setblock ~28 ~14 ~0 red_stained_glass
+setblock ~28 ~15 ~0 red_stained_glass
+setblock ~-28 ~14 ~6 red_stained_glass
+setblock ~-28 ~15 ~6 red_stained_glass
+setblock ~28 ~14 ~6 red_stained_glass
+setblock ~28 ~15 ~6 red_stained_glass
+setblock ~-28 ~14 ~12 red_stained_glass
+setblock ~-28 ~15 ~12 red_stained_glass
+setblock ~28 ~14 ~12 red_stained_glass
+setblock ~28 ~15 ~12 red_stained_glass
+setblock ~-28 ~14 ~18 red_stained_glass
+setblock ~-28 ~15 ~18 red_stained_glass
+setblock ~28 ~14 ~18 red_stained_glass
+setblock ~28 ~15 ~18 red_stained_glass
+setblock ~-28 ~14 ~24 red_stained_glass
+setblock ~-28 ~15 ~24 red_stained_glass
+setblock ~28 ~14 ~24 red_stained_glass
+setblock ~28 ~15 ~24 red_stained_glass
+setblock ~-28 ~19 ~-28 stone_brick_wall
+setblock ~-28 ~19 ~28 stone_brick_wall
+setblock ~-25 ~19 ~-28 stone_brick_wall
+setblock ~-25 ~19 ~28 stone_brick_wall
+setblock ~-22 ~19 ~-28 stone_brick_wall
+setblock ~-22 ~19 ~28 stone_brick_wall
+setblock ~-19 ~19 ~-28 stone_brick_wall
+setblock ~-19 ~19 ~28 stone_brick_wall
+setblock ~-16 ~19 ~-28 stone_brick_wall
+setblock ~-16 ~19 ~28 stone_brick_wall
+setblock ~-13 ~19 ~-28 stone_brick_wall
+setblock ~-13 ~19 ~28 stone_brick_wall
+setblock ~-10 ~19 ~-28 stone_brick_wall
+setblock ~-10 ~19 ~28 stone_brick_wall
+setblock ~-7 ~19 ~-28 stone_brick_wall
+setblock ~-7 ~19 ~28 stone_brick_wall
+setblock ~-4 ~19 ~-28 stone_brick_wall
+setblock ~-4 ~19 ~28 stone_brick_wall
+setblock ~-1 ~19 ~-28 stone_brick_wall
+setblock ~-1 ~19 ~28 stone_brick_wall
+setblock ~2 ~19 ~-28 stone_brick_wall
+setblock ~2 ~19 ~28 stone_brick_wall
+setblock ~5 ~19 ~-28 stone_brick_wall
+setblock ~5 ~19 ~28 stone_brick_wall
+setblock ~8 ~19 ~-28 stone_brick_wall
+setblock ~8 ~19 ~28 stone_brick_wall
+setblock ~11 ~19 ~-28 stone_brick_wall
+setblock ~11 ~19 ~28 stone_brick_wall
+setblock ~14 ~19 ~-28 stone_brick_wall
+setblock ~14 ~19 ~28 stone_brick_wall
+setblock ~17 ~19 ~-28 stone_brick_wall
+setblock ~17 ~19 ~28 stone_brick_wall
+setblock ~20 ~19 ~-28 stone_brick_wall
+setblock ~20 ~19 ~28 stone_brick_wall
+setblock ~23 ~19 ~-28 stone_brick_wall
+setblock ~23 ~19 ~28 stone_brick_wall
+setblock ~26 ~19 ~-28 stone_brick_wall
+setblock ~26 ~19 ~28 stone_brick_wall
+setblock ~-28 ~19 ~-28 stone_brick_wall
+setblock ~28 ~19 ~-28 stone_brick_wall
+setblock ~-28 ~19 ~-25 stone_brick_wall
+setblock ~28 ~19 ~-25 stone_brick_wall
+setblock ~-28 ~19 ~-22 stone_brick_wall
+setblock ~28 ~19 ~-22 stone_brick_wall
+setblock ~-28 ~19 ~-19 stone_brick_wall
+setblock ~28 ~19 ~-19 stone_brick_wall
+setblock ~-28 ~19 ~-16 stone_brick_wall
+setblock ~28 ~19 ~-16 stone_brick_wall
+setblock ~-28 ~19 ~-13 stone_brick_wall
+setblock ~28 ~19 ~-13 stone_brick_wall
+setblock ~-28 ~19 ~-10 stone_brick_wall
+setblock ~28 ~19 ~-10 stone_brick_wall
+setblock ~-28 ~19 ~-7 stone_brick_wall
+setblock ~28 ~19 ~-7 stone_brick_wall
+setblock ~-28 ~19 ~-4 stone_brick_wall
+setblock ~28 ~19 ~-4 stone_brick_wall
+setblock ~-28 ~19 ~-1 stone_brick_wall
+setblock ~28 ~19 ~-1 stone_brick_wall
+setblock ~-28 ~19 ~2 stone_brick_wall
+setblock ~28 ~19 ~2 stone_brick_wall
+setblock ~-28 ~19 ~5 stone_brick_wall
+setblock ~28 ~19 ~5 stone_brick_wall
+setblock ~-28 ~19 ~8 stone_brick_wall
+setblock ~28 ~19 ~8 stone_brick_wall
+setblock ~-28 ~19 ~11 stone_brick_wall
+setblock ~28 ~19 ~11 stone_brick_wall
+setblock ~-28 ~19 ~14 stone_brick_wall
+setblock ~28 ~19 ~14 stone_brick_wall
+setblock ~-28 ~19 ~17 stone_brick_wall
+setblock ~28 ~19 ~17 stone_brick_wall
+setblock ~-28 ~19 ~20 stone_brick_wall
+setblock ~28 ~19 ~20 stone_brick_wall
+setblock ~-28 ~19 ~23 stone_brick_wall
+setblock ~28 ~19 ~23 stone_brick_wall
+setblock ~-28 ~19 ~26 stone_brick_wall
+setblock ~28 ~19 ~26 stone_brick_wall
+fill ~-2 ~0 ~28 ~2 ~3 ~28 air
+setblock ~-3 ~4 ~28 soul_lantern
+setblock ~3 ~4 ~28 soul_lantern
+setblock ~-27 ~2 ~-27 torch
+setblock ~-27 ~2 ~27 torch
+setblock ~-23 ~2 ~-27 torch
+setblock ~-23 ~2 ~27 torch
+setblock ~-19 ~2 ~-27 torch
+setblock ~-19 ~2 ~27 torch
+setblock ~-15 ~2 ~-27 torch
+setblock ~-15 ~2 ~27 torch
+setblock ~-11 ~2 ~-27 torch
+setblock ~-11 ~2 ~27 torch
+setblock ~-7 ~2 ~-27 torch
+setblock ~-7 ~2 ~27 torch
+setblock ~-3 ~2 ~-27 torch
+setblock ~-3 ~2 ~27 torch
+setblock ~1 ~2 ~-27 torch
+setblock ~1 ~2 ~27 torch
+setblock ~5 ~2 ~-27 torch
+setblock ~5 ~2 ~27 torch
+setblock ~9 ~2 ~-27 torch
+setblock ~9 ~2 ~27 torch
+setblock ~13 ~2 ~-27 torch
+setblock ~13 ~2 ~27 torch
+setblock ~17 ~2 ~-27 torch
+setblock ~17 ~2 ~27 torch
+setblock ~21 ~2 ~-27 torch
+setblock ~21 ~2 ~27 torch
+setblock ~25 ~2 ~-27 torch
+setblock ~25 ~2 ~27 torch
+setblock ~-27 ~2 ~-27 torch
+setblock ~27 ~2 ~-27 torch
+setblock ~-27 ~2 ~-23 torch
+setblock ~27 ~2 ~-23 torch
+setblock ~-27 ~2 ~-19 torch
+setblock ~27 ~2 ~-19 torch
+setblock ~-27 ~2 ~-15 torch
+setblock ~27 ~2 ~-15 torch
+setblock ~-27 ~2 ~-11 torch
+setblock ~27 ~2 ~-11 torch
+setblock ~-27 ~2 ~-7 torch
+setblock ~27 ~2 ~-7 torch
+setblock ~-27 ~2 ~-3 torch
+setblock ~27 ~2 ~-3 torch
+setblock ~-27 ~2 ~1 torch
+setblock ~27 ~2 ~1 torch
+setblock ~-27 ~2 ~5 torch
+setblock ~27 ~2 ~5 torch
+setblock ~-27 ~2 ~9 torch
+setblock ~27 ~2 ~9 torch
+setblock ~-27 ~2 ~13 torch
+setblock ~27 ~2 ~13 torch
+setblock ~-27 ~2 ~17 torch
+setblock ~27 ~2 ~17 torch
+setblock ~-27 ~2 ~21 torch
+setblock ~27 ~2 ~21 torch
+setblock ~-27 ~2 ~25 torch
+setblock ~27 ~2 ~25 torch
+setblock ~-27 ~4 ~-27 torch
+setblock ~-27 ~4 ~27 torch
+setblock ~-23 ~4 ~-27 torch
+setblock ~-23 ~4 ~27 torch
+setblock ~-19 ~4 ~-27 torch
+setblock ~-19 ~4 ~27 torch
+setblock ~-15 ~4 ~-27 torch
+setblock ~-15 ~4 ~27 torch
+setblock ~-11 ~4 ~-27 torch
+setblock ~-11 ~4 ~27 torch
+setblock ~-7 ~4 ~-27 torch
+setblock ~-7 ~4 ~27 torch
+setblock ~-3 ~4 ~-27 torch
+setblock ~-3 ~4 ~27 torch
+setblock ~1 ~4 ~-27 torch
+setblock ~1 ~4 ~27 torch
+setblock ~5 ~4 ~-27 torch
+setblock ~5 ~4 ~27 torch
+setblock ~9 ~4 ~-27 torch
+setblock ~9 ~4 ~27 torch
+setblock ~13 ~4 ~-27 torch
+setblock ~13 ~4 ~27 torch
+setblock ~17 ~4 ~-27 torch
+setblock ~17 ~4 ~27 torch
+setblock ~21 ~4 ~-27 torch
+setblock ~21 ~4 ~27 torch
+setblock ~25 ~4 ~-27 torch
+setblock ~25 ~4 ~27 torch
+setblock ~-27 ~4 ~-27 torch
+setblock ~27 ~4 ~-27 torch
+setblock ~-27 ~4 ~-23 torch
+setblock ~27 ~4 ~-23 torch
+setblock ~-27 ~4 ~-19 torch
+setblock ~27 ~4 ~-19 torch
+setblock ~-27 ~4 ~-15 torch
+setblock ~27 ~4 ~-15 torch
+setblock ~-27 ~4 ~-11 torch
+setblock ~27 ~4 ~-11 torch
+setblock ~-27 ~4 ~-7 torch
+setblock ~27 ~4 ~-7 torch
+setblock ~-27 ~4 ~-3 torch
+setblock ~27 ~4 ~-3 torch
+setblock ~-27 ~4 ~1 torch
+setblock ~27 ~4 ~1 torch
+setblock ~-27 ~4 ~5 torch
+setblock ~27 ~4 ~5 torch
+setblock ~-27 ~4 ~9 torch
+setblock ~27 ~4 ~9 torch
+setblock ~-27 ~4 ~13 torch
+setblock ~27 ~4 ~13 torch
+setblock ~-27 ~4 ~17 torch
+setblock ~27 ~4 ~17 torch
+setblock ~-27 ~4 ~21 torch
+setblock ~27 ~4 ~21 torch
+setblock ~-27 ~4 ~25 torch
+setblock ~27 ~4 ~25 torch
+setblock ~-27 ~8 ~-27 torch
+setblock ~-27 ~8 ~27 torch
+setblock ~-23 ~8 ~-27 torch
+setblock ~-23 ~8 ~27 torch
+setblock ~-19 ~8 ~-27 torch
+setblock ~-19 ~8 ~27 torch
+setblock ~-15 ~8 ~-27 torch
+setblock ~-15 ~8 ~27 torch
+setblock ~-11 ~8 ~-27 torch
+setblock ~-11 ~8 ~27 torch
+setblock ~-7 ~8 ~-27 torch
+setblock ~-7 ~8 ~27 torch
+setblock ~-3 ~8 ~-27 torch
+setblock ~-3 ~8 ~27 torch
+setblock ~1 ~8 ~-27 torch
+setblock ~1 ~8 ~27 torch
+setblock ~5 ~8 ~-27 torch
+setblock ~5 ~8 ~27 torch
+setblock ~9 ~8 ~-27 torch
+setblock ~9 ~8 ~27 torch
+setblock ~13 ~8 ~-27 torch
+setblock ~13 ~8 ~27 torch
+setblock ~17 ~8 ~-27 torch
+setblock ~17 ~8 ~27 torch
+setblock ~21 ~8 ~-27 torch
+setblock ~21 ~8 ~27 torch
+setblock ~25 ~8 ~-27 torch
+setblock ~25 ~8 ~27 torch
+setblock ~-27 ~8 ~-27 torch
+setblock ~27 ~8 ~-27 torch
+setblock ~-27 ~8 ~-23 torch
+setblock ~27 ~8 ~-23 torch
+setblock ~-27 ~8 ~-19 torch
+setblock ~27 ~8 ~-19 torch
+setblock ~-27 ~8 ~-15 torch
+setblock ~27 ~8 ~-15 torch
+setblock ~-27 ~8 ~-11 torch
+setblock ~27 ~8 ~-11 torch
+setblock ~-27 ~8 ~-7 torch
+setblock ~27 ~8 ~-7 torch
+setblock ~-27 ~8 ~-3 torch
+setblock ~27 ~8 ~-3 torch
+setblock ~-27 ~8 ~1 torch
+setblock ~27 ~8 ~1 torch
+setblock ~-27 ~8 ~5 torch
+setblock ~27 ~8 ~5 torch
+setblock ~-27 ~8 ~9 torch
+setblock ~27 ~8 ~9 torch
+setblock ~-27 ~8 ~13 torch
+setblock ~27 ~8 ~13 torch
+setblock ~-27 ~8 ~17 torch
+setblock ~27 ~8 ~17 torch
+setblock ~-27 ~8 ~21 torch
+setblock ~27 ~8 ~21 torch
+setblock ~-27 ~8 ~25 torch
+setblock ~27 ~8 ~25 torch
+setblock ~-27 ~10 ~-27 torch
+setblock ~-27 ~10 ~27 torch
+setblock ~-23 ~10 ~-27 torch
+setblock ~-23 ~10 ~27 torch
+setblock ~-19 ~10 ~-27 torch
+setblock ~-19 ~10 ~27 torch
+setblock ~-15 ~10 ~-27 torch
+setblock ~-15 ~10 ~27 torch
+setblock ~-11 ~10 ~-27 torch
+setblock ~-11 ~10 ~27 torch
+setblock ~-7 ~10 ~-27 torch
+setblock ~-7 ~10 ~27 torch
+setblock ~-3 ~10 ~-27 torch
+setblock ~-3 ~10 ~27 torch
+setblock ~1 ~10 ~-27 torch
+setblock ~1 ~10 ~27 torch
+setblock ~5 ~10 ~-27 torch
+setblock ~5 ~10 ~27 torch
+setblock ~9 ~10 ~-27 torch
+setblock ~9 ~10 ~27 torch
+setblock ~13 ~10 ~-27 torch
+setblock ~13 ~10 ~27 torch
+setblock ~17 ~10 ~-27 torch
+setblock ~17 ~10 ~27 torch
+setblock ~21 ~10 ~-27 torch
+setblock ~21 ~10 ~27 torch
+setblock ~25 ~10 ~-27 torch
+setblock ~25 ~10 ~27 torch
+setblock ~-27 ~10 ~-27 torch
+setblock ~27 ~10 ~-27 torch
+setblock ~-27 ~10 ~-23 torch
+setblock ~27 ~10 ~-23 torch
+setblock ~-27 ~10 ~-19 torch
+setblock ~27 ~10 ~-19 torch
+setblock ~-27 ~10 ~-15 torch
+setblock ~27 ~10 ~-15 torch
+setblock ~-27 ~10 ~-11 torch
+setblock ~27 ~10 ~-11 torch
+setblock ~-27 ~10 ~-7 torch
+setblock ~27 ~10 ~-7 torch
+setblock ~-27 ~10 ~-3 torch
+setblock ~27 ~10 ~-3 torch
+setblock ~-27 ~10 ~1 torch
+setblock ~27 ~10 ~1 torch
+setblock ~-27 ~10 ~5 torch
+setblock ~27 ~10 ~5 torch
+setblock ~-27 ~10 ~9 torch
+setblock ~27 ~10 ~9 torch
+setblock ~-27 ~10 ~13 torch
+setblock ~27 ~10 ~13 torch
+setblock ~-27 ~10 ~17 torch
+setblock ~27 ~10 ~17 torch
+setblock ~-27 ~10 ~21 torch
+setblock ~27 ~10 ~21 torch
+setblock ~-27 ~10 ~25 torch
+setblock ~27 ~10 ~25 torch
+setblock ~-27 ~14 ~-27 torch
+setblock ~-27 ~14 ~27 torch
+setblock ~-23 ~14 ~-27 torch
+setblock ~-23 ~14 ~27 torch
+setblock ~-19 ~14 ~-27 torch
+setblock ~-19 ~14 ~27 torch
+setblock ~-15 ~14 ~-27 torch
+setblock ~-15 ~14 ~27 torch
+setblock ~-11 ~14 ~-27 torch
+setblock ~-11 ~14 ~27 torch
+setblock ~-7 ~14 ~-27 torch
+setblock ~-7 ~14 ~27 torch
+setblock ~-3 ~14 ~-27 torch
+setblock ~-3 ~14 ~27 torch
+setblock ~1 ~14 ~-27 torch
+setblock ~1 ~14 ~27 torch
+setblock ~5 ~14 ~-27 torch
+setblock ~5 ~14 ~27 torch
+setblock ~9 ~14 ~-27 torch
+setblock ~9 ~14 ~27 torch
+setblock ~13 ~14 ~-27 torch
+setblock ~13 ~14 ~27 torch
+setblock ~17 ~14 ~-27 torch
+setblock ~17 ~14 ~27 torch
+setblock ~21 ~14 ~-27 torch
+setblock ~21 ~14 ~27 torch
+setblock ~25 ~14 ~-27 torch
+setblock ~25 ~14 ~27 torch
+setblock ~-27 ~14 ~-27 torch
+setblock ~27 ~14 ~-27 torch
+setblock ~-27 ~14 ~-23 torch
+setblock ~27 ~14 ~-23 torch
+setblock ~-27 ~14 ~-19 torch
+setblock ~27 ~14 ~-19 torch
+setblock ~-27 ~14 ~-15 torch
+setblock ~27 ~14 ~-15 torch
+setblock ~-27 ~14 ~-11 torch
+setblock ~27 ~14 ~-11 torch
+setblock ~-27 ~14 ~-7 torch
+setblock ~27 ~14 ~-7 torch
+setblock ~-27 ~14 ~-3 torch
+setblock ~27 ~14 ~-3 torch
+setblock ~-27 ~14 ~1 torch
+setblock ~27 ~14 ~1 torch
+setblock ~-27 ~14 ~5 torch
+setblock ~27 ~14 ~5 torch
+setblock ~-27 ~14 ~9 torch
+setblock ~27 ~14 ~9 torch
+setblock ~-27 ~14 ~13 torch
+setblock ~27 ~14 ~13 torch
+setblock ~-27 ~14 ~17 torch
+setblock ~27 ~14 ~17 torch
+setblock ~-27 ~14 ~21 torch
+setblock ~27 ~14 ~21 torch
+setblock ~-27 ~14 ~25 torch
+setblock ~27 ~14 ~25 torch
+setblock ~-27 ~16 ~-27 torch
+setblock ~-27 ~16 ~27 torch
+setblock ~-23 ~16 ~-27 torch
+setblock ~-23 ~16 ~27 torch
+setblock ~-19 ~16 ~-27 torch
+setblock ~-19 ~16 ~27 torch
+setblock ~-15 ~16 ~-27 torch
+setblock ~-15 ~16 ~27 torch
+setblock ~-11 ~16 ~-27 torch
+setblock ~-11 ~16 ~27 torch
+setblock ~-7 ~16 ~-27 torch
+setblock ~-7 ~16 ~27 torch
+setblock ~-3 ~16 ~-27 torch
+setblock ~-3 ~16 ~27 torch
+setblock ~1 ~16 ~-27 torch
+setblock ~1 ~16 ~27 torch
+setblock ~5 ~16 ~-27 torch
+setblock ~5 ~16 ~27 torch
+setblock ~9 ~16 ~-27 torch
+setblock ~9 ~16 ~27 torch
+setblock ~13 ~16 ~-27 torch
+setblock ~13 ~16 ~27 torch
+setblock ~17 ~16 ~-27 torch
+setblock ~17 ~16 ~27 torch
+setblock ~21 ~16 ~-27 torch
+setblock ~21 ~16 ~27 torch
+setblock ~25 ~16 ~-27 torch
+setblock ~25 ~16 ~27 torch
+setblock ~-27 ~16 ~-27 torch
+setblock ~27 ~16 ~-27 torch
+setblock ~-27 ~16 ~-23 torch
+setblock ~27 ~16 ~-23 torch
+setblock ~-27 ~16 ~-19 torch
+setblock ~27 ~16 ~-19 torch
+setblock ~-27 ~16 ~-15 torch
+setblock ~27 ~16 ~-15 torch
+setblock ~-27 ~16 ~-11 torch
+setblock ~27 ~16 ~-11 torch
+setblock ~-27 ~16 ~-7 torch
+setblock ~27 ~16 ~-7 torch
+setblock ~-27 ~16 ~-3 torch
+setblock ~27 ~16 ~-3 torch
+setblock ~-27 ~16 ~1 torch
+setblock ~27 ~16 ~1 torch
+setblock ~-27 ~16 ~5 torch
+setblock ~27 ~16 ~5 torch
+setblock ~-27 ~16 ~9 torch
+setblock ~27 ~16 ~9 torch
+setblock ~-27 ~16 ~13 torch
+setblock ~27 ~16 ~13 torch
+setblock ~-27 ~16 ~17 torch
+setblock ~27 ~16 ~17 torch
+setblock ~-27 ~16 ~21 torch
+setblock ~27 ~16 ~21 torch
+setblock ~-27 ~16 ~25 torch
+setblock ~27 ~16 ~25 torch
+setblock ~-12 ~5 ~-12 soul_lantern
+setblock ~-12 ~5 ~-6 soul_lantern
+setblock ~-12 ~5 ~0 soul_lantern
+setblock ~-12 ~5 ~6 soul_lantern
+setblock ~-12 ~5 ~12 soul_lantern
+setblock ~-6 ~5 ~-12 soul_lantern
+setblock ~-6 ~5 ~-6 soul_lantern
+setblock ~-6 ~5 ~0 soul_lantern
+setblock ~-6 ~5 ~6 soul_lantern
+setblock ~-6 ~5 ~12 soul_lantern
+setblock ~0 ~5 ~-12 soul_lantern
+setblock ~0 ~5 ~-6 soul_lantern
+setblock ~0 ~5 ~0 soul_lantern
+setblock ~0 ~5 ~6 soul_lantern
+setblock ~0 ~5 ~12 soul_lantern
+setblock ~6 ~5 ~-12 soul_lantern
+setblock ~6 ~5 ~-6 soul_lantern
+setblock ~6 ~5 ~0 soul_lantern
+setblock ~6 ~5 ~6 soul_lantern
+setblock ~6 ~5 ~12 soul_lantern
+setblock ~12 ~5 ~-12 soul_lantern
+setblock ~12 ~5 ~-6 soul_lantern
+setblock ~12 ~5 ~0 soul_lantern
+setblock ~12 ~5 ~6 soul_lantern
+setblock ~12 ~5 ~12 soul_lantern
+setblock ~-24 ~1 ~-24 oak_fence
+setblock ~-24 ~2 ~-24 torch
+setblock ~-24 ~1 ~0 oak_fence
+setblock ~-24 ~2 ~0 torch
+setblock ~-24 ~1 ~24 oak_fence
+setblock ~-24 ~2 ~24 torch
+setblock ~0 ~1 ~-24 oak_fence
+setblock ~0 ~2 ~-24 torch
+setblock ~0 ~1 ~0 oak_fence
+setblock ~0 ~2 ~0 torch
+setblock ~0 ~1 ~24 oak_fence
+setblock ~0 ~2 ~24 torch
+setblock ~24 ~1 ~-24 oak_fence
+setblock ~24 ~2 ~-24 torch
+setblock ~24 ~1 ~0 oak_fence
+setblock ~24 ~2 ~0 torch
+setblock ~24 ~1 ~24 oak_fence
+setblock ~24 ~2 ~24 torch
+fill ~-26 ~5 ~-26 ~-24 ~5 ~-24 air
+fill ~-26 ~11 ~-26 ~-24 ~11 ~-24 air
+setblock ~-25 ~0 ~-25 stone_brick_stairs
+setblock ~-24 ~1 ~-25 stone_brick_stairs
+setblock ~-24 ~2 ~-24 stone_brick_stairs
+setblock ~-23 ~3 ~-24 stone_brick_stairs
+setblock ~-23 ~4 ~-23 stone_brick_stairs
+setblock ~-22 ~5 ~-23 stone_brick_stairs
+setblock ~-22 ~6 ~-22 stone_brick_stairs
+setblock ~-25 ~7 ~-22 stone_brick_stairs
+setblock ~-25 ~8 ~-25 stone_brick_stairs
+setblock ~-24 ~9 ~-25 stone_brick_stairs
+setblock ~-24 ~10 ~-24 stone_brick_stairs
+setblock ~-23 ~11 ~-24 stone_brick_stairs
+setblock ~-23 ~12 ~-23 stone_brick_stairs
+setblock ~-22 ~13 ~-23 stone_brick_stairs
+setblock ~-22 ~14 ~-22 stone_brick_stairs
+setblock ~-25 ~15 ~-22 stone_brick_stairs
+setblock ~-25 ~16 ~-25 stone_brick_stairs
+setblock ~-24 ~17 ~-25 stone_brick_stairs
 # === 4 HOGE HOEKTORENS + CENTRALE SPITS (tot ~100 hoog) ===
-fill 1970 80 1670 1974 150 1674 red_concrete
-fill 1971 80 1671 1973 150 1673 air
-setblock 1970 151 1670 stone_brick_wall
-setblock 1970 151 1674 stone_brick_wall
-setblock 1972 151 1670 stone_brick_wall
-setblock 1972 151 1674 stone_brick_wall
-setblock 1974 151 1670 stone_brick_wall
-setblock 1974 151 1674 stone_brick_wall
-setblock 1970 151 1670 stone_brick_wall
-setblock 1974 151 1670 stone_brick_wall
-setblock 1970 151 1672 stone_brick_wall
-setblock 1974 151 1672 stone_brick_wall
-setblock 1970 151 1674 stone_brick_wall
-setblock 1974 151 1674 stone_brick_wall
-setblock 1972 152 1672 oak_fence
-setblock 1972 153 1672 oak_fence
-setblock 1973 153 1672 black_wool
-setblock 1973 152 1672 black_wool
-setblock 1972 150 1672 sea_lantern
-setblock 1972 84 1670 torch
-setblock 1972 92 1670 torch
-setblock 1972 100 1670 torch
-setblock 1972 108 1670 torch
-setblock 1972 116 1670 torch
-setblock 1972 124 1670 torch
-setblock 1972 132 1670 torch
-setblock 1972 140 1670 torch
-setblock 1972 148 1670 torch
-fill 2026 80 1670 2030 150 1674 red_concrete
-fill 2027 80 1671 2029 150 1673 air
-setblock 2026 151 1670 stone_brick_wall
-setblock 2026 151 1674 stone_brick_wall
-setblock 2028 151 1670 stone_brick_wall
-setblock 2028 151 1674 stone_brick_wall
-setblock 2030 151 1670 stone_brick_wall
-setblock 2030 151 1674 stone_brick_wall
-setblock 2026 151 1670 stone_brick_wall
-setblock 2030 151 1670 stone_brick_wall
-setblock 2026 151 1672 stone_brick_wall
-setblock 2030 151 1672 stone_brick_wall
-setblock 2026 151 1674 stone_brick_wall
-setblock 2030 151 1674 stone_brick_wall
-setblock 2028 152 1672 oak_fence
-setblock 2028 153 1672 oak_fence
-setblock 2029 153 1672 black_wool
-setblock 2029 152 1672 black_wool
-setblock 2028 150 1672 sea_lantern
-setblock 2028 84 1670 torch
-setblock 2028 92 1670 torch
-setblock 2028 100 1670 torch
-setblock 2028 108 1670 torch
-setblock 2028 116 1670 torch
-setblock 2028 124 1670 torch
-setblock 2028 132 1670 torch
-setblock 2028 140 1670 torch
-setblock 2028 148 1670 torch
-fill 1970 80 1726 1974 150 1730 red_concrete
-fill 1971 80 1727 1973 150 1729 air
-setblock 1970 151 1726 stone_brick_wall
-setblock 1970 151 1730 stone_brick_wall
-setblock 1972 151 1726 stone_brick_wall
-setblock 1972 151 1730 stone_brick_wall
-setblock 1974 151 1726 stone_brick_wall
-setblock 1974 151 1730 stone_brick_wall
-setblock 1970 151 1726 stone_brick_wall
-setblock 1974 151 1726 stone_brick_wall
-setblock 1970 151 1728 stone_brick_wall
-setblock 1974 151 1728 stone_brick_wall
-setblock 1970 151 1730 stone_brick_wall
-setblock 1974 151 1730 stone_brick_wall
-setblock 1972 152 1728 oak_fence
-setblock 1972 153 1728 oak_fence
-setblock 1973 153 1728 black_wool
-setblock 1973 152 1728 black_wool
-setblock 1972 150 1728 sea_lantern
-setblock 1972 84 1726 torch
-setblock 1972 92 1726 torch
-setblock 1972 100 1726 torch
-setblock 1972 108 1726 torch
-setblock 1972 116 1726 torch
-setblock 1972 124 1726 torch
-setblock 1972 132 1726 torch
-setblock 1972 140 1726 torch
-setblock 1972 148 1726 torch
-fill 2026 80 1726 2030 150 1730 red_concrete
-fill 2027 80 1727 2029 150 1729 air
-setblock 2026 151 1726 stone_brick_wall
-setblock 2026 151 1730 stone_brick_wall
-setblock 2028 151 1726 stone_brick_wall
-setblock 2028 151 1730 stone_brick_wall
-setblock 2030 151 1726 stone_brick_wall
-setblock 2030 151 1730 stone_brick_wall
-setblock 2026 151 1726 stone_brick_wall
-setblock 2030 151 1726 stone_brick_wall
-setblock 2026 151 1728 stone_brick_wall
-setblock 2030 151 1728 stone_brick_wall
-setblock 2026 151 1730 stone_brick_wall
-setblock 2030 151 1730 stone_brick_wall
-setblock 2028 152 1728 oak_fence
-setblock 2028 153 1728 oak_fence
-setblock 2029 153 1728 black_wool
-setblock 2029 152 1728 black_wool
-setblock 2028 150 1728 sea_lantern
-setblock 2028 84 1726 torch
-setblock 2028 92 1726 torch
-setblock 2028 100 1726 torch
-setblock 2028 108 1726 torch
-setblock 2028 116 1726 torch
-setblock 2028 124 1726 torch
-setblock 2028 132 1726 torch
-setblock 2028 140 1726 torch
-setblock 2028 148 1726 torch
-fill 1999 98 1699 2001 180 1701 red_concrete
-fill 2000 98 1700 2000 180 1700 air
-setblock 2000 180 1700 sea_lantern
-setblock 2000 181 1700 oak_fence
-setblock 2000 182 1700 oak_fence
-setblock 2001 182 1700 black_wool
-setblock 2001 181 1700 black_wool
+fill ~-30 ~0 ~-30 ~-26 ~70 ~-26 red_concrete
+fill ~-29 ~0 ~-29 ~-27 ~70 ~-27 air
+setblock ~-30 ~71 ~-30 stone_brick_wall
+setblock ~-30 ~71 ~-26 stone_brick_wall
+setblock ~-28 ~71 ~-30 stone_brick_wall
+setblock ~-28 ~71 ~-26 stone_brick_wall
+setblock ~-26 ~71 ~-30 stone_brick_wall
+setblock ~-26 ~71 ~-26 stone_brick_wall
+setblock ~-30 ~71 ~-30 stone_brick_wall
+setblock ~-26 ~71 ~-30 stone_brick_wall
+setblock ~-30 ~71 ~-28 stone_brick_wall
+setblock ~-26 ~71 ~-28 stone_brick_wall
+setblock ~-30 ~71 ~-26 stone_brick_wall
+setblock ~-26 ~71 ~-26 stone_brick_wall
+setblock ~-28 ~72 ~-28 oak_fence
+setblock ~-28 ~73 ~-28 oak_fence
+setblock ~-27 ~73 ~-28 black_wool
+setblock ~-27 ~72 ~-28 black_wool
+setblock ~-28 ~70 ~-28 sea_lantern
+setblock ~-28 ~4 ~-30 torch
+setblock ~-28 ~12 ~-30 torch
+setblock ~-28 ~20 ~-30 torch
+setblock ~-28 ~28 ~-30 torch
+setblock ~-28 ~36 ~-30 torch
+setblock ~-28 ~44 ~-30 torch
+setblock ~-28 ~52 ~-30 torch
+setblock ~-28 ~60 ~-30 torch
+setblock ~-28 ~68 ~-30 torch
+fill ~26 ~0 ~-30 ~30 ~70 ~-26 red_concrete
+fill ~27 ~0 ~-29 ~29 ~70 ~-27 air
+setblock ~26 ~71 ~-30 stone_brick_wall
+setblock ~26 ~71 ~-26 stone_brick_wall
+setblock ~28 ~71 ~-30 stone_brick_wall
+setblock ~28 ~71 ~-26 stone_brick_wall
+setblock ~30 ~71 ~-30 stone_brick_wall
+setblock ~30 ~71 ~-26 stone_brick_wall
+setblock ~26 ~71 ~-30 stone_brick_wall
+setblock ~30 ~71 ~-30 stone_brick_wall
+setblock ~26 ~71 ~-28 stone_brick_wall
+setblock ~30 ~71 ~-28 stone_brick_wall
+setblock ~26 ~71 ~-26 stone_brick_wall
+setblock ~30 ~71 ~-26 stone_brick_wall
+setblock ~28 ~72 ~-28 oak_fence
+setblock ~28 ~73 ~-28 oak_fence
+setblock ~29 ~73 ~-28 black_wool
+setblock ~29 ~72 ~-28 black_wool
+setblock ~28 ~70 ~-28 sea_lantern
+setblock ~28 ~4 ~-30 torch
+setblock ~28 ~12 ~-30 torch
+setblock ~28 ~20 ~-30 torch
+setblock ~28 ~28 ~-30 torch
+setblock ~28 ~36 ~-30 torch
+setblock ~28 ~44 ~-30 torch
+setblock ~28 ~52 ~-30 torch
+setblock ~28 ~60 ~-30 torch
+setblock ~28 ~68 ~-30 torch
+fill ~-30 ~0 ~26 ~-26 ~70 ~30 red_concrete
+fill ~-29 ~0 ~27 ~-27 ~70 ~29 air
+setblock ~-30 ~71 ~26 stone_brick_wall
+setblock ~-30 ~71 ~30 stone_brick_wall
+setblock ~-28 ~71 ~26 stone_brick_wall
+setblock ~-28 ~71 ~30 stone_brick_wall
+setblock ~-26 ~71 ~26 stone_brick_wall
+setblock ~-26 ~71 ~30 stone_brick_wall
+setblock ~-30 ~71 ~26 stone_brick_wall
+setblock ~-26 ~71 ~26 stone_brick_wall
+setblock ~-30 ~71 ~28 stone_brick_wall
+setblock ~-26 ~71 ~28 stone_brick_wall
+setblock ~-30 ~71 ~30 stone_brick_wall
+setblock ~-26 ~71 ~30 stone_brick_wall
+setblock ~-28 ~72 ~28 oak_fence
+setblock ~-28 ~73 ~28 oak_fence
+setblock ~-27 ~73 ~28 black_wool
+setblock ~-27 ~72 ~28 black_wool
+setblock ~-28 ~70 ~28 sea_lantern
+setblock ~-28 ~4 ~26 torch
+setblock ~-28 ~12 ~26 torch
+setblock ~-28 ~20 ~26 torch
+setblock ~-28 ~28 ~26 torch
+setblock ~-28 ~36 ~26 torch
+setblock ~-28 ~44 ~26 torch
+setblock ~-28 ~52 ~26 torch
+setblock ~-28 ~60 ~26 torch
+setblock ~-28 ~68 ~26 torch
+fill ~26 ~0 ~26 ~30 ~70 ~30 red_concrete
+fill ~27 ~0 ~27 ~29 ~70 ~29 air
+setblock ~26 ~71 ~26 stone_brick_wall
+setblock ~26 ~71 ~30 stone_brick_wall
+setblock ~28 ~71 ~26 stone_brick_wall
+setblock ~28 ~71 ~30 stone_brick_wall
+setblock ~30 ~71 ~26 stone_brick_wall
+setblock ~30 ~71 ~30 stone_brick_wall
+setblock ~26 ~71 ~26 stone_brick_wall
+setblock ~30 ~71 ~26 stone_brick_wall
+setblock ~26 ~71 ~28 stone_brick_wall
+setblock ~30 ~71 ~28 stone_brick_wall
+setblock ~26 ~71 ~30 stone_brick_wall
+setblock ~30 ~71 ~30 stone_brick_wall
+setblock ~28 ~72 ~28 oak_fence
+setblock ~28 ~73 ~28 oak_fence
+setblock ~29 ~73 ~28 black_wool
+setblock ~29 ~72 ~28 black_wool
+setblock ~28 ~70 ~28 sea_lantern
+setblock ~28 ~4 ~26 torch
+setblock ~28 ~12 ~26 torch
+setblock ~28 ~20 ~26 torch
+setblock ~28 ~28 ~26 torch
+setblock ~28 ~36 ~26 torch
+setblock ~28 ~44 ~26 torch
+setblock ~28 ~52 ~26 torch
+setblock ~28 ~60 ~26 torch
+setblock ~28 ~68 ~26 torch
+fill ~-1 ~18 ~-1 ~1 ~100 ~1 red_concrete
+fill ~0 ~18 ~0 ~0 ~100 ~0 air
+setblock ~0 ~100 ~0 sea_lantern
+setblock ~0 ~101 ~0 oak_fence
+setblock ~0 ~102 ~0 oak_fence
+setblock ~1 ~102 ~0 black_wool
+setblock ~1 ~101 ~0 black_wool
 # === TROONZAAL ===
-fill 1994 80 1723 2006 80 1726 red_nether_brick
-fill 1994 81 1724 2006 81 1726 stone_brick_stairs
-fill 1995 81 1725 2005 81 1726 red_nether_brick
-fill 1999 82 1726 2001 86 1726 redstone_block
-setblock 2000 87 1726 redstone_block
-setblock 2000 82 1725 redstone_block
-setblock 2000 83 1725 red_carpet
-setblock 1999 82 1725 redstone_block
-setblock 2001 82 1725 redstone_block
-setblock 1999 83 1725 redstone_block
-setblock 2001 83 1725 redstone_block
-setblock 2000 81 1724 stone_brick_stairs
-setblock 1998 84 1726 lantern
-setblock 2002 84 1726 lantern
-setblock 1998 83 1725 torch
-setblock 2002 83 1725 torch
-setblock 2000 88 1726 torch
-setblock 1998 82 1726 red_concrete
-setblock 2002 82 1726 red_concrete
+fill ~-6 ~0 ~23 ~6 ~0 ~26 red_nether_brick
+fill ~-6 ~1 ~24 ~6 ~1 ~26 stone_brick_stairs
+fill ~-5 ~1 ~25 ~5 ~1 ~26 red_nether_brick
+fill ~-1 ~2 ~26 ~1 ~6 ~26 redstone_block
+setblock ~0 ~7 ~26 redstone_block
+setblock ~0 ~2 ~25 redstone_block
+setblock ~0 ~3 ~25 red_carpet
+setblock ~-1 ~2 ~25 redstone_block
+setblock ~1 ~2 ~25 redstone_block
+setblock ~-1 ~3 ~25 redstone_block
+setblock ~1 ~3 ~25 redstone_block
+setblock ~0 ~1 ~24 stone_brick_stairs
+setblock ~-2 ~4 ~26 lantern
+setblock ~2 ~4 ~26 lantern
+setblock ~-2 ~3 ~25 torch
+setblock ~2 ~3 ~25 torch
+setblock ~0 ~8 ~26 torch
+setblock ~-2 ~2 ~26 red_concrete
+setblock ~2 ~2 ~26 red_concrete
 # === GROTE SLAAPKAMER + LANG ROOD TAPIJT NAAR DE TROON ===
-fill 1985 81 1676 1995 84 1676 red_concrete
-fill 1985 81 1686 1995 84 1686 red_concrete
-fill 1985 81 1676 1985 84 1686 red_concrete
-fill 1995 81 1676 1995 84 1686 red_concrete
-fill 1986 81 1677 1994 81 1685 red_carpet
-setblock 1995 81 1681 air
-setblock 1995 82 1681 air
-setblock 1987 81 1678 red_wool
-setblock 1987 81 1679 red_wool
-setblock 1987 82 1677 dark_oak_planks
-setblock 1993 81 1678 red_wool
-setblock 1993 81 1679 red_wool
-setblock 1993 82 1677 dark_oak_planks
-setblock 1989 81 1685 bookshelf
-setblock 1990 81 1685 bookshelf
-setblock 1991 81 1685 bookshelf
-setblock 1986 81 1685 chest
-setblock 1994 81 1685 chest
-setblock 1990 81 1681 crafting_table
-setblock 1986 83 1677 lantern
-setblock 1994 83 1677 lantern
-setblock 1986 83 1685 torch
-setblock 1994 83 1685 torch
-setblock 1990 84 1681 lantern
-setblock 2000 81 1681 red_carpet
-setblock 1999 81 1681 red_carpet
-setblock 2001 81 1681 red_carpet
-setblock 2000 81 1682 red_carpet
-setblock 1999 81 1682 red_carpet
-setblock 2001 81 1682 red_carpet
-setblock 2000 81 1683 red_carpet
-setblock 1999 81 1683 red_carpet
-setblock 2001 81 1683 red_carpet
-setblock 2000 81 1684 red_carpet
-setblock 1999 81 1684 red_carpet
-setblock 2001 81 1684 red_carpet
-setblock 2000 81 1685 red_carpet
-setblock 1999 81 1685 red_carpet
-setblock 2001 81 1685 red_carpet
-setblock 2000 81 1686 red_carpet
-setblock 1999 81 1686 red_carpet
-setblock 2001 81 1686 red_carpet
-setblock 2000 81 1687 red_carpet
-setblock 1999 81 1687 red_carpet
-setblock 2001 81 1687 red_carpet
-setblock 2000 81 1688 red_carpet
-setblock 1999 81 1688 red_carpet
-setblock 2001 81 1688 red_carpet
-setblock 2000 81 1689 red_carpet
-setblock 1999 81 1689 red_carpet
-setblock 2001 81 1689 red_carpet
-setblock 2000 81 1690 red_carpet
-setblock 1999 81 1690 red_carpet
-setblock 2001 81 1690 red_carpet
-setblock 2000 81 1691 red_carpet
-setblock 1999 81 1691 red_carpet
-setblock 2001 81 1691 red_carpet
-setblock 2000 81 1692 red_carpet
-setblock 1999 81 1692 red_carpet
-setblock 2001 81 1692 red_carpet
-setblock 2000 81 1693 red_carpet
-setblock 1999 81 1693 red_carpet
-setblock 2001 81 1693 red_carpet
-setblock 2000 81 1694 red_carpet
-setblock 1999 81 1694 red_carpet
-setblock 2001 81 1694 red_carpet
-setblock 2000 81 1695 red_carpet
-setblock 1999 81 1695 red_carpet
-setblock 2001 81 1695 red_carpet
-setblock 2000 81 1696 red_carpet
-setblock 1999 81 1696 red_carpet
-setblock 2001 81 1696 red_carpet
-setblock 2000 81 1697 red_carpet
-setblock 1999 81 1697 red_carpet
-setblock 2001 81 1697 red_carpet
-setblock 2000 81 1698 red_carpet
-setblock 1999 81 1698 red_carpet
-setblock 2001 81 1698 red_carpet
-setblock 2000 81 1699 red_carpet
-setblock 1999 81 1699 red_carpet
-setblock 2001 81 1699 red_carpet
-setblock 2000 81 1700 red_carpet
-setblock 1999 81 1700 red_carpet
-setblock 2001 81 1700 red_carpet
-setblock 2000 81 1701 red_carpet
-setblock 1999 81 1701 red_carpet
-setblock 2001 81 1701 red_carpet
-setblock 2000 81 1702 red_carpet
-setblock 1999 81 1702 red_carpet
-setblock 2001 81 1702 red_carpet
-setblock 2000 81 1703 red_carpet
-setblock 1999 81 1703 red_carpet
-setblock 2001 81 1703 red_carpet
-setblock 2000 81 1704 red_carpet
-setblock 1999 81 1704 red_carpet
-setblock 2001 81 1704 red_carpet
-setblock 2000 81 1705 red_carpet
-setblock 1999 81 1705 red_carpet
-setblock 2001 81 1705 red_carpet
-setblock 2000 81 1706 red_carpet
-setblock 1999 81 1706 red_carpet
-setblock 2001 81 1706 red_carpet
-setblock 2000 81 1707 red_carpet
-setblock 1999 81 1707 red_carpet
-setblock 2001 81 1707 red_carpet
-setblock 2000 81 1708 red_carpet
-setblock 1999 81 1708 red_carpet
-setblock 2001 81 1708 red_carpet
-setblock 2000 81 1709 red_carpet
-setblock 1999 81 1709 red_carpet
-setblock 2001 81 1709 red_carpet
-setblock 2000 81 1710 red_carpet
-setblock 1999 81 1710 red_carpet
-setblock 2001 81 1710 red_carpet
-setblock 2000 81 1711 red_carpet
-setblock 1999 81 1711 red_carpet
-setblock 2001 81 1711 red_carpet
-setblock 2000 81 1712 red_carpet
-setblock 1999 81 1712 red_carpet
-setblock 2001 81 1712 red_carpet
-setblock 2000 81 1713 red_carpet
-setblock 1999 81 1713 red_carpet
-setblock 2001 81 1713 red_carpet
-setblock 2000 81 1714 red_carpet
-setblock 1999 81 1714 red_carpet
-setblock 2001 81 1714 red_carpet
-setblock 2000 81 1715 red_carpet
-setblock 1999 81 1715 red_carpet
-setblock 2001 81 1715 red_carpet
-setblock 2000 81 1716 red_carpet
-setblock 1999 81 1716 red_carpet
-setblock 2001 81 1716 red_carpet
-setblock 2000 81 1717 red_carpet
-setblock 1999 81 1717 red_carpet
-setblock 2001 81 1717 red_carpet
-setblock 2000 81 1718 red_carpet
-setblock 1999 81 1718 red_carpet
-setblock 2001 81 1718 red_carpet
-setblock 2000 81 1719 red_carpet
-setblock 1999 81 1719 red_carpet
-setblock 2001 81 1719 red_carpet
-setblock 2000 81 1720 red_carpet
-setblock 1999 81 1720 red_carpet
-setblock 2001 81 1720 red_carpet
-setblock 2000 81 1721 red_carpet
-setblock 1999 81 1721 red_carpet
-setblock 2001 81 1721 red_carpet
-setblock 2000 81 1722 red_carpet
-setblock 1999 81 1722 red_carpet
-setblock 2001 81 1722 red_carpet
-setblock 2000 81 1723 red_carpet
-setblock 1999 81 1723 red_carpet
-setblock 2001 81 1723 red_carpet
-setblock 2000 81 1724 red_carpet
-setblock 1999 81 1724 red_carpet
-setblock 2001 81 1724 red_carpet
-setblock 1995 81 1681 red_carpet
-setblock 1995 81 1682 red_carpet
-setblock 1996 81 1681 red_carpet
-setblock 1996 81 1682 red_carpet
-setblock 1997 81 1681 red_carpet
-setblock 1997 81 1682 red_carpet
-setblock 1998 81 1681 red_carpet
-setblock 1998 81 1682 red_carpet
-setblock 1999 81 1681 red_carpet
-setblock 1999 81 1682 red_carpet
-setblock 2000 81 1681 red_carpet
-setblock 2000 81 1682 red_carpet
-setblock 2001 81 1681 red_carpet
-setblock 2001 81 1682 red_carpet
-setblock 1997 83 1681 torch
-setblock 2003 83 1681 torch
-setblock 1997 83 1686 torch
-setblock 2003 83 1686 torch
-setblock 1997 83 1691 torch
-setblock 2003 83 1691 torch
-setblock 1997 83 1696 torch
-setblock 2003 83 1696 torch
-setblock 1997 83 1701 torch
-setblock 2003 83 1701 torch
-setblock 1997 83 1706 torch
-setblock 2003 83 1706 torch
-setblock 1997 83 1711 torch
-setblock 2003 83 1711 torch
-setblock 1997 83 1716 torch
-setblock 2003 83 1716 torch
-setblock 1997 83 1721 torch
-setblock 2003 83 1721 torch
+fill ~-15 ~1 ~-24 ~-5 ~4 ~-24 red_concrete
+fill ~-15 ~1 ~-14 ~-5 ~4 ~-14 red_concrete
+fill ~-15 ~1 ~-24 ~-15 ~4 ~-14 red_concrete
+fill ~-5 ~1 ~-24 ~-5 ~4 ~-14 red_concrete
+fill ~-14 ~1 ~-23 ~-6 ~1 ~-15 red_carpet
+setblock ~-5 ~1 ~-19 air
+setblock ~-5 ~2 ~-19 air
+setblock ~-13 ~1 ~-22 red_wool
+setblock ~-13 ~1 ~-21 red_wool
+setblock ~-13 ~2 ~-23 dark_oak_planks
+setblock ~-7 ~1 ~-22 red_wool
+setblock ~-7 ~1 ~-21 red_wool
+setblock ~-7 ~2 ~-23 dark_oak_planks
+setblock ~-11 ~1 ~-15 bookshelf
+setblock ~-10 ~1 ~-15 bookshelf
+setblock ~-9 ~1 ~-15 bookshelf
+setblock ~-14 ~1 ~-15 chest
+setblock ~-6 ~1 ~-15 chest
+setblock ~-10 ~1 ~-19 crafting_table
+setblock ~-14 ~3 ~-23 lantern
+setblock ~-6 ~3 ~-23 lantern
+setblock ~-14 ~3 ~-15 torch
+setblock ~-6 ~3 ~-15 torch
+setblock ~-10 ~4 ~-19 lantern
+setblock ~0 ~1 ~-19 red_carpet
+setblock ~-1 ~1 ~-19 red_carpet
+setblock ~1 ~1 ~-19 red_carpet
+setblock ~0 ~1 ~-18 red_carpet
+setblock ~-1 ~1 ~-18 red_carpet
+setblock ~1 ~1 ~-18 red_carpet
+setblock ~0 ~1 ~-17 red_carpet
+setblock ~-1 ~1 ~-17 red_carpet
+setblock ~1 ~1 ~-17 red_carpet
+setblock ~0 ~1 ~-16 red_carpet
+setblock ~-1 ~1 ~-16 red_carpet
+setblock ~1 ~1 ~-16 red_carpet
+setblock ~0 ~1 ~-15 red_carpet
+setblock ~-1 ~1 ~-15 red_carpet
+setblock ~1 ~1 ~-15 red_carpet
+setblock ~0 ~1 ~-14 red_carpet
+setblock ~-1 ~1 ~-14 red_carpet
+setblock ~1 ~1 ~-14 red_carpet
+setblock ~0 ~1 ~-13 red_carpet
+setblock ~-1 ~1 ~-13 red_carpet
+setblock ~1 ~1 ~-13 red_carpet
+setblock ~0 ~1 ~-12 red_carpet
+setblock ~-1 ~1 ~-12 red_carpet
+setblock ~1 ~1 ~-12 red_carpet
+setblock ~0 ~1 ~-11 red_carpet
+setblock ~-1 ~1 ~-11 red_carpet
+setblock ~1 ~1 ~-11 red_carpet
+setblock ~0 ~1 ~-10 red_carpet
+setblock ~-1 ~1 ~-10 red_carpet
+setblock ~1 ~1 ~-10 red_carpet
+setblock ~0 ~1 ~-9 red_carpet
+setblock ~-1 ~1 ~-9 red_carpet
+setblock ~1 ~1 ~-9 red_carpet
+setblock ~0 ~1 ~-8 red_carpet
+setblock ~-1 ~1 ~-8 red_carpet
+setblock ~1 ~1 ~-8 red_carpet
+setblock ~0 ~1 ~-7 red_carpet
+setblock ~-1 ~1 ~-7 red_carpet
+setblock ~1 ~1 ~-7 red_carpet
+setblock ~0 ~1 ~-6 red_carpet
+setblock ~-1 ~1 ~-6 red_carpet
+setblock ~1 ~1 ~-6 red_carpet
+setblock ~0 ~1 ~-5 red_carpet
+setblock ~-1 ~1 ~-5 red_carpet
+setblock ~1 ~1 ~-5 red_carpet
+setblock ~0 ~1 ~-4 red_carpet
+setblock ~-1 ~1 ~-4 red_carpet
+setblock ~1 ~1 ~-4 red_carpet
+setblock ~0 ~1 ~-3 red_carpet
+setblock ~-1 ~1 ~-3 red_carpet
+setblock ~1 ~1 ~-3 red_carpet
+setblock ~0 ~1 ~-2 red_carpet
+setblock ~-1 ~1 ~-2 red_carpet
+setblock ~1 ~1 ~-2 red_carpet
+setblock ~0 ~1 ~-1 red_carpet
+setblock ~-1 ~1 ~-1 red_carpet
+setblock ~1 ~1 ~-1 red_carpet
+setblock ~0 ~1 ~0 red_carpet
+setblock ~-1 ~1 ~0 red_carpet
+setblock ~1 ~1 ~0 red_carpet
+setblock ~0 ~1 ~1 red_carpet
+setblock ~-1 ~1 ~1 red_carpet
+setblock ~1 ~1 ~1 red_carpet
+setblock ~0 ~1 ~2 red_carpet
+setblock ~-1 ~1 ~2 red_carpet
+setblock ~1 ~1 ~2 red_carpet
+setblock ~0 ~1 ~3 red_carpet
+setblock ~-1 ~1 ~3 red_carpet
+setblock ~1 ~1 ~3 red_carpet
+setblock ~0 ~1 ~4 red_carpet
+setblock ~-1 ~1 ~4 red_carpet
+setblock ~1 ~1 ~4 red_carpet
+setblock ~0 ~1 ~5 red_carpet
+setblock ~-1 ~1 ~5 red_carpet
+setblock ~1 ~1 ~5 red_carpet
+setblock ~0 ~1 ~6 red_carpet
+setblock ~-1 ~1 ~6 red_carpet
+setblock ~1 ~1 ~6 red_carpet
+setblock ~0 ~1 ~7 red_carpet
+setblock ~-1 ~1 ~7 red_carpet
+setblock ~1 ~1 ~7 red_carpet
+setblock ~0 ~1 ~8 red_carpet
+setblock ~-1 ~1 ~8 red_carpet
+setblock ~1 ~1 ~8 red_carpet
+setblock ~0 ~1 ~9 red_carpet
+setblock ~-1 ~1 ~9 red_carpet
+setblock ~1 ~1 ~9 red_carpet
+setblock ~0 ~1 ~10 red_carpet
+setblock ~-1 ~1 ~10 red_carpet
+setblock ~1 ~1 ~10 red_carpet
+setblock ~0 ~1 ~11 red_carpet
+setblock ~-1 ~1 ~11 red_carpet
+setblock ~1 ~1 ~11 red_carpet
+setblock ~0 ~1 ~12 red_carpet
+setblock ~-1 ~1 ~12 red_carpet
+setblock ~1 ~1 ~12 red_carpet
+setblock ~0 ~1 ~13 red_carpet
+setblock ~-1 ~1 ~13 red_carpet
+setblock ~1 ~1 ~13 red_carpet
+setblock ~0 ~1 ~14 red_carpet
+setblock ~-1 ~1 ~14 red_carpet
+setblock ~1 ~1 ~14 red_carpet
+setblock ~0 ~1 ~15 red_carpet
+setblock ~-1 ~1 ~15 red_carpet
+setblock ~1 ~1 ~15 red_carpet
+setblock ~0 ~1 ~16 red_carpet
+setblock ~-1 ~1 ~16 red_carpet
+setblock ~1 ~1 ~16 red_carpet
+setblock ~0 ~1 ~17 red_carpet
+setblock ~-1 ~1 ~17 red_carpet
+setblock ~1 ~1 ~17 red_carpet
+setblock ~0 ~1 ~18 red_carpet
+setblock ~-1 ~1 ~18 red_carpet
+setblock ~1 ~1 ~18 red_carpet
+setblock ~0 ~1 ~19 red_carpet
+setblock ~-1 ~1 ~19 red_carpet
+setblock ~1 ~1 ~19 red_carpet
+setblock ~0 ~1 ~20 red_carpet
+setblock ~-1 ~1 ~20 red_carpet
+setblock ~1 ~1 ~20 red_carpet
+setblock ~0 ~1 ~21 red_carpet
+setblock ~-1 ~1 ~21 red_carpet
+setblock ~1 ~1 ~21 red_carpet
+setblock ~0 ~1 ~22 red_carpet
+setblock ~-1 ~1 ~22 red_carpet
+setblock ~1 ~1 ~22 red_carpet
+setblock ~0 ~1 ~23 red_carpet
+setblock ~-1 ~1 ~23 red_carpet
+setblock ~1 ~1 ~23 red_carpet
+setblock ~0 ~1 ~24 red_carpet
+setblock ~-1 ~1 ~24 red_carpet
+setblock ~1 ~1 ~24 red_carpet
+setblock ~-5 ~1 ~-19 red_carpet
+setblock ~-5 ~1 ~-18 red_carpet
+setblock ~-4 ~1 ~-19 red_carpet
+setblock ~-4 ~1 ~-18 red_carpet
+setblock ~-3 ~1 ~-19 red_carpet
+setblock ~-3 ~1 ~-18 red_carpet
+setblock ~-2 ~1 ~-19 red_carpet
+setblock ~-2 ~1 ~-18 red_carpet
+setblock ~-1 ~1 ~-19 red_carpet
+setblock ~-1 ~1 ~-18 red_carpet
+setblock ~0 ~1 ~-19 red_carpet
+setblock ~0 ~1 ~-18 red_carpet
+setblock ~1 ~1 ~-19 red_carpet
+setblock ~1 ~1 ~-18 red_carpet
+setblock ~-3 ~3 ~-19 torch
+setblock ~3 ~3 ~-19 torch
+setblock ~-3 ~3 ~-14 torch
+setblock ~3 ~3 ~-14 torch
+setblock ~-3 ~3 ~-9 torch
+setblock ~3 ~3 ~-9 torch
+setblock ~-3 ~3 ~-4 torch
+setblock ~3 ~3 ~-4 torch
+setblock ~-3 ~3 ~1 torch
+setblock ~3 ~3 ~1 torch
+setblock ~-3 ~3 ~6 torch
+setblock ~3 ~3 ~6 torch
+setblock ~-3 ~3 ~11 torch
+setblock ~3 ~3 ~11 torch
+setblock ~-3 ~3 ~16 torch
+setblock ~3 ~3 ~16 torch
+setblock ~-3 ~3 ~21 torch
+setblock ~3 ~3 ~21 torch
 # === GROTE KEUKEN (achter-rechts) ===
-fill 2006 81 1713 2016 84 1713 red_concrete
-fill 2006 81 1723 2016 84 1723 red_concrete
-fill 2006 81 1713 2006 84 1723 red_concrete
-fill 2016 81 1713 2016 84 1723 red_concrete
-setblock 2006 81 1718 air
-setblock 2006 82 1718 air
-setblock 2007 81 1714 furnace
-setblock 2008 81 1714 smoker
-setblock 2009 81 1714 furnace
-setblock 2010 81 1714 smoker
-setblock 2011 81 1714 furnace
-setblock 2012 81 1714 smoker
-setblock 2013 81 1714 furnace
-setblock 2014 81 1714 smoker
-setblock 2015 81 1714 furnace
-setblock 2007 81 1716 crafting_table
-setblock 2009 81 1716 crafting_table
-setblock 2011 81 1716 crafting_table
-setblock 2013 81 1716 crafting_table
-setblock 2015 81 1716 crafting_table
-setblock 2008 81 1718 cauldron
-setblock 2010 81 1718 cauldron
-setblock 2012 81 1718 barrel
-setblock 2014 81 1718 barrel
-setblock 2011 81 1716 cake
-setblock 2015 81 1722 chest
-setblock 2007 81 1722 chest
-setblock 2007 83 1714 lantern
-setblock 2015 83 1714 lantern
-setblock 2011 84 1718 lantern
-setblock 2007 83 1722 torch
-setblock 2015 83 1722 torch
+fill ~6 ~1 ~13 ~16 ~4 ~13 red_concrete
+fill ~6 ~1 ~23 ~16 ~4 ~23 red_concrete
+fill ~6 ~1 ~13 ~6 ~4 ~23 red_concrete
+fill ~16 ~1 ~13 ~16 ~4 ~23 red_concrete
+setblock ~6 ~1 ~18 air
+setblock ~6 ~2 ~18 air
+setblock ~7 ~1 ~14 furnace
+setblock ~8 ~1 ~14 smoker
+setblock ~9 ~1 ~14 furnace
+setblock ~10 ~1 ~14 smoker
+setblock ~11 ~1 ~14 furnace
+setblock ~12 ~1 ~14 smoker
+setblock ~13 ~1 ~14 furnace
+setblock ~14 ~1 ~14 smoker
+setblock ~15 ~1 ~14 furnace
+setblock ~7 ~1 ~16 crafting_table
+setblock ~9 ~1 ~16 crafting_table
+setblock ~11 ~1 ~16 crafting_table
+setblock ~13 ~1 ~16 crafting_table
+setblock ~15 ~1 ~16 crafting_table
+setblock ~8 ~1 ~18 cauldron
+setblock ~10 ~1 ~18 cauldron
+setblock ~12 ~1 ~18 barrel
+setblock ~14 ~1 ~18 barrel
+setblock ~11 ~1 ~16 cake
+setblock ~15 ~1 ~22 chest
+setblock ~7 ~1 ~22 chest
+setblock ~7 ~3 ~14 lantern
+setblock ~15 ~3 ~14 lantern
+setblock ~11 ~4 ~18 lantern
+setblock ~7 ~3 ~22 torch
+setblock ~15 ~3 ~22 torch
 # === MIDDEN-VERDIEPING: EETKAMER + WERKPLAATS ===
-setblock 1995 87 1700 dark_oak_slab
-setblock 1996 87 1700 dark_oak_slab
-setblock 1997 87 1700 dark_oak_slab
-setblock 1998 87 1700 dark_oak_slab
-setblock 1999 87 1700 dark_oak_slab
-setblock 2000 87 1700 dark_oak_slab
-setblock 2001 87 1700 dark_oak_slab
-setblock 2002 87 1700 dark_oak_slab
-setblock 2003 87 1700 dark_oak_slab
-setblock 2004 87 1700 dark_oak_slab
-setblock 2005 87 1700 dark_oak_slab
-setblock 1995 87 1699 dark_oak_stairs
-setblock 1995 87 1701 dark_oak_stairs
-setblock 1997 87 1699 dark_oak_stairs
-setblock 1997 87 1701 dark_oak_stairs
-setblock 1999 87 1699 dark_oak_stairs
-setblock 1999 87 1701 dark_oak_stairs
-setblock 2001 87 1699 dark_oak_stairs
-setblock 2001 87 1701 dark_oak_stairs
-setblock 2003 87 1699 dark_oak_stairs
-setblock 2003 87 1701 dark_oak_stairs
-setblock 2005 87 1699 dark_oak_stairs
-setblock 2005 87 1701 dark_oak_stairs
-setblock 2000 88 1700 soul_lantern
-setblock 2022 87 1722 crafting_table
-setblock 2021 87 1722 anvil
-setblock 2023 87 1722 grindstone
-setblock 2022 87 1721 brewing_stand
-setblock 2021 87 1721 cartography_table
-setblock 2023 87 1721 redstone_block
-setblock 2022 87 1720 lectern
+setblock ~-5 ~7 ~0 dark_oak_slab
+setblock ~-4 ~7 ~0 dark_oak_slab
+setblock ~-3 ~7 ~0 dark_oak_slab
+setblock ~-2 ~7 ~0 dark_oak_slab
+setblock ~-1 ~7 ~0 dark_oak_slab
+setblock ~0 ~7 ~0 dark_oak_slab
+setblock ~1 ~7 ~0 dark_oak_slab
+setblock ~2 ~7 ~0 dark_oak_slab
+setblock ~3 ~7 ~0 dark_oak_slab
+setblock ~4 ~7 ~0 dark_oak_slab
+setblock ~5 ~7 ~0 dark_oak_slab
+setblock ~-5 ~7 ~-1 dark_oak_stairs
+setblock ~-5 ~7 ~1 dark_oak_stairs
+setblock ~-3 ~7 ~-1 dark_oak_stairs
+setblock ~-3 ~7 ~1 dark_oak_stairs
+setblock ~-1 ~7 ~-1 dark_oak_stairs
+setblock ~-1 ~7 ~1 dark_oak_stairs
+setblock ~1 ~7 ~-1 dark_oak_stairs
+setblock ~1 ~7 ~1 dark_oak_stairs
+setblock ~3 ~7 ~-1 dark_oak_stairs
+setblock ~3 ~7 ~1 dark_oak_stairs
+setblock ~5 ~7 ~-1 dark_oak_stairs
+setblock ~5 ~7 ~1 dark_oak_stairs
+setblock ~0 ~8 ~0 soul_lantern
+setblock ~22 ~7 ~22 crafting_table
+setblock ~21 ~7 ~22 anvil
+setblock ~23 ~7 ~22 grindstone
+setblock ~22 ~7 ~21 brewing_stand
+setblock ~21 ~7 ~21 cartography_table
+setblock ~23 ~7 ~21 redstone_block
+setblock ~22 ~7 ~20 lectern
 # === BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===
-setblock 1977 93 1677 red_wool
-setblock 1977 93 1678 red_wool
-setblock 1977 96 1677 soul_lantern
-setblock 2023 93 1677 red_wool
-setblock 2023 93 1678 red_wool
-setblock 2023 96 1677 soul_lantern
-setblock 1977 93 1723 red_wool
-setblock 1977 93 1724 red_wool
-setblock 1977 96 1723 soul_lantern
-setblock 2023 93 1723 red_wool
-setblock 2023 93 1724 red_wool
-setblock 2023 96 1723 soul_lantern
+setblock ~-23 ~13 ~-23 red_wool
+setblock ~-23 ~13 ~-22 red_wool
+setblock ~-23 ~16 ~-23 soul_lantern
+setblock ~23 ~13 ~-23 red_wool
+setblock ~23 ~13 ~-22 red_wool
+setblock ~23 ~16 ~-23 soul_lantern
+setblock ~-23 ~13 ~23 red_wool
+setblock ~-23 ~13 ~24 red_wool
+setblock ~-23 ~16 ~23 soul_lantern
+setblock ~23 ~13 ~23 red_wool
+setblock ~23 ~13 ~24 red_wool
+setblock ~23 ~16 ~23 soul_lantern
 # === KELDER ===
-fill 1990 72 1690 2010 77 1710 air
-fill 1989 71 1689 2011 71 1711 netherrack
-fill 1989 72 1689 2011 77 1689 netherrack
-fill 1989 72 1711 2011 77 1711 netherrack
-fill 1989 72 1689 1989 77 1711 netherrack
-fill 2011 72 1689 2011 77 1711 netherrack
-fill 1989 78 1689 2011 78 1711 red_concrete
-setblock 2024 80 1676 stone_brick_stairs
-setblock 2024 81 1676 air
-setblock 2024 82 1676 air
-setblock 2024 79 1677 stone_brick_stairs
-setblock 2024 80 1677 air
-setblock 2024 81 1677 air
-setblock 2024 78 1678 stone_brick_stairs
-setblock 2024 79 1678 air
-setblock 2024 80 1678 air
-setblock 2024 77 1679 stone_brick_stairs
-setblock 2024 78 1679 air
-setblock 2024 79 1679 air
-setblock 2024 76 1680 stone_brick_stairs
-setblock 2024 77 1680 air
-setblock 2024 78 1680 air
-setblock 2024 75 1681 stone_brick_stairs
-setblock 2024 76 1681 air
-setblock 2024 77 1681 air
-setblock 2024 74 1682 stone_brick_stairs
-setblock 2024 75 1682 air
-setblock 2024 76 1682 air
-setblock 2024 73 1683 stone_brick_stairs
-setblock 2024 74 1683 air
-setblock 2024 75 1683 air
-setblock 2024 72 1684 stone_brick_stairs
-setblock 2024 73 1684 air
-setblock 2024 74 1684 air
-setblock 1992 73 1692 barrel
-setblock 1992 73 1700 barrel
-setblock 1992 73 1708 barrel
-setblock 1996 73 1692 barrel
-setblock 1996 73 1700 barrel
-setblock 1996 73 1708 barrel
-setblock 2000 73 1692 barrel
-setblock 2000 73 1700 barrel
-setblock 2000 73 1708 barrel
-setblock 2004 73 1692 barrel
-setblock 2004 73 1700 barrel
-setblock 2004 73 1708 barrel
-setblock 2008 73 1692 barrel
-setblock 2008 73 1700 barrel
-setblock 2008 73 1708 barrel
-setblock 1994 73 1694 chest
-setblock 2006 73 1706 chest
-setblock 1991 76 1691 torch
-setblock 1991 76 1700 torch
-setblock 1991 76 1709 torch
-setblock 2000 76 1691 torch
-setblock 2000 76 1700 torch
-setblock 2000 76 1709 torch
-setblock 2009 76 1691 torch
-setblock 2009 76 1700 torch
-setblock 2009 76 1709 torch
+fill ~-10 ~-8 ~-10 ~10 ~-3 ~10 air
+fill ~-11 ~-9 ~-11 ~11 ~-9 ~11 netherrack
+fill ~-11 ~-8 ~-11 ~11 ~-3 ~-11 netherrack
+fill ~-11 ~-8 ~11 ~11 ~-3 ~11 netherrack
+fill ~-11 ~-8 ~-11 ~-11 ~-3 ~11 netherrack
+fill ~11 ~-8 ~-11 ~11 ~-3 ~11 netherrack
+fill ~-11 ~-2 ~-11 ~11 ~-2 ~11 red_concrete
+setblock ~24 ~0 ~-24 stone_brick_stairs
+setblock ~24 ~1 ~-24 air
+setblock ~24 ~2 ~-24 air
+setblock ~24 ~-1 ~-23 stone_brick_stairs
+setblock ~24 ~0 ~-23 air
+setblock ~24 ~1 ~-23 air
+setblock ~24 ~-2 ~-22 stone_brick_stairs
+setblock ~24 ~-1 ~-22 air
+setblock ~24 ~0 ~-22 air
+setblock ~24 ~-3 ~-21 stone_brick_stairs
+setblock ~24 ~-2 ~-21 air
+setblock ~24 ~-1 ~-21 air
+setblock ~24 ~-4 ~-20 stone_brick_stairs
+setblock ~24 ~-3 ~-20 air
+setblock ~24 ~-2 ~-20 air
+setblock ~24 ~-5 ~-19 stone_brick_stairs
+setblock ~24 ~-4 ~-19 air
+setblock ~24 ~-3 ~-19 air
+setblock ~24 ~-6 ~-18 stone_brick_stairs
+setblock ~24 ~-5 ~-18 air
+setblock ~24 ~-4 ~-18 air
+setblock ~24 ~-7 ~-17 stone_brick_stairs
+setblock ~24 ~-6 ~-17 air
+setblock ~24 ~-5 ~-17 air
+setblock ~24 ~-8 ~-16 stone_brick_stairs
+setblock ~24 ~-7 ~-16 air
+setblock ~24 ~-6 ~-16 air
+setblock ~-8 ~-7 ~-8 barrel
+setblock ~-8 ~-7 ~0 barrel
+setblock ~-8 ~-7 ~8 barrel
+setblock ~-4 ~-7 ~-8 barrel
+setblock ~-4 ~-7 ~0 barrel
+setblock ~-4 ~-7 ~8 barrel
+setblock ~0 ~-7 ~-8 barrel
+setblock ~0 ~-7 ~0 barrel
+setblock ~0 ~-7 ~8 barrel
+setblock ~4 ~-7 ~-8 barrel
+setblock ~4 ~-7 ~0 barrel
+setblock ~4 ~-7 ~8 barrel
+setblock ~8 ~-7 ~-8 barrel
+setblock ~8 ~-7 ~0 barrel
+setblock ~8 ~-7 ~8 barrel
+setblock ~-6 ~-7 ~-6 chest
+setblock ~6 ~-7 ~6 chest
+setblock ~-9 ~-4 ~-9 torch
+setblock ~-9 ~-4 ~0 torch
+setblock ~-9 ~-4 ~9 torch
+setblock ~0 ~-4 ~-9 torch
+setblock ~0 ~-4 ~0 torch
+setblock ~0 ~-4 ~9 torch
+setblock ~9 ~-4 ~-9 torch
+setblock ~9 ~-4 ~0 torch
+setblock ~9 ~-4 ~9 torch
 scoreboard players set rmRood rm_state 1

@@ -9,11 +9,6 @@
 scoreboard objectives add rm_state dummy
 scoreboard objectives add rm_timer dummy
 
-# --- Laad beide kasteel-locaties alvast (chunks moeten geladen zijn voor we
-#     ze bouwen als je straks een rol kiest) ---
-tickingarea add 1895 40 1895 2105 200 2105 ridder_kasteel true
-tickingarea add 1895 40 1595 2105 200 1805 rood_kasteel true
-
 # --- Ruimte + vloer van de keuze-hal (21x21) ---
 fill ~-10 ~ ~-10 ~10 ~7 ~10 air
 fill ~-10 ~-1 ~-10 ~10 ~-1 ~10 stone_bricks

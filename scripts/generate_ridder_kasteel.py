@@ -32,11 +32,23 @@ def build_castle(cx, cz, p, mode):
     def c(t):
         lines.append("# " + t)
 
+    # Alles wordt RELATIEF gebouwd t.o.v. de speler (~). cx,cz,FLOOR is het
+    # ontwerp-middelpunt; we zetten dat om naar ~-offsets. Zo verschijnt het
+    # kasteel om de speler heen, precies waar die staat (geen verre teleport).
+    def rxx(x):
+        return f"~{x - cx}"
+
+    def ryy(y):
+        return f"~{y - FLOOR}"
+
+    def rzz(z):
+        return f"~{z - cz}"
+
     def fill(x1, y1, z1, x2, y2, z2, block):
-        lines.append(f"fill {x1} {y1} {z1} {x2} {y2} {z2} {block}")
+        lines.append(f"fill {rxx(x1)} {ryy(y1)} {rzz(z1)} {rxx(x2)} {ryy(y2)} {rzz(z2)} {block}")
 
     def setb(x, y, z, block):
-        lines.append(f"setblock {x} {y} {z} {block}")
+        lines.append(f"setblock {rxx(x)} {ryy(y)} {rzz(z)} {block}")
 
     def chunk_fill(x1, y1, z1, x2, y2, z2, block, step=30):
         """Split a big fill into tiles <= 27000 blocks (Bedrock /fill limit is 32768)."""
@@ -65,8 +77,15 @@ def build_castle(cx, cz, p, mode):
     lines.append("gamerule dofiretick false")
     lines.append("gamerule mobgriefing false")
     lines.append("scoreboard objectives add rm_state dummy")
-    # (de tickingarea wordt al in start.mcfunction toegevoegd zodat de chunks
-    #  geladen zijn voordat we hier bouwen)
+    # Houd het kasteel geladen (relatief rond de speler die hier nu staat)
+    lines.append(
+        f"tickingarea remove {p['area']}")
+    lines.append(
+        f"tickingarea add ~-{COURT+4} ~-12 ~-{COURT+4} ~{COURT+4} ~118 ~{COURT+4} {p['area']} true")
+    if mode == "ours":
+        # Anker dat het middelpunt van ONS kasteel onthoudt (voor de aanvallen)
+        lines.append("kill @e[type=ridder_mod:kasteel_anker]")
+        lines.append("summon ridder_mod:kasteel_anker ~ ~ ~")
 
     # --- Clear + ground (chunked: Bedrock /fill max is 32768 blocks) ---
     c("Binnenplaats leegmaken (tot muurhoogte) en de grond vlak leggen")

@@ -80,6 +80,6 @@ Een Bedrock-addon kan de echte speler-*skin* niet veranderen. De "avatar" wordt 
 
 ## Techniek
 
-- Beide kastelen worden op vaste locaties gebouwd (ons op `2000, 80, 2000`, het rode op `2000, 80, 1700`) via `build_kasteel.mcfunction` en `build_rood_kasteel.mcfunction`, allebei gegenereerd door `scripts/generate_ridder_kasteel.py`. Grote `fill`-commando's worden automatisch opgedeeld zodat ze onder de Bedrock-limiet van 32768 blokken blijven.
+- Het kasteel wordt **rondom de speler** gebouwd (relatieve `~`-coördinaten) op de plek waar je een rol kiest, dus je staat meteen ín je eigen kasteel — geen verre teleport. Een onzichtbaar anker (`kasteel_anker`) onthoudt het middelpunt, zodat de aanvallen op de juiste plek gebeuren. Het rode vijandkasteel wordt 260 blokken naar het noorden gebouwd zodra je het met `/function naar_vijand` aanvalt. Beide worden gegenereerd door `scripts/generate_ridder_kasteel.py`; grote `fill`-commando's worden opgedeeld onder de Bedrock-limiet van 32768 blokken.
 - Entity-textures worden gegenereerd door `scripts/generate_ridder_textures.py`.
 - De portal-keuze werkt via een tick-functie (`tick.mcfunction`) die detecteert of een speler op een keuze-portal staat.

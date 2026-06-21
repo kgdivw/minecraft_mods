@@ -8,6 +8,7 @@ entity.ridder_mod:uitvinder.name=Inventor
 entity.ridder_mod:hofnar.name=Jester
 entity.ridder_mod:butler.name=Butler
 entity.ridder_mod:keuze_portal.name=Choice Portal
+entity.ridder_mod:kasteel_anker.name=Castle Anchor
 item.spawn_egg.entity.ridder_mod:ridder_npc.name=Spawn Knight
 item.spawn_egg.entity.ridder_mod:vijand_ridder.name=Spawn Enemy Knight
 item.spawn_egg.entity.ridder_mod:vijand_boog.name=Spawn Enemy Archer

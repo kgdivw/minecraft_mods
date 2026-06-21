@@ -1,38 +1,38 @@
 # ==========================================================
 # RIDDER MOD - KASTEELBEWONERS + LEGER RIDDERS
-# Wordt 1x per wereld opgeroepen door de keuze-functies.
-# Coords passen bij het grote kasteel (midden 2000,80,2000, WALL=28).
+# Wordt aangeroepen met "execute at @s" terwijl de speler in
+# het midden van het kasteel staat -> alles RELATIEF (~).
 # ==========================================================
 
 # --- Kasteelbewoners (binnen) ---
 # Kok in de grote keuken (achter-rechts)
-summon ridder_mod:kok 2011 81 2018
-# Uitvinder in de werkplaats (midden-verdieping, achter-rechts)
-summon ridder_mod:uitvinder 2022 87 2022
+summon ridder_mod:kok ~11 ~1 ~18
+# Uitvinder in de werkplaats (midden-verdieping)
+summon ridder_mod:uitvinder ~22 ~7 ~22
 # Hofnar in de troonzaal (voor de tronen)
-summon ridder_mod:hofnar 2000 81 2018
-summon ridder_mod:hofnar 1996 81 2019
+summon ridder_mod:hofnar ~0 ~1 ~18
+summon ridder_mod:hofnar ~-4 ~1 ~19
 # Butler bij de ingang
-summon ridder_mod:butler 2000 81 1976
+summon ridder_mod:butler ~0 ~1 ~-24
 
-# --- LEGER RIDDERS op de binnenplaats (voor de poort, kijken naar het noorden) ---
-summon ridder_mod:ridder_npc 1988 80 1964
-summon ridder_mod:ridder_npc 1994 80 1964
-summon ridder_mod:ridder_npc 2000 80 1964
-summon ridder_mod:ridder_npc 2006 80 1964
-summon ridder_mod:ridder_npc 2012 80 1964
-summon ridder_mod:ridder_npc 1988 80 1958
-summon ridder_mod:ridder_npc 1994 80 1958
-summon ridder_mod:ridder_npc 2006 80 1958
-summon ridder_mod:ridder_npc 2012 80 1958
-summon ridder_mod:ridder_npc 1988 80 1952
-summon ridder_mod:ridder_npc 1994 80 1952
-summon ridder_mod:ridder_npc 2000 80 1952
-summon ridder_mod:ridder_npc 2006 80 1952
-summon ridder_mod:ridder_npc 2012 80 1952
+# --- LEGER RIDDERS op de binnenplaats (voor de poort, noordkant) ---
+summon ridder_mod:ridder_npc ~-12 ~ ~-36
+summon ridder_mod:ridder_npc ~-6 ~ ~-36
+summon ridder_mod:ridder_npc ~0 ~ ~-36
+summon ridder_mod:ridder_npc ~6 ~ ~-36
+summon ridder_mod:ridder_npc ~12 ~ ~-36
+summon ridder_mod:ridder_npc ~-12 ~ ~-42
+summon ridder_mod:ridder_npc ~-6 ~ ~-42
+summon ridder_mod:ridder_npc ~6 ~ ~-42
+summon ridder_mod:ridder_npc ~12 ~ ~-42
+summon ridder_mod:ridder_npc ~-12 ~ ~-48
+summon ridder_mod:ridder_npc ~-6 ~ ~-48
+summon ridder_mod:ridder_npc ~0 ~ ~-48
+summon ridder_mod:ridder_npc ~6 ~ ~-48
+summon ridder_mod:ridder_npc ~12 ~ ~-48
 # Wachters die de poort flankeren
-summon ridder_mod:ridder_npc 1995 80 1970
-summon ridder_mod:ridder_npc 2005 80 1970
+summon ridder_mod:ridder_npc ~-5 ~ ~-30
+summon ridder_mod:ridder_npc ~5 ~ ~-30
 
 # --- Markeren dat het leger al gespawnd is ---
 scoreboard players set rmLeger rm_state 1
