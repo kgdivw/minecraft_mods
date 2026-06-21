@@ -36,7 +36,11 @@ replaceitem entity @s slot.hotbar 4 arrow 64
 replaceitem entity @s slot.hotbar 5 arrow 64
 
 # --- Naar de binnenplaats, midden in je leger ---
-tp @s 2000 80 1972 0 0
+tp @s 2000 80 1958 0 0
+
+# --- Start de aftelklok: over 1 minuut valt de vijand aan ---
+tag @s add rm_count
+scoreboard players set @s rm_timer 0
 
 # --- Welkom ---
 title @s clear
@@ -46,4 +50,4 @@ playsound random.anvil_use @s
 tellraw @s {"rawtext":[{"text":"§7⚔ §lJe bent nu een Ridder! §r§7Je draagt het sterkste harnas."}]}
 tellraw @s {"rawtext":[{"text":"§7In je inventaris: §fzwaard, schild, boog, kruisboog, speer & pijlen."}]}
 tellraw @s {"rawtext":[{"text":"§7Je staat midden in je §fleger ridders§7 op de binnenplaats!"}]}
-tellraw @s {"rawtext":[{"text":"§7Tip: §e/function vijand_leger §7voor een epische ridderveldslag!"}]}
+tellraw @s {"rawtext":[{"text":"§c⚔ §lPas op! Over 1 MINUUT valt de vijand je kasteel aan! §r§7Hou je wapens klaar!"}]}

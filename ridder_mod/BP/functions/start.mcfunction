@@ -7,6 +7,7 @@
 
 # --- Scoreboards (rm_state houdt bij of kasteel/leger al gebouwd zijn) ---
 scoreboard objectives add rm_state dummy
+scoreboard objectives add rm_timer dummy
 
 # --- Laad beide kasteel-locaties alvast (chunks moeten geladen zijn voor we
 #     ze bouwen als je straks een rol kiest) ---

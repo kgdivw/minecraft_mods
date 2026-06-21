@@ -26,7 +26,11 @@ give @s golden_apple 5
 give @s diamond 16
 
 # --- Op de DIAMANTEN troon zetten ---
-tp @s 2003 83 2017 180 0
+tp @s 2003 83 2025 180 0
+
+# --- Start de aftelklok: over 1 minuut valt de vijand aan ---
+tag @s add rm_count
+scoreboard players set @s rm_timer 0
 
 # --- Welkom ---
 title @s clear
@@ -35,4 +39,4 @@ title @s subtitle §eJe zit op de diamanten troon!
 playsound random.levelup @s
 tellraw @s {"rawtext":[{"text":"§b♦ §lWelkom Prins/Prinses! §r§7Je zit op je §bdiamanten troon§7."}]}
 tellraw @s {"rawtext":[{"text":"§7Het §6rode tapijt §7loopt van je slaapkamer naar de troon."}]}
-tellraw @s {"rawtext":[{"text":"§7Je leger ridders staat buiten klaar. §e/function help §7voor meer."}]}
+tellraw @s {"rawtext":[{"text":"§c⚔ §lPas op! Over 1 MINUUT valt de vijand je kasteel aan! §r§7Bereid je voor met je leger!"}]}

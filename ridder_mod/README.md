@@ -56,9 +56,9 @@ Ten noorden ligt een **even groot ROOD kasteel** van de vijand, met een eigen **
 | 💣 Vijandige Kanonnier | Kanonskogels / vuurballen |
 | 👑 Vijandige Koning | Boss — versla hem! |
 
-Wil je een epische veldslag?
+**Let op:** zodra je een rol kiest, krijg je een waarschuwing dat **over 1 minuut** de vijand aanvalt. Na 60 seconden bestormt een gemengd vijandig leger (zwaardvechters, boogschutters, kanonniers) automatisch via de noordpoort je binnenplaats — bereid je voor met je ridders! Je kunt ook zelf een golf oproepen of zelf aanvallen:
 ```
-/function vijand_leger   # de vijand valt ons kasteel aan
+/function vijand_leger   # roep meteen een extra aanvalsgolf op
 /function naar_vijand    # jij valt het rode kasteel aan
 ```
 

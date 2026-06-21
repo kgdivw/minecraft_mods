@@ -26,7 +26,11 @@ give @s golden_apple 8
 give @s gold_block 16
 
 # --- Op de GOUDEN troon zetten (kijkt de troonzaal in) ---
-tp @s 1997 83 2017 180 0
+tp @s 1997 83 2025 180 0
+
+# --- Start de aftelklok: over 1 minuut valt de vijand aan ---
+tag @s add rm_count
+scoreboard players set @s rm_timer 0
 
 # --- Koninklijk welkom ---
 title @s clear
@@ -35,4 +39,4 @@ title @s subtitle §eJe zit op de gouden troon!
 playsound random.levelup @s
 tellraw @s {"rawtext":[{"text":"§6♚ §lLang leve de Koning/Koningin! §r§7Je zit op je §6gouden troon§7."}]}
 tellraw @s {"rawtext":[{"text":"§7Het §6rode tapijt §7loopt van je slaapkamer naar de troon."}]}
-tellraw @s {"rawtext":[{"text":"§7Je leger ridders staat buiten klaar. §e/function help §7voor meer."}]}
+tellraw @s {"rawtext":[{"text":"§c⚔ §lPas op! Over 1 MINUUT valt de vijand je kasteel aan! §r§7Bereid je voor met je leger!"}]}

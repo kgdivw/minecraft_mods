@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FUNC_DIR = os.path.join(ROOT, "ridder_mod", "BP", "functions")
 
 FLOOR = 80           # great-hall floor level
-WALL = 20            # keep half-width  -> keep is 41x41
+WALL = 28            # keep half-width  -> keep is 57x57 (lekker groot)
 COURT = 100          # courtyard half-width -> ~201 wide ("200 breed")
 
 
@@ -48,7 +48,7 @@ def build_castle(cx, cz, p, mode):
                     zb = min(za + step - 1, z2)
                     fill(xa, ya, za, xb, yb, zb, block)
 
-    def torch_ring(y, half, spacing=6):
+    def torch_ring(y, half, spacing=4):
         for x in range(cx - half + 1, cx + half, spacing):
             setb(x, y, cz - half + 1, p["torch"])
             setb(x, y, cz + half - 1, p["torch"])
@@ -146,11 +146,19 @@ def build_castle(cx, cz, p, mode):
     setb(cx - 3, FLOOR + 4, ez, p["gate_light"])
     setb(cx + 3, FLOOR + 4, ez, p["gate_light"])
 
+    # Veel fakkels: twee ringen per verdieping (laag + hoog)
     for fy in floors_y:
-        torch_ring(fy + 3, WALL)
-    for dx in (-8, 0, 8):
-        for dz in (-8, 0, 8):
+        torch_ring(fy + 2, WALL)
+        torch_ring(fy + 4, WALL)
+    # Hangende lantaarns als kroonluchters in de grote hal
+    for dx in (-12, -6, 0, 6, 12):
+        for dz in (-12, -6, 0, 6, 12):
             setb(cx + dx, FLOOR + 5, cz + dz, p["lantern"])
+    # Staande fakkels op hekpalen door de hal heen
+    for dx in (-WALL + 4, 0, WALL - 4):
+        for dz in (-WALL + 4, 0, WALL - 4):
+            setb(cx + dx, FLOOR + 1, cz + dz, "oak_fence")
+            setb(cx + dx, FLOOR + 2, cz + dz, "torch")
 
     # Staircase holes + stairs (NW corner)
     for fy in floors_y[1:]:
@@ -204,50 +212,113 @@ def build_castle(cx, cz, p, mode):
     fill(cx - 6, FLOOR + 1, DAIS_Z, cx + 6, FLOOR + 1, DAIS_Z + 2, p["stairs"])
     fill(cx - 5, FLOOR + 1, DAIS_Z + 1, cx + 5, FLOOR + 1, DAIS_Z + 2, p["floor"])
 
-    def throne(tx, block, light):
-        fill(tx - 1, FLOOR + 2, DAIS_Z + 2, tx + 1, FLOOR + 5, DAIS_Z + 2, block)
+    def throne(tx, block):
+        # Een echte stoelvorm (GEEN glas): hoge rugleuning, zitting met
+        # kussen (tapijt), armleuningen en wat fakkels/lantaarns als licht.
+        # Hoge rugleuning
+        fill(tx - 1, FLOOR + 2, DAIS_Z + 2, tx + 1, FLOOR + 6, DAIS_Z + 2, block)
+        setb(tx, FLOOR + 7, DAIS_Z + 2, block)             # kroontje bovenop
+        # Zitting + kussen
         setb(tx, FLOOR + 2, DAIS_Z + 1, block)
+        setb(tx, FLOOR + 3, DAIS_Z + 1, "red_carpet")      # zacht kussen
+        # Armleuningen links en rechts
         setb(tx - 1, FLOOR + 2, DAIS_Z + 1, block)
         setb(tx + 1, FLOOR + 2, DAIS_Z + 1, block)
-        setb(tx - 1, FLOOR + 6, DAIS_Z + 2, light)
-        setb(tx + 1, FLOOR + 6, DAIS_Z + 2, light)
-        setb(tx, FLOOR + 6, DAIS_Z + 2, block)
+        setb(tx - 1, FLOOR + 3, DAIS_Z + 1, block)
+        setb(tx + 1, FLOOR + 3, DAIS_Z + 1, block)
+        # Voetenbankje / trede ervoor
+        setb(tx, FLOOR + 1, DAIS_Z, p["stairs"])
+        # Licht: lantaarns en fakkels (geen glas!)
+        setb(tx - 2, FLOOR + 4, DAIS_Z + 2, "lantern")
+        setb(tx + 2, FLOOR + 4, DAIS_Z + 2, "lantern")
+        setb(tx - 2, FLOOR + 3, DAIS_Z + 1, "torch")
+        setb(tx + 2, FLOOR + 3, DAIS_Z + 1, "torch")
+        setb(tx, FLOOR + 8, DAIS_Z + 2, "torch")
 
     if mode == "ours":
-        throne(cx - 3, "gold_block", "sea_lantern")     # golden throne (koning)
-        throne(cx + 3, "diamond_block", "sea_lantern")  # diamond throne (prins)
+        throne(cx - 3, "gold_block")      # gouden troon (koning)
+        throne(cx + 3, "diamond_block")   # diamanten troon (prins)
     else:
-        throne(cx, "redstone_block", "glowstone")       # single red enemy throne
-        setb(cx, FLOOR + 7, DAIS_Z + 2, "red_concrete")
+        throne(cx, "redstone_block")      # rode vijandtroon
+        setb(cx - 2, FLOOR + 2, DAIS_Z + 2, "red_concrete")
+        setb(cx + 2, FLOOR + 2, DAIS_Z + 2, "red_concrete")
 
-    # Bedroom + long red carpet
-    c("=== SLAAPKAMER + LANG ROOD TAPIJT NAAR DE TROON ===")
-    BR_X = cx - WALL + 6
-    BR_Z = cz - WALL + 6
-    setb(BR_X, FLOOR + 1, BR_Z, "red_wool")
-    setb(BR_X, FLOOR + 1, BR_Z + 1, "red_wool")
-    setb(BR_X - 1, FLOOR + 1, BR_Z, "crafting_table")
-    setb(BR_X + 1, FLOOR + 1, BR_Z, "chest")
-    setb(BR_X - 2, FLOOR + 4, BR_Z, p["lantern"])
-    for z in range(BR_Z, DAIS_Z + 1):
+    # Bedroom: a big enclosed room (front-left) + long red carpet to the throne
+    c("=== GROTE SLAAPKAMER + LANG ROOD TAPIJT NAAR DE TROON ===")
+    BRX, BRZ = cx - 10, cz - WALL + 9
+    for (x1, z1, x2, z2) in [
+        (BRX - 5, BRZ - 5, BRX + 5, BRZ - 5),
+        (BRX - 5, BRZ + 5, BRX + 5, BRZ + 5),
+        (BRX - 5, BRZ - 5, BRX - 5, BRZ + 5),
+        (BRX + 5, BRZ - 5, BRX + 5, BRZ + 5),
+    ]:
+        fill(x1, FLOOR + 1, z1, x2, FLOOR + 4, z2, WALLB)
+    # carpet floor inside, then beds + furniture on top
+    fill(BRX - 4, FLOOR + 1, BRZ - 4, BRX + 4, FLOOR + 1, BRZ + 4, "red_carpet")
+    # doorway toward the centre (+x wall)
+    setb(BRX + 5, FLOOR + 1, BRZ, "air")
+    setb(BRX + 5, FLOOR + 2, BRZ, "air")
+    # two royal beds with headboards
+    for bx in (BRX - 3, BRX + 3):
+        setb(bx, FLOOR + 1, BRZ - 3, "red_wool")
+        setb(bx, FLOOR + 1, BRZ - 2, "red_wool")
+        setb(bx, FLOOR + 2, BRZ - 4, "dark_oak_planks")
+    # bookshelves, chests, table
+    for bx in (BRX - 1, BRX, BRX + 1):
+        setb(bx, FLOOR + 1, BRZ + 4, "bookshelf")
+    setb(BRX - 4, FLOOR + 1, BRZ + 4, "chest")
+    setb(BRX + 4, FLOOR + 1, BRZ + 4, "chest")
+    setb(BRX, FLOOR + 1, BRZ, "crafting_table")
+    # plenty of light (lanterns + torches, no glass)
+    setb(BRX - 4, FLOOR + 3, BRZ - 4, "lantern")
+    setb(BRX + 4, FLOOR + 3, BRZ - 4, "lantern")
+    setb(BRX - 4, FLOOR + 3, BRZ + 4, "torch")
+    setb(BRX + 4, FLOOR + 3, BRZ + 4, "torch")
+    setb(BRX, FLOOR + 4, BRZ, "lantern")
+    # the long red carpet from the bedroom door to the throne dais
+    for z in range(BRZ, DAIS_Z + 1):
         setb(cx, FLOOR + 1, z, "red_carpet")
         setb(cx - 1, FLOOR + 1, z, "red_carpet")
         setb(cx + 1, FLOOR + 1, z, "red_carpet")
-    for x in range(BR_X, cx + 1):
-        setb(x, FLOOR + 1, BR_Z, "red_carpet")
+    for x in range(BRX + 5, cx + 2):
+        setb(x, FLOOR + 1, BRZ, "red_carpet")
+        setb(x, FLOOR + 1, BRZ + 1, "red_carpet")
+    # torches lining the carpet
+    for z in range(BRZ, DAIS_Z, 5):
+        setb(cx - 3, FLOOR + 3, z, "torch")
+        setb(cx + 3, FLOOR + 3, z, "torch")
 
-    # Kitchen
-    c("=== KEUKEN (achter-rechts) ===")
-    KX = cx + WALL - 6
-    KZ = cz + WALL - 6
-    setb(KX, FLOOR + 1, KZ, "furnace")
-    setb(KX - 1, FLOOR + 1, KZ, "furnace")
-    setb(KX + 1, FLOOR + 1, KZ, "smoker")
-    setb(KX, FLOOR + 1, KZ - 2, "crafting_table")
-    setb(KX - 1, FLOOR + 1, KZ - 2, "cauldron")
-    setb(KX + 1, FLOOR + 1, KZ - 2, "barrel")
-    setb(KX, FLOOR + 1, KZ - 1, "cake")
-    setb(KX - 2, FLOOR + 4, KZ, p["lantern"])
+    # Kitchen: a big enclosed room (back-right) with a long counter
+    c("=== GROTE KEUKEN (achter-rechts) ===")
+    KX, KZ = cx + 11, cz + WALL - 10
+    for (x1, z1, x2, z2) in [
+        (KX - 5, KZ - 5, KX + 5, KZ - 5),
+        (KX - 5, KZ + 5, KX + 5, KZ + 5),
+        (KX - 5, KZ - 5, KX - 5, KZ + 5),
+        (KX + 5, KZ - 5, KX + 5, KZ + 5),
+    ]:
+        fill(x1, FLOOR + 1, z1, x2, FLOOR + 4, z2, WALLB)
+    setb(KX - 5, FLOOR + 1, KZ, "air")   # doorway (-x wall)
+    setb(KX - 5, FLOOR + 2, KZ, "air")
+    # long counter of ovens
+    for i, bx in enumerate(range(KX - 4, KX + 5)):
+        setb(bx, FLOOR + 1, KZ - 4, "furnace" if i % 2 == 0 else "smoker")
+    # work tables + pots
+    for bx in range(KX - 4, KX + 5, 2):
+        setb(bx, FLOOR + 1, KZ - 2, "crafting_table")
+    setb(KX - 3, FLOOR + 1, KZ, "cauldron")
+    setb(KX - 1, FLOOR + 1, KZ, "cauldron")
+    setb(KX + 1, FLOOR + 1, KZ, "barrel")
+    setb(KX + 3, FLOOR + 1, KZ, "barrel")
+    setb(KX, FLOOR + 1, KZ - 2, "cake")
+    setb(KX + 4, FLOOR + 1, KZ + 4, "chest")
+    setb(KX - 4, FLOOR + 1, KZ + 4, "chest")
+    # plenty of light
+    setb(KX - 4, FLOOR + 3, KZ - 4, "lantern")
+    setb(KX + 4, FLOOR + 3, KZ - 4, "lantern")
+    setb(KX, FLOOR + 4, KZ, "lantern")
+    setb(KX - 4, FLOOR + 3, KZ + 4, "torch")
+    setb(KX + 4, FLOOR + 3, KZ + 4, "torch")
 
     # Middle floor: dining + workshop
     c("=== MIDDEN-VERDIEPING: EETKAMER + WERKPLAATS ===")

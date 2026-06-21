@@ -23,6 +23,15 @@ execute as @a[tag=rol_koning] at @s run effect @s strength 6 0 true
 # --- Pijlen bijvullen voor ridders als die op raken ---
 execute as @a[tag=rol_ridder,hasitem={item=arrow,quantity=0}] run give @s arrow 64
 
+# --- Aftellen naar de vijandelijke aanval (1 minuut = 1200 ticks na je keuze) ---
+scoreboard players add @a[tag=rm_count] rm_timer 1
+execute as @a[tag=rm_count,scores={rm_timer=600}] run tellraw @a {"rawtext":[{"text":"§e⏳ Nog 30 seconden tot de vijand aanvalt!"}]}
+execute as @a[tag=rm_count,scores={rm_timer=900}] run tellraw @a {"rawtext":[{"text":"§6⏳ Nog 15 seconden tot de aanval!"}]}
+execute as @a[tag=rm_count,scores={rm_timer=1140}] run tellraw @a {"rawtext":[{"text":"§c⏳ Nog 3 seconden!"}]}
+execute as @a[tag=rm_count,scores={rm_timer=1170..}] at @s run title @s actionbar §c§lDE VIJAND KOMT ERAAN!
+execute as @a[tag=rm_count,scores={rm_timer=1200..}] run function vijand_leger
+tag @a[tag=rm_count,scores={rm_timer=1200..}] remove rm_count
+
 # --- HUD ---
 execute as @a[tag=rol_ridder] run titleraw @s actionbar {"rawtext":[{"text":"§7§l⚔ RIDDER §r§7| §fSterkste wapens & harnas"}]}
 execute as @a[tag=rol_prins] run titleraw @s actionbar {"rawtext":[{"text":"§b§l♦ PRINS/PRINSES §r§7| §bDiamanten troon"}]}
