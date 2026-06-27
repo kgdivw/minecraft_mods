@@ -5,22 +5,22 @@
 # (op grondniveau) en stormt dan naar binnen. Jouw ridders verdedigen.
 # ==========================================================
 
-# --- Zwaardvechters (voorhoede, voorste rij van het platform) ---
-summon ridder_mod:vijand_ridder ~-12 ~ ~-108
-summon ridder_mod:vijand_ridder ~-6 ~ ~-108
-summon ridder_mod:vijand_ridder ~0 ~ ~-108
-summon ridder_mod:vijand_ridder ~6 ~ ~-108
-summon ridder_mod:vijand_ridder ~12 ~ ~-108
+# --- Zwaardvechters (voorhoede, op het spawn-platform bij de noordmuur) ---
+summon ridder_mod:vijand_ridder ~-12 ~1 ~-86
+summon ridder_mod:vijand_ridder ~-6 ~1 ~-86
+summon ridder_mod:vijand_ridder ~0 ~1 ~-86
+summon ridder_mod:vijand_ridder ~6 ~1 ~-86
+summon ridder_mod:vijand_ridder ~12 ~1 ~-86
 
 # --- Boogschutters (middelste rij) ---
-summon ridder_mod:vijand_boog ~-10 ~ ~-114
-summon ridder_mod:vijand_boog ~-4 ~ ~-114
-summon ridder_mod:vijand_boog ~4 ~ ~-114
-summon ridder_mod:vijand_boog ~10 ~ ~-114
+summon ridder_mod:vijand_boog ~-10 ~1 ~-90
+summon ridder_mod:vijand_boog ~-4 ~1 ~-90
+summon ridder_mod:vijand_boog ~4 ~1 ~-90
+summon ridder_mod:vijand_boog ~10 ~1 ~-90
 
 # --- Kanonniers (achterste rij) ---
-summon ridder_mod:vijand_kanon ~-6 ~ ~-119
-summon ridder_mod:vijand_kanon ~6 ~ ~-119
+summon ridder_mod:vijand_kanon ~-6 ~1 ~-94
+summon ridder_mod:vijand_kanon ~6 ~1 ~-94
 
 title @a title §c§lDE VIJAND VALT AAN!
 title @a subtitle §eZwaarden, bogen en kanonnen!

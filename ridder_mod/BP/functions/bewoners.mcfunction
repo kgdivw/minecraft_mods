@@ -36,8 +36,8 @@ execute if score rmButler rm_state matches 500.. at @e[type=ridder_mod:kasteel_a
 execute if score rmButler rm_state matches 500.. run scoreboard players set rmButler rm_state 0
 
 # --- Katapult van de uitvinder bombardeert de vijand (om de ~2.5s, alleen bij vijanden) ---
-# (een fireball kun je in Bedrock niet summonen; we gebruiken een blikseminslag
-#  op de vijandlinie -- dramatisch en het beschadigt geen blokken)
+# (GEEN bliksem: de katapult doet vuurschade + vlam-deeltjes op een paar vijanden)
 execute if score rmCat rm_state matches 50.. at @e[type=ridder_mod:kasteel_anker] if entity @e[family=vijand_ridder,r=150] run playsound mob.ghast.fireball @a
-execute if score rmCat rm_state matches 50.. at @e[type=ridder_mod:kasteel_anker] if entity @e[family=vijand_ridder,r=150] run summon lightning_bolt ~ ~ ~-105
+execute if score rmCat rm_state matches 50.. at @e[type=ridder_mod:kasteel_anker] as @e[family=vijand_ridder,r=150,c=4] run damage @s 6 fire
+execute if score rmCat rm_state matches 50.. at @e[type=ridder_mod:kasteel_anker] as @e[family=vijand_ridder,r=150,c=4] run particle minecraft:basic_flame_particle ~ ~1 ~
 execute if score rmCat rm_state matches 50.. run scoreboard players set rmCat rm_state 0

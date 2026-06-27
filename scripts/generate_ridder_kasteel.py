@@ -60,13 +60,14 @@ def build_castle(cx, cz, p, mode):
                     zb = min(za + step - 1, z2)
                     fill(xa, ya, za, xb, yb, zb, block)
 
-    def torch_ring(y, half, spacing=4):
-        for x in range(cx - half + 1, cx + half, spacing):
-            setb(x, y, cz - half + 1, p["torch"])
-            setb(x, y, cz + half - 1, p["torch"])
-        for z in range(cz - half + 1, cz + half, spacing):
-            setb(cx - half + 1, y, z, p["torch"])
-            setb(cx + half - 1, y, z, p["torch"])
+    def wall_glow_ring(y, half, spacing=6):
+        # Gloei-blokken INGEBOUWD in de muren (vallen nooit af als item)
+        for x in range(cx - half + 3, cx + half - 2, spacing):
+            setb(x, y, cz - half, p["glow"])
+            setb(x, y, cz + half, p["glow"])
+        for z in range(cz - half + 3, cz + half - 2, spacing):
+            setb(cx - half, y, z, p["glow"])
+            setb(cx + half, y, z, p["glow"])
 
     WALLB = p["wall"]
 
@@ -114,9 +115,13 @@ def build_castle(cx, cz, p, mode):
     fill(cx - 3, FLOOR, gate_z, cx + 3, FLOOR + 4, gate_z, "air")
     setb(cx - 4, FLOOR + 4, gate_z, p["gate_light"])
     setb(cx + 4, FLOOR + 4, gate_z, p["gate_light"])
-    for x in range(cx - COURT + 4, cx + COURT, 12):
-        setb(x, FLOOR + 4, cz - COURT + 1, p["torch"])
-        setb(x, FLOOR + 4, cz + COURT - 1, p["torch"])
+    # Gloei-blokken ingebouwd in de buitenmuur (geen losse fakkels)
+    for x in range(cx - COURT + 6, cx + COURT - 5, 12):
+        setb(x, FLOOR + 4, cz - COURT, p["glow"])
+        setb(x, FLOOR + 4, cz + COURT, p["glow"])
+    for z in range(cz - COURT + 6, cz + COURT - 5, 12):
+        setb(cx - COURT, FLOOR + 4, z, p["glow"])
+        setb(cx + COURT, FLOOR + 4, z, p["glow"])
 
     # --- Keep ---
     c("=== DE KEEP - FUNDERING & 3 VERDIEPINGEN ===")
@@ -165,19 +170,21 @@ def build_castle(cx, cz, p, mode):
     setb(cx - 3, FLOOR + 4, ez, p["gate_light"])
     setb(cx + 3, FLOOR + 4, ez, p["gate_light"])
 
-    # Veel fakkels: twee ringen per verdieping (laag + hoog)
+    # Gloei-blokken ingebouwd in de muren van elke verdieping
     for fy in floors_y:
-        torch_ring(fy + 2, WALL)
-        torch_ring(fy + 4, WALL)
-    # Hangende lantaarns als kroonluchters in de grote hal
-    for dx in (-12, -6, 0, 6, 12):
-        for dz in (-12, -6, 0, 6, 12):
-            setb(cx + dx, FLOOR + 5, cz + dz, p["lantern"])
-    # Staande fakkels op hekpalen door de hal heen
-    for dx in (-WALL + 4, 0, WALL - 4):
-        for dz in (-WALL + 4, 0, WALL - 4):
+        wall_glow_ring(fy + 3, WALL)
+    # Gloei-blokken INGEBOUWD in de plafonds (kroonluchters, vallen nooit af)
+    ceilings = [floors_y[1] - 1, floors_y[2] - 1, TOP]
+    for ceil in ceilings:
+        for dx in (-12, 0, 12):
+            for dz in (-12, 0, 12):
+                setb(cx + dx, ceil, cz + dz, p["glow"])
+    # Gloeiende lamp-pilaren door de hal heen (gloei-blok op een paal -> valt nooit af)
+    for dx in (-WALL + 6, 0, WALL - 6):
+        for dz in (-WALL + 6, 0, WALL - 6):
             setb(cx + dx, FLOOR + 1, cz + dz, "oak_fence")
-            setb(cx + dx, FLOOR + 2, cz + dz, "torch")
+            setb(cx + dx, FLOOR + 2, cz + dz, "oak_fence")
+            setb(cx + dx, FLOOR + 3, cz + dz, p["glow"])
 
     # Staircase holes + stairs (NW corner)
     for fy in floors_y[1:]:
@@ -203,8 +210,8 @@ def build_castle(cx, cz, p, mode):
         fill(tx - 1, FLOOR, tz - 1, tx + 1, TOWER_TOP, tz + 1, "air")
         # Vloer-plateau bovenop de toren (zodat boogschutters er kunnen staan)
         fill(tx - 1, TOWER_TOP, tz - 1, tx + 1, TOWER_TOP, tz + 1, WALLB)
-        setb(tx - 1, TOWER_TOP + 1, tz - 1, p["torch"])
-        setb(tx + 1, TOWER_TOP + 1, tz + 1, p["torch"])
+        setb(tx - 1, TOWER_TOP, tz - 1, p["glow"])
+        setb(tx + 1, TOWER_TOP, tz + 1, p["glow"])
         for ddx in (-2, 0, 2):
             setb(tx + ddx, TOWER_TOP + 1, tz - 2, p["merlon"])
             setb(tx + ddx, TOWER_TOP + 1, tz + 2, p["merlon"])
@@ -216,8 +223,9 @@ def build_castle(cx, cz, p, mode):
         setb(tx + 1, TOWER_TOP + 3, tz, p["flag"])
         setb(tx + 1, TOWER_TOP + 2, tz, p["flag"])
         setb(tx, TOWER_TOP, tz, p["spire_light"])
-        for y in range(FLOOR + 4, TOWER_TOP, 8):
-            setb(tx, y, tz - 2, p["torch"])
+        # Gloei-blokken ingebouwd in de torenmuur (geen losse fakkels)
+        for y in range(FLOOR + 6, TOWER_TOP, 10):
+            setb(tx, y, tz - 2, p["glow"])
 
     SPIRE_TOP = FLOOR + 100
     fill(cx - 1, TOP, cz - 1, cx + 1, SPIRE_TOP, cz + 1, WALLB)
@@ -251,12 +259,12 @@ def build_castle(cx, cz, p, mode):
         setb(tx + 1, FLOOR + 3, DAIS_Z + 1, block)
         # Voetenbankje / trede ervoor
         setb(tx, FLOOR + 1, DAIS_Z, p["stairs"])
-        # Licht: lantaarns en fakkels (geen glas!)
-        setb(tx - 2, FLOOR + 4, DAIS_Z + 2, "lantern")
-        setb(tx + 2, FLOOR + 4, DAIS_Z + 2, "lantern")
-        setb(tx - 2, FLOOR + 3, DAIS_Z + 1, "torch")
-        setb(tx + 2, FLOOR + 3, DAIS_Z + 1, "torch")
-        setb(tx, FLOOR + 8, DAIS_Z + 2, "torch")
+        # Licht: gloei-blokken in/aan de troon (vallen nooit af als item)
+        setb(tx - 1, FLOOR + 6, DAIS_Z + 2, p["glow"])   # glanzende kroonhoek
+        setb(tx + 1, FLOOR + 6, DAIS_Z + 2, p["glow"])
+        setb(tx, FLOOR + 8, DAIS_Z + 2, p["glow"])        # bovenop het kroontje
+        setb(tx - 2, FLOOR + 2, DAIS_Z + 1, p["glow"])    # gloei-zuiltjes naast de troon
+        setb(tx + 2, FLOOR + 2, DAIS_Z + 1, p["glow"])
 
     if mode == "ours":
         throne(cx - 3, "gold_block")      # gouden troon (koning)
@@ -292,12 +300,12 @@ def build_castle(cx, cz, p, mode):
     setb(BRX - 4, FLOOR + 1, BRZ + 4, "chest")
     setb(BRX + 4, FLOOR + 1, BRZ + 4, "chest")
     setb(BRX, FLOOR + 1, BRZ, "crafting_table")
-    # plenty of light (lanterns + torches, no glass)
-    setb(BRX - 4, FLOOR + 3, BRZ - 4, "lantern")
-    setb(BRX + 4, FLOOR + 3, BRZ - 4, "lantern")
-    setb(BRX - 4, FLOOR + 3, BRZ + 4, "torch")
-    setb(BRX + 4, FLOOR + 3, BRZ + 4, "torch")
-    setb(BRX, FLOOR + 4, BRZ, "lantern")
+    # Licht: gloei-blokken INGEBOUWD in de muren + 1 hangende lantaarn
+    setb(BRX - 5, FLOOR + 3, BRZ - 4, p["glow"])
+    setb(BRX + 5, FLOOR + 3, BRZ - 4, p["glow"])
+    setb(BRX - 5, FLOOR + 3, BRZ + 4, p["glow"])
+    setb(BRX + 5, FLOOR + 3, BRZ + 4, p["glow"])
+    setb(BRX, FLOOR + 5, BRZ, p["glow"])   # gloei-tegel in het plafond
     # the long red carpet from the bedroom door to the throne dais
     for z in range(BRZ, DAIS_Z + 1):
         setb(cx, FLOOR + 1, z, "red_carpet")
@@ -306,10 +314,10 @@ def build_castle(cx, cz, p, mode):
     for x in range(BRX + 5, cx + 2):
         setb(x, FLOOR + 1, BRZ, "red_carpet")
         setb(x, FLOOR + 1, BRZ + 1, "red_carpet")
-    # torches lining the carpet
-    for z in range(BRZ, DAIS_Z, 5):
-        setb(cx - 3, FLOOR + 3, z, "torch")
-        setb(cx + 3, FLOOR + 3, z, "torch")
+    # Gloei-tegels INGEBOUWD in de vloer langs het tapijt (geen losse fakkels)
+    for z in range(BRZ + 2, DAIS_Z - 1, 6):
+        setb(cx - 3, FLOOR, z, p["glow"])
+        setb(cx + 3, FLOOR, z, p["glow"])
 
     # Kitchen: a big enclosed room (back-right) with a long counter
     c("=== GROTE KEUKEN (achter-rechts) ===")
@@ -340,12 +348,12 @@ def build_castle(cx, cz, p, mode):
     setb(KX, FLOOR + 1, KZ + 2, "campfire")
     setb(KX - 1, FLOOR + 1, KZ + 2, "cauldron")
     setb(KX + 1, FLOOR + 1, KZ + 2, "cauldron")
-    # plenty of light
-    setb(KX - 4, FLOOR + 3, KZ - 4, "lantern")
-    setb(KX + 4, FLOOR + 3, KZ - 4, "lantern")
-    setb(KX, FLOOR + 4, KZ, "lantern")
-    setb(KX - 4, FLOOR + 3, KZ + 4, "torch")
-    setb(KX + 4, FLOOR + 3, KZ + 4, "torch")
+    # Licht: gloei-blokken INGEBOUWD in de muren + 1 hangende lantaarn
+    setb(KX - 5, FLOOR + 3, KZ - 4, p["glow"])
+    setb(KX + 5, FLOOR + 3, KZ - 4, p["glow"])
+    setb(KX - 5, FLOOR + 3, KZ + 4, p["glow"])
+    setb(KX + 5, FLOOR + 3, KZ + 4, p["glow"])
+    setb(KX, FLOOR + 5, KZ, p["glow"])   # gloei-tegel in het plafond
 
     # Middle floor: dining + workshop
     c("=== MIDDEN-VERDIEPING: EETKAMER + WERKPLAATS ===")
@@ -355,7 +363,7 @@ def build_castle(cx, cz, p, mode):
     for x in range(cx - 5, cx + 6, 2):
         setb(x, F1 + 1, cz - 1, "dark_oak_stairs")
         setb(x, F1 + 1, cz + 1, "dark_oak_stairs")
-    setb(cx, F1 + 2, cz, p["lantern"])
+    setb(cx, floors_y[2] - 1, cz, p["glow"])   # gloei-tegel in het plafond
     WX, WZ = cx + WALL - 6, cz + WALL - 6
     setb(WX, F1 + 1, WZ, "crafting_table")
     setb(WX - 1, F1 + 1, WZ, "anvil")
@@ -384,23 +392,23 @@ def build_castle(cx, cz, p, mode):
         setb(catx, FLOOR + 1, catz - 1, "dropper")
         setb(catx - 1, FLOOR + 1, catz, "redstone_block")
         setb(catx + 1, FLOOR + 1, catz, "redstone_lamp")
-        setb(catx, FLOOR + 5, catz - 1, "torch")
+        setb(catx, FLOOR + 5, catz - 1, p["glow"])   # gloei-blok (valt niet af)
 
-        # Vijand-spawnplatform: een vlak plein net buiten de noordpoort,
-        # op HETZELFDE grondniveau als de binnenplaats.
-        c("=== VIJAND SPAWN-PLATFORM (buiten de noordpoort) ===")
-        pz1, pz2 = cz - COURT - 24, cz - COURT - 1
-        chunk_fill(cx - 18, FLOOR, pz1 - 1, cx + 18, FLOOR + 4, pz2 + 1, "air")
-        chunk_fill(cx - 17, FLOOR - 1, pz1, cx + 17, FLOOR - 1, pz2, p["plaza"])
-        # lage rand zodat ze er niet afvallen
-        fill(cx - 17, FLOOR, pz1, cx + 17, FLOOR, pz1, p["wall"])
-        fill(cx - 17, FLOOR, pz1, cx - 17, FLOOR, pz2, p["wall"])
-        fill(cx + 17, FLOOR, pz1, cx + 17, FLOOR, pz2, p["wall"])
-        # fakkels op de hoeken
-        setb(cx - 17, FLOOR + 1, pz1, p["torch"])
-        setb(cx + 17, FLOOR + 1, pz1, p["torch"])
-        # bordje-blok in het midden
-        setb(cx, FLOOR, pz1 + 1, "redstone_lamp")
+        # Vijand-spawnplatform: een vlak, gemarkeerd plein BINNEN de
+        # binnenplaats bij de noordmuur -> altijd geladen en op exact
+        # hetzelfde grondniveau als de rest van het kasteel.
+        c("=== VIJAND SPAWN-PLATFORM (binnen de binnenplaats, noordmuur) ===")
+        pz1, pz2 = cz - COURT + 2, cz - COURT + 18
+        fill(cx - 16, FLOOR - 1, pz1, cx + 16, FLOOR - 1, pz2, p["foundation"])
+        # lage rand op noord/oost/west (zuidkant open naar de keep)
+        fill(cx - 16, FLOOR, pz1, cx + 16, FLOOR, pz1, p["wall"])
+        fill(cx - 16, FLOOR, pz1, cx - 16, FLOOR, pz2, p["wall"])
+        fill(cx + 16, FLOOR, pz1, cx + 16, FLOOR, pz2, p["wall"])
+        # gloei-blokken op de hoeken (geen losse fakkels)
+        setb(cx - 16, FLOOR, pz1, p["glow"])
+        setb(cx + 16, FLOOR, pz1, p["glow"])
+        setb(cx - 16, FLOOR, pz2, p["glow"])
+        setb(cx + 16, FLOOR, pz2, p["glow"])
 
     # Top floor: bedrooms
     c("=== BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===")
@@ -409,7 +417,7 @@ def build_castle(cx, cz, p, mode):
                      (cx - WALL + 5, cz + WALL - 5), (cx + WALL - 5, cz + WALL - 5)]:
         setb(bx, F2 + 1, bz, "red_wool")
         setb(bx, F2 + 1, bz + 1, "red_wool")
-        setb(bx, F2 + 4, bz, p["lantern"])
+        setb(bx, TOP, bz, p["glow"])   # gloei-tegel in het dak
 
     # Cellar
     c("=== KELDER ===")
@@ -432,9 +440,10 @@ def build_castle(cx, cz, p, mode):
             setb(cx + dx, CELL_Y + 1, cz + dz, "barrel")
     setb(cx - 6, CELL_Y + 1, cz - 6, "chest")
     setb(cx + 6, CELL_Y + 1, cz + 6, "chest")
-    for dx in (-9, 0, 9):
-        for dz in (-9, 0, 9):
-            setb(cx + dx, CELL_Y + 4, cz + dz, p["torch"])
+    # Gloei-blokken ingebouwd in het kelderplafond (geen losse fakkels)
+    for dx in (-8, 0, 8):
+        for dz in (-8, 0, 8):
+            setb(cx + dx, CELL_Y + 6, cz + dz, p["glow"])
 
     return lines
 
@@ -443,19 +452,22 @@ def build_castle(cx, cz, p, mode):
 # mods in deze repo ook gebruiken (stone_bricks, stone_brick_wall, nether_brick
 # (enkelvoud!), red_concrete, sea_lantern, soul_lantern, ...). Gebruik GEEN
 # Java-namen zoals "red_nether_bricks" of "cobblestone_wall".
+# "glow" is een VOL blok (sea_lantern/glowstone): heeft geen steun nodig en
+# valt dus nooit af als opraapbaar item -- daarom gebruiken we dat overal voor
+# verlichting i.p.v. losse fakkels/lantaarns.
 OUR = {
     "wall": "stone_bricks", "floor": "polished_andesite", "foundation": "stone_bricks",
     "cellar": "cobblestone", "merlon": "stone_brick_wall", "plaza": "stone_bricks",
-    "stairs": "stone_brick_stairs", "glass": "glass_pane", "torch": "torch",
+    "stairs": "stone_brick_stairs", "glass": "glass_pane", "glow": "sea_lantern",
     "lantern": "lantern", "spire_light": "sea_lantern", "flag": "red_wool",
     "gate_light": "sea_lantern", "area": "ridder_kasteel",
 }
 ROOD = {
     "wall": "red_concrete", "floor": "red_nether_brick", "foundation": "red_nether_brick",
     "cellar": "netherrack", "merlon": "stone_brick_wall", "plaza": "red_nether_brick",
-    "stairs": "stone_brick_stairs", "glass": "red_stained_glass", "torch": "torch",
+    "stairs": "stone_brick_stairs", "glass": "red_stained_glass", "glow": "glowstone",
     "lantern": "soul_lantern", "spire_light": "sea_lantern", "flag": "black_wool",
-    "gate_light": "soul_lantern", "area": "rood_kasteel",
+    "gate_light": "glowstone", "area": "rood_kasteel",
 }
 
 
