@@ -1,0 +1,56 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ridder_mod:ridder_boog",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["ridder", "leger", "boogschutter", "mob"]
+            },
+            "minecraft:collision_box": { "width": 0.6, "height": 1.9 },
+            "minecraft:health": { "value": 40, "max": 40 },
+            "minecraft:movement": { "value": 0.2 },
+            "minecraft:knockback_resistance": { "value": 0.9 },
+            "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+            "minecraft:navigation.walk": { "can_path_over_water": true, "avoid_water": true },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:physics": {},
+            "minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+            "minecraft:shooter": { "def": "minecraft:arrow" },
+            "minecraft:behavior.float": { "priority": 0 },
+            "minecraft:behavior.hurt_by_target": { "priority": 1 },
+            "minecraft:behavior.ranged_attack": {
+                "priority": 2,
+                "attack_interval_min": 0.8,
+                "attack_interval_max": 1.6,
+                "attack_radius": 40.0,
+                "ranged_fov": 120
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 3,
+                "reselect_targets": true,
+                "within_radius": 60,
+                "must_see": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                { "test": "is_family", "subject": "other", "value": "vijand_ridder" },
+                                { "test": "is_family", "subject": "other", "value": "monster" }
+                            ]
+                        },
+                        "max_dist": 60
+                    }
+                ]
+            },
+            "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 10.0, "probability": 0.04 },
+            "minecraft:behavior.random_look_around": { "priority": 8 },
+            "minecraft:loot": { "table": "loot_tables/empty.json" }
+        }
+    }
+}

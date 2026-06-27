@@ -7,8 +7,8 @@
 # --- Kasteelbewoners (binnen) ---
 # Kok in de grote keuken (achter-rechts)
 summon ridder_mod:kok ~11 ~1 ~18
-# Uitvinder in de werkplaats (midden-verdieping)
-summon ridder_mod:uitvinder ~22 ~7 ~22
+# Uitvinder bij zijn katapult op de binnenplaats
+summon ridder_mod:uitvinder ~14 ~1 ~-50
 # Hofnar in de troonzaal (voor de tronen)
 summon ridder_mod:hofnar ~0 ~1 ~18
 summon ridder_mod:hofnar ~-4 ~1 ~19
@@ -33,6 +33,12 @@ summon ridder_mod:ridder_npc ~12 ~ ~-48
 # Wachters die de poort flankeren
 summon ridder_mod:ridder_npc ~-5 ~ ~-30
 summon ridder_mod:ridder_npc ~5 ~ ~-30
+
+# --- BOOGSCHUTTERS bovenop de 4 hoektorens (schieten op de vijand) ---
+summon ridder_mod:ridder_boog ~-28 ~71 ~-28
+summon ridder_mod:ridder_boog ~28 ~71 ~-28
+summon ridder_mod:ridder_boog ~-28 ~71 ~28
+summon ridder_mod:ridder_boog ~28 ~71 ~28
 
 # --- Markeren dat het leger al gespawnd is ---
 scoreboard players set rmLeger rm_state 1

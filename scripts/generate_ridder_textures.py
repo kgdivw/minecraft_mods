@@ -95,6 +95,9 @@ save(knight((159, 166, 173), (40, 70, 140), (130, 137, 145), (70, 76, 84),
 save(knight((58, 58, 64), (120, 18, 27), (74, 74, 82), (44, 44, 50),
             plume=(20, 20, 20)), "vijand_ridder")
 
+# Friendly tower archer: steel helm, green hood/tabard
+save(knight((159, 166, 173), (46, 120, 60), (120, 130, 110), (60, 80, 55),
+            plume=(40, 160, 70)), "ridder_boog")
 # Enemy archer: red hood + leather, bright red tabard
 img = knight((122, 16, 16), (192, 57, 43), (140, 60, 50), (90, 30, 30), plume=None)
 save(img, "vijand_boog")

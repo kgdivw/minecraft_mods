@@ -1075,6 +1075,9 @@ setblock ~-24 ~17 ~-25 stone_brick_stairs
 # === 4 HOGE HOEKTORENS + CENTRALE SPITS (tot ~100 hoog) ===
 fill ~-30 ~0 ~-30 ~-26 ~70 ~-26 stone_bricks
 fill ~-29 ~0 ~-29 ~-27 ~70 ~-27 air
+fill ~-29 ~70 ~-29 ~-27 ~70 ~-27 stone_bricks
+setblock ~-29 ~71 ~-29 torch
+setblock ~-27 ~71 ~-27 torch
 setblock ~-30 ~71 ~-30 stone_brick_wall
 setblock ~-30 ~71 ~-26 stone_brick_wall
 setblock ~-28 ~71 ~-30 stone_brick_wall
@@ -1103,6 +1106,9 @@ setblock ~-28 ~60 ~-30 torch
 setblock ~-28 ~68 ~-30 torch
 fill ~26 ~0 ~-30 ~30 ~70 ~-26 stone_bricks
 fill ~27 ~0 ~-29 ~29 ~70 ~-27 air
+fill ~27 ~70 ~-29 ~29 ~70 ~-27 stone_bricks
+setblock ~27 ~71 ~-29 torch
+setblock ~29 ~71 ~-27 torch
 setblock ~26 ~71 ~-30 stone_brick_wall
 setblock ~26 ~71 ~-26 stone_brick_wall
 setblock ~28 ~71 ~-30 stone_brick_wall
@@ -1131,6 +1137,9 @@ setblock ~28 ~60 ~-30 torch
 setblock ~28 ~68 ~-30 torch
 fill ~-30 ~0 ~26 ~-26 ~70 ~30 stone_bricks
 fill ~-29 ~0 ~27 ~-27 ~70 ~29 air
+fill ~-29 ~70 ~27 ~-27 ~70 ~29 stone_bricks
+setblock ~-29 ~71 ~27 torch
+setblock ~-27 ~71 ~29 torch
 setblock ~-30 ~71 ~26 stone_brick_wall
 setblock ~-30 ~71 ~30 stone_brick_wall
 setblock ~-28 ~71 ~26 stone_brick_wall
@@ -1159,6 +1168,9 @@ setblock ~-28 ~60 ~26 torch
 setblock ~-28 ~68 ~26 torch
 fill ~26 ~0 ~26 ~30 ~70 ~30 stone_bricks
 fill ~27 ~0 ~27 ~29 ~70 ~29 air
+fill ~27 ~70 ~27 ~29 ~70 ~29 stone_bricks
+setblock ~27 ~71 ~27 torch
+setblock ~29 ~71 ~29 torch
 setblock ~26 ~71 ~26 stone_brick_wall
 setblock ~26 ~71 ~30 stone_brick_wall
 setblock ~28 ~71 ~26 stone_brick_wall
@@ -1441,6 +1453,9 @@ setblock ~14 ~1 ~18 barrel
 setblock ~11 ~1 ~16 cake
 setblock ~15 ~1 ~22 chest
 setblock ~7 ~1 ~22 chest
+setblock ~11 ~1 ~20 campfire
+setblock ~10 ~1 ~20 cauldron
+setblock ~12 ~1 ~20 cauldron
 setblock ~7 ~3 ~14 lantern
 setblock ~15 ~3 ~14 lantern
 setblock ~11 ~4 ~18 lantern
@@ -1478,6 +1493,20 @@ setblock ~22 ~7 ~21 brewing_stand
 setblock ~21 ~7 ~21 cartography_table
 setblock ~23 ~7 ~21 redstone_block
 setblock ~22 ~7 ~20 lectern
+# === KATAPULT VAN DE UITVINDER (binnenplaats, noordkant) ===
+fill ~12 ~0 ~-53 ~16 ~0 ~-51 oak_planks
+setblock ~12 ~0 ~-53 oak_log
+setblock ~12 ~0 ~-51 oak_log
+setblock ~16 ~0 ~-53 oak_log
+setblock ~16 ~0 ~-51 oak_log
+setblock ~14 ~1 ~-51 oak_fence
+setblock ~14 ~2 ~-51 oak_fence
+setblock ~14 ~3 ~-52 oak_fence
+setblock ~14 ~4 ~-53 cauldron
+setblock ~14 ~1 ~-53 dropper
+setblock ~13 ~1 ~-52 redstone_block
+setblock ~15 ~1 ~-52 redstone_lamp
+setblock ~14 ~5 ~-53 torch
 # === BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===
 setblock ~-23 ~13 ~-23 red_wool
 setblock ~-23 ~13 ~-22 red_wool

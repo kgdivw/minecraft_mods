@@ -22,8 +22,14 @@ tellraw @s {"rawtext":[{"text":""}]}
 tellraw @s {"rawtext":[{"text":"§e§l▶ HET KASTEEL"}]}
 tellraw @s {"rawtext":[{"text":"§7Stenen kasteel met 3 verdiepingen, torens, een"}]}
 tellraw @s {"rawtext":[{"text":"§7troonzaal, slaapkamer, keuken & kelder. Vol fakkels!"}]}
-tellraw @s {"rawtext":[{"text":"§7Bewoners: §fkok, uitvinder, hofnar & butler§7."}]}
 tellraw @s {"rawtext":[{"text":"§7Een §6rood tapijt §7loopt van de slaapkamer naar de troon."}]}
+tellraw @s {"rawtext":[{"text":""}]}
+tellraw @s {"rawtext":[{"text":"§e§l▶ DE BEWONERS DOEN MEE"}]}
+tellraw @s {"rawtext":[{"text":"§7🍲 De §fkok §7kookt soep en deelt die uit"}]}
+tellraw @s {"rawtext":[{"text":"§7🔧 De §fuitvinder §7heeft een §fkatapult §7die de vijand bekogelt"}]}
+tellraw @s {"rawtext":[{"text":"§7🤹 De §fhofnar §7danst rond met vrolijke deeltjes"}]}
+tellraw @s {"rawtext":[{"text":"§7🍗 De §fbutler §7brengt eten naar de koninklijke familie"}]}
+tellraw @s {"rawtext":[{"text":"§7🏹 §fBoogschutters §7op de torens beschieten de vijand"}]}
 tellraw @s {"rawtext":[{"text":""}]}
 tellraw @s {"rawtext":[{"text":"§e§l▶ DE VIJAND (ten noorden)"}]}
 tellraw @s {"rawtext":[{"text":"§cEen even groot ROOD kasteel met een vijandige"}]}

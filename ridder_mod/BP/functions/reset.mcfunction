@@ -20,6 +20,7 @@ scoreboard players set rmVijand rm_state 0
 # --- Anker + alle mod-wezens opruimen ---
 kill @e[type=ridder_mod:kasteel_anker]
 kill @e[type=ridder_mod:ridder_npc]
+kill @e[type=ridder_mod:ridder_boog]
 kill @e[type=ridder_mod:vijand_ridder]
 kill @e[type=ridder_mod:vijand_boog]
 kill @e[type=ridder_mod:vijand_kanon]

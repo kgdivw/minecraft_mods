@@ -201,6 +201,10 @@ def build_castle(cx, cz, p, mode):
                      (cx - WALL, cz + WALL), (cx + WALL, cz + WALL)]:
         fill(tx - 2, FLOOR, tz - 2, tx + 2, TOWER_TOP, tz + 2, WALLB)
         fill(tx - 1, FLOOR, tz - 1, tx + 1, TOWER_TOP, tz + 1, "air")
+        # Vloer-plateau bovenop de toren (zodat boogschutters er kunnen staan)
+        fill(tx - 1, TOWER_TOP, tz - 1, tx + 1, TOWER_TOP, tz + 1, WALLB)
+        setb(tx - 1, TOWER_TOP + 1, tz - 1, p["torch"])
+        setb(tx + 1, TOWER_TOP + 1, tz + 1, p["torch"])
         for ddx in (-2, 0, 2):
             setb(tx + ddx, TOWER_TOP + 1, tz - 2, p["merlon"])
             setb(tx + ddx, TOWER_TOP + 1, tz + 2, p["merlon"])
@@ -332,6 +336,10 @@ def build_castle(cx, cz, p, mode):
     setb(KX, FLOOR + 1, KZ - 2, "cake")
     setb(KX + 4, FLOOR + 1, KZ + 4, "chest")
     setb(KX - 4, FLOOR + 1, KZ + 4, "chest")
+    # Een brandend kampvuur (rookt continu) waar de kok soep op kookt
+    setb(KX, FLOOR + 1, KZ + 2, "campfire")
+    setb(KX - 1, FLOOR + 1, KZ + 2, "cauldron")
+    setb(KX + 1, FLOOR + 1, KZ + 2, "cauldron")
     # plenty of light
     setb(KX - 4, FLOOR + 3, KZ - 4, "lantern")
     setb(KX + 4, FLOOR + 3, KZ - 4, "lantern")
@@ -356,6 +364,27 @@ def build_castle(cx, cz, p, mode):
     setb(WX - 1, F1 + 1, WZ - 1, "cartography_table")
     setb(WX + 1, F1 + 1, WZ - 1, "redstone_block")
     setb(WX, F1 + 1, WZ - 2, "lectern")
+
+    # The inventor's catapult on the courtyard (ours only), aimed north
+    if mode == "ours":
+        c("=== KATAPULT VAN DE UITVINDER (binnenplaats, noordkant) ===")
+        catx, catz = cx + 14, cz - 52
+        # wooden base + wheels
+        fill(catx - 2, FLOOR, catz - 1, catx + 2, FLOOR, catz + 1, "oak_planks")
+        setb(catx - 2, FLOOR, catz - 1, "oak_log")
+        setb(catx - 2, FLOOR, catz + 1, "oak_log")
+        setb(catx + 2, FLOOR, catz - 1, "oak_log")
+        setb(catx + 2, FLOOR, catz + 1, "oak_log")
+        # throwing arm (fences going up and leaning north) + bucket
+        setb(catx, FLOOR + 1, catz + 1, "oak_fence")
+        setb(catx, FLOOR + 2, catz + 1, "oak_fence")
+        setb(catx, FLOOR + 3, catz, "oak_fence")
+        setb(catx, FLOOR + 4, catz - 1, "cauldron")   # the "bucket"
+        # a dispenser-looking launcher + redstone flair (inventor's gadget)
+        setb(catx, FLOOR + 1, catz - 1, "dropper")
+        setb(catx - 1, FLOOR + 1, catz, "redstone_block")
+        setb(catx + 1, FLOOR + 1, catz, "redstone_lamp")
+        setb(catx, FLOOR + 5, catz - 1, "torch")
 
     # Top floor: bedrooms
     c("=== BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===")

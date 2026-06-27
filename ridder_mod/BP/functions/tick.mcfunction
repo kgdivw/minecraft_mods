@@ -32,6 +32,9 @@ execute as @a[tag=rm_count,scores={rm_timer=1170..}] run title @s actionbar §c�
 execute as @a[tag=rm_count,scores={rm_timer=1200..}] at @e[type=ridder_mod:kasteel_anker] run function vijand_aanval
 tag @a[tag=rm_count,scores={rm_timer=1200..}] remove rm_count
 
+# --- Actieve kasteelbewoners (kok, uitvinder, hofnar, butler, katapult) ---
+execute if entity @e[type=ridder_mod:kasteel_anker] run function bewoners
+
 # --- HUD ---
 execute as @a[tag=rol_ridder] run titleraw @s actionbar {"rawtext":[{"text":"§7§l⚔ RIDDER §r§7| §fSterkste wapens & harnas"}]}
 execute as @a[tag=rol_prins] run titleraw @s actionbar {"rawtext":[{"text":"§b§l♦ PRINS/PRINSES §r§7| §bDiamanten troon"}]}

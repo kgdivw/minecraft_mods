@@ -1073,6 +1073,9 @@ setblock ~-24 ~17 ~-25 stone_brick_stairs
 # === 4 HOGE HOEKTORENS + CENTRALE SPITS (tot ~100 hoog) ===
 fill ~-30 ~0 ~-30 ~-26 ~70 ~-26 red_concrete
 fill ~-29 ~0 ~-29 ~-27 ~70 ~-27 air
+fill ~-29 ~70 ~-29 ~-27 ~70 ~-27 red_concrete
+setblock ~-29 ~71 ~-29 torch
+setblock ~-27 ~71 ~-27 torch
 setblock ~-30 ~71 ~-30 stone_brick_wall
 setblock ~-30 ~71 ~-26 stone_brick_wall
 setblock ~-28 ~71 ~-30 stone_brick_wall
@@ -1101,6 +1104,9 @@ setblock ~-28 ~60 ~-30 torch
 setblock ~-28 ~68 ~-30 torch
 fill ~26 ~0 ~-30 ~30 ~70 ~-26 red_concrete
 fill ~27 ~0 ~-29 ~29 ~70 ~-27 air
+fill ~27 ~70 ~-29 ~29 ~70 ~-27 red_concrete
+setblock ~27 ~71 ~-29 torch
+setblock ~29 ~71 ~-27 torch
 setblock ~26 ~71 ~-30 stone_brick_wall
 setblock ~26 ~71 ~-26 stone_brick_wall
 setblock ~28 ~71 ~-30 stone_brick_wall
@@ -1129,6 +1135,9 @@ setblock ~28 ~60 ~-30 torch
 setblock ~28 ~68 ~-30 torch
 fill ~-30 ~0 ~26 ~-26 ~70 ~30 red_concrete
 fill ~-29 ~0 ~27 ~-27 ~70 ~29 air
+fill ~-29 ~70 ~27 ~-27 ~70 ~29 red_concrete
+setblock ~-29 ~71 ~27 torch
+setblock ~-27 ~71 ~29 torch
 setblock ~-30 ~71 ~26 stone_brick_wall
 setblock ~-30 ~71 ~30 stone_brick_wall
 setblock ~-28 ~71 ~26 stone_brick_wall
@@ -1157,6 +1166,9 @@ setblock ~-28 ~60 ~26 torch
 setblock ~-28 ~68 ~26 torch
 fill ~26 ~0 ~26 ~30 ~70 ~30 red_concrete
 fill ~27 ~0 ~27 ~29 ~70 ~29 air
+fill ~27 ~70 ~27 ~29 ~70 ~29 red_concrete
+setblock ~27 ~71 ~27 torch
+setblock ~29 ~71 ~29 torch
 setblock ~26 ~71 ~26 stone_brick_wall
 setblock ~26 ~71 ~30 stone_brick_wall
 setblock ~28 ~71 ~26 stone_brick_wall
@@ -1427,6 +1439,9 @@ setblock ~14 ~1 ~18 barrel
 setblock ~11 ~1 ~16 cake
 setblock ~15 ~1 ~22 chest
 setblock ~7 ~1 ~22 chest
+setblock ~11 ~1 ~20 campfire
+setblock ~10 ~1 ~20 cauldron
+setblock ~12 ~1 ~20 cauldron
 setblock ~7 ~3 ~14 lantern
 setblock ~15 ~3 ~14 lantern
 setblock ~11 ~4 ~18 lantern

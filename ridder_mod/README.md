@@ -34,14 +34,15 @@ Zodra je op een portal stapt word je automatisch naar het kasteel geteleporteerd
 - Kamers: **slaapkamer(s)**, **keuken**, **uitvinderswerkplaats**, **eetkamer** en een **kelder** met opslag.
 - Overal **fakkels** en lantaarns.
 
-### Bewoners
+### Bewoners (ze doen allemaal echt iets!)
 
-| Bewoner | Waar |
-|---------|------|
-| 👨‍🍳 Kok | In de keuken |
-| 🔧 Uitvinder | In de werkplaats (midden-verdieping) |
-| 🤹 Hofnar | In de troonzaal |
-| 🤵 Butler | Bij de ingang |
+| Bewoner | Wat hij/zij doet |
+|---------|------------------|
+| 👨‍🍳 Kok | Kookt soep op het kampvuur in de keuken en deelt dampende kommen soep uit aan wie in de buurt is |
+| 🔧 Uitvinder | Staat bij zijn zelfgebouwde **katapult** op de binnenplaats; tijdens een gevecht bekogelt de katapult de vijand met vuurballen |
+| 🤹 Hofnar | Danst energiek rond met vrolijke hartjes- en feestdeeltjes |
+| 🤵 Butler | Brengt regelmatig **gebraden kip** naar de koninklijke familie (en zet af en toe een kip neer) |
+| 🏹 Boogschutter-ridders | Staan boven op de 4 hoektorens en beschieten naderende vijanden met pijlen |
 
 ### Het leger & de vijand
 
