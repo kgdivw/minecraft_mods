@@ -1507,6 +1507,17 @@ setblock ~14 ~1 ~-53 dropper
 setblock ~13 ~1 ~-52 redstone_block
 setblock ~15 ~1 ~-52 redstone_lamp
 setblock ~14 ~5 ~-53 torch
+# === VIJAND SPAWN-PLATFORM (buiten de noordpoort) ===
+fill ~-18 ~0 ~-125 ~11 ~4 ~-100 air
+fill ~12 ~0 ~-125 ~18 ~4 ~-100 air
+fill ~-17 ~-1 ~-124 ~12 ~-1 ~-101 stone_bricks
+fill ~13 ~-1 ~-124 ~17 ~-1 ~-101 stone_bricks
+fill ~-17 ~0 ~-124 ~17 ~0 ~-124 stone_bricks
+fill ~-17 ~0 ~-124 ~-17 ~0 ~-101 stone_bricks
+fill ~17 ~0 ~-124 ~17 ~0 ~-101 stone_bricks
+setblock ~-17 ~1 ~-124 torch
+setblock ~17 ~1 ~-124 torch
+setblock ~0 ~0 ~-123 redstone_lamp
 # === BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===
 setblock ~-23 ~13 ~-23 red_wool
 setblock ~-23 ~13 ~-22 red_wool

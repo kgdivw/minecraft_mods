@@ -17,6 +17,9 @@ scoreboard players set rmLeger rm_state 0
 scoreboard players set rmRood rm_state 0
 scoreboard players set rmVijand rm_state 0
 
+# --- Rondscharrelende kippen bij het kasteel opruimen ---
+execute at @e[type=ridder_mod:kasteel_anker] run kill @e[type=chicken,r=70]
+
 # --- Anker + alle mod-wezens opruimen ---
 kill @e[type=ridder_mod:kasteel_anker]
 kill @e[type=ridder_mod:ridder_npc]

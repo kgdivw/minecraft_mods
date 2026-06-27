@@ -41,7 +41,7 @@ Zodra je op een portal stapt word je automatisch naar het kasteel geteleporteerd
 | 👨‍🍳 Kok | Kookt soep op het kampvuur in de keuken en deelt dampende kommen soep uit aan wie in de buurt is |
 | 🔧 Uitvinder | Staat bij zijn zelfgebouwde **katapult** op de binnenplaats; tijdens een gevecht bekogelt de katapult de vijand met vuurballen |
 | 🤹 Hofnar | Danst energiek rond met vrolijke hartjes- en feestdeeltjes |
-| 🤵 Butler | Brengt regelmatig **gebraden kip** naar de koninklijke familie (en zet af en toe een kip neer) |
+| 🤵 Butler | Brengt **gebraden kip** naar de koninklijke familie — maar alleen als je die nog niet hebt (dus pas weer als je het op hebt) |
 | 🏹 Boogschutter-ridders | Staan boven op de 4 hoektorens en beschieten naderende vijanden met pijlen |
 
 ### Het leger & de vijand
@@ -57,7 +57,7 @@ Ten noorden ligt een **even groot ROOD kasteel** van de vijand, met een eigen **
 | 💣 Vijandige Kanonnier | Kanonskogels / vuurballen |
 | 👑 Vijandige Koning | Boss — versla hem! |
 
-**Let op:** zodra je een rol kiest, krijg je een waarschuwing dat **over 1 minuut** de vijand aanvalt. Na 60 seconden bestormt een gemengd vijandig leger (zwaardvechters, boogschutters, kanonniers) automatisch via de noordpoort je binnenplaats — bereid je voor met je ridders! Je kunt ook zelf een golf oproepen of zelf aanvallen:
+**Let op:** zodra je een rol kiest, krijg je een waarschuwing dat **over 1 minuut** de vijand aanvalt. Na 60 seconden verschijnt een gemengd vijandig leger (zwaardvechters, boogschutters, kanonniers) op een **vlak spawn-platform net buiten de noordpoort** (op hetzelfde grondniveau) en bestormt je binnenplaats — bereid je voor met je ridders! Je kunt ook zelf een golf oproepen of zelf aanvallen:
 ```
 /function vijand_leger   # roep meteen een extra aanvalsgolf op
 /function naar_vijand    # jij valt het rode kasteel aan

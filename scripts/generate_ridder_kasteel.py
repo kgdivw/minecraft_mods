@@ -386,6 +386,22 @@ def build_castle(cx, cz, p, mode):
         setb(catx + 1, FLOOR + 1, catz, "redstone_lamp")
         setb(catx, FLOOR + 5, catz - 1, "torch")
 
+        # Vijand-spawnplatform: een vlak plein net buiten de noordpoort,
+        # op HETZELFDE grondniveau als de binnenplaats.
+        c("=== VIJAND SPAWN-PLATFORM (buiten de noordpoort) ===")
+        pz1, pz2 = cz - COURT - 24, cz - COURT - 1
+        chunk_fill(cx - 18, FLOOR, pz1 - 1, cx + 18, FLOOR + 4, pz2 + 1, "air")
+        chunk_fill(cx - 17, FLOOR - 1, pz1, cx + 17, FLOOR - 1, pz2, p["plaza"])
+        # lage rand zodat ze er niet afvallen
+        fill(cx - 17, FLOOR, pz1, cx + 17, FLOOR, pz1, p["wall"])
+        fill(cx - 17, FLOOR, pz1, cx - 17, FLOOR, pz2, p["wall"])
+        fill(cx + 17, FLOOR, pz1, cx + 17, FLOOR, pz2, p["wall"])
+        # fakkels op de hoeken
+        setb(cx - 17, FLOOR + 1, pz1, p["torch"])
+        setb(cx + 17, FLOOR + 1, pz1, p["torch"])
+        # bordje-blok in het midden
+        setb(cx, FLOOR, pz1 + 1, "redstone_lamp")
+
     # Top floor: bedrooms
     c("=== BOVENSTE VERDIEPING: EXTRA SLAAPKAMERS ===")
     F2 = floors_y[2]
