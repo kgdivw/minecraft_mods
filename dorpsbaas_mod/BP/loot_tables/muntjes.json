@@ -1,0 +1,14 @@
+{
+    "pools": [
+        {
+            "rolls": { "min": 2, "max": 5 },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dorpsbaas:muntje",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

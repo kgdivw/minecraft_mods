@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Baas van het Dorp - Behavior Pack",
+        "description": "Spawn in een mega dorp en word de baas! Koop een pak, auto en huis, versla Herobrine, word rijk en beroemd.",
+        "uuid": "1953cdcc-b8e6-4c38-9cc2-13175af17e69",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 10]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "d5901027-b038-465f-8754-6c23e6cd33bb",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "c5cb5b1b-3e4c-4db5-8731-e02ca435d7c5",
+            "version": [1, 0, 0]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "dorpsbaas:auto_emerald",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/auto_emerald"
+            },
+            "geometry": {
+                "default": "geometry.dorpsbaas_auto"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#3CC86E",
+                "overlay_color": "#1B7A3E"
+            }
+        }
+    }
+}

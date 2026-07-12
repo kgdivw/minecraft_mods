@@ -55,6 +55,14 @@ jobs:
           cd build/lava_mod
           zip -r ../LavaMod.mcaddon BP/
 
+      - name: Create Baas van het Dorp addon
+        run: |
+          mkdir -p build/dorpsbaas_mod
+          cp -r dorpsbaas_mod/BP build/dorpsbaas_mod/
+          cp -r dorpsbaas_mod/RP build/dorpsbaas_mod/
+          cd build/dorpsbaas_mod
+          zip -r ../BaasVanHetDorp.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -105,12 +113,21 @@ jobs:
             - Alle mobs, dieren en items die in/op lava komen zakken weg in de lava
             - Spelers blijven gewoon staan (immuun)
             - Vereist Minecraft 1.21+ met experimentele scripting aan
+
+            ### Baas van het Dorp
+            - Spawn in een MEGA dorp met wegen, huizen en dorpelingen
+            - Word de BAAS: koop een pak (met rode strik), auto en huis via sta-op platforms
+            - Bestuurbare auto's van diamant, goud of emerald
+            - Versla Herobrine, die mobs en stoute villagers gebruikt om baas te worden
+            - Verdien EUR met opdrachten én door Herobrine's mobs te verslaan
+            - 100 EUR = emerald huizen, 1000 EUR = regenboog huizen met zwembad + beroemd!
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
             build/Dierentuin.mcaddon
             build/Superteams.mcaddon
             build/LavaMod.mcaddon
+            build/BaasVanHetDorp.mcaddon
           prerelease: false
           draft: false
         env:

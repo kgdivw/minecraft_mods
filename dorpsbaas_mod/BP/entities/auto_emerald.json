@@ -1,0 +1,76 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "dorpsbaas:auto_emerald",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "auto",
+                    "vehicle",
+                    "inanimate"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.6,
+                "height": 1.0
+            },
+            "minecraft:health": {
+                "value": 60,
+                "max": 60
+            },
+            "minecraft:movement": {
+                "value": 0.6
+            },
+            "minecraft:navigation.walk": {
+                "can_path_over_water": false,
+                "avoid_water": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:rideable": {
+                "seat_count": 1,
+                "interact_text": "Rijden",
+                "family_types": [
+                    "player"
+                ],
+                "seats": {
+                    "position": [
+                        0.0,
+                        0.9,
+                        0.0
+                    ]
+                }
+            },
+            "minecraft:input_ground_controlled": {},
+            "minecraft:variable_max_auto_step": {
+                "base_value": 1.0625,
+                "jump_prevented_value": 0.5625
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "void",
+                        "deals_damage": true
+                    },
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            }
+        }
+    }
+}

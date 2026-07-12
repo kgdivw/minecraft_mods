@@ -1,0 +1,12 @@
+item.dorpsbaas:muntje.name=Coin (EUR)
+item.dorpsbaas:strik.name=Red Bow Tie
+entity.dorpsbaas:herobrine.name=Herobrine
+entity.dorpsbaas:stoute_villager.name=Bad Villager
+entity.dorpsbaas:auto_diamant.name=Diamond Car
+entity.dorpsbaas:auto_goud.name=Gold Car
+entity.dorpsbaas:auto_emerald.name=Emerald Car
+item.spawn_egg.entity.dorpsbaas:herobrine.name=Spawn Herobrine
+item.spawn_egg.entity.dorpsbaas:stoute_villager.name=Spawn Bad Villager
+item.spawn_egg.entity.dorpsbaas:auto_diamant.name=Diamond Car
+item.spawn_egg.entity.dorpsbaas:auto_goud.name=Gold Car
+item.spawn_egg.entity.dorpsbaas:auto_emerald.name=Emerald Car

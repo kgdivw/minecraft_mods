@@ -1,0 +1,12 @@
+item.dorpsbaas:muntje.name=Muntje (EUR)
+item.dorpsbaas:strik.name=Rode Strik
+entity.dorpsbaas:herobrine.name=Herobrine
+entity.dorpsbaas:stoute_villager.name=Stoute Villager
+entity.dorpsbaas:auto_diamant.name=Diamanten Auto
+entity.dorpsbaas:auto_goud.name=Gouden Auto
+entity.dorpsbaas:auto_emerald.name=Emerald Auto
+item.spawn_egg.entity.dorpsbaas:herobrine.name=Spawn Herobrine
+item.spawn_egg.entity.dorpsbaas:stoute_villager.name=Spawn Stoute Villager
+item.spawn_egg.entity.dorpsbaas:auto_diamant.name=Diamanten Auto
+item.spawn_egg.entity.dorpsbaas:auto_goud.name=Gouden Auto
+item.spawn_egg.entity.dorpsbaas:auto_emerald.name=Emerald Auto

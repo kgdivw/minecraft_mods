@@ -1,0 +1,48 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "dorpsbaas:keuze",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "pak_zwart":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_zwart"] } },
+            "pak_grijs":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_grijs"] } },
+            "pak_blauw":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_blauw"] } },
+            "auto_diamant":  { "minecraft:type_family": { "family": ["keuze", "plat_auto_diamant"] } },
+            "auto_goud":     { "minecraft:type_family": { "family": ["keuze", "plat_auto_goud"] } },
+            "auto_emerald":  { "minecraft:type_family": { "family": ["keuze", "plat_auto_emerald"] } },
+            "huis_ijzer":    { "minecraft:type_family": { "family": ["keuze", "plat_huis_ijzer"] } },
+            "huis_diamant":  { "minecraft:type_family": { "family": ["keuze", "plat_huis_diamant"] } },
+            "huis_goud":     { "minecraft:type_family": { "family": ["keuze", "plat_huis_goud"] } },
+            "huis_emerald":  { "minecraft:type_family": { "family": ["keuze", "plat_huis_emerald"] } },
+            "hero":          { "minecraft:type_family": { "family": ["keuze", "plat_hero"] } },
+            "groter":        { "minecraft:type_family": { "family": ["keuze", "plat_groter"] } }
+        },
+        "components": {
+            "minecraft:collision_box": { "width": 0.1, "height": 0.1 },
+            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:physics": { "has_gravity": false, "has_collision": false },
+            "minecraft:fire_immune": true,
+            "minecraft:damage_sensor": { "triggers": [ { "deals_damage": false } ] },
+            "minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+            "minecraft:loot": { "table": "loot_tables/empty.json" }
+        },
+        "events": {
+            "dorpsbaas:pak_zwart":    { "add": { "component_groups": ["pak_zwart"] } },
+            "dorpsbaas:pak_grijs":    { "add": { "component_groups": ["pak_grijs"] } },
+            "dorpsbaas:pak_blauw":    { "add": { "component_groups": ["pak_blauw"] } },
+            "dorpsbaas:auto_diamant": { "add": { "component_groups": ["auto_diamant"] } },
+            "dorpsbaas:auto_goud":    { "add": { "component_groups": ["auto_goud"] } },
+            "dorpsbaas:auto_emerald": { "add": { "component_groups": ["auto_emerald"] } },
+            "dorpsbaas:huis_ijzer":   { "add": { "component_groups": ["huis_ijzer"] } },
+            "dorpsbaas:huis_diamant": { "add": { "component_groups": ["huis_diamant"] } },
+            "dorpsbaas:huis_goud":    { "add": { "component_groups": ["huis_goud"] } },
+            "dorpsbaas:huis_emerald": { "add": { "component_groups": ["huis_emerald"] } },
+            "dorpsbaas:hero":         { "add": { "component_groups": ["hero"] } },
+            "dorpsbaas:groter":       { "add": { "component_groups": ["groter"] } }
+        }
+    }
+}

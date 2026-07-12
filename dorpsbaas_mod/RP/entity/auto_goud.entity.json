@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "dorpsbaas:auto_goud",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/auto_goud"
+            },
+            "geometry": {
+                "default": "geometry.dorpsbaas_auto"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#F5CD3C",
+                "overlay_color": "#B8860B"
+            }
+        }
+    }
+}
