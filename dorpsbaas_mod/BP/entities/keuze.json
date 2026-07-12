@@ -8,9 +8,7 @@
             "is_experimental": false
         },
         "component_groups": {
-            "pak_zwart":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_zwart"] } },
-            "pak_grijs":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_grijs"] } },
-            "pak_blauw":     { "minecraft:type_family": { "family": ["keuze", "plat_pak_blauw"] } },
+            "pak":           { "minecraft:type_family": { "family": ["keuze", "plat_pak"] } },
             "auto_diamant":  { "minecraft:type_family": { "family": ["keuze", "plat_auto_diamant"] } },
             "auto_goud":     { "minecraft:type_family": { "family": ["keuze", "plat_auto_goud"] } },
             "auto_emerald":  { "minecraft:type_family": { "family": ["keuze", "plat_auto_emerald"] } },
@@ -31,9 +29,7 @@
             "minecraft:loot": { "table": "loot_tables/empty.json" }
         },
         "events": {
-            "dorpsbaas:pak_zwart":    { "add": { "component_groups": ["pak_zwart"] } },
-            "dorpsbaas:pak_grijs":    { "add": { "component_groups": ["pak_grijs"] } },
-            "dorpsbaas:pak_blauw":    { "add": { "component_groups": ["pak_blauw"] } },
+            "dorpsbaas:pak":          { "add": { "component_groups": ["pak"] } },
             "dorpsbaas:auto_diamant": { "add": { "component_groups": ["auto_diamant"] } },
             "dorpsbaas:auto_goud":    { "add": { "component_groups": ["auto_goud"] } },
             "dorpsbaas:auto_emerald": { "add": { "component_groups": ["auto_emerald"] } },

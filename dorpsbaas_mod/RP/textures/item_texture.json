@@ -5,8 +5,8 @@
         "muntje": {
             "textures": "textures/items/muntje"
         },
-        "strik": {
-            "textures": "textures/items/strik"
+        "pak_icon": {
+            "textures": "textures/items/pak_icon"
         }
     }
 }

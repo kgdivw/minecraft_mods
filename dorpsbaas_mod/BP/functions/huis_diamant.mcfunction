@@ -1,7 +1,10 @@
-# Jouw huis van diamant - gegenereerd
-fill ~-5 ~0 ~2 ~5 ~10 ~14 air
+# Jouw huis van diamant
+fill ~-5 ~0 ~2 ~5 ~11 ~14 air
 fill ~-5 ~-1 ~2 ~5 ~-1 ~14 light_blue_concrete
-fill ~-4 ~0 ~3 ~4 ~4 ~13 diamond_block hollow
+fill ~-4 ~0 ~3 ~4 ~4 ~3 diamond_block
+fill ~-4 ~0 ~13 ~4 ~4 ~13 diamond_block
+fill ~-4 ~0 ~3 ~-4 ~4 ~13 diamond_block
+fill ~4 ~0 ~3 ~4 ~4 ~13 diamond_block
 fill ~-4 ~5 ~3 ~4 ~5 ~13 diamond_block
 fill ~-4 ~-1 ~3 ~4 ~-1 ~13 light_blue_concrete
 setblock ~0 ~0 ~3 air

@@ -14,14 +14,14 @@ Je bouwt dan het dorp rondom jezelf met een centraal plein vol keuze-platforms.
 
 ## Hoe word je de baas? (opdrachten)
 
-Stap op de gekleurde platforms om een opdracht te doen:
+Op het dorpsplein staan **winkels**. Loop naar binnen en stap op de mat om te kopen.
+De winkelier vertelt je spontaan over de prijs.
 
-1. **Pak** — zwart, grijs of blauw pak met een rode strik. *(Herobrine draagt grijs.)*
-2. **Auto** — een **bestuurbare** auto van diamant, goud of emerald. *(Herobrine rijdt goud.)*
-3. **Huis** — een eigen huis van ijzer, diamant, goud of emerald.
-4. **Versla Herobrine** — hij verschijnt met zijn leger. Sla hem eruit!
-5. **Huis groter maken** — een extra verdieping erbovenop.
-6. **Rijk & beroemd worden**:
+1. **Kleermaker** (noord) — een **blauw pak met een rode strik** (die zie je op je buik). *(Herobrine draagt grijs.)*
+2. **Garage** (west) — een **bestuurbare** auto van diamant, goud of emerald. *(Herobrine rijdt goud.)* De auto rijdt over obstakels van 1 blok heen.
+3. **Makelaar** (oost) — een eigen huis van ijzer, diamant, goud of emerald.
+4. **Gemeentehuis** (zuid) — **Versla Herobrine** (hij verschijnt met zijn leger) en daarna je **huis groter maken**.
+5. **Rijk & beroemd worden**:
    - **100 EUR** → je huizen worden van **emerald** (nog geen zwembad).
    - **1000 EUR** → **regenboog** huizen **met zwembad** → je wordt **BEROEMD** en de **BAAS**!
 
