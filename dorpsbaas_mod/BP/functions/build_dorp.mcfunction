@@ -334,20 +334,20 @@ setblock ~31 ~3 ~31 torch
 setblock ~37 ~3 ~31 torch
 setblock ~34 ~3 ~34 lantern
 # Dorpelingen
-summon villager_v2 ~-30 ~1 ~-35
-summon villager_v2 ~-30 ~1 ~-19
-summon villager_v2 ~-30 ~1 ~-3
-summon villager_v2 ~-30 ~1 ~13
-summon villager_v2 ~-30 ~1 ~29
-summon villager_v2 ~-14 ~1 ~-35
-summon villager_v2 ~-14 ~1 ~29
-summon villager_v2 ~2 ~1 ~-35
-summon villager_v2 ~2 ~1 ~29
-summon villager_v2 ~18 ~1 ~-35
-summon villager_v2 ~18 ~1 ~29
-summon villager_v2 ~34 ~1 ~-35
-summon villager_v2 ~34 ~1 ~-19
-summon villager_v2 ~34 ~1 ~-3
-summon villager_v2 ~34 ~1 ~13
-summon villager_v2 ~34 ~1 ~29
+summon dorpsbaas:dorpeling ~-30 ~1 ~-35
+summon dorpsbaas:dorpeling ~-30 ~1 ~-19
+summon dorpsbaas:dorpeling ~-30 ~1 ~-3
+summon dorpsbaas:dorpeling ~-30 ~1 ~13
+summon dorpsbaas:dorpeling ~-30 ~1 ~29
+summon dorpsbaas:dorpeling ~-14 ~1 ~-35
+summon dorpsbaas:dorpeling ~-14 ~1 ~29
+summon dorpsbaas:dorpeling ~2 ~1 ~-35
+summon dorpsbaas:dorpeling ~2 ~1 ~29
+summon dorpsbaas:dorpeling ~18 ~1 ~-35
+summon dorpsbaas:dorpeling ~18 ~1 ~29
+summon dorpsbaas:dorpeling ~34 ~1 ~-35
+summon dorpsbaas:dorpeling ~34 ~1 ~-19
+summon dorpsbaas:dorpeling ~34 ~1 ~-3
+summon dorpsbaas:dorpeling ~34 ~1 ~13
+summon dorpsbaas:dorpeling ~34 ~1 ~29
 # klaar

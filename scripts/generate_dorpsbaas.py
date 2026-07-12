@@ -106,10 +106,10 @@ def generate_dorp():
         L.append(f"setblock ~{x2} ~3 ~{z1} torch")
         L.append(f"setblock ~{cx} ~3 ~{cz} lantern")
 
-    # Dorpelingen (lopen rond, geven complimenten via tick.mcfunction)
+    # Dorpelingen (eigen entity - vanilla 'villager_v2' is niet summonbaar in deze versie)
     L.append("# Dorpelingen")
     for i, (cx, cz) in enumerate(spots):
-        L.append(f"summon villager_v2 ~{cx} ~1 ~{cz - 5}")
+        L.append(f"summon dorpsbaas:dorpeling ~{cx} ~1 ~{cz - 5}")
 
     L.append("# klaar")
     with open(os.path.join(FUNC, "build_dorp.mcfunction"), "w", encoding="utf-8") as f:
@@ -282,6 +282,16 @@ def generate_herobrine():
     print("herobrine.png")
 
 
+def generate_dorpeling():
+    # Vriendelijke dorpeling: bruin gewaad, grote neus, blije oogjes
+    img, d = _skin_base(skin=(170, 130, 100), shirt=(120, 85, 55), pants=(95, 70, 50))
+    d.rectangle([11, 12, 12, 14], fill=(150, 110, 85))   # villager-neus
+    d.rectangle([9, 11, 10, 11], fill=(60, 45, 35))       # oogjes
+    d.rectangle([13, 11, 14, 11], fill=(60, 45, 35))
+    img.save(os.path.join(TEX_ENT, "dorpeling.png"))
+    print("dorpeling.png")
+
+
 def generate_stoute_villager():
     img, d = _skin_base(skin=(160, 120, 95), shirt=(90, 60, 40), pants=(70, 50, 35))
     d.rectangle([11, 12, 12, 14], fill=(120, 90, 70))
@@ -366,6 +376,7 @@ if __name__ == "__main__":
     generate_car_model()
     generate_pak_model()
     generate_herobrine()
+    generate_dorpeling()
     generate_stoute_villager()
     generate_pak_texture()
     generate_car_textures()

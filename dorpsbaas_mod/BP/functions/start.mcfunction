@@ -38,7 +38,7 @@ fill ~5 ~0 ~-23 ~5 ~4 ~-16 blue_terracotta
 fill ~-5 ~5 ~-23 ~5 ~5 ~-16 light_blue_concrete
 fill ~-3 ~0 ~-20 ~3 ~1 ~-20 spruce_fence
 setblock ~0 ~2 ~-16 sea_lantern
-summon villager_v2 "§9Kleermaker" ~0 ~1 ~-22
+summon dorpsbaas:dorpeling "§9Kleermaker" ~0 ~1 ~-22
 fill ~-1 ~-1 ~-18 ~1 ~-1 ~-18 blue_wool
 summon dorpsbaas:keuze ~0 ~0 ~-18 0 0 dorpsbaas:pak mk
 summon armor_stand "§9§lKLEERMAKER\n§r§7Stap op de mat voor een\n§9blauw pak met rode strik" ~0 ~2 ~-18
@@ -52,7 +52,7 @@ fill ~-23 ~0 ~-5 ~-16 ~4 ~-5 gray_concrete
 fill ~-23 ~0 ~5 ~-16 ~4 ~5 gray_concrete
 fill ~-23 ~5 ~-5 ~-16 ~5 ~5 iron_block
 setblock ~-16 ~2 ~0 sea_lantern
-summon villager_v2 "§7Monteur" ~-22 ~1 ~0
+summon dorpsbaas:dorpeling "§7Monteur" ~-22 ~1 ~0
 fill ~-19 ~-1 ~-3 ~-19 ~-1 ~-3 light_blue_wool
 summon dorpsbaas:keuze ~-19 ~0 ~-3 0 0 dorpsbaas:auto_diamant mk
 summon armor_stand "§b§lDIAMANTEN AUTO" ~-19 ~2 ~-3
@@ -72,7 +72,7 @@ fill ~16 ~0 ~-8 ~23 ~4 ~-8 brown_terracotta
 fill ~16 ~0 ~8 ~23 ~4 ~8 brown_terracotta
 fill ~16 ~5 ~-8 ~23 ~5 ~8 dark_oak_planks
 setblock ~16 ~2 ~0 sea_lantern
-summon villager_v2 "§6Makelaar" ~22 ~1 ~0
+summon dorpsbaas:dorpeling "§6Makelaar" ~22 ~1 ~0
 fill ~19 ~-1 ~-6 ~19 ~-1 ~-6 white_wool
 summon dorpsbaas:keuze ~19 ~0 ~-6 0 0 dorpsbaas:huis_ijzer mk
 summon armor_stand "§f§lIJZEREN HUIS" ~19 ~2 ~-6
@@ -95,7 +95,7 @@ fill ~-6 ~0 ~16 ~-6 ~4 ~23 quartz_block
 fill ~6 ~0 ~16 ~6 ~4 ~23 quartz_block
 fill ~-6 ~5 ~16 ~6 ~5 ~23 chiseled_quartz_block
 setblock ~0 ~2 ~16 sea_lantern
-summon villager_v2 "§eBurgemeester" ~0 ~1 ~22
+summon dorpsbaas:dorpeling "§eBurgemeester" ~0 ~1 ~22
 fill ~-2 ~-1 ~19 ~-2 ~-1 ~19 red_wool
 summon dorpsbaas:keuze ~-2 ~0 ~19 0 0 dorpsbaas:hero mk
 summon armor_stand "§c§lVERSLA HEROBRINE\n§r§7Kan met pak + auto + huis" ~-2 ~2 ~19
