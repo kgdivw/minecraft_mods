@@ -20,6 +20,7 @@ replaceitem entity @s slot.armor.chest 0 air
 replaceitem entity @s slot.armor.legs 0 air
 replaceitem entity @s slot.armor.feet 0 air
 kill @e[type=dorpsbaas:keuze]
+kill @e[type=dorpsbaas:huis_anker]
 kill @e[type=dorpsbaas:herobrine]
 kill @e[type=dorpsbaas:stoute_villager]
 kill @e[type=dorpsbaas:auto_diamant]

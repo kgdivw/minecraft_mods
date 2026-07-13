@@ -1,10 +1,3 @@
-# Bouwt JOUW huis voor je neer, afhankelijk van je flags.
-# Regenboog (1000 EUR) > emerald (100 EUR of gekozen) > gekozen materiaal.
-execute if entity @s[tag=db_rainbow] run function huis_regenboog
-execute if entity @s[tag=!db_rainbow,tag=db_rijk100] run function huis_emerald
-execute if entity @s[tag=!db_rainbow,tag=!db_rijk100,tag=db_mat_emerald] run function huis_emerald
-execute if entity @s[tag=!db_rainbow,tag=!db_rijk100,tag=db_mat_goud] run function huis_goud
-execute if entity @s[tag=!db_rainbow,tag=!db_rijk100,tag=db_mat_diamant] run function huis_diamant
-execute if entity @s[tag=!db_rainbow,tag=!db_rijk100,tag=db_mat_ijzer] run function huis_ijzer
-# Groter gemaakt? Extra verdieping erbovenop.
-execute if entity @s[tag=db_groot] run function huis_verdieping
+# Herbouw je huis op de plek van je huis-anker (of waar je staat als er nog geen anker is).
+execute at @e[type=dorpsbaas:huis_anker] run function huis_render
+execute unless entity @e[type=dorpsbaas:huis_anker] run function huis_render

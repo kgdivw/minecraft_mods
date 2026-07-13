@@ -4,7 +4,7 @@ replaceitem entity @s slot.armor.chest 0 dorpsbaas:pak_blauw
 replaceitem entity @s slot.armor.head 0 diamond_helmet
 replaceitem entity @s slot.armor.legs 0 diamond_leggings
 replaceitem entity @s slot.armor.feet 0 diamond_boots
-scoreboard players add @s db_geld 50
+scoreboard players add @s db_geld 25
 playsound random.levelup @s ~ ~ ~
 title @s title §9§lBLAUW PAK AAN!
 title @s subtitle §7Met een rode strik op je buik
