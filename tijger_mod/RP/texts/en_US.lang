@@ -3,3 +3,5 @@ entity.tijger:pijl.name=Orange Arrow
 item.tijger:oranje_boog.name=Orange Bow
 item.tijger:oranje_pijl.name=Orange Arrow
 item.spawn_egg.entity.tijger:tijger.name=Spawn Tiger
+item.tijger:pootafdruk.name=Paw Print Button
+entity.tijger:krab_signaal.name=Scratch Signal

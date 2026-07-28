@@ -1,0 +1,17 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "tijger:recept_pootafdruk"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:leather" },
+            { "item": "minecraft:orange_dye" }
+        ],
+        "result": {
+            "item": "tijger:pootafdruk",
+            "count": 1
+        }
+    }
+}

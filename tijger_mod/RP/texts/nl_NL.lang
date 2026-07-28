@@ -3,3 +3,5 @@ entity.tijger:pijl.name=Oranje Pijl
 item.tijger:oranje_boog.name=Oranje Boog
 item.tijger:oranje_pijl.name=Oranje Pijl
 item.spawn_egg.entity.tijger:tijger.name=Spawn Tijger
+item.tijger:pootafdruk.name=Pootafdruk Knop
+entity.tijger:krab_signaal.name=Krab Signaal

@@ -1,0 +1,53 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tijger:krab_signaal",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "tijger:weg": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["krab_signaal"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:timer": {
+        "time": 1,
+        "looping": false,
+        "time_down_event": {
+          "event": "tijger:klaar"
+        }
+      },
+      "minecraft:projectile": {
+        "power": 0.3,
+        "gravity": 0.08,
+        "anchor": 1,
+        "should_bounce": false,
+        "offset": [0, -0.1, 0],
+        "inertia": 0.99,
+        "liquid_inertia": 0.6
+      }
+    },
+    "events": {
+      "tijger:klaar": {
+        "add": {
+          "component_groups": ["tijger:weg"]
+        }
+      }
+    }
+  }
+}

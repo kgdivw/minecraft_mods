@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "tijger:krab_signaal",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/krab_signaal"
+            },
+            "geometry": {
+                "default": "geometry.oranje_pijl"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

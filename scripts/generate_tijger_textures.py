@@ -120,6 +120,30 @@ def create_arrow_icon(output_path):
     print(f"Created {output_path}")
 
 
+def create_paw_icon(output_path):
+    """16x16 orange paw print button icon."""
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    # round button background
+    d.ellipse([0, 0, 15, 15], fill=(250, 240, 225))
+    d.ellipse([0, 0, 15, 15], outline=DARK_ORANGE)
+    # main pad
+    d.ellipse([4, 7, 11, 13], fill=ORANGE)
+    # toes
+    d.ellipse([2, 3, 5, 6], fill=ORANGE)
+    d.ellipse([6, 2, 9, 5], fill=ORANGE)
+    d.ellipse([10, 3, 13, 6], fill=ORANGE)
+    img.save(output_path)
+    print(f"Created {output_path}")
+
+
+def create_invisible_texture(output_path):
+    """Fully transparent 16x16 texture (invisible signal entity)."""
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    img.save(output_path)
+    print(f"Created {output_path}")
+
+
 def create_pack_icon(output_path):
     """128x128 tiger face pack icon."""
     img = Image.new("RGBA", (128, 128), (0, 0, 0, 0))
@@ -175,6 +199,8 @@ if __name__ == "__main__":
     create_arrow_entity_texture(os.path.join(mod, "RP", "textures", "entity", "oranje_pijl.png"))
     create_bow_icon(os.path.join(mod, "RP", "textures", "items", "oranje_boog.png"))
     create_arrow_icon(os.path.join(mod, "RP", "textures", "items", "oranje_pijl.png"))
+    create_paw_icon(os.path.join(mod, "RP", "textures", "items", "pootafdruk.png"))
+    create_invisible_texture(os.path.join(mod, "RP", "textures", "entity", "krab_signaal.png"))
     create_pack_icon(os.path.join(mod, "BP", "pack_icon.png"))
     create_pack_icon(os.path.join(mod, "RP", "pack_icon.png"))
     print("All tijger textures generated!")

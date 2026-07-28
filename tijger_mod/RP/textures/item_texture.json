@@ -7,6 +7,9 @@
         },
         "oranje_pijl": {
             "textures": "textures/items/oranje_pijl"
+        },
+        "pootafdruk": {
+            "textures": "textures/items/pootafdruk"
         }
     }
 }
