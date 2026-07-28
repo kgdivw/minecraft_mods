@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tijger:oranje_boog",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.bow"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:icon": {
+        "texture": "oranje_boog"
+      },
+      "minecraft:display_name": {
+        "value": "item.tijger:oranje_boog.name"
+      },
+      "minecraft:use_animation": {
+        "value": "bow"
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 3600,
+        "movement_modifier": 0.35
+      },
+      "minecraft:shooter": {
+        "ammunition": [
+          {
+            "item": "tijger:oranje_pijl",
+            "use_offhand": true,
+            "search_inventory": true,
+            "use_in_creative": true
+          }
+        ],
+        "charge_on_draw": false,
+        "max_draw_duration": 1.0,
+        "scale_power_by_draw_duration": true
+      }
+    }
+  }
+}

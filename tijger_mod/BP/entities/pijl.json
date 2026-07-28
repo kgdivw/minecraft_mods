@@ -1,0 +1,79 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tijger:pijl",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "tijger:marker": {
+        "minecraft:type_family": {
+          "family": ["pijl", "raakmarker"]
+        },
+        "minecraft:timer": {
+          "time": 2,
+          "looping": false,
+          "time_down_event": {
+            "event": "tijger:klaar"
+          }
+        }
+      },
+      "tijger:weg": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["pijl"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 1,
+            "knockback": true,
+            "semi_random_diff_damage": false
+          },
+          "stick_in_ground": {},
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "tijger:raak",
+              "target": "self"
+            }
+          }
+        },
+        "power": 3.0,
+        "gravity": 0.05,
+        "anchor": 1,
+        "should_bounce": false,
+        "offset": [0, -0.1, 0],
+        "inertia": 0.99,
+        "liquid_inertia": 0.6,
+        "hit_sound": "bow.hit"
+      }
+    },
+    "events": {
+      "tijger:raak": {
+        "add": {
+          "component_groups": ["tijger:marker"]
+        }
+      },
+      "tijger:klaar": {
+        "add": {
+          "component_groups": ["tijger:weg"]
+        }
+      }
+    }
+  }
+}

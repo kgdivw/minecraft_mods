@@ -1,0 +1,17 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "tijger:recept_oranje_boog"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bow" },
+            { "item": "minecraft:orange_dye" }
+        ],
+        "result": {
+            "item": "tijger:oranje_boog",
+            "count": 1
+        }
+    }
+}

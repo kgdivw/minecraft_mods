@@ -1,0 +1,77 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tijger:tijger",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["tijger", "animal"]
+            },
+            "minecraft:collision_box": {
+                "width": 1.1,
+                "height": 1.1
+            },
+            "minecraft:scale": 1.5,
+            "minecraft:health": {
+                "value": 60,
+                "max": 60
+            },
+            "minecraft:movement": {
+                "value": 0.4
+            },
+            "minecraft:navigation.walk": {
+                "can_path_over_water": false,
+                "avoid_water": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:leashable": {
+                "soft_distance": 4,
+                "hard_distance": 6,
+                "max_distance": 10
+            },
+            "minecraft:rideable": {
+                "seat_count": 1,
+                "interact_text": "Rijden",
+                "family_types": ["player"],
+                "seats": {
+                    "position": [0.0, 1.15, -0.2]
+                }
+            },
+            "minecraft:input_ground_controlled": {},
+            "minecraft:variable_max_auto_step": {
+                "base_value": 1.0625,
+                "jump_prevented_value": 0.5625
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 5,
+                "speed_multiplier": 0.6,
+                "xz_dist": 8,
+                "y_dist": 2
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 6,
+                "look_distance": 8.0,
+                "probability": 0.05
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            }
+        }
+    }
+}

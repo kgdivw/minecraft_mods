@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "tijger:tijger",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/tijger"
+            },
+            "geometry": {
+                "default": "geometry.wolf"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#E8842B",
+                "overlay_color": "#1A1A1A"
+            },
+            "animations": {
+                "walk": "animation.quadruped.walk",
+                "look_at_target": "animation.common.look_at_target"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    {
+                        "walk": "query.modified_move_speed"
+                    }
+                ]
+            }
+        }
+    }
+}

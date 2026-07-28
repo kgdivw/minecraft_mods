@@ -1,0 +1,12 @@
+{
+    "resource_pack_name": "Tijger Mod",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "oranje_boog": {
+            "textures": "textures/items/oranje_boog"
+        },
+        "oranje_pijl": {
+            "textures": "textures/items/oranje_pijl"
+        }
+    }
+}

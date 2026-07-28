@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tijger:oranje_pijl",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.arrow"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "oranje_pijl"
+      },
+      "minecraft:display_name": {
+        "value": "item.tijger:oranje_pijl.name"
+      },
+      "minecraft:projectile": {
+        "projectile_entity": "tijger:pijl"
+      }
+    }
+  }
+}

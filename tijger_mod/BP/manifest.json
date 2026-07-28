@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Tijger Mod Behavior Pack",
+        "description": "Schiet dieren met de oranje boog en ze worden een tijger waar je op kunt rijden!",
+        "uuid": "3a81d464-cff3-460a-8d6f-495a38243938",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 60]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "94057abd-8126-4664-bf58-a1f7c924d58e",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b35c7c8d-29a7-4fd5-a002-29035608076e",
+            "version": [1, 0, 0]
+        }
+    ]
+}
