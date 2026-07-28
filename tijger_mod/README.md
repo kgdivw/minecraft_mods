@@ -14,5 +14,5 @@ Schiet dieren met de **Oranje Boog** en ze veranderen in een tijger waar je op k
 
 - Werkt op bijna elk dier of mob (koeien, schapen, zombies, villagers...)
 - Werkt niet op spelers en niet op tijgers zelf
-- De tijger is groot, snel (kan over blokken van 1 hoog stappen) en heeft 60 levens
+- De tijger is groot, snel, kan 3 blokken hoog klimmen en heeft 60 levens
 - Je kunt de tijger ook aan een lijn (lead) meenemen
