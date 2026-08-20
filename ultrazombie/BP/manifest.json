@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Ultrazombie Behavior Pack",
+        "description": "Tem een zombie met rot vlees en praat met hem in de chat! Verander hem in elke mob, laat hem hout hakken, mijnen en vechten.",
+        "uuid": "a0a3b7b0-4f47-4cb1-889a-66ce5ae6213b",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "1b1bc5d5-41a0-4a9b-b2f1-9fca898809f2",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "uuid": "b3902ee3-2d14-40e7-afb2-1e4ef5610fcd",
+            "version": [1, 0, 0],
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.19.0-beta"
+        }
+    ]
+}

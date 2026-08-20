@@ -71,6 +71,13 @@ jobs:
           cd build/tijger_mod
           zip -r ../TijgerMod.mcaddon BP/ RP/
 
+      - name: Create Ultrazombie addon
+        run: |
+          mkdir -p build/ultrazombie
+          cp -r ultrazombie/BP build/ultrazombie/
+          cd build/ultrazombie
+          zip -r ../UltraZombie.mcaddon BP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -135,6 +142,13 @@ jobs:
             - Schiet een dier of mob met een oranje pijl en het verandert in een Tijger
             - Klik op de tijger om erop te rijden — hij loopt waar jij kijkt
             - `/function geef` voor een gratis boog + 64 pijlen
+
+            ### Ultrazombie
+            - Tem een zombie door hem te slaan met rot vlees in je hand
+            - Praat met hem in de chat: zeg een mobnaam (blaze, warden, paard...) en hij verandert erin!
+            - Zeg "ga hout hakken", "ga mijnen", "vecht", "dans", "kom hier" of "stop"
+            - Zegt hij iets grappigs terug als hij je niet snapt
+            - LET OP: zet "Beta APIs" aan bij Experimenten in je wereldinstellingen!
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -143,6 +157,7 @@ jobs:
             build/LavaMod.mcaddon
             build/BaasVanHetDorp.mcaddon
             build/TijgerMod.mcaddon
+            build/UltraZombie.mcaddon
           prerelease: false
           draft: false
         env:
