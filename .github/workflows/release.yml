@@ -76,7 +76,7 @@ jobs:
           mkdir -p build/ultrazombie
           cp -r ultrazombie/BP build/ultrazombie/
           cd build/ultrazombie
-          zip -r ../UltraZombie.mcaddon BP/
+          zip -r ../Ultrazombie.mcaddon BP/
 
       - name: Get short SHA
         id: sha
@@ -157,7 +157,7 @@ jobs:
             build/LavaMod.mcaddon
             build/BaasVanHetDorp.mcaddon
             build/TijgerMod.mcaddon
-            build/UltraZombie.mcaddon
+            build/Ultrazombie.mcaddon
           prerelease: false
           draft: false
         env:

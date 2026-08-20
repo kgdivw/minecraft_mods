@@ -4,7 +4,7 @@ Tem een zombie en praat met hem in de chat! Hij verandert in **elke mob van Mine
 
 ## Belangrijk bij het installeren
 
-1. Open `UltraZombie.mcaddon` (dubbelklik) — Minecraft installeert hem vanzelf.
+1. Open `Ultrazombie.mcaddon` (dubbelklik) — Minecraft installeert hem vanzelf.
 2. Zet het pack aan bij je wereld onder **Gedragspakketten / Behavior Packs**.
 3. **Zet bij de wereldinstellingen onder "Experimenten" het vinkje "Beta APIs" AAN.**
    Zonder dat vinkje kan de Ultrazombie de chat niet lezen!
