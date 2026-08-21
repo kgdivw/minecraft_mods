@@ -50,7 +50,6 @@ const MOBS = {
     sneeuwgolem: "minecraft:snow_golem",
     heks: "minecraft:witch",
     witch: "minecraft:witch",
-    ghast: "minecraft:ghast",
     slijm: "minecraft:slime",
     slime: "minecraft:slime",
     magma: "minecraft:magma_cube",
@@ -92,8 +91,6 @@ const MOBS = {
     gordeldier: "minecraft:armadillo",
     armadillo: "minecraft:armadillo",
     breeze: "minecraft:breeze",
-    phantom: "minecraft:phantom",
-    vex: "minecraft:vex",
     ravager: "minecraft:ravager",
     pillager: "minecraft:pillager",
     vindicator: "minecraft:vindicator",
@@ -117,8 +114,12 @@ const MOBS = {
 const DORPELING_IDS = ["minecraft:villager_v2", "minecraft:villager"];
 const DORPELING_WOORDEN = new Set(["dorpeling", "villager"]);
 
-// Te gevaarlijk -- hier zegt de Ultrazombie nee tegen.
-const VERBODEN_WOORDEN = new Set(["wither", "draak", "dragon", "enderdraak", "ender_dragon"]);
+// Te gevaarlijk of te eng -- hier zegt de Ultrazombie nee tegen.
+// Geesten mogen niet (dat heeft de baas zo besloten).
+const VERBODEN_WOORDEN = new Set([
+    "wither", "draak", "dragon", "enderdraak", "ender_dragon",
+    "geest", "spook", "ghast", "phantom", "fantoom", "vex"
+]);
 
 // Dit zijn geen echte mobs (of je maatje zou erdoor verdwijnen),
 // dus die slaan we over bij het gokken van mobnamen.
