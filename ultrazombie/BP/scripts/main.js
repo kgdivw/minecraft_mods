@@ -118,7 +118,7 @@ const DORPELING_WOORDEN = new Set(["dorpeling", "villager"]);
 // Geesten mogen niet (dat heeft de baas zo besloten).
 const VERBODEN_WOORDEN = new Set([
     "wither", "draak", "dragon", "enderdraak", "ender_dragon",
-    "geest", "spook", "ghast", "phantom", "fantoom", "vex"
+    "geest", "spook", "spookje", "ghost", "ghast", "phantom", "fantoom", "vex"
 ]);
 
 // Dit zijn geen echte mobs (of je maatje zou erdoor verdwijnen),
