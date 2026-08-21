@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Ultrazombie Resource Pack",
+        "description": "Resourcepakket van de Ultrazombie. Hoort bij het Ultrazombie gedragspakket.",
+        "uuid": "2be0a19a-56bb-4a3c-9483-52ee0233fb27",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "d3096f21-d224-4931-b2cf-0e33ac0f64c4",
+            "version": [1, 0, 0]
+        }
+    ]
+}

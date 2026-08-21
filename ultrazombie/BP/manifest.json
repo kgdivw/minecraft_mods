@@ -25,6 +25,10 @@
         {
             "module_name": "@minecraft/server",
             "version": "1.19.0-beta"
+        },
+        {
+            "uuid": "2be0a19a-56bb-4a3c-9483-52ee0233fb27",
+            "version": [1, 0, 0]
         }
     ]
 }

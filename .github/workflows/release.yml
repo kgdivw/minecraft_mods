@@ -75,8 +75,9 @@ jobs:
         run: |
           mkdir -p build/ultrazombie
           cp -r ultrazombie/BP build/ultrazombie/
+          cp -r ultrazombie/RP build/ultrazombie/
           cd build/ultrazombie
-          zip -r ../Ultrazombie.mcaddon BP/
+          zip -r ../Ultrazombie.mcaddon BP/ RP/
 
       - name: Get short SHA
         id: sha
