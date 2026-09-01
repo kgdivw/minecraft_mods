@@ -1,0 +1,12 @@
+{
+    "resource_pack_name": "Robot Mod",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "robot_bouwpakket": {
+            "textures": "textures/items/robot_bouwpakket"
+        },
+        "afstandsbediening": {
+            "textures": "textures/items/afstandsbediening"
+        }
+    }
+}

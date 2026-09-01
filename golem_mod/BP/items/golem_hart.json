@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "golem:golem_hart",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:icon": {
+                "texture": "golem_hart"
+            },
+            "minecraft:display_name": {
+                "value": "item.golem:golem_hart.name"
+            },
+            "minecraft:entity_placer": {
+                "entity": "golem:ultragolem",
+                "use_on": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt",
+                    "minecraft:sand",
+                    "minecraft:gravel",
+                    "minecraft:stone",
+                    "minecraft:cobblestone",
+                    "minecraft:deepslate",
+                    "minecraft:podzol",
+                    "minecraft:mycelium",
+                    "minecraft:moss_block",
+                    "minecraft:snow_block",
+                    "minecraft:sandstone",
+                    "minecraft:netherrack",
+                    "minecraft:end_stone",
+                    "minecraft:iron_block",
+                    "minecraft:stone_bricks",
+                    "minecraft:oak_planks"
+                ]
+            }
+        }
+    }
+}

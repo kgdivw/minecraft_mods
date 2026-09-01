@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "robot:recept_robot_bouwpakket"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "III",
+            "IRI",
+            "III"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "R": {
+                "item": "minecraft:redstone"
+            }
+        },
+        "result": {
+            "item": "robot:robot_bouwpakket",
+            "count": 1
+        }
+    }
+}

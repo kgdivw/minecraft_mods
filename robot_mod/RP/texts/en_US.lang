@@ -1,0 +1,4 @@
+entity.robot:robot.name=Robot
+item.spawn_egg.entity.robot:robot.name=Spawn Robot
+item.robot:robot_bouwpakket.name=Robot Build Kit
+item.robot:afstandsbediening.name=Robot Remote Control

@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "Golem Mod",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "golem_hart": {
+            "textures": "textures/items/golem_hart"
+        }
+    }
+}

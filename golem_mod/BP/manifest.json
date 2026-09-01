@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Golem Mod Behavior Pack",
+        "description": "De sterkste golems van de hele wereld. Ze vallen alles aan behalve jou!",
+        "uuid": "e52ca234-a092-414b-84c1-3f9bb2cefc0a",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 60]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "13888388-150f-4497-9c02-ed770d511d3c",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "4b0bacb7-cfe1-47f4-b5a0-8722b0b7cba2",
+            "version": [1, 0, 0]
+        }
+    ]
+}

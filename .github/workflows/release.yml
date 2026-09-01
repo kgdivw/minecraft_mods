@@ -79,6 +79,22 @@ jobs:
           cd build/ultrazombie
           zip -r ../Ultrazombie.mcaddon BP/ RP/
 
+      - name: Create Robot Mod addon
+        run: |
+          mkdir -p build/robot_mod
+          cp -r robot_mod/BP build/robot_mod/
+          cp -r robot_mod/RP build/robot_mod/
+          cd build/robot_mod
+          zip -r ../RobotMod.mcaddon BP/ RP/
+
+      - name: Create Golem Mod addon
+        run: |
+          mkdir -p build/golem_mod
+          cp -r golem_mod/BP build/golem_mod/
+          cp -r golem_mod/RP build/golem_mod/
+          cd build/golem_mod
+          zip -r ../GolemMod.mcaddon BP/ RP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -150,6 +166,19 @@ jobs:
             - Zeg "ga hout hakken", "ga mijnen", "vecht", "dans", "kom hier" of "stop"
             - Zegt hij iets grappigs terug als hij je niet snapt
             - LET OP: zet "Beta APIs" aan bij Experimenten in je wereldinstellingen!
+
+            ### Robot Mod
+            - Craft het Robot Bouwpakket (8x ijzer + 1x redstone) en zet je eigen robot in elkaar
+            - Klik met de afstandsbediening: VOLGEN, VECHTEN of DIAMANT MIJNEN
+            - Hij vecht monsters weg en legt elke gevonden diamant bij jou neer
+            - Aangevallen? Dan gaat hij KAPOT en staat hij stil (doodgaan kan hij niet)
+            - Repareren: redstone in je hand + ijzer in je rugzak, en klik op de robot
+
+            ### Golem Mod
+            - De Ultra Golem: 1000 leven, 250 schade, immuun voor vuur, lava en jouw klappen
+            - Hij valt ALLES aan behalve spelers — monsters, dieren, dorpelingen
+            - Craft een Golem Hart (ijzerblokken + diamanten + redstoneblok) en klik op de grond
+            - `/function golem` geeft je meteen 5 harten voor een heel golemleger
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -159,6 +188,8 @@ jobs:
             build/BaasVanHetDorp.mcaddon
             build/TijgerMod.mcaddon
             build/Ultrazombie.mcaddon
+            build/RobotMod.mcaddon
+            build/GolemMod.mcaddon
           prerelease: false
           draft: false
         env:

@@ -1,0 +1,29 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "robot:recept_afstandsbediening"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " R ",
+            " I ",
+            " S "
+        ],
+        "key": {
+            "R": {
+                "item": "minecraft:redstone"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "S": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "robot:afstandsbediening",
+            "count": 1
+        }
+    }
+}

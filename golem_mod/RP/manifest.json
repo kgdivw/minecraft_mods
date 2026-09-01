@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Golem Mod Resource Pack",
+        "description": "Textures voor de Golem Mod",
+        "uuid": "4b0bacb7-cfe1-47f4-b5a0-8722b0b7cba2",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 60]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "89133139-c800-4d72-a7aa-2ae8e7b90af7",
+            "version": [1, 0, 0]
+        }
+    ]
+}

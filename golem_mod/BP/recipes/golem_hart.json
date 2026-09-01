@@ -1,0 +1,29 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "golem:recept_golem_hart"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "IDI",
+            "DND",
+            "IDI"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "D": {
+                "item": "minecraft:diamond"
+            },
+            "N": {
+                "item": "minecraft:redstone_block"
+            }
+        },
+        "result": {
+            "item": "golem:golem_hart",
+            "count": 1
+        }
+    }
+}
