@@ -103,12 +103,25 @@ jobs:
           cd build/samen_pijn_mod
           zip -r ../SamenPijn.mcaddon BP/ RP/
 
+      - name: Create Samen Pijn mcpacks
+        run: |
+          mkdir -p build
+          cd samen_pijn_mod/BP
+          zip -r ../../build/SamenPijnGedrag.mcpack .
+          cd ../RP
+          zip -r ../../build/SamenPijnTexturen.mcpack .
+
       - name: Create Random Blok Battle addon
         run: |
           mkdir -p build/random_blok_mod
           cp -r random_blok_mod/BP build/random_blok_mod/
           cd build/random_blok_mod
           zip -r ../RandomBlokBattle.mcaddon BP/
+
+      - name: Create Random Blok Battle mcpack
+        run: |
+          cd random_blok_mod/BP
+          zip -r ../../build/RandomBlokBattle.mcpack .
 
       - name: Get short SHA
         id: sha
@@ -201,6 +214,7 @@ jobs:
             - Geen nieuwe texturen; het resourcepakket komt mee en activeert automatisch
             - Kisten en shulkerboxen blijven ook onaangeroerd; geen experimenten nodig
             - Uitzetten met `/function samen_uit`, weer aan met `/function samen_aan`
+            - Lukt de `.mcaddon` niet op tablet? Installeer dan eerst `SamenPijnTexturen.mcpack` en daarna `SamenPijnGedrag.mcpack`
 
             ### Random Blok Battle
             - Elk blok dat je breekt geeft een ander item: glas geeft diamanten, zand geeft goud
@@ -221,7 +235,10 @@ jobs:
             build/RobotMod.mcaddon
             build/GolemMod.mcaddon
             build/SamenPijn.mcaddon
+            build/SamenPijnGedrag.mcpack
+            build/SamenPijnTexturen.mcpack
             build/RandomBlokBattle.mcaddon
+            build/RandomBlokBattle.mcpack
           prerelease: false
           draft: false
         env:
