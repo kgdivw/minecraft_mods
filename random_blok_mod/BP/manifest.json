@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Random Blok Battle Behavior Pack",
+        "description": "Elk blok dat je breekt geeft een ander item: glas geeft diamanten! Na 100 dagen begint de BATTLE.",
+        "uuid": "1efbd3e8-8d87-4093-b7f3-6e5de452ba70",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "9b3c0551-eb95-4d08-996f-bcdbbe0c6e23",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "uuid": "f97b2f10-7e89-4728-8f53-527afdad4da2",
+            "version": [1, 0, 0],
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.9.0"
+        }
+    ]
+}
