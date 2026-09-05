@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Samen Pijn Resource Pack",
+        "description": "Hoort bij het Samen Pijn gedragspakket. Verandert niets aan de texturen.",
+        "uuid": "97854cff-0ca5-47b2-9dd4-334521e4e54b",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "278b2d81-f383-4674-b413-b4363a0e048d",
+            "version": [1, 0, 0]
+        }
+    ]
+}

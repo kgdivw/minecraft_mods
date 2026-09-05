@@ -95,6 +95,21 @@ jobs:
           cd build/golem_mod
           zip -r ../GolemMod.mcaddon BP/ RP/
 
+      - name: Create Samen Pijn addon
+        run: |
+          mkdir -p build/samen_pijn_mod
+          cp -r samen_pijn_mod/BP build/samen_pijn_mod/
+          cp -r samen_pijn_mod/RP build/samen_pijn_mod/
+          cd build/samen_pijn_mod
+          zip -r ../SamenPijn.mcaddon BP/ RP/
+
+      - name: Create Random Blok Battle addon
+        run: |
+          mkdir -p build/random_blok_mod
+          cp -r random_blok_mod/BP build/random_blok_mod/
+          cd build/random_blok_mod
+          zip -r ../RandomBlokBattle.mcaddon BP/
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -179,6 +194,21 @@ jobs:
             - Hij valt ALLES aan behalve spelers — monsters, dieren, dorpelingen
             - Craft een Golem Hart (ijzerblokken + diamanten + redstoneblok) en klik op de grond
             - `/function golem` geeft je meteen 5 harten voor een heel golemleger
+            ### Samen Pijn
+            - Doet één speler zich pijn, dan doen ALLE spelers zich even veel pijn
+            - Werkt bij vallen, vuur, lava, honger, mobs, verdrinken en pvp
+            - Je items, rugzak en XP blijven gewoon van jezelf
+            - Geen nieuwe texturen; het resourcepakket komt mee en activeert automatisch
+            - Kisten en shulkerboxen blijven ook onaangeroerd; geen experimenten nodig
+            - Uitzetten met `/function samen_uit`, weer aan met `/function samen_aan`
+
+            ### Random Blok Battle
+            - Elk blok dat je breekt geeft een ander item: glas geeft diamanten, zand geeft goud
+            - 114 blokken met hun eigen item, twee blokken geven nooit hetzelfde
+            - Er loopt een timer van 100 Minecraft-dagen om spullen te verzamelen
+            - Daarna: BATTLE in een arena hoog in de lucht, de laatste die leeft wint
+            - In je eentje? Dan vecht je tegen 5 golven monsters
+            - `/function battle_lijst` toont de hele lijst, `/function battle_nu` start meteen
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -190,6 +220,8 @@ jobs:
             build/Ultrazombie.mcaddon
             build/RobotMod.mcaddon
             build/GolemMod.mcaddon
+            build/SamenPijn.mcaddon
+            build/RandomBlokBattle.mcaddon
           prerelease: false
           draft: false
         env:

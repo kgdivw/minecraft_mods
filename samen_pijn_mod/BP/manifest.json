@@ -1,0 +1,34 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Samen Pijn Behavior Pack",
+        "description": "Doet iemand zich pijn? Dan doet IEDEREEN zich pijn. Je spullen blijven gewoon van jou.",
+        "uuid": "5d31340e-52d3-455a-bd37-2e4bf40da003",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "1682e87c-1ac7-404d-9cca-2d46f2fe419d",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "uuid": "8af462ab-7db5-4dcb-b0ed-b9a43a37828a",
+            "version": [1, 0, 0],
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.9.0"
+        },
+        {
+            "uuid": "97854cff-0ca5-47b2-9dd4-334521e4e54b",
+            "version": [1, 0, 0]
+        }
+    ]
+}
