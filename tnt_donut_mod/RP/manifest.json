@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "TNT Donut Resource Pack",
+        "description": "Textures voor het TNT Donut Blok",
+        "uuid": "ef795284-3179-4af0-9a42-10c9fed033a6",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "5cbfc59a-ec18-45b3-9359-b06c0ea5d583",
+            "version": [1, 0, 0]
+        }
+    ]
+}

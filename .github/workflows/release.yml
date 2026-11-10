@@ -123,6 +123,22 @@ jobs:
           cd random_blok_mod/BP
           zip -r ../../build/RandomBlokBattle.mcpack .
 
+      - name: Create TNT Donut addon
+        run: |
+          mkdir -p build/tnt_donut_mod
+          cp -r tnt_donut_mod/BP build/tnt_donut_mod/
+          cp -r tnt_donut_mod/RP build/tnt_donut_mod/
+          cd build/tnt_donut_mod
+          zip -r ../TntDonut.mcaddon BP/ RP/
+
+      - name: Create TNT Donut mcpacks
+        run: |
+          mkdir -p build
+          cd tnt_donut_mod/BP
+          zip -r ../../build/TntDonutGedrag.mcpack .
+          cd ../RP
+          zip -r ../../build/TntDonutTexturen.mcpack .
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -223,6 +239,12 @@ jobs:
             - Daarna: BATTLE in een arena hoog in de lucht, de laatste die leeft wint
             - In je eentje? Dan vecht je tegen 5 golven monsters
             - `/function battle_lijst` toont de hele lijst, `/function battle_nu` start meteen
+            ### TNT Donut
+            - Eén blok: het TNT Donut Blok (creatief menu, bij de bouwblokken)
+            - Zet hem neer en er verschijnt een gigantische donut van 12.460 TNT
+            - De donut is 49 blokken breed en ligt op de grond, met een gat in het midden
+            - Het blok zelf verdwijnt meteen, dus je kunt er zoveel neerzetten als je wilt
+            - Steek hem aan met vuursteen en staal... en ren weg
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -239,6 +261,9 @@ jobs:
             build/SamenPijnTexturen.mcpack
             build/RandomBlokBattle.mcaddon
             build/RandomBlokBattle.mcpack
+            build/TntDonut.mcaddon
+            build/TntDonutGedrag.mcpack
+            build/TntDonutTexturen.mcpack
           prerelease: false
           draft: false
         env:

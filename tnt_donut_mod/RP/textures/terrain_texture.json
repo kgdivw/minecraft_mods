@@ -1,0 +1,11 @@
+{
+    "resource_pack_name": "tnt_donut",
+    "texture_name": "atlas.terrain",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+        "tnt_donut_blok": {
+            "textures": "textures/blocks/tnt_donut_blok"
+        }
+    }
+}

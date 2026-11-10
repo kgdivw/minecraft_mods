@@ -1,0 +1,7 @@
+{
+    "format_version": [1, 1, 0],
+    "donut:tnt_donut_blok": {
+        "textures": "tnt_donut_blok",
+        "sound": "stone"
+    }
+}
