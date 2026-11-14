@@ -711,15 +711,15 @@ function winnen() {
     stopSpel(false);
 }
 
-// Na een dreun gaan de mijnwerkers eerst een stuk weg, zodat je even op adem
-// kunt komen op de plek waar je weer wakker wordt.
-function duwMijnwerkersWeg() {
+// Na een dreun worden de mijnwerkers op de plek waar je weer wakker wordt
+// neergezet: net als bij de start op precies SPAWN_AFSTAND blokken van je af.
+function zetMijnwerkersOpAfstand() {
     system.runTimeout(() => {
         const spelers = world.getAllPlayers();
         if (spelers.length === 0) return;
         for (const m of alleMijnwerkers()) {
             const p = spelers[Math.floor(Math.random() * spelers.length)];
-            try { m.teleport(plekRondom(p, 25 + Math.random() * 10, 1)); } catch (e) { /* niet erg */ }
+            try { m.teleport(plekRondom(p, SPAWN_AFSTAND, 1)); } catch (e) { /* niet erg */ }
         }
     }, 60);
 }
@@ -730,7 +730,7 @@ function krimp(naam) {
             laatsteKans = true;
             world.sendMessage("§c[Steen]§r " + naam + " is bijna vergruizeld! Dit was je §claatste kans§r.");
             world.sendMessage("§7De mijnwerkers schrikken ervan en lopen een stuk weg. RENNEN!");
-            duwMijnwerkersWeg();
+            zetMijnwerkersOpAfstand();
             opslaan();
             return;
         }
@@ -744,7 +744,7 @@ function krimp(naam) {
     eindfase = false;
     world.sendMessage("§c[Steen]§r " + naam + " is kapot geslagen! Er breekt een stuk van je af.");
     world.sendMessage("§7Je bent nu een §e" + grootte().naam + "§7. Doorgaan maar!");
-    duwMijnwerkersWeg();
+    zetMijnwerkersOpAfstand();
     nieuweOpdracht();
     opslaan();
 }

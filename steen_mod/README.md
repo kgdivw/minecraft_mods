@@ -39,7 +39,8 @@ Je schil groeit mee: van een dun laagje grind tot een enorme rotsjas.
 - Ben je een **BERG**? Dan stoppen de opdrachten en begint de laatste missie:
   **sloop alle drie de mijnwerkers**. Lukt dat, dan heb jij gewonnen.
 - Ga je dood, dan **breekt er een stuk van je af**: je wordt een maat kleiner en
-  gaat gewoon door. De mijnwerkers schrikken ervan en lopen eerst een stuk weg.
+  gaat gewoon door. De mijnwerkers staan dan weer op 10 blokken van je af, op de
+  plek waar je wakker wordt.
 - Ben je al een kiezelsteen als je doodgaat? Dan krijg je nog één **laatste
   kans**. Gaat het dan weer mis, dan hebben de mijnwerkers gewonnen.
 - Zolang je nog geen BERG bent, komt er binnen 10 seconden een nieuwe mijnwerker
