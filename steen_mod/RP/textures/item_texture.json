@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "steen",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "steen_pak_klein": {
+      "textures": "textures/items/steen_pak_klein"
+    },
+    "steen_pak_groot": {
+      "textures": "textures/items/steen_pak_groot"
+    },
+    "steen_pak_mega": {
+      "textures": "textures/items/steen_pak_mega"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "steen:pak_klein",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/steen_pak"
+      },
+      "geometry": {
+        "default": "geometry.steen_pak_klein"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "initialize": [
+          "variable.tcos0 = 0;"
+        ]
+      }
+    }
+  }
+}

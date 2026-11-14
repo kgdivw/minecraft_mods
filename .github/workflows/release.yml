@@ -139,6 +139,22 @@ jobs:
           cd ../RP
           zip -r ../../build/TntDonutTexturen.mcpack .
 
+      - name: Create Je Bent Een Steen addon
+        run: |
+          mkdir -p build/steen_mod
+          cp -r steen_mod/BP build/steen_mod/
+          cp -r steen_mod/RP build/steen_mod/
+          cd build/steen_mod
+          zip -r ../JeBentEenSteen.mcaddon BP/ RP/
+
+      - name: Create Je Bent Een Steen mcpacks
+        run: |
+          mkdir -p build
+          cd steen_mod/BP
+          zip -r ../../build/JeBentEenSteenGedrag.mcpack .
+          cd ../RP
+          zip -r ../../build/JeBentEenSteenTexturen.mcpack .
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -245,6 +261,16 @@ jobs:
             - De donut is 49 blokken breed en ligt op de grond, met een gat in het midden
             - Het blok zelf verdwijnt meteen, dus je kunt er zoveel neerzetten als je wilt
             - Steek hem aan met vuursteen en staal... en ren weg
+
+            ### Je Bent Een Steen
+            - Jij BENT een steen; Bert, Klaas en Dirk komen je kapot minen
+            - Ze rennen achter je aan en graven dwars door muren naar je toe
+            - Doe opdrachten om te groeien: van Kiezelsteen tot BERG
+            - Groter = meer hartjes, dikkere stenen schil en veel hardere klappen
+            - Vallen, vuur, lava en verdrinken doen je niks; je bent van steen
+            - Ga je dood? Dan breekt er een stuk van je af en word je kleiner
+            - Ben je een BERG? Sloop alle drie de mijnwerkers en je hebt gewonnen
+            - Starten met `/function steen`, uitleg met `/function steen_info`
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -264,6 +290,9 @@ jobs:
             build/TntDonut.mcaddon
             build/TntDonutGedrag.mcpack
             build/TntDonutTexturen.mcpack
+            build/JeBentEenSteen.mcaddon
+            build/JeBentEenSteenGedrag.mcpack
+            build/JeBentEenSteenTexturen.mcpack
           prerelease: false
           draft: false
         env:
