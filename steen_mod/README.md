@@ -17,8 +17,10 @@ hardere klappen.
 2. Zet in je wereld-instellingen het behavior pack **en** het resource pack aan.
 3. Typ in de chat: `/function steen`
 
-Je krijgt meteen je stenen schil, de drie mijnwerkers komen eraan en je eerste
-opdracht staat in de chat en onderin je scherm.
+Je krijgt meteen je stenen schil, de drie mijnwerkers verschijnen op **10 blokken
+afstand** van je en je eerste opdracht staat in de chat en onderin je scherm.
+Ren je verder dan 80 blokken weg, dan duiken ze weer op diezelfde 10 blokken
+afstand naast je op.
 
 ## Hoe groot kun je worden
 

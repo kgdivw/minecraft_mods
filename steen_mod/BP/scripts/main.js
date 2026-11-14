@@ -23,6 +23,8 @@ import { world, system, ItemStack } from "@minecraft/server";
 const MIJNWERKER = "steen:mijnwerker";
 const VOORNAMEN = ["Bert", "Klaas", "Dirk"];
 const AANTAL_MIJNWERKERS = 3;
+// Op hoeveel blokken afstand van jou een mijnwerker verschijnt.
+const SPAWN_AFSTAND = 10;
 const MAX_PUNTEN = 8;
 const DIMENSIES = ["overworld", "nether", "the_end"];
 
@@ -297,20 +299,27 @@ function alleMijnwerkers() {
     return lijst;
 }
 
-function veiligePlek(p, minR, maxR) {
+// Een plek rondom de speler: precies zo veel blokken ver, in een willekeurige
+// richting.
+function plekRondom(p, blokken, hoger) {
     const hoek = Math.random() * Math.PI * 2;
-    const r = minR + Math.random() * (maxR - minR);
     return {
-        x: p.location.x + Math.cos(hoek) * r,
-        y: p.location.y + 1,
-        z: p.location.z + Math.sin(hoek) * r
+        x: p.location.x + Math.cos(hoek) * blokken,
+        y: p.location.y + hoger,
+        z: p.location.z + Math.sin(hoek) * blokken
     };
 }
 
 function spawnMijnwerker(speler, naam, melden) {
-    for (let poging = 0; poging < 8; poging++) {
+    // Zit die ene plek vol (muur, berg), dan proberen we een andere richting en
+    // een iets andere hoogte, maar altijd op dezelfde afstand.
+    const hoogtes = [1, 2, 0, 3, 1, 2, 0, 3, 1, 2, 0, 3];
+    for (let poging = 0; poging < hoogtes.length; poging++) {
         try {
-            const m = speler.dimension.spawnEntity(MIJNWERKER, veiligePlek(speler, 8, 14));
+            const m = speler.dimension.spawnEntity(
+                MIJNWERKER,
+                plekRondom(speler, SPAWN_AFSTAND, hoogtes[poging])
+            );
             m.nameTag = naam + " de Mijnwerker";
             if (melden) {
                 world.sendMessage("§8[Mijn]§r " + naam + " klimt uit de mijn omhoog... en hij ziet je!");
@@ -407,7 +416,7 @@ function stuurMijnwerker(m, spelers) {
     } catch (e) { /* niet erg */ }
 
     if (best > 80) {
-        try { m.teleport(veiligePlek(doelwit, 8, 14)); } catch (e) { /* niet erg */ }
+        try { m.teleport(plekRondom(doelwit, SPAWN_AFSTAND, 1)); } catch (e) { /* niet erg */ }
         return;
     }
     if (best > 3) graaf(m, doelwit);
@@ -710,7 +719,7 @@ function duwMijnwerkersWeg() {
         if (spelers.length === 0) return;
         for (const m of alleMijnwerkers()) {
             const p = spelers[Math.floor(Math.random() * spelers.length)];
-            try { m.teleport(veiligePlek(p, 25, 35)); } catch (e) { /* niet erg */ }
+            try { m.teleport(plekRondom(p, 25 + Math.random() * 10, 1)); } catch (e) { /* niet erg */ }
         }
     }, 60);
 }
