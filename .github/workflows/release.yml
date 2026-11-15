@@ -264,13 +264,14 @@ jobs:
 
             ### Je Bent Een Steen
             - Jij BENT een steen; Bert, Klaas en Dirk komen je kapot minen
-            - Ze rennen achter je aan en graven dwars door muren naar je toe
-            - Doe opdrachten om te groeien: van Kiezelsteen tot BERG
-            - Groter = meer hartjes, dikkere stenen schil en veel hardere klappen
+            - Ze rennen achter je aan, graven door muren en staan op 10 blokken van je af
+            - In je rugzak zit de Upgrade-knop: tik ermee voor het menu
+            - GROEIEN: van level 1 tot level 6, elk level met zijn eigen opdracht
+            - AANVAL: acht upgrades om te unlocken, van Harde Kop tot Bergkracht
             - Vallen, vuur, lava en verdrinken doen je niks; je bent van steen
-            - Ga je dood? Dan breekt er een stuk van je af en word je kleiner
-            - Ben je een BERG? Sloop alle drie de mijnwerkers en je hebt gewonnen
-            - Starten met `/function steen`, uitleg met `/function steen_info`
+            - Ga je dood? Dan zak je een level, maar je upgrades blijven van jou
+            - Ben je level 6? Sloop alle drie de mijnwerkers en je hebt gewonnen
+            - Het spel start vanzelf; werkt er iets niet, doe `/function steen_test`
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
