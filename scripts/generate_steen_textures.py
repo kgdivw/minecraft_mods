@@ -217,11 +217,46 @@ def maak_pack_icoon(pad):
     print("Gemaakt:", pad)
 
 
+# ============================================================
+#  DE UPGRADE-KNOP
+#  Een stenen knop met een dikke groene pijl omhoog: daarmee open
+#  je in het spel het menu met de aanval- en groei-knop.
+# ============================================================
+GROEN = (86, 206, 92)
+GROEN_DONKER = (46, 150, 58)
+
+
+def maak_upgrade_icoon(pad):
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+
+    # het stenen knopje
+    d.rounded_rectangle([1, 1, 14, 14], radius=3, fill=STEEN)
+    d.rounded_rectangle([1, 1, 14, 3], radius=2, fill=STEEN_LICHT)
+    d.rounded_rectangle([1, 12, 14, 14], radius=2, fill=STEEN_DONKER)
+    random.seed(21)
+    for _ in range(26):
+        x = random.randint(2, 13)
+        y = random.randint(2, 13)
+        d.point((x, y), fill=random.choice([STEEN_DONKER, STEEN_LICHT, STEEN_ZEER_DONKER]))
+
+    # de pijl omhoog: eerst de donkere rand, dan het groen erin
+    punt = [(8, 2), (13, 8), (10, 8), (10, 13), (6, 13), (6, 8), (3, 8)]
+    d.polygon(punt, fill=GROEN_DONKER)
+    binnen = [(8, 4), (11, 8), (9, 8), (9, 12), (7, 12), (7, 8), (5, 8)]
+    d.polygon(binnen, fill=GROEN)
+
+    zorg_voor_map(pad)
+    img.save(pad)
+    print("Gemaakt:", pad)
+
+
 def main():
     maak_mijnwerker(os.path.join(BASE, "RP", "textures", "entity", "mijnwerker.png"))
     maak_steen_pak(os.path.join(BASE, "RP", "textures", "entity", "steen_pak.png"))
     for i, naam in enumerate(["klein", "groot", "mega"]):
         maak_kei_icoon(os.path.join(BASE, "RP", "textures", "items", "steen_pak_%s.png" % naam), i)
+    maak_upgrade_icoon(os.path.join(BASE, "RP", "textures", "items", "steen_upgrade.png"))
     maak_pack_icoon(os.path.join(BASE, "BP", "pack_icon.png"))
     maak_pack_icoon(os.path.join(BASE, "RP", "pack_icon.png"))
 

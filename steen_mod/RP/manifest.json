@@ -2,16 +2,16 @@
     "format_version": 2,
     "header": {
         "name": "Je Bent Een Steen Resource Pack",
-        "description": "Stenen schillen voor de steen en texturen voor de mijnwerkers",
+        "description": "Stenen schillen, de upgrade-knop en de texturen van de mijnwerkers",
         "uuid": "7fdb98e4-0edb-40f7-8f56-4bc8dd083c58",
-        "version": [1, 0, 0],
+        "version": [1, 0, 1],
         "min_engine_version": [1, 21, 0]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "b6934349-8fc9-491e-b5cf-6855affa9415",
-            "version": [1, 0, 0]
+            "version": [1, 0, 1]
         }
     ]
 }

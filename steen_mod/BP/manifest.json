@@ -2,21 +2,21 @@
     "format_version": 2,
     "header": {
         "name": "Je Bent Een Steen Behavior Pack",
-        "description": "Jij bent een steen en drie mijnwerkers willen je kapot minen. Doe opdrachten om groter te worden!",
+        "description": "Jij bent een steen en drie mijnwerkers willen je kapot minen. Word level 6 en sloop ze!",
         "uuid": "2e321014-2c04-46bc-8c8e-41f0b4099696",
-        "version": [1, 0, 0],
+        "version": [1, 0, 1],
         "min_engine_version": [1, 21, 0]
     },
     "modules": [
         {
             "type": "data",
             "uuid": "97ca0f55-4942-45b6-9d00-9d7521ae1422",
-            "version": [1, 0, 0]
+            "version": [1, 0, 1]
         },
         {
             "type": "script",
             "uuid": "68b713de-88d8-4320-b06d-f2747e8c26c6",
-            "version": [1, 0, 0],
+            "version": [1, 0, 1],
             "language": "javascript",
             "entry": "scripts/main.js"
         }
@@ -24,11 +24,15 @@
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "2.9.0"
+            "version": "2.0.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
         },
         {
             "uuid": "7fdb98e4-0edb-40f7-8f56-4bc8dd083c58",
-            "version": [1, 0, 0]
+            "version": [1, 0, 1]
         }
     ]
 }

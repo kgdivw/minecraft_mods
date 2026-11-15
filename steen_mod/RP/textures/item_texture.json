@@ -10,6 +10,9 @@
     },
     "steen_pak_mega": {
       "textures": "textures/items/steen_pak_mega"
+    },
+    "steen_upgrade": {
+      "textures": "textures/items/steen_upgrade"
     }
   }
 }
