@@ -155,6 +155,11 @@ jobs:
           cd ../RP
           zip -r ../../build/JeBentEenSteenTexturen.mcpack .
 
+      - name: Create Je Bent Een Steen world
+        run: |
+          mkdir -p build
+          python3 scripts/generate_steen_wereld.py
+
       - name: Get short SHA
         id: sha
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -272,6 +277,7 @@ jobs:
             - Ga je dood? Dan zak je een level, maar je upgrades blijven van jou
             - Ben je level 6? Sloop alle drie de mijnwerkers en je hebt gewonnen
             - Het spel start vanzelf; werkt er iets niet, doe `/function steen_test`
+            - Makkelijkst: open `JeBentEenSteen.mcworld`, daar zit alles al in en aan
           files: |
             build/BlauwePiglins.mcaddon
             build/NinjaMod.mcaddon
@@ -294,6 +300,7 @@ jobs:
             build/JeBentEenSteen.mcaddon
             build/JeBentEenSteenGedrag.mcpack
             build/JeBentEenSteenTexturen.mcpack
+            build/JeBentEenSteen.mcworld
           prerelease: false
           draft: false
         env:

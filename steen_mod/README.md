@@ -15,12 +15,21 @@ opdracht, en die is elke keer anders.
 
 ## Starten
 
+**De makkelijkste manier (ook op tablet): `JeBentEenSteen.mcworld`.** Dat is een
+kant-en-klare wereld waar allebei de pakketten al in zitten en al aanstaan, met
+cheats aan en coordinaten in beeld. Openen, en je speelt. Er is niets te
+importeren en niets aan te vinken.
+
+Liever in je eigen wereld?
+
 1. Installeer `JeBentEenSteen.mcaddon` (dubbelklikken opent Minecraft).
    Lukt dat niet op tablet? Installeer dan eerst `JeBentEenSteenTexturen.mcpack`
    en daarna `JeBentEenSteenGedrag.mcpack`.
 2. Zet in je wereld-instellingen het behavior pack **en** het resource pack aan.
 3. Ga de wereld in. **Het spel start vanzelf.** Werkt dat niet, typ dan
    `/function steen`.
+
+De wereld maak je opnieuw met `python scripts/generate_steen_wereld.py`.
 
 De drie mijnwerkers verschijnen op **10 blokken afstand** van je, ook na je
 dood en ook als je verder dan 80 blokken wegrent.
